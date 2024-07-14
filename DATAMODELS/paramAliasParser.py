@@ -15,7 +15,6 @@ def get_file_paths(dir):
 # code is bad at the moment, will address if needed, for the time being it runs well enough
 
 def extract_parameter_aliases(dir):
-    count = 0
 
     py_files = get_file_paths(dir)
     out = {}
@@ -59,23 +58,23 @@ def extract_parameter_aliases(dir):
 
             # now this looks for the second set of aliases (source code seems to be weird)
             # it should overwrite the "None" values if any
-            if match5:
-                for idx, i in enumerate(match5):
-                    temp = i.split(",")
-                    # print(file_path.split("/")[-1][:-3])
-                    for j in temp:
-                        match6 = pattern6.search(str(j))
-                        if match6:
-                            # print(match6.group(2), match6.group(1))
-                            try:
-                                if entry_dict[match6.group(2)] == None:
-                                    entry_dict[match6.group(2)] = [match6.group(1)] # ",".join([i for i in match6.group(1)])
-                                elif match6.group(2) != None and type(match6.group(2)) != str: # error somewhere
-                                    entry_dict[match6.group(2)].append(match6.group(1))
-                            except(KeyError):
-                                entry_dict[match6.group(2)] = [match6.group(1)]
+            # if match5:
+            #     for idx, i in enumerate(match5):
+            #         temp = i.split(",")
+            #         # print(file_path.split("/")[-1][:-3])
+            #         for j in temp:
+            #             match6 = pattern6.search(str(j))
+            #             if match6:
+            #                 # print(match6.group(2), match6.group(1))
+            #                 try:
+            #                     if entry_dict[match6.group(2)] == None:
+            #                         entry_dict[match6.group(2)] = [match6.group(1)] # ",".join([i for i in match6.group(1)])
+            #                     elif match6.group(2) != None and type(match6.group(2)) != str: # error somewhere
+            #                         entry_dict[match6.group(2)].append(match6.group(1))
+            #                 except(KeyError):
+            #                     entry_dict[match6.group(2)] = [match6.group(1)]
 
-                print("\n")
+                # print("\n")
 
         out[file_path.split("/")[-1][:-3]] = entry_dict
 
@@ -84,7 +83,7 @@ def extract_parameter_aliases(dir):
 if __name__ == "main":
     out = extract_parameter_aliases(PATH_TO_MODULE_DIR)
 
-        # save to file
+    # save to file
     with open("paramAliasMap.py", 'w') as file:
         file.write("paramAliasMap = ")
         pprint.pprint(out, stream=file)
