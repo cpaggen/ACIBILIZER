@@ -1,0 +1,686 @@
+{
+        "fv:RemotePolHolder": {
+            "contains": {
+                "fault:Counts": "",
+                "fault:Delegate": "",
+                "fv:PndgAnyDefCont": "",
+                "fv:PndgAnyGroupDefCont": "",
+                "fv:PndgCont": "",
+                "fv:PndgCtrctCont": "",
+                "fv:PndgEpCPCont": "",
+                "fv:PndgEpPCtrctInfoCont": "",
+                "fv:PndgRFltPCont": "",
+                "fv:PndgRtdOutDefCont": "",
+                "fv:PullRecover": "",
+                "fv:RsFromAssocPolToExpRt": "",
+                "fv:RsFromAssocPolToIntraImpRt": "",
+                "fv:RsFromAssocPolToRtSumm": "",
+                "fv:RsToRemoteBDDef": "",
+                "fv:RsToRemoteBDHolder": "",
+                "fv:RsToRemoteBackupPol": "",
+                "fv:RsToRemoteByPassChain": "",
+                "fv:RsToRemoteCloudsecKeyDefCont": "",
+                "fv:RsToRemoteConnInstrPol": "",
+                "fv:RsToRemoteCtxDef": "",
+                "fv:RsToRemoteESgHolder": "",
+                "fv:RsToRemoteFabricExtConnPDef": "",
+                "fv:RsToRemoteHealthGrp": "",
+                "fv:RsToRemoteHostprotPolDef": "",
+                "fv:RsToRemoteIpContainer": "",
+                "fv:RsToRemoteIpslaPol": "",
+                "fv:RsToRemoteKeyChainPolDef": "",
+                "fv:RsToRemoteLeakRouteFromToCont": "",
+                "fv:RsToRemoteLocalSiteCtxDef": "",
+                "fv:RsToRemoteMdpProviderDef": "",
+                "fv:RsToRemoteMdpTenantInfoDef": "",
+                "fv:RsToRemoteMember": "",
+                "fv:RsToRemoteMonGrp": "",
+                "fv:RsToRemoteMonPol": "",
+                "fv:RsToRemoteNetflowExporterPolDef": "",
+                "fv:RsToRemoteNetflowMonitorPolDef": "",
+                "fv:RsToRemotePbrIpsla": "",
+                "fv:RsToRemotePimRouteMapDefWrapper": "",
+                "fv:RsToRemotePinningPDef": "",
+                "fv:RsToRemoteQosDppPolDef": "",
+                "fv:RsToRemoteQosRequirement": "",
+                "fv:RsToRemoteQueryGroup": "",
+                "fv:RsToRemoteRFltAtt": "",
+                "fv:RsToRemoteRedirectPol": "",
+                "fv:RsToRemoteRemoteSiteCtxDef": "",
+                "fv:RsToRemoteRtdCtxDef": "",
+                "fv:RsToRemoteRtdEpPInfoHolder": "",
+                "fv:RsToRemoteSiteCont": "",
+                "fv:RsToRemoteStpEncapInstDef": "",
+                "fv:RsToRemoteSvcL3OutDef": "",
+                "fv:RsToRemoteSyslogGroup": "",
+                "fv:RsToRemoteTabooDef": "",
+                "fv:RsToSpanFilterGrp": "",
+                "health:Inst": ""
+            },
+            "rnMap": {
+                "fd-": "fault:Delegate",
+                "fltCnts": "fault:Counts",
+                "health": "health:Inst",
+                "pndgAnyDefCont": "fv:PndgAnyDefCont",
+                "pndgAnyGroupDefCont": "fv:PndgAnyGroupDefCont",
+                "pndgCont": "fv:PndgCont",
+                "pndgCtrctCont": "fv:PndgCtrctCont",
+                "pndgEpCPCont": "fv:PndgEpCPCont",
+                "pndgEpPCtrctInfoCont": "fv:PndgEpPCtrctInfoCont",
+                "pndgRFltPCont": "fv:PndgRFltPCont",
+                "pndgRtdOutDefCont": "fv:PndgRtdOutDefCont",
+                "pullRecover-": "fv:PullRecover",
+                "rsfromAssocPolToExpRt-": "fv:RsFromAssocPolToExpRt",
+                "rsfromAssocPolToIntraImpRt-": "fv:RsFromAssocPolToIntraImpRt",
+                "rsfromAssocPolToRtSumm-": "fv:RsFromAssocPolToRtSumm",
+                "rstoRemoteBDDef-": "fv:RsToRemoteBDDef",
+                "rstoRemoteBDHolder-": "fv:RsToRemoteBDHolder",
+                "rstoRemoteBackupPol-": "fv:RsToRemoteBackupPol",
+                "rstoRemoteByPassChain-": "fv:RsToRemoteByPassChain",
+                "rstoRemoteCloudsecKeyDefCont-": "fv:RsToRemoteCloudsecKeyDefCont",
+                "rstoRemoteConnInstrPol": "fv:RsToRemoteConnInstrPol",
+                "rstoRemoteCtxDef-": "fv:RsToRemoteCtxDef",
+                "rstoRemoteESgHolder-": "fv:RsToRemoteESgHolder",
+                "rstoRemoteFabricExtConnPDef": "fv:RsToRemoteFabricExtConnPDef",
+                "rstoRemoteHealthGrp-": "fv:RsToRemoteHealthGrp",
+                "rstoRemoteHostprotPolDef-": "fv:RsToRemoteHostprotPolDef",
+                "rstoRemoteIpContainer-": "fv:RsToRemoteIpContainer",
+                "rstoRemoteIpslaPol-": "fv:RsToRemoteIpslaPol",
+                "rstoRemoteKeyChainPolDef-": "fv:RsToRemoteKeyChainPolDef",
+                "rstoRemoteLeakRouteFromToCont-": "fv:RsToRemoteLeakRouteFromToCont",
+                "rstoRemoteLocalSiteCtxDef-": "fv:RsToRemoteLocalSiteCtxDef",
+                "rstoRemoteMdpProviderDef-": "fv:RsToRemoteMdpProviderDef",
+                "rstoRemoteMdpTenantInfoDef-": "fv:RsToRemoteMdpTenantInfoDef",
+                "rstoRemoteMember-": "fv:RsToRemoteMember",
+                "rstoRemoteMonGrp-": "fv:RsToRemoteMonGrp",
+                "rstoRemoteMonPol-": "fv:RsToRemoteMonPol",
+                "rstoRemoteNetflowExporterPolDef-": "fv:RsToRemoteNetflowExporterPolDef",
+                "rstoRemoteNetflowMonitorPolDef-": "fv:RsToRemoteNetflowMonitorPolDef",
+                "rstoRemotePbrIpsla-": "fv:RsToRemotePbrIpsla",
+                "rstoRemotePimRouteMapDefWrapper-": "fv:RsToRemotePimRouteMapDefWrapper",
+                "rstoRemotePinningPDef-": "fv:RsToRemotePinningPDef",
+                "rstoRemoteQosDppPolDef-": "fv:RsToRemoteQosDppPolDef",
+                "rstoRemoteQosRequirement-": "fv:RsToRemoteQosRequirement",
+                "rstoRemoteQueryGroup-": "fv:RsToRemoteQueryGroup",
+                "rstoRemoteRFltAtt-": "fv:RsToRemoteRFltAtt",
+                "rstoRemoteRedirectPol-": "fv:RsToRemoteRedirectPol",
+                "rstoRemoteRemoteSiteCtxDef-": "fv:RsToRemoteRemoteSiteCtxDef",
+                "rstoRemoteRtdCtxDef-": "fv:RsToRemoteRtdCtxDef",
+                "rstoRemoteRtdEpPInfoHolder-": "fv:RsToRemoteRtdEpPInfoHolder",
+                "rstoRemoteSiteCont": "fv:RsToRemoteSiteCont",
+                "rstoRemoteStpEncapInstDef-": "fv:RsToRemoteStpEncapInstDef",
+                "rstoRemoteSvcL3OutDef-": "fv:RsToRemoteSvcL3OutDef",
+                "rstoRemoteSyslogGroup-": "fv:RsToRemoteSyslogGroup",
+                "rstoRemoteTabooDef-": "fv:RsToRemoteTabooDef",
+                "rstoSpanFilterGrp-": "fv:RsToSpanFilterGrp"
+            },
+            "identifiedBy": [
+
+            ],
+            "rnFormat": "remotepolholder",
+            "containedBy": {
+                "top:Root": ""
+            },
+            "superClasses": [
+                "pol:Def",
+                "pol:Obj",
+                "naming:NamedObject"
+            ],
+            "subClasses": {
+
+            },
+            "relationFrom": {
+
+            },
+            "relationTo": {
+                "fv:RsFromAssocPolToExpRt": "fv:FabricExpRtctrlDef",
+                "fv:RsFromAssocPolToIntraImpRt": "fv:IntraVrfFabricImpRtctrlDef",
+                "fv:RsFromAssocPolToRtSumm": "fv:CtxRtSummPolDef",
+                "fv:RsToRemoteBDDef": "fv:BDDef",
+                "fv:RsToRemoteBDHolder": "fv:BDHolder",
+                "fv:RsToRemoteBackupPol": "vns:BackupPol",
+                "fv:RsToRemoteByPassChain": "vns:ByPassChain",
+                "fv:RsToRemoteCloudsecKeyDefCont": "cloudsec:KeyDefCont",
+                "fv:RsToRemoteConnInstrPol": "fv:ConnInstrPol",
+                "fv:RsToRemoteCtxDef": "fv:CtxDef",
+                "fv:RsToRemoteESgHolder": "fv:ESgHolder",
+                "fv:RsToRemoteFabricExtConnPDef": "fv:FabricExtConnPDef",
+                "fv:RsToRemoteHealthGrp": "vns:RedirectHealthGroup",
+                "fv:RsToRemoteHostprotPolDef": "hostprot:PolDef",
+                "fv:RsToRemoteIpContainer": "hostprot:RemoteIpContainer",
+                "fv:RsToRemoteIpslaPol": "fv:SlaDef",
+                "fv:RsToRemoteKeyChainPolDef": "fv:KeyChainPolDef",
+                "fv:RsToRemoteLeakRouteFromToCont": "leak:RouteFromToCont",
+                "fv:RsToRemoteLocalSiteCtxDef": "fv:LocalCtxDef",
+                "fv:RsToRemoteMdpProviderDef": "mdp:ProviderDef",
+                "fv:RsToRemoteMdpTenantInfoDef": "mdp:TenantInfoDef",
+                "fv:RsToRemoteMember": "fv:TrackMember",
+                "fv:RsToRemoteMonGrp": "mon:Group",
+                "fv:RsToRemoteMonPol": "mon:Pol",
+                "fv:RsToRemoteNetflowExporterPolDef": "netflow:ExporterPolDef",
+                "fv:RsToRemoteNetflowMonitorPolDef": "netflow:MonitorPolDef",
+                "fv:RsToRemotePbrIpsla": "fv:IPSLAMonitoringPol",
+                "fv:RsToRemotePimRouteMapDefWrapper": "pim:RouteMapDefWrapper",
+                "fv:RsToRemotePinningPDef": "fc:PinningPDef",
+                "fv:RsToRemoteQosDppPolDef": "qos:DppPolDef",
+                "fv:RsToRemoteQosRequirement": "qos:Requirement",
+                "fv:RsToRemoteQueryGroup": "callhome:QueryGroup",
+                "fv:RsToRemoteRFltAtt": "vz:AFilterableUnit",
+                "fv:RsToRemoteRedirectPol": "vns:SvcRedirectPol",
+                "fv:RsToRemoteRemoteSiteCtxDef": "fv:RemoteCtxDef",
+                "fv:RsToRemoteRtdCtxDef": "l3ext:RtdCtxDef",
+                "fv:RsToRemoteRtdEpPInfoHolder": "fv:RtdEpPInfoHolder",
+                "fv:RsToRemoteSiteCont": "fv:SiteCont",
+                "fv:RsToRemoteStpEncapInstDef": "stp:EncapInstDef",
+                "fv:RsToRemoteSvcL3OutDef": "vns:SvcL3OutDef",
+                "fv:RsToRemoteSyslogGroup": "syslog:Group",
+                "fv:RsToRemoteTabooDef": "vz:TabooDef",
+                "fv:RsToSpanFilterGrp": "span:FilterGrp"
+            },
+            "dnFormats": [
+                "remotepolholder"
+            ],
+            "writeAccess": [
+
+            ],
+            "readAccess": [
+                "admin"
+            ],
+            "faults": {
+
+            },
+            "events": {
+
+            },
+            "stats": {
+
+            },
+            "isAbstract": false,
+            "isConfigurable": false,
+            "isContextRoot": false,
+            "isDeprecated": false,
+            "isEncrypted": false,
+            "isExportable": false,
+            "isPersistent": true,
+            "isSubjectToQuota": false,
+            "isObservable": true,
+            "hasStats": false,
+            "isStat": false,
+            "isFaultable": false,
+            "isDomainable": false,
+            "isHealthScorable": true,
+            "shouldCollectHealthStats": false,
+            "healthCollectionSource": "faults",
+            "hasEventRules": false,
+            "abstractionLayer": "logical",
+            "apicNxProcessing": false,
+            "monitoringPolicySource": "Parent",
+            "isCreatableDeletable": "always",
+            "platformFlavors": [
+
+            ],
+            "classId": "2085",
+            "className": "RemotePolHolder",
+            "classPkg": "fv",
+            "featureTag": "",
+            "moCategory": "Regular",
+            "label": "",
+            "comment": [
+                "A container existing on each node to efficiently download policies to the node. For example: filters, bridge domain, and taboo policies.  This is an internal object."
+            ],
+            "properties": {
+                "childAction": {
+                    "comment": [
+                         "Delete or ignore. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "4",
+                    "propLocalId": "5",
+                    "label": "childAction",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationChildAction",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "16384", "localName": "deleteAll",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteAll "},
+                         { "value": "8192", "localName": "deleteNonPresent",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteNonPresent "},
+                         { "value": "4096", "localName": "ignore",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ignore "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "descr": {
+                    "comment": [
+                         "Specifies a description of the policy definition."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "5579",
+                    "propLocalId": "28",
+                    "label": "Description",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Descr",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": true,
+                    "likeProp": "naming:Described:descr",
+                    "validators": [
+                         {"min" : 0, "max": 128,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9\\\\!#$%()*,-./:;@ _{|}~?&+]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "dn": {
+                    "comment": [
+                         "A tag or metadata is a non-hierarchical keyword or term assigned to the fabric module."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1",
+                    "propLocalId": "2",
+                    "label": "dn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "lcOwn": {
+                    "comment": [
+                         "A value that indicates how this object was created. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "9",
+                    "propLocalId": "9",
+                    "label": "lcOwn",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "mo:Owner",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "local", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "4", "localName": "implicit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Implicit "},
+                         { "value": "0", "localName": "local",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Local "},
+                         { "value": "1", "localName": "policy",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Policy "},
+                         { "value": "2", "localName": "replica",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Replica "},
+                         { "value": "3", "localName": "resolveOnBehalf",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ResolvedOnBehalf "}
+                    ],
+                    "default": "local",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "modTs": {
+                    "comment": [
+                         "The time when this object was last modified."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "7",
+                    "propLocalId": "7",
+                    "label": "modTs",
+                    "baseType": "scalar:Date",
+                    "modelType": "mo:TStamp",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "never", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "never",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "never "}
+                    ],
+                    "default": "never",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "name": {
+                    "comment": [
+                         "null"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "4991",
+                    "propLocalId": "13",
+                    "label": "Name",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Name",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": true,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 64,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9_.:-]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "nameAlias": {
+                    "isConfigurable": true,
+                    "propGlobalId": "28417",
+                    "propLocalId": "6719",
+                    "label": "Name alias",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:NameAlias",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 63,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9_.-]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "ownerKey": {
+                    "comment": [
+                         "The key for enabling clients to own their data for entity correlation."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "15230",
+                    "propLocalId": "4100",
+                    "label": "ownerKey",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Descr",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 128,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9\\\\!#$%()*,-./:;@ _{|}~?&+]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "ownerTag": {
+                    "comment": [
+                         "A tag for enabling clients to add their own data. For example, to indicate who created this object."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "15231",
+                    "propLocalId": "4101",
+                    "label": "ownerTag",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Descr",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 64,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9\\\\!#$%()*,-./:;@ _{|}~?&+]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "reResolveRelation": {
+                    "comment": [
+                         "The property reResolveRelation when set to True\n                     will force the re-resolution of all the relations\n                     under fvRemotePolHolder"
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "55720",
+                    "propLocalId": "12615",
+                    "label": "Re Resolve Relation",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "false", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "no",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "rn": {
+                    "comment": [
+                         "Identifies an object from its siblings within the context of its parent object. The distinguished name contains a sequence of relative names."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "2",
+                    "propLocalId": "3",
+                    "label": "rn",
+                    "baseType": "reference:BinRN",
+                    "modelType": "reference:BinRN",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "status": {
+                    "comment": [
+                         "The upgrade status. This property is for internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "3",
+                    "propLocalId": "4",
+                    "label": "status",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationStatus",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "created",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be created. An error is returned if the object already exists.  \nIn the return value of a setter method: indicates that an object has been created.  \n"
+                             ],
+                             "label": "created "},
+                         { "value": "8", "localName": "deleted",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be deleted.  \nIn the return value of a setter method: indicates that an object has been deleted.\n"
+                             ],
+                             "label": "deleted "},
+                         { "value": "4", "localName": "modified",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be modified  \nIn the return value of a setter method: indicates that an object has been modified.\n"
+                             ],
+                             "label": "modified "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                }
+            }
+        }
+}

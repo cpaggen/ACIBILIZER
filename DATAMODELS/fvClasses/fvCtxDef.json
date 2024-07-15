@@ -1,0 +1,2094 @@
+{
+        "fv:CtxDef": {
+            "contains": {
+                "bgp:AutoRtTargetPDef": "",
+                "bgp:DomainIdAllocatorDef": "",
+                "bgp:RtTargetPDef": "",
+                "cloud:BdiIdDef": "",
+                "cloud:CtxHolder": "",
+                "cloud:CtxVrfHolder": "",
+                "cloud:RtCtrlPolDef": "",
+                "cloud:SubnetVrfHolder": "",
+                "cloud:VrfRouteLeakPolDef": "",
+                "dns:LblDef": "",
+                "extdev:SDWanVpnDef": "",
+                "fault:Counts": "",
+                "fault:Delegate": "",
+                "fault:Inst": "",
+                "fv:AEPgCont": "",
+                "fv:AssocBDDefCont": "",
+                "fv:AssocESg": "",
+                "fv:AssocPolicyDef": "",
+                "fv:CtxConfigIssues": "",
+                "fv:EpRetDef": "",
+                "fv:ExtConnTrack": "",
+                "fv:L3EpCont": "",
+                "fv:L3EpScanInfo": "",
+                "fv:LCtxDef": "",
+                "fv:ProtEPg": "",
+                "fv:RtDcToFvCtx": "",
+                "fv:RtFvCtxDef": "",
+                "fv:RtPullRemoteCtxDef": "",
+                "fv:RtSrcToCtxDef": "",
+                "fv:RtSrvCtxDef": "",
+                "fv:RtToCtxDef": "",
+                "fv:RtToFvCtxDef": "",
+                "fv:RtToFvInbCtxDef": "",
+                "fv:RtToInbCtxDef": "",
+                "fv:RtToRemoteCtxDef": "",
+                "health:Inst": "",
+                "igmp:CtxDef": "",
+                "l3:EgrBytesAg15min": "",
+                "l3:EgrBytesAg1d": "",
+                "l3:EgrBytesAg1h": "",
+                "l3:EgrBytesAg1mo": "",
+                "l3:EgrBytesAg1qtr": "",
+                "l3:EgrBytesAg1w": "",
+                "l3:EgrBytesAg1year": "",
+                "l3:EgrBytesAgHist15min": "",
+                "l3:EgrBytesAgHist1d": "",
+                "l3:EgrBytesAgHist1h": "",
+                "l3:EgrBytesAgHist1mo": "",
+                "l3:EgrBytesAgHist1qtr": "",
+                "l3:EgrBytesAgHist1w": "",
+                "l3:EgrBytesAgHist1year": "",
+                "l3:EgrBytesPart15min": "",
+                "l3:EgrBytesPart1d": "",
+                "l3:EgrBytesPart1h": "",
+                "l3:EgrBytesPart1mo": "",
+                "l3:EgrBytesPart1qtr": "",
+                "l3:EgrBytesPart1w": "",
+                "l3:EgrBytesPart1year": "",
+                "l3:EgrBytesPart5min": "",
+                "l3:EgrBytesPartHist15min": "",
+                "l3:EgrBytesPartHist1d": "",
+                "l3:EgrBytesPartHist1h": "",
+                "l3:EgrBytesPartHist1mo": "",
+                "l3:EgrBytesPartHist1qtr": "",
+                "l3:EgrBytesPartHist1w": "",
+                "l3:EgrBytesPartHist1year": "",
+                "l3:EgrBytesPartHist5min": "",
+                "l3:EgrPktsAg15min": "",
+                "l3:EgrPktsAg1d": "",
+                "l3:EgrPktsAg1h": "",
+                "l3:EgrPktsAg1mo": "",
+                "l3:EgrPktsAg1qtr": "",
+                "l3:EgrPktsAg1w": "",
+                "l3:EgrPktsAg1year": "",
+                "l3:EgrPktsAgHist15min": "",
+                "l3:EgrPktsAgHist1d": "",
+                "l3:EgrPktsAgHist1h": "",
+                "l3:EgrPktsAgHist1mo": "",
+                "l3:EgrPktsAgHist1qtr": "",
+                "l3:EgrPktsAgHist1w": "",
+                "l3:EgrPktsAgHist1year": "",
+                "l3:EgrPktsPart15min": "",
+                "l3:EgrPktsPart1d": "",
+                "l3:EgrPktsPart1h": "",
+                "l3:EgrPktsPart1mo": "",
+                "l3:EgrPktsPart1qtr": "",
+                "l3:EgrPktsPart1w": "",
+                "l3:EgrPktsPart1year": "",
+                "l3:EgrPktsPart5min": "",
+                "l3:EgrPktsPartHist15min": "",
+                "l3:EgrPktsPartHist1d": "",
+                "l3:EgrPktsPartHist1h": "",
+                "l3:EgrPktsPartHist1mo": "",
+                "l3:EgrPktsPartHist1qtr": "",
+                "l3:EgrPktsPartHist1w": "",
+                "l3:EgrPktsPartHist1year": "",
+                "l3:EgrPktsPartHist5min": "",
+                "l3:IngrBytesAg15min": "",
+                "l3:IngrBytesAg1d": "",
+                "l3:IngrBytesAg1h": "",
+                "l3:IngrBytesAg1mo": "",
+                "l3:IngrBytesAg1qtr": "",
+                "l3:IngrBytesAg1w": "",
+                "l3:IngrBytesAg1year": "",
+                "l3:IngrBytesAgHist15min": "",
+                "l3:IngrBytesAgHist1d": "",
+                "l3:IngrBytesAgHist1h": "",
+                "l3:IngrBytesAgHist1mo": "",
+                "l3:IngrBytesAgHist1qtr": "",
+                "l3:IngrBytesAgHist1w": "",
+                "l3:IngrBytesAgHist1year": "",
+                "l3:IngrBytesPart15min": "",
+                "l3:IngrBytesPart1d": "",
+                "l3:IngrBytesPart1h": "",
+                "l3:IngrBytesPart1mo": "",
+                "l3:IngrBytesPart1qtr": "",
+                "l3:IngrBytesPart1w": "",
+                "l3:IngrBytesPart1year": "",
+                "l3:IngrBytesPart5min": "",
+                "l3:IngrBytesPartHist15min": "",
+                "l3:IngrBytesPartHist1d": "",
+                "l3:IngrBytesPartHist1h": "",
+                "l3:IngrBytesPartHist1mo": "",
+                "l3:IngrBytesPartHist1qtr": "",
+                "l3:IngrBytesPartHist1w": "",
+                "l3:IngrBytesPartHist1year": "",
+                "l3:IngrBytesPartHist5min": "",
+                "l3:IngrPktsAg15min": "",
+                "l3:IngrPktsAg1d": "",
+                "l3:IngrPktsAg1h": "",
+                "l3:IngrPktsAg1mo": "",
+                "l3:IngrPktsAg1qtr": "",
+                "l3:IngrPktsAg1w": "",
+                "l3:IngrPktsAg1year": "",
+                "l3:IngrPktsAgHist15min": "",
+                "l3:IngrPktsAgHist1d": "",
+                "l3:IngrPktsAgHist1h": "",
+                "l3:IngrPktsAgHist1mo": "",
+                "l3:IngrPktsAgHist1qtr": "",
+                "l3:IngrPktsAgHist1w": "",
+                "l3:IngrPktsAgHist1year": "",
+                "l3:IngrPktsPart15min": "",
+                "l3:IngrPktsPart1d": "",
+                "l3:IngrPktsPart1h": "",
+                "l3:IngrPktsPart1mo": "",
+                "l3:IngrPktsPart1qtr": "",
+                "l3:IngrPktsPart1w": "",
+                "l3:IngrPktsPart1year": "",
+                "l3:IngrPktsPart5min": "",
+                "l3:IngrPktsPartHist15min": "",
+                "l3:IngrPktsPartHist1d": "",
+                "l3:IngrPktsPartHist1h": "",
+                "l3:IngrPktsPartHist1mo": "",
+                "l3:IngrPktsPartHist1qtr": "",
+                "l3:IngrPktsPartHist1w": "",
+                "l3:IngrPktsPartHist1year": "",
+                "l3:IngrPktsPartHist5min": "",
+                "l3ext:GlobalCtxNameDef": "",
+                "leak:AssocRouteFromToCtx": "",
+                "leak:RouteCont": "",
+                "pim:CtxDef": "",
+                "pim:IPV6CtxDef": "",
+                "snmp:CtxDef": "",
+                "telemetry:SubnetFltGrpDef": "",
+                "vz:AnyREpPCont": "",
+                "vz:CtrctEntityDef": "",
+                "vz:ResPcTagCont": ""
+            },
+            "rnMap": {
+                "CDl3EgrBytesAg15min": "l3:EgrBytesAg15min",
+                "CDl3EgrBytesAg1d": "l3:EgrBytesAg1d",
+                "CDl3EgrBytesAg1h": "l3:EgrBytesAg1h",
+                "CDl3EgrBytesAg1mo": "l3:EgrBytesAg1mo",
+                "CDl3EgrBytesAg1qtr": "l3:EgrBytesAg1qtr",
+                "CDl3EgrBytesAg1w": "l3:EgrBytesAg1w",
+                "CDl3EgrBytesAg1year": "l3:EgrBytesAg1year",
+                "CDl3EgrBytesPart15min-": "l3:EgrBytesPart15min",
+                "CDl3EgrBytesPart1d-": "l3:EgrBytesPart1d",
+                "CDl3EgrBytesPart1h-": "l3:EgrBytesPart1h",
+                "CDl3EgrBytesPart1mo-": "l3:EgrBytesPart1mo",
+                "CDl3EgrBytesPart1qtr-": "l3:EgrBytesPart1qtr",
+                "CDl3EgrBytesPart1w-": "l3:EgrBytesPart1w",
+                "CDl3EgrBytesPart1year-": "l3:EgrBytesPart1year",
+                "CDl3EgrBytesPart5min-": "l3:EgrBytesPart5min",
+                "CDl3EgrPktsAg15min": "l3:EgrPktsAg15min",
+                "CDl3EgrPktsAg1d": "l3:EgrPktsAg1d",
+                "CDl3EgrPktsAg1h": "l3:EgrPktsAg1h",
+                "CDl3EgrPktsAg1mo": "l3:EgrPktsAg1mo",
+                "CDl3EgrPktsAg1qtr": "l3:EgrPktsAg1qtr",
+                "CDl3EgrPktsAg1w": "l3:EgrPktsAg1w",
+                "CDl3EgrPktsAg1year": "l3:EgrPktsAg1year",
+                "CDl3EgrPktsPart15min-": "l3:EgrPktsPart15min",
+                "CDl3EgrPktsPart1d-": "l3:EgrPktsPart1d",
+                "CDl3EgrPktsPart1h-": "l3:EgrPktsPart1h",
+                "CDl3EgrPktsPart1mo-": "l3:EgrPktsPart1mo",
+                "CDl3EgrPktsPart1qtr-": "l3:EgrPktsPart1qtr",
+                "CDl3EgrPktsPart1w-": "l3:EgrPktsPart1w",
+                "CDl3EgrPktsPart1year-": "l3:EgrPktsPart1year",
+                "CDl3EgrPktsPart5min-": "l3:EgrPktsPart5min",
+                "CDl3IngrBytesAg15min": "l3:IngrBytesAg15min",
+                "CDl3IngrBytesAg1d": "l3:IngrBytesAg1d",
+                "CDl3IngrBytesAg1h": "l3:IngrBytesAg1h",
+                "CDl3IngrBytesAg1mo": "l3:IngrBytesAg1mo",
+                "CDl3IngrBytesAg1qtr": "l3:IngrBytesAg1qtr",
+                "CDl3IngrBytesAg1w": "l3:IngrBytesAg1w",
+                "CDl3IngrBytesAg1year": "l3:IngrBytesAg1year",
+                "CDl3IngrBytesPart15min-": "l3:IngrBytesPart15min",
+                "CDl3IngrBytesPart1d-": "l3:IngrBytesPart1d",
+                "CDl3IngrBytesPart1h-": "l3:IngrBytesPart1h",
+                "CDl3IngrBytesPart1mo-": "l3:IngrBytesPart1mo",
+                "CDl3IngrBytesPart1qtr-": "l3:IngrBytesPart1qtr",
+                "CDl3IngrBytesPart1w-": "l3:IngrBytesPart1w",
+                "CDl3IngrBytesPart1year-": "l3:IngrBytesPart1year",
+                "CDl3IngrBytesPart5min-": "l3:IngrBytesPart5min",
+                "CDl3IngrPktsAg15min": "l3:IngrPktsAg15min",
+                "CDl3IngrPktsAg1d": "l3:IngrPktsAg1d",
+                "CDl3IngrPktsAg1h": "l3:IngrPktsAg1h",
+                "CDl3IngrPktsAg1mo": "l3:IngrPktsAg1mo",
+                "CDl3IngrPktsAg1qtr": "l3:IngrPktsAg1qtr",
+                "CDl3IngrPktsAg1w": "l3:IngrPktsAg1w",
+                "CDl3IngrPktsAg1year": "l3:IngrPktsAg1year",
+                "CDl3IngrPktsPart15min-": "l3:IngrPktsPart15min",
+                "CDl3IngrPktsPart1d-": "l3:IngrPktsPart1d",
+                "CDl3IngrPktsPart1h-": "l3:IngrPktsPart1h",
+                "CDl3IngrPktsPart1mo-": "l3:IngrPktsPart1mo",
+                "CDl3IngrPktsPart1qtr-": "l3:IngrPktsPart1qtr",
+                "CDl3IngrPktsPart1w-": "l3:IngrPktsPart1w",
+                "CDl3IngrPktsPart1year-": "l3:IngrPktsPart1year",
+                "CDl3IngrPktsPart5min-": "l3:IngrPktsPart5min",
+                "HDl3EgrBytesAg15min-": "l3:EgrBytesAgHist15min",
+                "HDl3EgrBytesAg1d-": "l3:EgrBytesAgHist1d",
+                "HDl3EgrBytesAg1h-": "l3:EgrBytesAgHist1h",
+                "HDl3EgrBytesAg1mo-": "l3:EgrBytesAgHist1mo",
+                "HDl3EgrBytesAg1qtr-": "l3:EgrBytesAgHist1qtr",
+                "HDl3EgrBytesAg1w-": "l3:EgrBytesAgHist1w",
+                "HDl3EgrBytesAg1year-": "l3:EgrBytesAgHist1year",
+                "HDl3EgrBytesPart15min-": "l3:EgrBytesPartHist15min",
+                "HDl3EgrBytesPart1d-": "l3:EgrBytesPartHist1d",
+                "HDl3EgrBytesPart1h-": "l3:EgrBytesPartHist1h",
+                "HDl3EgrBytesPart1mo-": "l3:EgrBytesPartHist1mo",
+                "HDl3EgrBytesPart1qtr-": "l3:EgrBytesPartHist1qtr",
+                "HDl3EgrBytesPart1w-": "l3:EgrBytesPartHist1w",
+                "HDl3EgrBytesPart1year-": "l3:EgrBytesPartHist1year",
+                "HDl3EgrBytesPart5min-": "l3:EgrBytesPartHist5min",
+                "HDl3EgrPktsAg15min-": "l3:EgrPktsAgHist15min",
+                "HDl3EgrPktsAg1d-": "l3:EgrPktsAgHist1d",
+                "HDl3EgrPktsAg1h-": "l3:EgrPktsAgHist1h",
+                "HDl3EgrPktsAg1mo-": "l3:EgrPktsAgHist1mo",
+                "HDl3EgrPktsAg1qtr-": "l3:EgrPktsAgHist1qtr",
+                "HDl3EgrPktsAg1w-": "l3:EgrPktsAgHist1w",
+                "HDl3EgrPktsAg1year-": "l3:EgrPktsAgHist1year",
+                "HDl3EgrPktsPart15min-": "l3:EgrPktsPartHist15min",
+                "HDl3EgrPktsPart1d-": "l3:EgrPktsPartHist1d",
+                "HDl3EgrPktsPart1h-": "l3:EgrPktsPartHist1h",
+                "HDl3EgrPktsPart1mo-": "l3:EgrPktsPartHist1mo",
+                "HDl3EgrPktsPart1qtr-": "l3:EgrPktsPartHist1qtr",
+                "HDl3EgrPktsPart1w-": "l3:EgrPktsPartHist1w",
+                "HDl3EgrPktsPart1year-": "l3:EgrPktsPartHist1year",
+                "HDl3EgrPktsPart5min-": "l3:EgrPktsPartHist5min",
+                "HDl3IngrBytesAg15min-": "l3:IngrBytesAgHist15min",
+                "HDl3IngrBytesAg1d-": "l3:IngrBytesAgHist1d",
+                "HDl3IngrBytesAg1h-": "l3:IngrBytesAgHist1h",
+                "HDl3IngrBytesAg1mo-": "l3:IngrBytesAgHist1mo",
+                "HDl3IngrBytesAg1qtr-": "l3:IngrBytesAgHist1qtr",
+                "HDl3IngrBytesAg1w-": "l3:IngrBytesAgHist1w",
+                "HDl3IngrBytesAg1year-": "l3:IngrBytesAgHist1year",
+                "HDl3IngrBytesPart15min-": "l3:IngrBytesPartHist15min",
+                "HDl3IngrBytesPart1d-": "l3:IngrBytesPartHist1d",
+                "HDl3IngrBytesPart1h-": "l3:IngrBytesPartHist1h",
+                "HDl3IngrBytesPart1mo-": "l3:IngrBytesPartHist1mo",
+                "HDl3IngrBytesPart1qtr-": "l3:IngrBytesPartHist1qtr",
+                "HDl3IngrBytesPart1w-": "l3:IngrBytesPartHist1w",
+                "HDl3IngrBytesPart1year-": "l3:IngrBytesPartHist1year",
+                "HDl3IngrBytesPart5min-": "l3:IngrBytesPartHist5min",
+                "HDl3IngrPktsAg15min-": "l3:IngrPktsAgHist15min",
+                "HDl3IngrPktsAg1d-": "l3:IngrPktsAgHist1d",
+                "HDl3IngrPktsAg1h-": "l3:IngrPktsAgHist1h",
+                "HDl3IngrPktsAg1mo-": "l3:IngrPktsAgHist1mo",
+                "HDl3IngrPktsAg1qtr-": "l3:IngrPktsAgHist1qtr",
+                "HDl3IngrPktsAg1w-": "l3:IngrPktsAgHist1w",
+                "HDl3IngrPktsAg1year-": "l3:IngrPktsAgHist1year",
+                "HDl3IngrPktsPart15min-": "l3:IngrPktsPartHist15min",
+                "HDl3IngrPktsPart1d-": "l3:IngrPktsPartHist1d",
+                "HDl3IngrPktsPart1h-": "l3:IngrPktsPartHist1h",
+                "HDl3IngrPktsPart1mo-": "l3:IngrPktsPartHist1mo",
+                "HDl3IngrPktsPart1qtr-": "l3:IngrPktsPartHist1qtr",
+                "HDl3IngrPktsPart1w-": "l3:IngrPktsPartHist1w",
+                "HDl3IngrPktsPart1year-": "l3:IngrPktsPartHist1year",
+                "HDl3IngrPktsPart5min-": "l3:IngrPktsPartHist5min",
+                "anyreppcont": "vz:AnyREpPCont",
+                "assocBddefDn-": "fv:AssocBDDefCont",
+                "assocESgEpPDn-": "fv:AssocESg",
+                "assocleakrtcont-": "leak:AssocRouteFromToCtx",
+                "autortp-": "bgp:AutoRtTargetPDef",
+                "bdiidd-": "cloud:BdiIdDef",
+                "bgpdomainid": "bgp:DomainIdAllocatorDef",
+                "cloudRtctrlPolDef-": "cloud:RtCtrlPolDef",
+                "ctxcfgissues": "fv:CtxConfigIssues",
+                "ctxholder-": "cloud:CtxHolder",
+                "ctxvrfholder-": "cloud:CtxVrfHolder",
+                "dnslbl-": "dns:LblDef",
+                "entity-": "vz:CtrctEntityDef",
+                "epRPol": "fv:EpRetDef",
+                "epgDn-": "fv:AEPgCont",
+                "extconntrack": "fv:ExtConnTrack",
+                "fault-": "fault:Inst",
+                "fd-": "fault:Delegate",
+                "fltCnts": "fault:Counts",
+                "globalctxname": "l3ext:GlobalCtxNameDef",
+                "health": "health:Inst",
+                "igmpctxdef": "igmp:CtxDef",
+                "l3EpScanInfo": "fv:L3EpScanInfo",
+                "l3epcont": "fv:L3EpCont",
+                "lCtx": "fv:LCtxDef",
+                "leakroutecont-": "leak:RouteCont",
+                "pimctxpdef": "pim:CtxDef",
+                "pimipv6ctxpdef": "pim:IPV6CtxDef",
+                "prot-": "fv:ProtEPg",
+                "resPcTagCont": "vz:ResPcTagCont",
+                "rtToInbCtxDef": "fv:RtToInbCtxDef",
+                "rtanalyticsSrvCtxDef-": "fv:RtSrvCtxDef",
+                "rtcloudFvCtxDef-": "fv:RtFvCtxDef",
+                "rtdcToFvCtx": "fv:RtDcToFvCtx",
+                "rtp-": "bgp:RtTargetPDef",
+                "rtpolicy-": "fv:AssocPolicyDef",
+                "rtresolutionPullRemoteCtxDef-": "fv:RtPullRemoteCtxDef",
+                "rtspanSrcToCtxDef-": "fv:RtSrcToCtxDef",
+                "rttoCtxDef": "fv:RtToCtxDef",
+                "rttoFvCtxDef": "fv:RtToFvCtxDef",
+                "rttoFvInbCtxDef": "fv:RtToFvInbCtxDef",
+                "rttoRemoteCtxDef-": "fv:RtToRemoteCtxDef",
+                "sdwanvpndef-": "extdev:SDWanVpnDef",
+                "sfltgrpdef": "telemetry:SubnetFltGrpDef",
+                "snmpctx": "snmp:CtxDef",
+                "subnetvrfholder-": "cloud:SubnetVrfHolder",
+                "vrfRtLeakPolDef": "cloud:VrfRouteLeakPolDef"
+            },
+            "identifiedBy": [
+                "ctxDn"
+            ],
+            "rnFormat": "ctx-[{ctxDn}]",
+            "containedBy": {
+                "pol:Uni": ""
+            },
+            "superClasses": [
+                "fv:ACtx",
+                "fv:L3Dom",
+                "fv:Dom",
+                "fv:Def",
+                "pol:DefRoot",
+                "pol:Def",
+                "pol:Obj",
+                "naming:NamedObject"
+            ],
+            "subClasses": {
+
+            },
+            "relationFrom": {
+                "fv:RtDcToFvCtx": "intersight:DeviceConnectorInst",
+                "fv:RtFvCtxDef": "cloud:Bookeeping",
+                "fv:RtPullRemoteCtxDef": "resolution:RemotePolicyMgr",
+                "fv:RtSrcToCtxDef": "span:Src",
+                "fv:RtSrvCtxDef": "analytics:ACfgSrv",
+                "fv:RtToCtxDef": "telemetry:CollectorProvider",
+                "fv:RtToFvCtxDef": "telemetry:ServerCtx",
+                "fv:RtToFvInbCtxDef": "aaa:ServiceNodeCluster",
+                "fv:RtToInbCtxDef": "telemetry:Provider",
+                "fv:RtToRemoteCtxDef": "fv:RemotePolHolder"
+            },
+            "relationTo": {
+
+            },
+            "dnFormats": [
+                "uni/ctx-[{ctxDn}]"
+            ],
+            "writeAccess": [
+
+            ],
+            "readAccess": [
+                "aaa",
+                "access-protocol",
+                "admin",
+                "fabric-protocol",
+                "tenant-connectivity",
+                "tenant-epg",
+                "tenant-ext-connectivity",
+                "tenant-ext-protocol",
+                "tenant-network-profile",
+                "tenant-protocol"
+            ],
+            "faults": {
+
+            },
+            "events": {
+
+            },
+            "stats": {
+                "l3:EgrBytesAg15min": {
+                    "comment": [
+                         "Egress byte. A class that represents the most current aggregated statistics for mpls vrf egress bytes in a 15 minute sampling interval.  This class updates every 5 minutes."
+                    ]
+                },
+                "l3:EgrBytesAg1d": {
+                    "comment": [
+                         "Egress byte. A class that represents the most current aggregated statistics for mpls vrf egress bytes in a 1 day sampling interval.  This class updates every hour."
+                    ]
+                },
+                "l3:EgrBytesAg1h": {
+                    "comment": [
+                         "Egress byte. A class that represents the most current aggregated statistics for mpls vrf egress bytes in a 1 hour sampling interval.  This class updates every 15 minutes."
+                    ]
+                },
+                "l3:EgrBytesAg1mo": {
+                    "comment": [
+                         "Egress byte. A class that represents the most current aggregated statistics for mpls vrf egress bytes in a 1 month sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrBytesAg1qtr": {
+                    "comment": [
+                         "Egress byte. A class that represents the most current aggregated statistics for mpls vrf egress bytes in a 1 quarter sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrBytesAg1w": {
+                    "comment": [
+                         "Egress byte. A class that represents the most current aggregated statistics for mpls vrf egress bytes in a 1 week sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrBytesAg1year": {
+                    "comment": [
+                         "Egress byte. A class that represents the most current aggregated statistics for mpls vrf egress bytes in a 1 year sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrBytesAgHist15min": {
+                    "comment": [
+                         "Egress byte. A class that represents historical aggregated statistics for mpls vrf egress bytes in a 15 minute sampling interval.  This class updates every 5 minutes."
+                    ]
+                },
+                "l3:EgrBytesAgHist1d": {
+                    "comment": [
+                         "Egress byte. A class that represents historical aggregated statistics for mpls vrf egress bytes in a 1 day sampling interval.  This class updates every hour."
+                    ]
+                },
+                "l3:EgrBytesAgHist1h": {
+                    "comment": [
+                         "Egress byte. A class that represents historical aggregated statistics for mpls vrf egress bytes in a 1 hour sampling interval.  This class updates every 15 minutes."
+                    ]
+                },
+                "l3:EgrBytesAgHist1mo": {
+                    "comment": [
+                         "Egress byte. A class that represents historical aggregated statistics for mpls vrf egress bytes in a 1 month sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrBytesAgHist1qtr": {
+                    "comment": [
+                         "Egress byte. A class that represents historical aggregated statistics for mpls vrf egress bytes in a 1 quarter sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrBytesAgHist1w": {
+                    "comment": [
+                         "Egress byte. A class that represents historical aggregated statistics for mpls vrf egress bytes in a 1 week sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrBytesAgHist1year": {
+                    "comment": [
+                         "Egress byte. A class that represents historical aggregated statistics for mpls vrf egress bytes in a 1 year sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrBytesPart15min": {
+                    "comment": [
+                         "Egress byte. A class that represents the most current portion of the statistics for mpls vrf egress bytes in a 15 minute sampling interval.  This class updates every 5 minutes."
+                    ]
+                },
+                "l3:EgrBytesPart1d": {
+                    "comment": [
+                         "Egress byte. A class that represents the most current portion of the statistics for mpls vrf egress bytes in a 1 day sampling interval.  This class updates every hour."
+                    ]
+                },
+                "l3:EgrBytesPart1h": {
+                    "comment": [
+                         "Egress byte. A class that represents the most current portion of the statistics for mpls vrf egress bytes in a 1 hour sampling interval.  This class updates every 15 minutes."
+                    ]
+                },
+                "l3:EgrBytesPart1mo": {
+                    "comment": [
+                         "Egress byte. A class that represents the most current portion of the statistics for mpls vrf egress bytes in a 1 month sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrBytesPart1qtr": {
+                    "comment": [
+                         "Egress byte. A class that represents the most current portion of the statistics for mpls vrf egress bytes in a 1 quarter sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrBytesPart1w": {
+                    "comment": [
+                         "Egress byte. A class that represents the most current portion of the statistics for mpls vrf egress bytes in a 1 week sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrBytesPart1year": {
+                    "comment": [
+                         "Egress byte. A class that represents the most current portion of the statistics for mpls vrf egress bytes in a 1 year sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrBytesPart5min": {
+                    "comment": [
+                         "Egress byte. A class that represents the most current portion of the statistics for mpls vrf egress bytes in a 5 minute sampling interval.  This class updates every 10 seconds."
+                    ]
+                },
+                "l3:EgrBytesPartHist15min": {
+                    "comment": [
+                         "Egress byte. A class that represents historical portion of the statistics for mpls vrf egress bytes in a 15 minute sampling interval.  This class updates every 5 minutes."
+                    ]
+                },
+                "l3:EgrBytesPartHist1d": {
+                    "comment": [
+                         "Egress byte. A class that represents historical portion of the statistics for mpls vrf egress bytes in a 1 day sampling interval.  This class updates every hour."
+                    ]
+                },
+                "l3:EgrBytesPartHist1h": {
+                    "comment": [
+                         "Egress byte. A class that represents historical portion of the statistics for mpls vrf egress bytes in a 1 hour sampling interval.  This class updates every 15 minutes."
+                    ]
+                },
+                "l3:EgrBytesPartHist1mo": {
+                    "comment": [
+                         "Egress byte. A class that represents historical portion of the statistics for mpls vrf egress bytes in a 1 month sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrBytesPartHist1qtr": {
+                    "comment": [
+                         "Egress byte. A class that represents historical portion of the statistics for mpls vrf egress bytes in a 1 quarter sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrBytesPartHist1w": {
+                    "comment": [
+                         "Egress byte. A class that represents historical portion of the statistics for mpls vrf egress bytes in a 1 week sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrBytesPartHist1year": {
+                    "comment": [
+                         "Egress byte. A class that represents historical portion of the statistics for mpls vrf egress bytes in a 1 year sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrBytesPartHist5min": {
+                    "comment": [
+                         "Egress byte. A class that represents historical portion of the statistics for mpls vrf egress bytes in a 5 minute sampling interval.  This class updates every 10 seconds."
+                    ]
+                },
+                "l3:EgrPktsAg15min": {
+                    "comment": [
+                         "Egress packet. A class that represents the most current aggregated statistics for mpls vrf egress packets in a 15 minute sampling interval.  This class updates every 5 minutes."
+                    ]
+                },
+                "l3:EgrPktsAg1d": {
+                    "comment": [
+                         "Egress packet. A class that represents the most current aggregated statistics for mpls vrf egress packets in a 1 day sampling interval.  This class updates every hour."
+                    ]
+                },
+                "l3:EgrPktsAg1h": {
+                    "comment": [
+                         "Egress packet. A class that represents the most current aggregated statistics for mpls vrf egress packets in a 1 hour sampling interval.  This class updates every 15 minutes."
+                    ]
+                },
+                "l3:EgrPktsAg1mo": {
+                    "comment": [
+                         "Egress packet. A class that represents the most current aggregated statistics for mpls vrf egress packets in a 1 month sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrPktsAg1qtr": {
+                    "comment": [
+                         "Egress packet. A class that represents the most current aggregated statistics for mpls vrf egress packets in a 1 quarter sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrPktsAg1w": {
+                    "comment": [
+                         "Egress packet. A class that represents the most current aggregated statistics for mpls vrf egress packets in a 1 week sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrPktsAg1year": {
+                    "comment": [
+                         "Egress packet. A class that represents the most current aggregated statistics for mpls vrf egress packets in a 1 year sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrPktsAgHist15min": {
+                    "comment": [
+                         "Egress packet. A class that represents historical aggregated statistics for mpls vrf egress packets in a 15 minute sampling interval.  This class updates every 5 minutes."
+                    ]
+                },
+                "l3:EgrPktsAgHist1d": {
+                    "comment": [
+                         "Egress packet. A class that represents historical aggregated statistics for mpls vrf egress packets in a 1 day sampling interval.  This class updates every hour."
+                    ]
+                },
+                "l3:EgrPktsAgHist1h": {
+                    "comment": [
+                         "Egress packet. A class that represents historical aggregated statistics for mpls vrf egress packets in a 1 hour sampling interval.  This class updates every 15 minutes."
+                    ]
+                },
+                "l3:EgrPktsAgHist1mo": {
+                    "comment": [
+                         "Egress packet. A class that represents historical aggregated statistics for mpls vrf egress packets in a 1 month sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrPktsAgHist1qtr": {
+                    "comment": [
+                         "Egress packet. A class that represents historical aggregated statistics for mpls vrf egress packets in a 1 quarter sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrPktsAgHist1w": {
+                    "comment": [
+                         "Egress packet. A class that represents historical aggregated statistics for mpls vrf egress packets in a 1 week sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrPktsAgHist1year": {
+                    "comment": [
+                         "Egress packet. A class that represents historical aggregated statistics for mpls vrf egress packets in a 1 year sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrPktsPart15min": {
+                    "comment": [
+                         "Egress packet. A class that represents the most current portion of the statistics for mpls vrf egress packets in a 15 minute sampling interval.  This class updates every 5 minutes."
+                    ]
+                },
+                "l3:EgrPktsPart1d": {
+                    "comment": [
+                         "Egress packet. A class that represents the most current portion of the statistics for mpls vrf egress packets in a 1 day sampling interval.  This class updates every hour."
+                    ]
+                },
+                "l3:EgrPktsPart1h": {
+                    "comment": [
+                         "Egress packet. A class that represents the most current portion of the statistics for mpls vrf egress packets in a 1 hour sampling interval.  This class updates every 15 minutes."
+                    ]
+                },
+                "l3:EgrPktsPart1mo": {
+                    "comment": [
+                         "Egress packet. A class that represents the most current portion of the statistics for mpls vrf egress packets in a 1 month sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrPktsPart1qtr": {
+                    "comment": [
+                         "Egress packet. A class that represents the most current portion of the statistics for mpls vrf egress packets in a 1 quarter sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrPktsPart1w": {
+                    "comment": [
+                         "Egress packet. A class that represents the most current portion of the statistics for mpls vrf egress packets in a 1 week sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrPktsPart1year": {
+                    "comment": [
+                         "Egress packet. A class that represents the most current portion of the statistics for mpls vrf egress packets in a 1 year sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrPktsPart5min": {
+                    "comment": [
+                         "Egress packet. A class that represents the most current portion of the statistics for mpls vrf egress packets in a 5 minute sampling interval.  This class updates every 10 seconds."
+                    ]
+                },
+                "l3:EgrPktsPartHist15min": {
+                    "comment": [
+                         "Egress packet. A class that represents historical portion of the statistics for mpls vrf egress packets in a 15 minute sampling interval.  This class updates every 5 minutes."
+                    ]
+                },
+                "l3:EgrPktsPartHist1d": {
+                    "comment": [
+                         "Egress packet. A class that represents historical portion of the statistics for mpls vrf egress packets in a 1 day sampling interval.  This class updates every hour."
+                    ]
+                },
+                "l3:EgrPktsPartHist1h": {
+                    "comment": [
+                         "Egress packet. A class that represents historical portion of the statistics for mpls vrf egress packets in a 1 hour sampling interval.  This class updates every 15 minutes."
+                    ]
+                },
+                "l3:EgrPktsPartHist1mo": {
+                    "comment": [
+                         "Egress packet. A class that represents historical portion of the statistics for mpls vrf egress packets in a 1 month sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrPktsPartHist1qtr": {
+                    "comment": [
+                         "Egress packet. A class that represents historical portion of the statistics for mpls vrf egress packets in a 1 quarter sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrPktsPartHist1w": {
+                    "comment": [
+                         "Egress packet. A class that represents historical portion of the statistics for mpls vrf egress packets in a 1 week sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrPktsPartHist1year": {
+                    "comment": [
+                         "Egress packet. A class that represents historical portion of the statistics for mpls vrf egress packets in a 1 year sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:EgrPktsPartHist5min": {
+                    "comment": [
+                         "Egress packet. A class that represents historical portion of the statistics for mpls vrf egress packets in a 5 minute sampling interval.  This class updates every 10 seconds."
+                    ]
+                },
+                "l3:IngrBytesAg15min": {
+                    "comment": [
+                         "Ingress bytes. A class that represents the most current aggregated statistics for mpls vrf ingress bytes in a 15 minute sampling interval.  This class updates every 5 minutes."
+                    ]
+                },
+                "l3:IngrBytesAg1d": {
+                    "comment": [
+                         "Ingress bytes. A class that represents the most current aggregated statistics for mpls vrf ingress bytes in a 1 day sampling interval.  This class updates every hour."
+                    ]
+                },
+                "l3:IngrBytesAg1h": {
+                    "comment": [
+                         "Ingress bytes. A class that represents the most current aggregated statistics for mpls vrf ingress bytes in a 1 hour sampling interval.  This class updates every 15 minutes."
+                    ]
+                },
+                "l3:IngrBytesAg1mo": {
+                    "comment": [
+                         "Ingress bytes. A class that represents the most current aggregated statistics for mpls vrf ingress bytes in a 1 month sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrBytesAg1qtr": {
+                    "comment": [
+                         "Ingress bytes. A class that represents the most current aggregated statistics for mpls vrf ingress bytes in a 1 quarter sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrBytesAg1w": {
+                    "comment": [
+                         "Ingress bytes. A class that represents the most current aggregated statistics for mpls vrf ingress bytes in a 1 week sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrBytesAg1year": {
+                    "comment": [
+                         "Ingress bytes. A class that represents the most current aggregated statistics for mpls vrf ingress bytes in a 1 year sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrBytesAgHist15min": {
+                    "comment": [
+                         "Ingress bytes. A class that represents historical aggregated statistics for mpls vrf ingress bytes in a 15 minute sampling interval.  This class updates every 5 minutes."
+                    ]
+                },
+                "l3:IngrBytesAgHist1d": {
+                    "comment": [
+                         "Ingress bytes. A class that represents historical aggregated statistics for mpls vrf ingress bytes in a 1 day sampling interval.  This class updates every hour."
+                    ]
+                },
+                "l3:IngrBytesAgHist1h": {
+                    "comment": [
+                         "Ingress bytes. A class that represents historical aggregated statistics for mpls vrf ingress bytes in a 1 hour sampling interval.  This class updates every 15 minutes."
+                    ]
+                },
+                "l3:IngrBytesAgHist1mo": {
+                    "comment": [
+                         "Ingress bytes. A class that represents historical aggregated statistics for mpls vrf ingress bytes in a 1 month sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrBytesAgHist1qtr": {
+                    "comment": [
+                         "Ingress bytes. A class that represents historical aggregated statistics for mpls vrf ingress bytes in a 1 quarter sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrBytesAgHist1w": {
+                    "comment": [
+                         "Ingress bytes. A class that represents historical aggregated statistics for mpls vrf ingress bytes in a 1 week sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrBytesAgHist1year": {
+                    "comment": [
+                         "Ingress bytes. A class that represents historical aggregated statistics for mpls vrf ingress bytes in a 1 year sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrBytesPart15min": {
+                    "comment": [
+                         "Ingress bytes. A class that represents the most current portion of the statistics for mpls vrf ingress bytes in a 15 minute sampling interval.  This class updates every 5 minutes."
+                    ]
+                },
+                "l3:IngrBytesPart1d": {
+                    "comment": [
+                         "Ingress bytes. A class that represents the most current portion of the statistics for mpls vrf ingress bytes in a 1 day sampling interval.  This class updates every hour."
+                    ]
+                },
+                "l3:IngrBytesPart1h": {
+                    "comment": [
+                         "Ingress bytes. A class that represents the most current portion of the statistics for mpls vrf ingress bytes in a 1 hour sampling interval.  This class updates every 15 minutes."
+                    ]
+                },
+                "l3:IngrBytesPart1mo": {
+                    "comment": [
+                         "Ingress bytes. A class that represents the most current portion of the statistics for mpls vrf ingress bytes in a 1 month sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrBytesPart1qtr": {
+                    "comment": [
+                         "Ingress bytes. A class that represents the most current portion of the statistics for mpls vrf ingress bytes in a 1 quarter sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrBytesPart1w": {
+                    "comment": [
+                         "Ingress bytes. A class that represents the most current portion of the statistics for mpls vrf ingress bytes in a 1 week sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrBytesPart1year": {
+                    "comment": [
+                         "Ingress bytes. A class that represents the most current portion of the statistics for mpls vrf ingress bytes in a 1 year sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrBytesPart5min": {
+                    "comment": [
+                         "Ingress bytes. A class that represents the most current portion of the statistics for mpls vrf ingress bytes in a 5 minute sampling interval.  This class updates every 10 seconds."
+                    ]
+                },
+                "l3:IngrBytesPartHist15min": {
+                    "comment": [
+                         "Ingress bytes. A class that represents historical portion of the statistics for mpls vrf ingress bytes in a 15 minute sampling interval.  This class updates every 5 minutes."
+                    ]
+                },
+                "l3:IngrBytesPartHist1d": {
+                    "comment": [
+                         "Ingress bytes. A class that represents historical portion of the statistics for mpls vrf ingress bytes in a 1 day sampling interval.  This class updates every hour."
+                    ]
+                },
+                "l3:IngrBytesPartHist1h": {
+                    "comment": [
+                         "Ingress bytes. A class that represents historical portion of the statistics for mpls vrf ingress bytes in a 1 hour sampling interval.  This class updates every 15 minutes."
+                    ]
+                },
+                "l3:IngrBytesPartHist1mo": {
+                    "comment": [
+                         "Ingress bytes. A class that represents historical portion of the statistics for mpls vrf ingress bytes in a 1 month sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrBytesPartHist1qtr": {
+                    "comment": [
+                         "Ingress bytes. A class that represents historical portion of the statistics for mpls vrf ingress bytes in a 1 quarter sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrBytesPartHist1w": {
+                    "comment": [
+                         "Ingress bytes. A class that represents historical portion of the statistics for mpls vrf ingress bytes in a 1 week sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrBytesPartHist1year": {
+                    "comment": [
+                         "Ingress bytes. A class that represents historical portion of the statistics for mpls vrf ingress bytes in a 1 year sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrBytesPartHist5min": {
+                    "comment": [
+                         "Ingress bytes. A class that represents historical portion of the statistics for mpls vrf ingress bytes in a 5 minute sampling interval.  This class updates every 10 seconds."
+                    ]
+                },
+                "l3:IngrPktsAg15min": {
+                    "comment": [
+                         "Ingress packet. A class that represents the most current aggregated statistics for mpls vrf ingress packets in a 15 minute sampling interval.  This class updates every 5 minutes."
+                    ]
+                },
+                "l3:IngrPktsAg1d": {
+                    "comment": [
+                         "Ingress packet. A class that represents the most current aggregated statistics for mpls vrf ingress packets in a 1 day sampling interval.  This class updates every hour."
+                    ]
+                },
+                "l3:IngrPktsAg1h": {
+                    "comment": [
+                         "Ingress packet. A class that represents the most current aggregated statistics for mpls vrf ingress packets in a 1 hour sampling interval.  This class updates every 15 minutes."
+                    ]
+                },
+                "l3:IngrPktsAg1mo": {
+                    "comment": [
+                         "Ingress packet. A class that represents the most current aggregated statistics for mpls vrf ingress packets in a 1 month sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrPktsAg1qtr": {
+                    "comment": [
+                         "Ingress packet. A class that represents the most current aggregated statistics for mpls vrf ingress packets in a 1 quarter sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrPktsAg1w": {
+                    "comment": [
+                         "Ingress packet. A class that represents the most current aggregated statistics for mpls vrf ingress packets in a 1 week sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrPktsAg1year": {
+                    "comment": [
+                         "Ingress packet. A class that represents the most current aggregated statistics for mpls vrf ingress packets in a 1 year sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrPktsAgHist15min": {
+                    "comment": [
+                         "Ingress packet. A class that represents historical aggregated statistics for mpls vrf ingress packets in a 15 minute sampling interval.  This class updates every 5 minutes."
+                    ]
+                },
+                "l3:IngrPktsAgHist1d": {
+                    "comment": [
+                         "Ingress packet. A class that represents historical aggregated statistics for mpls vrf ingress packets in a 1 day sampling interval.  This class updates every hour."
+                    ]
+                },
+                "l3:IngrPktsAgHist1h": {
+                    "comment": [
+                         "Ingress packet. A class that represents historical aggregated statistics for mpls vrf ingress packets in a 1 hour sampling interval.  This class updates every 15 minutes."
+                    ]
+                },
+                "l3:IngrPktsAgHist1mo": {
+                    "comment": [
+                         "Ingress packet. A class that represents historical aggregated statistics for mpls vrf ingress packets in a 1 month sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrPktsAgHist1qtr": {
+                    "comment": [
+                         "Ingress packet. A class that represents historical aggregated statistics for mpls vrf ingress packets in a 1 quarter sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrPktsAgHist1w": {
+                    "comment": [
+                         "Ingress packet. A class that represents historical aggregated statistics for mpls vrf ingress packets in a 1 week sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrPktsAgHist1year": {
+                    "comment": [
+                         "Ingress packet. A class that represents historical aggregated statistics for mpls vrf ingress packets in a 1 year sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrPktsPart15min": {
+                    "comment": [
+                         "Ingress packet. A class that represents the most current portion of the statistics for mpls vrf ingress packets in a 15 minute sampling interval.  This class updates every 5 minutes."
+                    ]
+                },
+                "l3:IngrPktsPart1d": {
+                    "comment": [
+                         "Ingress packet. A class that represents the most current portion of the statistics for mpls vrf ingress packets in a 1 day sampling interval.  This class updates every hour."
+                    ]
+                },
+                "l3:IngrPktsPart1h": {
+                    "comment": [
+                         "Ingress packet. A class that represents the most current portion of the statistics for mpls vrf ingress packets in a 1 hour sampling interval.  This class updates every 15 minutes."
+                    ]
+                },
+                "l3:IngrPktsPart1mo": {
+                    "comment": [
+                         "Ingress packet. A class that represents the most current portion of the statistics for mpls vrf ingress packets in a 1 month sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrPktsPart1qtr": {
+                    "comment": [
+                         "Ingress packet. A class that represents the most current portion of the statistics for mpls vrf ingress packets in a 1 quarter sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrPktsPart1w": {
+                    "comment": [
+                         "Ingress packet. A class that represents the most current portion of the statistics for mpls vrf ingress packets in a 1 week sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrPktsPart1year": {
+                    "comment": [
+                         "Ingress packet. A class that represents the most current portion of the statistics for mpls vrf ingress packets in a 1 year sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrPktsPart5min": {
+                    "comment": [
+                         "Ingress packet. A class that represents the most current portion of the statistics for mpls vrf ingress packets in a 5 minute sampling interval.  This class updates every 10 seconds."
+                    ]
+                },
+                "l3:IngrPktsPartHist15min": {
+                    "comment": [
+                         "Ingress packet. A class that represents historical portion of the statistics for mpls vrf ingress packets in a 15 minute sampling interval.  This class updates every 5 minutes."
+                    ]
+                },
+                "l3:IngrPktsPartHist1d": {
+                    "comment": [
+                         "Ingress packet. A class that represents historical portion of the statistics for mpls vrf ingress packets in a 1 day sampling interval.  This class updates every hour."
+                    ]
+                },
+                "l3:IngrPktsPartHist1h": {
+                    "comment": [
+                         "Ingress packet. A class that represents historical portion of the statistics for mpls vrf ingress packets in a 1 hour sampling interval.  This class updates every 15 minutes."
+                    ]
+                },
+                "l3:IngrPktsPartHist1mo": {
+                    "comment": [
+                         "Ingress packet. A class that represents historical portion of the statistics for mpls vrf ingress packets in a 1 month sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrPktsPartHist1qtr": {
+                    "comment": [
+                         "Ingress packet. A class that represents historical portion of the statistics for mpls vrf ingress packets in a 1 quarter sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrPktsPartHist1w": {
+                    "comment": [
+                         "Ingress packet. A class that represents historical portion of the statistics for mpls vrf ingress packets in a 1 week sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrPktsPartHist1year": {
+                    "comment": [
+                         "Ingress packet. A class that represents historical portion of the statistics for mpls vrf ingress packets in a 1 year sampling interval.  This class updates every day."
+                    ]
+                },
+                "l3:IngrPktsPartHist5min": {
+                    "comment": [
+                         "Ingress packet. A class that represents historical portion of the statistics for mpls vrf ingress packets in a 5 minute sampling interval.  This class updates every 10 seconds."
+                    ]
+                }
+            },
+            "isAbstract": false,
+            "isConfigurable": false,
+            "isContextRoot": true,
+            "isDeprecated": false,
+            "isEncrypted": false,
+            "isExportable": false,
+            "isPersistent": true,
+            "isSubjectToQuota": false,
+            "isObservable": true,
+            "hasStats": true,
+            "isStat": false,
+            "isFaultable": true,
+            "isDomainable": false,
+            "isHealthScorable": true,
+            "shouldCollectHealthStats": false,
+            "healthCollectionSource": "faults",
+            "hasEventRules": false,
+            "abstractionLayer": "logical",
+            "apicNxProcessing": false,
+            "monitoringPolicySource": "Explicit",
+            "isCreatableDeletable": "always",
+            "platformFlavors": [
+
+            ],
+            "classId": "2008",
+            "className": "CtxDef",
+            "classPkg": "fv",
+            "featureTag": "",
+            "moCategory": "Regular",
+            "label": "Private Network",
+            "comment": [
+                "A private L3 network context belonging to a specific tenant. This is an internal representation of the context."
+            ],
+            "properties": {
+                "bdEnforcedEnable": {
+                    "comment": [
+                         "BD Enforced Flag"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "32657",
+                    "propLocalId": "7834",
+                    "label": "BD Enforcement Status",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "boolean",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "false", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "false",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "childAction": {
+                    "comment": [
+                         "Delete or ignore. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "4",
+                    "propLocalId": "5",
+                    "label": "childAction",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationChildAction",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "16384", "localName": "deleteAll",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteAll "},
+                         { "value": "8192", "localName": "deleteNonPresent",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteNonPresent "},
+                         { "value": "4096", "localName": "ignore",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ignore "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "ctxDn": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "1771",
+                    "propLocalId": "106",
+                    "label": "ctxDn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": false,
+                    "isNaming": true,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "descr": {
+                    "comment": [
+                         "Specifies a description of the policy definition root."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "5614",
+                    "propLocalId": "28",
+                    "label": "Description",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Descr",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": true,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 128,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9\\\\!#$%()*,-./:;@ _{|}~?&+]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "dn": {
+                    "comment": [
+                         "A tag or metadata is a non-hierarchical keyword or term assigned to the fabric module."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1",
+                    "propLocalId": "2",
+                    "label": "dn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "eppCount": {
+                    "isConfigurable": false,
+                    "propGlobalId": "44789",
+                    "propLocalId": "9883",
+                    "label": "Number of EpPs in this VRF deployed on the same leaf where this CtxDef is present",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "scalar:Uint32",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "esgEnabled": {
+                    "isConfigurable": false,
+                    "propGlobalId": "59543",
+                    "propLocalId": "13034",
+                    "label": "Indicates if the ESg feautre is enabled in the VRF",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "false", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "no",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "ipDataPlaneLearning": {
+                    "isConfigurable": true,
+                    "propGlobalId": "44631",
+                    "propLocalId": "9832",
+                    "label": "Data Plane Learning",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "fv:ipDataPlaneLearning",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "enabled", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1", "localName": "disabled",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Disabled "},
+                         { "value": "2", "localName": "enabled",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Enabled "}
+                    ],
+                    "default": "enabled",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "knwMcastAct": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "1769",
+                    "propLocalId": "913",
+                    "label": "Known Multicast Action",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "vz:BinaryAction",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "permit", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Default is permit"
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "deny",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "deny"
+                             ],
+                             "label": "Deny "},
+                         { "value": "1", "localName": "permit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Permit "}
+                    ],
+                    "default": "permit",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "lcOwn": {
+                    "comment": [
+                         "A value that indicates how this object was created. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "9",
+                    "propLocalId": "9",
+                    "label": "lcOwn",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "mo:Owner",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "local", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "4", "localName": "implicit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Implicit "},
+                         { "value": "0", "localName": "local",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Local "},
+                         { "value": "1", "localName": "policy",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Policy "},
+                         { "value": "2", "localName": "replica",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Replica "},
+                         { "value": "3", "localName": "resolveOnBehalf",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ResolvedOnBehalf "}
+                    ],
+                    "default": "local",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "missingContent": {
+                    "isConfigurable": false,
+                    "propGlobalId": "22705",
+                    "propLocalId": "5669",
+                    "label": "Missing Content because of Version Mismatch at the time of the push",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "false", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "no",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "modTs": {
+                    "comment": [
+                         "The time when this object was last modified."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "7",
+                    "propLocalId": "7",
+                    "label": "modTs",
+                    "baseType": "scalar:Date",
+                    "modelType": "mo:TStamp",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "never", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "never",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "never "}
+                    ],
+                    "default": "never",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "monPolDn": {
+                    "comment": [
+                         "The monitoring policy attached to this observable object."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "14296",
+                    "propLocalId": "228",
+                    "label": "Monitoring policy",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "name": {
+                    "comment": [
+                         "null"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "4991",
+                    "propLocalId": "13",
+                    "label": "Name",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Name",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": true,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 64,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9_.:-]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "nameAlias": {
+                    "isConfigurable": true,
+                    "propGlobalId": "28417",
+                    "propLocalId": "6719",
+                    "label": "Name alias",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:NameAlias",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 63,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9_.-]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "ownerKey": {
+                    "comment": [
+                         "The key for enabling clients to own their data for entity correlation."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "15230",
+                    "propLocalId": "4100",
+                    "label": "ownerKey",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Descr",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 128,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9\\\\!#$%()*,-./:;@ _{|}~?&+]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "ownerTag": {
+                    "comment": [
+                         "A tag for enabling clients to add their own data. For example, to indicate who created this object."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "15231",
+                    "propLocalId": "4101",
+                    "label": "ownerTag",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Descr",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 64,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9\\\\!#$%()*,-./:;@ _{|}~?&+]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "pcEnfDir": {
+                    "comment": [
+                         "Default value has to be egress in all non-userfacing model for reserving old behavior roght\n                after upgrade"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "23112",
+                    "propLocalId": "5378",
+                    "label": "Policy Enforcement Direction",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "l3ext:PcEnfDir",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": true,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "egress", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1", "localName": "egress",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Policy will be applied at the Egress Node"
+                             ],
+                             "label": "Egress "},
+                         { "value": "0", "localName": "ingress",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Policy Will be applied at the Ingress Node"
+                             ],
+                             "label": "Ingress "}
+                    ],
+                    "default": "egress",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "pcEnfDirUpdated": {
+                    "comment": [
+                         "Policy Enforcement Direction Post Upgrade Status"
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "23164",
+                    "propLocalId": "5379",
+                    "label": "Policy Enforcement Direction Post Upgrade Status",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "false", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "no",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "pcEnfPref": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "1770",
+                    "propLocalId": "914",
+                    "label": "Policy Control Enforcement",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "fv:PcEnfPref",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "enforced", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1", "localName": "enforced",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Enforce access control rules for this private network"
+                             ],
+                             "label": "Enforced "},
+                         { "value": "2", "localName": "unenforced",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Do not enforce access control rules for this private network"
+                             ],
+                             "label": "Unenforced "}
+                    ],
+                    "default": "enforced",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "pcTag": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1768",
+                    "propLocalId": "551",
+                    "label": "pcTag",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "vz:GPCTag",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "0", "localName": "any",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "any "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "rn": {
+                    "comment": [
+                         "Identifies an object from its siblings within the context of its parent object. The distinguished name contains a sequence of relative names."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "2",
+                    "propLocalId": "3",
+                    "label": "rn",
+                    "baseType": "reference:BinRN",
+                    "modelType": "reference:BinRN",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "scope": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1767",
+                    "propLocalId": "1",
+                    "label": "scope",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "fv:ScopeId",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "0", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "}
+                    ],
+                    "default": "0",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "seg": {
+                    "comment": [
+                         "A LAN domain segment."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1766",
+                    "propLocalId": "912",
+                    "label": "seg",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "fv:Seg",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "status": {
+                    "comment": [
+                         "The upgrade status. This property is for internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "3",
+                    "propLocalId": "4",
+                    "label": "status",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationStatus",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "created",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be created. An error is returned if the object already exists.  \nIn the return value of a setter method: indicates that an object has been created.  \n"
+                             ],
+                             "label": "created "},
+                         { "value": "8", "localName": "deleted",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be deleted.  \nIn the return value of a setter method: indicates that an object has been deleted.\n"
+                             ],
+                             "label": "deleted "},
+                         { "value": "4", "localName": "modified",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be modified  \nIn the return value of a setter method: indicates that an object has been modified.\n"
+                             ],
+                             "label": "modified "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "vrfFlag": {
+                    "isConfigurable": false,
+                    "propGlobalId": "56476",
+                    "propLocalId": "12802",
+                    "label": "Vrf Type",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "l3:CtxFlags",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": true,
+                    "likeProp": "l3:Ctx:vrfFlag",
+                    "validValues": [
+                         { "value": "unspecified", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1", "localName": "multidomainExtCtx",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Shadow VRF created for external domain "},
+                         { "value": "2", "localName": "multidomainIntCtx",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Shadow internal VRF created for external domain "},
+                         { "value": "3", "localName": "serviceIntCtx",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Shadow internal VRF created for Service L3out cases "},
+                         { "value": "0", "localName": "unspecified",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Unspecified "}
+                    ],
+                    "default": "unspecified",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "vrfId": {
+                    "comment": [
+                         "A shorter and unique id for every fvCtx.\n                     At the time of introduction, it is planned to be used only in cAPIC."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "61467",
+                    "propLocalId": "2196",
+                    "label": "VRF Id",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "fv:VrfId",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "0", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "}
+                    ],
+                    "default": "0",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "vrfIndex": {
+                    "isConfigurable": true,
+                    "propGlobalId": "62665",
+                    "propLocalId": "13689",
+                    "label": "VRF Index",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "fv:VrfIndex",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 1, "max": 0 }
+                    ],
+                    "validValues": [
+                         { "value": "0", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "}
+                    ],
+                    "default": 0,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                }
+            }
+        }
+}

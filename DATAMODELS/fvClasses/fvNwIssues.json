@@ -1,0 +1,2170 @@
+{
+        "fv:NwIssues": {
+            "contains": {
+                "fault:Counts": "",
+                "fault:Delegate": "",
+                "fault:Inst": "",
+                "health:Inst": ""
+            },
+            "rnMap": {
+                "fault-": "fault:Inst",
+                "fd-": "fault:Delegate",
+                "fltCnts": "fault:Counts",
+                "health": "health:Inst"
+            },
+            "identifiedBy": [
+
+            ],
+            "rnFormat": "nwissues",
+            "containedBy": {
+                "fv:AEPgCont": "",
+                "fv:AttEntityPathAtt": "",
+                "fv:BrEpP": "",
+                "fv:ConfigState": "",
+                "fv:DyPathAtt": "",
+                "fv:ESgEpP": "",
+                "fv:EpP": "",
+                "fv:ExtStPathAtt": "",
+                "fv:InBEpP": "",
+                "fv:Locale": "",
+                "fv:OoBEpP": "",
+                "fv:RsNodePortAtt": "",
+                "fv:RsStGrpAtt": "",
+                "fv:RsStPathAtt": "",
+                "fv:RtdEpP": "",
+                "fv:StPathAtt": "",
+                "fv:TnlEpP": "",
+                "l3ext:RtdOutDef": "",
+                "mgmt:InstPDef": "",
+                "vz:ToEPg": "",
+                "vz:ToEPgAny": ""
+            },
+            "superClasses": [
+                "fv:AEpPConfIssues",
+                "fv:AConfIssues",
+                "pol:AConfIssues",
+                "pol:Def",
+                "pol:Obj",
+                "naming:NamedObject"
+            ],
+            "subClasses": {
+
+            },
+            "relationFrom": {
+
+            },
+            "relationTo": {
+
+            },
+            "dnFormats": [
+                "uni/epp/sec-[{epgPKey}]/nwissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/nwissues",
+                "anydefcont/anydef-[{anyDn}]/to-[{epgDn}]/nwissues",
+                "uni/epp/oob-[{epgPKey}]/instp-{name}/nwissues",
+                "bdps-[{bdDn}]-isSvc-{isSvc}/epgDn-[{epgDn}]/nwissues",
+                "bd-[{bdDn}]-isSvc-{isSvc}/epgDn-[{epgDn}]/nwissues",
+                "bd-[{bdDn}]-isSvc-{isSvc}/outDn-[{outDn}]/epgDn-[{epgDn}]/nwissues",
+                "uni/bd-[{bdDn}]-isSvc-{isSvc}/outDn-[{outDn}]/epgDn-[{epgDn}]/nwissues",
+                "uni/ctx-[{ctxDn}]/epgDn-[{epgDn}]/nwissues",
+                "uni/bd-[{bdDn}]-isSvc-{isSvc}/epgDn-[{epgDn}]/nwissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/rsnodePortAtt-[{tDn}]/nwissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/rsnodePortAtt-[{tDn}]/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/rsnodePortAtt-[{tDn}]/nwissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/rsnodePortAtt-[{tDn}]/nwissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/rsnodePortAtt-[{tDn}]/nwissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/rsnodePortAtt-[{tDn}]/nwissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/rsnodePortAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/rsnodePortAtt-[{tDn}]/nwissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/rsnodePortAtt-[{tDn}]/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/rsnodePortAtt-[{tDn}]/nwissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/rsnodePortAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/rsnodePortAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/rsnodePortAtt-[{tDn}]/nwissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/nwissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/nwissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/nwissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/nwissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/nwissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/nwissues",
+                "uni/epp/node-{id}/nwissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/nwissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/nwissues",
+                "uni/epp/node-{id}/nwissues",
+                "uni/epp/node-{id}/nwissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/dyatt-[{targetDn}]/nwissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/nwissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/nwissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/nwissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/nwissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/nwissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/nwissues",
+                "uni/epp/node-{id}/dyatt-[{targetDn}]/nwissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/nwissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/nwissues",
+                "uni/epp/node-{id}/dyatt-[{targetDn}]/nwissues",
+                "uni/epp/node-{id}/dyatt-[{targetDn}]/nwissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/nwissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/nwissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/nwissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/nwissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/nwissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/nwissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/nwissues",
+                "uni/epp/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/nwissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/nwissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/nwissues",
+                "uni/epp/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/nwissues",
+                "uni/epp/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/nwissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/stpathatt-[{pathName}]/nwissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/nwissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/nwissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/nwissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/nwissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/nwissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/nwissues",
+                "uni/epp/node-{id}/stpathatt-[{pathName}]/nwissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/nwissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/nwissues",
+                "uni/epp/node-{id}/stpathatt-[{pathName}]/nwissues",
+                "uni/epp/node-{id}/stpathatt-[{pathName}]/nwissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/attEntitypathatt-[{pathName}]/nwissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/nwissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/nwissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/nwissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/nwissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/nwissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/nwissues",
+                "uni/epp/node-{id}/attEntitypathatt-[{pathName}]/nwissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/nwissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/nwissues",
+                "uni/epp/node-{id}/attEntitypathatt-[{pathName}]/nwissues",
+                "uni/epp/node-{id}/attEntitypathatt-[{pathName}]/nwissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/nwissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/nwissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/nwissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/rsstGrpAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/rsstGrpAtt-[{tDn}]/nwissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/nwissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/nwissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/nwissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/nwissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/node-{id}/rsstPathAtt-[{tDn}]/nwissues",
+                "uni/epp/inb-[{epgPKey}]/nwissues",
+                "uni/epp/oob-[{epgPKey}]/nwissues",
+                "uni/epp/fv-[{epgPKey}]/nwissues",
+                "uni/epp/rtd-[{epgPKey}]/nwissues",
+                "uni/epp/br-[{epgPKey}]/nwissues",
+                "anydefcont/anygroupdef-[{anyDn}]/fr-[{epgDefDn}]/to-[{epgDefDn}]/nwissues",
+                "cdef-[{collDn}]/epgCont-[{epgDn}]/fr-[{epgDefDn}]/to-[{epgDefDn}]/nwissues"
+            ],
+            "writeAccess": [
+
+            ],
+            "readAccess": [
+                "admin"
+            ],
+            "faults": {
+                "F0467": "fltFvNwIssuesConfig-failed"
+            },
+            "events": {
+
+            },
+            "stats": {
+
+            },
+            "isAbstract": false,
+            "isConfigurable": false,
+            "isContextRoot": false,
+            "isDeprecated": false,
+            "isEncrypted": false,
+            "isExportable": false,
+            "isPersistent": true,
+            "isSubjectToQuota": false,
+            "isObservable": true,
+            "hasStats": false,
+            "isStat": false,
+            "isFaultable": true,
+            "isDomainable": false,
+            "isHealthScorable": true,
+            "shouldCollectHealthStats": false,
+            "healthCollectionSource": "faults",
+            "hasEventRules": false,
+            "abstractionLayer": "logical",
+            "apicNxProcessing": false,
+            "monitoringPolicySource": "Parent",
+            "isCreatableDeletable": "never",
+            "platformFlavors": [
+
+            ],
+            "classId": "2113",
+            "className": "NwIssues",
+            "classPkg": "fv",
+            "featureTag": "",
+            "moCategory": "Regular",
+            "label": "Network Configuration Issues",
+            "comment": [
+                "The network configuration issues for each endpoint profile."
+            ],
+            "properties": {
+                "childAction": {
+                    "comment": [
+                         "Delete or ignore. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "4",
+                    "propLocalId": "5",
+                    "label": "childAction",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationChildAction",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "16384", "localName": "deleteAll",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteAll "},
+                         { "value": "8192", "localName": "deleteNonPresent",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteNonPresent "},
+                         { "value": "4096", "localName": "ignore",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ignore "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "configQual": {
+                    "comment": [
+                         "The network configuration quality issues."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1832",
+                    "propLocalId": "461",
+                    "label": "configQual",
+                    "baseType": "scalar:Bitmask64",
+                    "modelType": "fv:NwIssues",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "0x400000000000000", "localName": "Cdp-tunneling-with-cdp-enabled-interface",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "This fault is raised when you enable CDP on a Tunnel Interface, on which CDP tunneling mask is already enabled"
+                             ],
+                             "label": "CDP on tunnel interface is not allowed when protocol mask is set to CDP "},
+                         { "value": "0x400000000000", "localName": "IP-EPG-not-applicable-to-L2-only-BD",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "IP based EPG is not applicable to L2 only BD."
+                             ],
+                             "label": "IP based EPG not applicable to L2 only BD. "},
+                         { "value": "0x800000000000000", "localName": "Lldp-tunneling-with-lldp-enabled-interface",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "This fault is raised when you enable LLDP on a Tunnel Interface, on which LLDP tunneling mask is already enabled"
+                             ],
+                             "label": "LLDP on tunnel interface is not allowed when protocol mask is set to LLDP "},
+                         { "value": "0x800000000000", "localName": "Qos-Policy-not-supported-for-IP-EPG",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Custom QoS Policy not supported for IP based EPG."
+                             ],
+                             "label": "QoS Policy not supported for IP based EPG. "},
+                         { "value": "0x80000000000000", "localName": "Tnlport-with-regularEPGs",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Port mode change to tunnel not allowed if regular EPGs exist on the port."
+                             ],
+                             "label": "Regular EPgs,l2Outs,L3outs cannot be deployed on the edge ports. "},
+                         { "value": "1", "localName": "bd-not-present",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "BD Validations\n                     BD is not present on the node. Following issues are possible:\n                     1. This could be a temporary issue as the BD could be in the process of getting pushed to the node.\n                     2. If the EPg is associated with a default BD then check the Connectivity Instrumentation Policy."
+                             ],
+                             "label": "BD Not Present "},
+                         { "value": "0x1000000000", "localName": "bgp-peer-profile-conflict",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Same BGP Peer Profile for Context(VRF) is Deployed on the Node from Different L3 Outsides."
+                             ],
+                             "label": "Same BGP Peer Profile for Context(VRF) is Deployed on the Node from Different L3 Outsides "},
+                         { "value": "0x4000000000000000", "localName": "bgpProt-policy-already-existing",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "A specific leaf node can hold only a single bgpProtP config, this fault is raised when inconsistent configuration is detected"
+                             ],
+                             "label": "A specific leaf node can hold only a single bgpProtP config; this fault is raised when inconsistent configuration is detected "},
+                         { "value": "2", "localName": "context-not-present",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Context Validations\n                     VRF is not present on the node. Following issues are possible:\n                     1. This could be a temporary issue as the VRF could be in the process of getting pushed to the node.\n                     2. If the EPg is associated with a default VRF then check the Connectivity Instrumentation Policy."
+                             ],
+                             "label": "VRF Not Present "},
+                         { "value": "0x8000000000000", "localName": "dampening-policy-conflict",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Different Dampening Policies are Defined for Context(VRF) Deployed on the Node from Different L3 Outsides."
+                             ],
+                             "label": "Different Dampening Policies are Defined for Context(VRF) Deployed on the Node from Different L3 Outsides. "},
+                         { "value": "0x100000000000", "localName": "def-rtleak-criteria-conflict",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Different Default Route Leak Criterias for Context(VRF) Deployed on the Node from Different L3 Outsides."
+                             ],
+                             "label": "Different Default Route Leak Criterias for Context(VRF) Deployed on the Node from Different L3 Outsides "},
+                         { "value": "0x10000000000", "localName": "default-rt-leak-scope-conflict",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "For Given Context(VRF) on the same Node, All L3 Outsides  must have same Scope for Default Route Leak Policy."
+                             ],
+                             "label": "L3 Outsides have Different Scopes for Default Route Leak Policies on the same Node "},
+                         { "value": "0", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0x100000000", "localName": "dest-is-member-of-pc-or-vpc",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "SPAN validations"
+                             ],
+                             "label": "SPAN Destination Cannot be PC or VPC Member "},
+                         { "value": "0x8000000", "localName": "dhcp-provider-is-not-reachable",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "DHCP provider is not present in associated EPG/BD subnet"
+                             ],
+                             "label": "DHCP Provider Not Present in Associated EPG/BD Subnet "},
+                         { "value": "0x200000000000", "localName": "dns-not-supported-on-spine-inb",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "DNS on inb epg is not supported on spine."
+                             ],
+                             "label": "Inband DNS resolution not supported on spines. "},
+                         { "value": "0x800000000", "localName": "duplicate-encap",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "duplicate encap present on node.\n                     @@@ This issue is raised only as a temporary failure in situations where\n                     @@@ the old consumer of the encap has not been cleaned up yet, either due to\n                     @@@ a bug or due to congestion on the node."
+                             ],
+                             "label": "Encap Is Already In Use. "},
+                         { "value": "0x80000000000", "localName": "eigrp-multiple-out-conflict",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "For a given context(VRF) on the same Node, EIGRP cannot be enabled on more than one L3 Outside."
+                             ],
+                             "label": "EIGRP cannot be deployed on the same node and same context from multiple L3 Outsides "},
+                         { "value": "4194304", "localName": "encap-already-in-use",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Encap validation\n                     On a node, an encap (VLAN or VXLAN) can be used by only 1 EPg or BD at a time."
+                             ],
+                             "label": "Encap Already Used in Another EPG "},
+                         { "value": "0x10000000000000", "localName": "encap-mode-mismatch",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Different encap modes are not allowed for an encap on a given interface"
+                             ],
+                             "label": "Different encap modes are not allowed for an encap on a given interface. "},
+                         { "value": "0x2000000000000000", "localName": "encap-port-mode-mismatch",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Port mode should be set to double encap port mode to deploy epgs with double encap"
+                             ],
+                             "label": "Qinq Double Encaps can be deployed only on the trunk double encap ports and regular encaps cannot be deployed on such ports "},
+                         { "value": "0x8000000000000000", "localName": "epg-bd-mode-mismatch",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Legacy BD will not supported for the EPgs having double encap Statis ports"
+                             ],
+                             "label": "A regular EPg with double encap(qinq) path caanot be supported under Legacy BD.These type of paths will be supported by the EPgswhen they are under Regular BDs "},
+                         { "value": "0x200000000", "localName": "filter-entry-protocol-not-supported",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Filter validations"
+                             ],
+                             "label": "Filter Entry Unsupported Protocol Value "},
+                         { "value": "262144", "localName": "inconsistent-ibgp-peer-as-number",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "BGP Peer AS validations"
+                             ],
+                             "label": "Inconsistent iBGP Peer AS number provided "},
+                         { "value": "4", "localName": "insufficient-resources",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "overall there are not enough resources"
+                             ],
+                             "label": "Insufficient Resources "},
+                         { "value": "0x2000000000000", "localName": "interleak-policy-conflict",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Different Interleak Policies are Defined for Context(VRF) Deployed on the Node from Different L3 Outsides."
+                             ],
+                             "label": "Different Interleak Policies are Defined for Context(VRF) Deployed on the Node from Different L3 Outsides. "},
+                         { "value": "524288", "localName": "invalid-bgp-peer-address",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "BGP Peer Address validations"
+                             ],
+                             "label": "BGP Peer Address Cannot Be Same as Router ID "},
+                         { "value": "0x400000000", "localName": "invalid-contract-config",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "contract rule error"
+                             ],
+                             "label": "Invalid Contract Configuration "},
+                         { "value": "0x20000000", "localName": "invalid-ep-selection",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Invalid EP selection"
+                             ],
+                             "label": "Spine Cannot Be Selected For this EP "},
+                         { "value": "1048576", "localName": "invalid-exception-mask-for-subnet",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Route Control - L3 External Subnet/Exception validation"
+                             ],
+                             "label": "Exception Subnet Mask Must Be More Specific than Subnet Mask "},
+                         { "value": "64", "localName": "invalid-path",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Path is not available\n                     Following issues are possible:\n                     1. The path (i.e. port/port-channel/Attachable-Profile/Loose-Node) getting referred does not exist on the node.\n                     2. The domain associated with the EPg is not allowed to use the specified path. Check the Attachable Profile\n                        configuration associated with the domain.\n                     3. The path (i.e. port/port-channel/Attachable-Profile/Loose-Node) is deployed on FEX and is part of l2Out/l3Out.\n                        l2Out and l3Out are NOT supported on FEX\n                     4. L3Dom associated with the L3Out does not exist. Configure a valid L3 Domain and associate it with the L3Out."
+                             ],
+                             "label": "Invalid Path Configuration "},
+                         { "value": "33554432", "localName": "invalid-vlan",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Invalid VLAN Configuration\n                     The domain associated with the EPg is not allowed to use the specified encap. Check the Attachable Profile,\n                     and VLAN/VXLAN Namespace (fvns:VlanInstP and fvns:VxlanInstP) configurations associated with the domain."
+                             ],
+                             "label": "Invalid VLAN Configuration "},
+                         { "value": "0x10000000", "localName": "ip-address-already-in-use",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "IP-Address already in use"
+                             ],
+                             "label": "IP Address Already in Use "},
+                         { "value": "32768", "localName": "ip-address-not-present",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "IP-Address Validations"
+                             ],
+                             "label": "IP Address Not Present "},
+                         { "value": "0x200000000000000", "localName": "ipattr-already-in-use",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "IpAttr validation. an IpAttr can be used by only 1 EPg in a given l2BD"
+                             ],
+                             "label": "IP attribute already Used by another EPG "},
+                         { "value": "0x40000000000", "localName": "l3out-config-conflict",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "For a given port, catch and report conflicting properties coming from different l3outs"
+                             ],
+                             "label": "Operational interface parameters cannot be different (e.g. MTU, MAC, SVI Autostate, qos Priority, qos Custom Policy) from different deployments under a context "},
+                         { "value": "0x80000000", "localName": "l3port-and-sub-interface-on-path",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "L3 Port and Sub-Interface are not allowed on the same path\n                     Under a Layer3 Outside, a pure layer3 port and sub-interface configurations are not allowed on the same port."
+                             ],
+                             "label": "L3 Port and Sub-Interface Not Allowed on Same Path "},
+                         { "value": "131072", "localName": "missing-dhcp-lbl-for-infra",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "DHCP validations"
+                             ],
+                             "label": "Infra DHCP relay profile is missing corresponding DHCP label "},
+                         { "value": "65536", "localName": "multiple-ctx-configuration",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Conflicting VRF validations\n                     A Layer-3 interface (which could be a pure-layer3 interface or a sub-interface) can belong to only 1 Ctx (fvCtx aka VRF)\n                     at a time.\n                     For pure-layer3 interface: Please check the Layer3 Outside configuration and make sure that for a given node same path (port/port-channel)\n                     is not part of multiple Layer3 Outsides associated to different fvCtxs.\n                     For sub-interface: Please check the Layer3 Outside configuration and make sure that for a given node the same encap is not part of multiple\n                     Layer3 Outsides associated to different fvCtxs."
+                             ],
+                             "label": "Multiple VRF configuration provided for an encap or path "},
+                         { "value": "16384", "localName": "multiple-external-encap",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "External Encap Validations\n                     A Bridge Domain (fv:BD) can be extended outside the fabric using only one external encap per node.\n                     Check the Layer 2 Outside configuration."
+                             ],
+                             "label": "Only One External Encap Allowed on Bridge Domain "},
+                         { "value": "0x4000000", "localName": "multiple-mgmt-epg",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Multiple managment EPgs configured"
+                             ],
+                             "label": "Multiple Management EPGs Configured For Node "},
+                         { "value": "8388608", "localName": "multiple-outsides-from-context-configured-for-the-same-node",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Multiple Outsides from the Same Context Configured for the Same Node\n                     Please check the Layer3 Outside configurations. Fault Deprecated - It's valid now."
+                             ],
+                             "label": "Multiple External Networks From Same Context Configured For Same Node - Deprecated "},
+                         { "value": "8192", "localName": "native-or-untagged-encap-failure",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Native/Untagged Vlan Validation\n                     You are trying to configure two different encaps as native or untagged on the path (i.e. port/port-channel).\n                     Check the \"mode\" type set on the relations between the EPg and the fabric:Path."
+                             ],
+                             "label": "Only One Native or Untagged Encap Allowed on Interface "},
+                         { "value": "0", "localName": "not-applicable",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "N/A "},
+                         { "value": "0x1000000000000", "localName": "not-supported-with-egress-policy-enforcement-mode",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Not Supprted with VRF's \"egress\" policy enforcement mode"
+                             ],
+                             "label": "Not supported with VRFs Egress Policy Enforcement Mode "},
+                         { "value": "0x4000000000", "localName": "ospf-area-id-conflict",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Same OSPF Area for Context(VRF) Deployed on the Node from Different L3 Outsides."
+                             ],
+                             "label": "Same OSPF Area for Context(VRF) Deployed on the Node from Different Outsides "},
+                         { "value": "0x8000000000", "localName": "ospf-role-conflict",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "For Given Context(VRF) OSPF cannot be supporting protocol for BGP for one L3 Outside and Main protocol for some other L3 Outside on the same Node."
+                             ],
+                             "label": "OSPF cannot be supporting protocol for BGP in one L3 Outside and Main protocol for another on same node for given Context(VRF) "},
+                         { "value": "16777216", "localName": "path-is-out-of-service",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Path is Out of Service\n                     The path (port/port-channel) getting referred is marked Out-of-Service.\n                     Check the Out Of Service Policy (fabric:OOServicePol)"
+                             ],
+                             "label": "Path Out of Service "},
+                         { "value": "0x40000000", "localName": "path-wiring-issues",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Path has wiring issues\n                     The path (port/port-channel) getting referred has wiring-issues, which means the link is not\n                     connected to a supported peer."
+                             ],
+                             "label": "Path Wiring Issues "},
+                         { "value": "4096", "localName": "port-channel-capacity",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Not enough port-channels available\n                     Check the total number of Access Bundle Groups (i.e. infra:AccBndlGrp) deployed on the node.\n                     The total number of port-channles created by the Access Bundle Groups should not exceed\n                     the total number of port-channels supported by the node."
+                             ],
+                             "label": "Insufficient Port Channels Available "},
+                         { "value": "512", "localName": "port-configured-as-l2",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Port is configured as l2\n                     The path (i.e. port/port-channel) is currently getting used by some configurations (example L2 Outside, Application EPg)\n                     which need the port to be configured as a Layer-2 port."
+                             ],
+                             "label": "Interface Configured as L2 "},
+                         { "value": "256", "localName": "port-configured-as-l3",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Path is configured as l3\n                     The path (i.e. port/port-channel) is currently getting used by some configurations (example L3 Outside)\n                     which need the port to be configured as a Layer-3 port."
+                             ],
+                             "label": "Interface Configured as L3 "},
+                         { "value": "2048", "localName": "port-configured-for-apic",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Port is configured for apic\n                     The path (i.e. port/port-channel) is currently getting used for APIC connection, hence\n                     no configurations are allowed on it which may bring down the connectivity with APIC"
+                             ],
+                             "label": "Port Connected to Controller "},
+                         { "value": "0x100000000000000", "localName": "port-configured-for-breakout",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Port configured for breakout"
+                             ],
+                             "label": "Interface Configured For Breakout "},
+                         { "value": "1024", "localName": "port-configured-for-fex",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Port is configured as fex-fabric\n                     The path (i.e. port/port-channel) is currently getting used for attaching a FEX.\n                     Please check the Fex Profile (infra:FexP) and the port-selectors (infra:HPortS) associated to it."
+                             ],
+                             "label": "Interface Configured For FEX "},
+                         { "value": "128", "localName": "port-part-of-port-channel",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Path is not available\n                     The configuration is directly referring to a port which is part of a port-channel. Such configurations\n                     may affect the behavior of the port-channel and hence are not allowed.\n                     Configuration should refer to the Access-Bundle-Group (infra:AccBndlGrp) directly."
+                             ],
+                             "label": "Port is Member of Port Channel "},
+                         { "value": "2097152", "localName": "prefix-entry-already-in-use",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Prefix Entry validation\n                     Under a Ctx (fvCtx aka VRF), a subnet can belong to only one external EPg at a time. Please check your external network instance profiles\n                     (l3ext:InstP) under the Layer3 Outside configurations."
+                             ],
+                             "label": "Prefix Entry Already Used in Another EPG "},
+                         { "value": "0x20000000000", "localName": "qinq-double-tag-port-with-l2outs-or-l3outs",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "L2outs and L3outs cannot support double encap(qinq)"
+                             ],
+                             "label": "L2Outs or L3Outs cannot be deployed on qinq double tag ports. "},
+                         { "value": "0x2000000000", "localName": "router-id-conflict",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Different Router IDs for Context(VRF) Deployed on the Node from Different L3 Outsides."
+                             ],
+                             "label": "Different Router IDs for Context(VRF) Deployed on the Node from Different L3 Outsides "},
+                         { "value": "0x4000000000000", "localName": "rtctrl-enforce-policy-conflict",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Different Route Control Enforcement Policies are Defined for Context(VRF) Deployed on the Node from Different L3 Outsides."
+                             ],
+                             "label": "Different Route Control Enforcement Policies are Defined for Context(VRF) Deployed on the Node from Different L3 Outsides. "},
+                         { "value": "0x1000000000000000", "localName": "tnlepg-accEncap-missing",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Vlan Encap should be set to tunnel before TnlEPG deployment."
+                             ],
+                             "label": "AccEncap should be set for TnlEPG deployment on Core Port. "},
+                         { "value": "0x40000000000000", "localName": "tnlepg-existing-on-port",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Only one TnlEPG can be set on a port."
+                             ],
+                             "label": "Only one Tunnel can be deployed on an edge port. "},
+                         { "value": "0x20000000000000", "localName": "tnlepg-port-mode-mismatch",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Port mode should be set to tunnel before TnlEPG deployment."
+                             ],
+                             "label": "Port mode should be set to tunnel for Tunnel deployment. "},
+                         { "value": "8", "localName": "vlan-capacity",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Not enough VLANs available\n                     Check the total number of EPgs and BDs deployed on the node.\n                     There total should not exceed the number of VLANs supported by the node"
+                             ],
+                             "label": "Insufficient VLANs Available "},
+                         { "value": "32", "localName": "vrf-capacity",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Not enough VRFs available\n                     Check the total number of Ctx(aka VRF) deployed on the node.\n                     The total should not exceed the number of VRF supported by the node."
+                             ],
+                             "label": "Insufficient VRFs Available "},
+                         { "value": "16", "localName": "vxlan-capacity",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Not enough VXLANs available\n                     Check the total number of EPgs, BDs, VRFs etc. confgigurations which use a VXLAN Id.\n                     There total should not exceed the number of VXLANs supported."
+                             ],
+                             "label": "Insufficient VXLANs Available "}
+                    ],
+                    "default": "not-applicable",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "configSt": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "4993",
+                    "propLocalId": "474",
+                    "label": "configSt",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "pol:ConfigSt",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "applied",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Configuration applied."
+                             ],
+                             "label": "applied "},
+                         { "value": "1", "localName": "applying",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Configuration is getting applied."
+                             ],
+                             "label": "applying "},
+                         { "value": "not-applied", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "3", "localName": "failed-to-apply",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Failed to apply configuration"
+                             ],
+                             "label": "failed-to-apply "},
+                         { "value": "0", "localName": "not-applied",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Configuration is not applied."
+                             ],
+                             "label": "not-applied "},
+                         { "value": "4", "localName": "temp-failed-to-apply",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Temporary failure. No faults are raised for this kind of failure."
+                             ],
+                             "label": "temp-failed-to-apply "}
+                    ],
+                    "default": "not-applied",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "debugMessage": {
+                    "comment": [
+                         "Debug messages for the issues"
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "34111",
+                    "propLocalId": "8076",
+                    "label": "debugMessage",
+                    "baseType": "string:Basic",
+                    "modelType": "string:Basic",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "descr": {
+                    "comment": [
+                         "Specifies a description of the policy definition."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "5579",
+                    "propLocalId": "28",
+                    "label": "Description",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Descr",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": true,
+                    "likeProp": "naming:Described:descr",
+                    "validators": [
+                         {"min" : 0, "max": 128,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9\\\\!#$%()*,-./:;@ _{|}~?&+]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "dn": {
+                    "comment": [
+                         "A tag or metadata is a non-hierarchical keyword or term assigned to the fabric module."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1",
+                    "propLocalId": "2",
+                    "label": "dn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "epgPKey": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1831",
+                    "propLocalId": "525",
+                    "label": "epgPKey",
+                    "baseType": "reference:BinRef",
+                    "modelType": "fv:PrimKey",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "lcOwn": {
+                    "comment": [
+                         "A value that indicates how this object was created. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "9",
+                    "propLocalId": "9",
+                    "label": "lcOwn",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "mo:Owner",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "local", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "4", "localName": "implicit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Implicit "},
+                         { "value": "0", "localName": "local",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Local "},
+                         { "value": "1", "localName": "policy",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Policy "},
+                         { "value": "2", "localName": "replica",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Replica "},
+                         { "value": "3", "localName": "resolveOnBehalf",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ResolvedOnBehalf "}
+                    ],
+                    "default": "local",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "modTs": {
+                    "comment": [
+                         "The time when this object was last modified."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "7",
+                    "propLocalId": "7",
+                    "label": "modTs",
+                    "baseType": "scalar:Date",
+                    "modelType": "mo:TStamp",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "never", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "never",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "never "}
+                    ],
+                    "default": "never",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "monPolDn": {
+                    "comment": [
+                         "The monitoring policy attached to this observable object."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "14318",
+                    "propLocalId": "228",
+                    "label": "Monitoring policy",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "name": {
+                    "comment": [
+                         "null"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "4991",
+                    "propLocalId": "13",
+                    "label": "Name",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Name",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": true,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 64,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9_.:-]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "nameAlias": {
+                    "isConfigurable": true,
+                    "propGlobalId": "28417",
+                    "propLocalId": "6719",
+                    "label": "Name alias",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:NameAlias",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 63,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9_.-]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "ownerKey": {
+                    "comment": [
+                         "The key for enabling clients to own their data for entity correlation."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "15230",
+                    "propLocalId": "4100",
+                    "label": "ownerKey",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Descr",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 128,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9\\\\!#$%()*,-./:;@ _{|}~?&+]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "ownerTag": {
+                    "comment": [
+                         "A tag for enabling clients to add their own data. For example, to indicate who created this object."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "15231",
+                    "propLocalId": "4101",
+                    "label": "ownerTag",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Descr",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 64,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9\\\\!#$%()*,-./:;@ _{|}~?&+]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "rn": {
+                    "comment": [
+                         "Identifies an object from its siblings within the context of its parent object. The distinguished name contains a sequence of relative names."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "2",
+                    "propLocalId": "3",
+                    "label": "rn",
+                    "baseType": "reference:BinRN",
+                    "modelType": "reference:BinRN",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "status": {
+                    "comment": [
+                         "The upgrade status. This property is for internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "3",
+                    "propLocalId": "4",
+                    "label": "status",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationStatus",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "created",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be created. An error is returned if the object already exists.  \nIn the return value of a setter method: indicates that an object has been created.  \n"
+                             ],
+                             "label": "created "},
+                         { "value": "8", "localName": "deleted",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be deleted.  \nIn the return value of a setter method: indicates that an object has been deleted.\n"
+                             ],
+                             "label": "deleted "},
+                         { "value": "4", "localName": "modified",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be modified  \nIn the return value of a setter method: indicates that an object has been modified.\n"
+                             ],
+                             "label": "modified "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "tempConfigQual": {
+                    "comment": [
+                         "An internal property for tracking temporary configuration qualifiers raised by the switch for policies pushed by APIC."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "16107",
+                    "propLocalId": "4256",
+                    "label": "tempConfigQual",
+                    "baseType": "scalar:Bitmask64",
+                    "modelType": "fv:NwIssues",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "0x400000000000000", "localName": "Cdp-tunneling-with-cdp-enabled-interface",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "This fault is raised when you enable CDP on a Tunnel Interface, on which CDP tunneling mask is already enabled"
+                             ],
+                             "label": "CDP on tunnel interface is not allowed when protocol mask is set to CDP "},
+                         { "value": "0x400000000000", "localName": "IP-EPG-not-applicable-to-L2-only-BD",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "IP based EPG is not applicable to L2 only BD."
+                             ],
+                             "label": "IP based EPG not applicable to L2 only BD. "},
+                         { "value": "0x800000000000000", "localName": "Lldp-tunneling-with-lldp-enabled-interface",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "This fault is raised when you enable LLDP on a Tunnel Interface, on which LLDP tunneling mask is already enabled"
+                             ],
+                             "label": "LLDP on tunnel interface is not allowed when protocol mask is set to LLDP "},
+                         { "value": "0x800000000000", "localName": "Qos-Policy-not-supported-for-IP-EPG",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Custom QoS Policy not supported for IP based EPG."
+                             ],
+                             "label": "QoS Policy not supported for IP based EPG. "},
+                         { "value": "0x80000000000000", "localName": "Tnlport-with-regularEPGs",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Port mode change to tunnel not allowed if regular EPGs exist on the port."
+                             ],
+                             "label": "Regular EPgs,l2Outs,L3outs cannot be deployed on the edge ports. "},
+                         { "value": "1", "localName": "bd-not-present",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "BD Validations\n                     BD is not present on the node. Following issues are possible:\n                     1. This could be a temporary issue as the BD could be in the process of getting pushed to the node.\n                     2. If the EPg is associated with a default BD then check the Connectivity Instrumentation Policy."
+                             ],
+                             "label": "BD Not Present "},
+                         { "value": "0x1000000000", "localName": "bgp-peer-profile-conflict",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Same BGP Peer Profile for Context(VRF) is Deployed on the Node from Different L3 Outsides."
+                             ],
+                             "label": "Same BGP Peer Profile for Context(VRF) is Deployed on the Node from Different L3 Outsides "},
+                         { "value": "0x4000000000000000", "localName": "bgpProt-policy-already-existing",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "A specific leaf node can hold only a single bgpProtP config, this fault is raised when inconsistent configuration is detected"
+                             ],
+                             "label": "A specific leaf node can hold only a single bgpProtP config; this fault is raised when inconsistent configuration is detected "},
+                         { "value": "2", "localName": "context-not-present",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Context Validations\n                     VRF is not present on the node. Following issues are possible:\n                     1. This could be a temporary issue as the VRF could be in the process of getting pushed to the node.\n                     2. If the EPg is associated with a default VRF then check the Connectivity Instrumentation Policy."
+                             ],
+                             "label": "VRF Not Present "},
+                         { "value": "0x8000000000000", "localName": "dampening-policy-conflict",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Different Dampening Policies are Defined for Context(VRF) Deployed on the Node from Different L3 Outsides."
+                             ],
+                             "label": "Different Dampening Policies are Defined for Context(VRF) Deployed on the Node from Different L3 Outsides. "},
+                         { "value": "0x100000000000", "localName": "def-rtleak-criteria-conflict",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Different Default Route Leak Criterias for Context(VRF) Deployed on the Node from Different L3 Outsides."
+                             ],
+                             "label": "Different Default Route Leak Criterias for Context(VRF) Deployed on the Node from Different L3 Outsides "},
+                         { "value": "0x10000000000", "localName": "default-rt-leak-scope-conflict",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "For Given Context(VRF) on the same Node, All L3 Outsides  must have same Scope for Default Route Leak Policy."
+                             ],
+                             "label": "L3 Outsides have Different Scopes for Default Route Leak Policies on the same Node "},
+                         { "value": "0", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0x100000000", "localName": "dest-is-member-of-pc-or-vpc",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "SPAN validations"
+                             ],
+                             "label": "SPAN Destination Cannot be PC or VPC Member "},
+                         { "value": "0x8000000", "localName": "dhcp-provider-is-not-reachable",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "DHCP provider is not present in associated EPG/BD subnet"
+                             ],
+                             "label": "DHCP Provider Not Present in Associated EPG/BD Subnet "},
+                         { "value": "0x200000000000", "localName": "dns-not-supported-on-spine-inb",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "DNS on inb epg is not supported on spine."
+                             ],
+                             "label": "Inband DNS resolution not supported on spines. "},
+                         { "value": "0x800000000", "localName": "duplicate-encap",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "duplicate encap present on node.\n                     @@@ This issue is raised only as a temporary failure in situations where\n                     @@@ the old consumer of the encap has not been cleaned up yet, either due to\n                     @@@ a bug or due to congestion on the node."
+                             ],
+                             "label": "Encap Is Already In Use. "},
+                         { "value": "0x80000000000", "localName": "eigrp-multiple-out-conflict",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "For a given context(VRF) on the same Node, EIGRP cannot be enabled on more than one L3 Outside."
+                             ],
+                             "label": "EIGRP cannot be deployed on the same node and same context from multiple L3 Outsides "},
+                         { "value": "4194304", "localName": "encap-already-in-use",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Encap validation\n                     On a node, an encap (VLAN or VXLAN) can be used by only 1 EPg or BD at a time."
+                             ],
+                             "label": "Encap Already Used in Another EPG "},
+                         { "value": "0x10000000000000", "localName": "encap-mode-mismatch",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Different encap modes are not allowed for an encap on a given interface"
+                             ],
+                             "label": "Different encap modes are not allowed for an encap on a given interface. "},
+                         { "value": "0x2000000000000000", "localName": "encap-port-mode-mismatch",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Port mode should be set to double encap port mode to deploy epgs with double encap"
+                             ],
+                             "label": "Qinq Double Encaps can be deployed only on the trunk double encap ports and regular encaps cannot be deployed on such ports "},
+                         { "value": "0x8000000000000000", "localName": "epg-bd-mode-mismatch",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Legacy BD will not supported for the EPgs having double encap Statis ports"
+                             ],
+                             "label": "A regular EPg with double encap(qinq) path caanot be supported under Legacy BD.These type of paths will be supported by the EPgswhen they are under Regular BDs "},
+                         { "value": "0x200000000", "localName": "filter-entry-protocol-not-supported",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Filter validations"
+                             ],
+                             "label": "Filter Entry Unsupported Protocol Value "},
+                         { "value": "262144", "localName": "inconsistent-ibgp-peer-as-number",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "BGP Peer AS validations"
+                             ],
+                             "label": "Inconsistent iBGP Peer AS number provided "},
+                         { "value": "4", "localName": "insufficient-resources",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "overall there are not enough resources"
+                             ],
+                             "label": "Insufficient Resources "},
+                         { "value": "0x2000000000000", "localName": "interleak-policy-conflict",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Different Interleak Policies are Defined for Context(VRF) Deployed on the Node from Different L3 Outsides."
+                             ],
+                             "label": "Different Interleak Policies are Defined for Context(VRF) Deployed on the Node from Different L3 Outsides. "},
+                         { "value": "524288", "localName": "invalid-bgp-peer-address",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "BGP Peer Address validations"
+                             ],
+                             "label": "BGP Peer Address Cannot Be Same as Router ID "},
+                         { "value": "0x400000000", "localName": "invalid-contract-config",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "contract rule error"
+                             ],
+                             "label": "Invalid Contract Configuration "},
+                         { "value": "0x20000000", "localName": "invalid-ep-selection",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Invalid EP selection"
+                             ],
+                             "label": "Spine Cannot Be Selected For this EP "},
+                         { "value": "1048576", "localName": "invalid-exception-mask-for-subnet",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Route Control - L3 External Subnet/Exception validation"
+                             ],
+                             "label": "Exception Subnet Mask Must Be More Specific than Subnet Mask "},
+                         { "value": "64", "localName": "invalid-path",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Path is not available\n                     Following issues are possible:\n                     1. The path (i.e. port/port-channel/Attachable-Profile/Loose-Node) getting referred does not exist on the node.\n                     2. The domain associated with the EPg is not allowed to use the specified path. Check the Attachable Profile\n                        configuration associated with the domain.\n                     3. The path (i.e. port/port-channel/Attachable-Profile/Loose-Node) is deployed on FEX and is part of l2Out/l3Out.\n                        l2Out and l3Out are NOT supported on FEX\n                     4. L3Dom associated with the L3Out does not exist. Configure a valid L3 Domain and associate it with the L3Out."
+                             ],
+                             "label": "Invalid Path Configuration "},
+                         { "value": "33554432", "localName": "invalid-vlan",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Invalid VLAN Configuration\n                     The domain associated with the EPg is not allowed to use the specified encap. Check the Attachable Profile,\n                     and VLAN/VXLAN Namespace (fvns:VlanInstP and fvns:VxlanInstP) configurations associated with the domain."
+                             ],
+                             "label": "Invalid VLAN Configuration "},
+                         { "value": "0x10000000", "localName": "ip-address-already-in-use",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "IP-Address already in use"
+                             ],
+                             "label": "IP Address Already in Use "},
+                         { "value": "32768", "localName": "ip-address-not-present",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "IP-Address Validations"
+                             ],
+                             "label": "IP Address Not Present "},
+                         { "value": "0x200000000000000", "localName": "ipattr-already-in-use",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "IpAttr validation. an IpAttr can be used by only 1 EPg in a given l2BD"
+                             ],
+                             "label": "IP attribute already Used by another EPG "},
+                         { "value": "0x40000000000", "localName": "l3out-config-conflict",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "For a given port, catch and report conflicting properties coming from different l3outs"
+                             ],
+                             "label": "Operational interface parameters cannot be different (e.g. MTU, MAC, SVI Autostate, qos Priority, qos Custom Policy) from different deployments under a context "},
+                         { "value": "0x80000000", "localName": "l3port-and-sub-interface-on-path",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "L3 Port and Sub-Interface are not allowed on the same path\n                     Under a Layer3 Outside, a pure layer3 port and sub-interface configurations are not allowed on the same port."
+                             ],
+                             "label": "L3 Port and Sub-Interface Not Allowed on Same Path "},
+                         { "value": "131072", "localName": "missing-dhcp-lbl-for-infra",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "DHCP validations"
+                             ],
+                             "label": "Infra DHCP relay profile is missing corresponding DHCP label "},
+                         { "value": "65536", "localName": "multiple-ctx-configuration",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Conflicting VRF validations\n                     A Layer-3 interface (which could be a pure-layer3 interface or a sub-interface) can belong to only 1 Ctx (fvCtx aka VRF)\n                     at a time.\n                     For pure-layer3 interface: Please check the Layer3 Outside configuration and make sure that for a given node same path (port/port-channel)\n                     is not part of multiple Layer3 Outsides associated to different fvCtxs.\n                     For sub-interface: Please check the Layer3 Outside configuration and make sure that for a given node the same encap is not part of multiple\n                     Layer3 Outsides associated to different fvCtxs."
+                             ],
+                             "label": "Multiple VRF configuration provided for an encap or path "},
+                         { "value": "16384", "localName": "multiple-external-encap",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "External Encap Validations\n                     A Bridge Domain (fv:BD) can be extended outside the fabric using only one external encap per node.\n                     Check the Layer 2 Outside configuration."
+                             ],
+                             "label": "Only One External Encap Allowed on Bridge Domain "},
+                         { "value": "0x4000000", "localName": "multiple-mgmt-epg",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Multiple managment EPgs configured"
+                             ],
+                             "label": "Multiple Management EPGs Configured For Node "},
+                         { "value": "8388608", "localName": "multiple-outsides-from-context-configured-for-the-same-node",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Multiple Outsides from the Same Context Configured for the Same Node\n                     Please check the Layer3 Outside configurations. Fault Deprecated - It's valid now."
+                             ],
+                             "label": "Multiple External Networks From Same Context Configured For Same Node - Deprecated "},
+                         { "value": "8192", "localName": "native-or-untagged-encap-failure",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Native/Untagged Vlan Validation\n                     You are trying to configure two different encaps as native or untagged on the path (i.e. port/port-channel).\n                     Check the \"mode\" type set on the relations between the EPg and the fabric:Path."
+                             ],
+                             "label": "Only One Native or Untagged Encap Allowed on Interface "},
+                         { "value": "0", "localName": "not-applicable",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "N/A "},
+                         { "value": "0x1000000000000", "localName": "not-supported-with-egress-policy-enforcement-mode",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Not Supprted with VRF's \"egress\" policy enforcement mode"
+                             ],
+                             "label": "Not supported with VRFs Egress Policy Enforcement Mode "},
+                         { "value": "0x4000000000", "localName": "ospf-area-id-conflict",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Same OSPF Area for Context(VRF) Deployed on the Node from Different L3 Outsides."
+                             ],
+                             "label": "Same OSPF Area for Context(VRF) Deployed on the Node from Different Outsides "},
+                         { "value": "0x8000000000", "localName": "ospf-role-conflict",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "For Given Context(VRF) OSPF cannot be supporting protocol for BGP for one L3 Outside and Main protocol for some other L3 Outside on the same Node."
+                             ],
+                             "label": "OSPF cannot be supporting protocol for BGP in one L3 Outside and Main protocol for another on same node for given Context(VRF) "},
+                         { "value": "16777216", "localName": "path-is-out-of-service",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Path is Out of Service\n                     The path (port/port-channel) getting referred is marked Out-of-Service.\n                     Check the Out Of Service Policy (fabric:OOServicePol)"
+                             ],
+                             "label": "Path Out of Service "},
+                         { "value": "0x40000000", "localName": "path-wiring-issues",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Path has wiring issues\n                     The path (port/port-channel) getting referred has wiring-issues, which means the link is not\n                     connected to a supported peer."
+                             ],
+                             "label": "Path Wiring Issues "},
+                         { "value": "4096", "localName": "port-channel-capacity",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Not enough port-channels available\n                     Check the total number of Access Bundle Groups (i.e. infra:AccBndlGrp) deployed on the node.\n                     The total number of port-channles created by the Access Bundle Groups should not exceed\n                     the total number of port-channels supported by the node."
+                             ],
+                             "label": "Insufficient Port Channels Available "},
+                         { "value": "512", "localName": "port-configured-as-l2",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Port is configured as l2\n                     The path (i.e. port/port-channel) is currently getting used by some configurations (example L2 Outside, Application EPg)\n                     which need the port to be configured as a Layer-2 port."
+                             ],
+                             "label": "Interface Configured as L2 "},
+                         { "value": "256", "localName": "port-configured-as-l3",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Path is configured as l3\n                     The path (i.e. port/port-channel) is currently getting used by some configurations (example L3 Outside)\n                     which need the port to be configured as a Layer-3 port."
+                             ],
+                             "label": "Interface Configured as L3 "},
+                         { "value": "2048", "localName": "port-configured-for-apic",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Port is configured for apic\n                     The path (i.e. port/port-channel) is currently getting used for APIC connection, hence\n                     no configurations are allowed on it which may bring down the connectivity with APIC"
+                             ],
+                             "label": "Port Connected to Controller "},
+                         { "value": "0x100000000000000", "localName": "port-configured-for-breakout",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Port configured for breakout"
+                             ],
+                             "label": "Interface Configured For Breakout "},
+                         { "value": "1024", "localName": "port-configured-for-fex",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Port is configured as fex-fabric\n                     The path (i.e. port/port-channel) is currently getting used for attaching a FEX.\n                     Please check the Fex Profile (infra:FexP) and the port-selectors (infra:HPortS) associated to it."
+                             ],
+                             "label": "Interface Configured For FEX "},
+                         { "value": "128", "localName": "port-part-of-port-channel",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Path is not available\n                     The configuration is directly referring to a port which is part of a port-channel. Such configurations\n                     may affect the behavior of the port-channel and hence are not allowed.\n                     Configuration should refer to the Access-Bundle-Group (infra:AccBndlGrp) directly."
+                             ],
+                             "label": "Port is Member of Port Channel "},
+                         { "value": "2097152", "localName": "prefix-entry-already-in-use",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Prefix Entry validation\n                     Under a Ctx (fvCtx aka VRF), a subnet can belong to only one external EPg at a time. Please check your external network instance profiles\n                     (l3ext:InstP) under the Layer3 Outside configurations."
+                             ],
+                             "label": "Prefix Entry Already Used in Another EPG "},
+                         { "value": "0x20000000000", "localName": "qinq-double-tag-port-with-l2outs-or-l3outs",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "L2outs and L3outs cannot support double encap(qinq)"
+                             ],
+                             "label": "L2Outs or L3Outs cannot be deployed on qinq double tag ports. "},
+                         { "value": "0x2000000000", "localName": "router-id-conflict",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Different Router IDs for Context(VRF) Deployed on the Node from Different L3 Outsides."
+                             ],
+                             "label": "Different Router IDs for Context(VRF) Deployed on the Node from Different L3 Outsides "},
+                         { "value": "0x4000000000000", "localName": "rtctrl-enforce-policy-conflict",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Different Route Control Enforcement Policies are Defined for Context(VRF) Deployed on the Node from Different L3 Outsides."
+                             ],
+                             "label": "Different Route Control Enforcement Policies are Defined for Context(VRF) Deployed on the Node from Different L3 Outsides. "},
+                         { "value": "0x1000000000000000", "localName": "tnlepg-accEncap-missing",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Vlan Encap should be set to tunnel before TnlEPG deployment."
+                             ],
+                             "label": "AccEncap should be set for TnlEPG deployment on Core Port. "},
+                         { "value": "0x40000000000000", "localName": "tnlepg-existing-on-port",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Only one TnlEPG can be set on a port."
+                             ],
+                             "label": "Only one Tunnel can be deployed on an edge port. "},
+                         { "value": "0x20000000000000", "localName": "tnlepg-port-mode-mismatch",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Port mode should be set to tunnel before TnlEPG deployment."
+                             ],
+                             "label": "Port mode should be set to tunnel for Tunnel deployment. "},
+                         { "value": "8", "localName": "vlan-capacity",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Not enough VLANs available\n                     Check the total number of EPgs and BDs deployed on the node.\n                     There total should not exceed the number of VLANs supported by the node"
+                             ],
+                             "label": "Insufficient VLANs Available "},
+                         { "value": "32", "localName": "vrf-capacity",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Not enough VRFs available\n                     Check the total number of Ctx(aka VRF) deployed on the node.\n                     The total should not exceed the number of VRF supported by the node."
+                             ],
+                             "label": "Insufficient VRFs Available "},
+                         { "value": "16", "localName": "vxlan-capacity",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Not enough VXLANs available\n                     Check the total number of EPgs, BDs, VRFs etc. confgigurations which use a VXLAN Id.\n                     There total should not exceed the number of VXLANs supported."
+                             ],
+                             "label": "Insufficient VXLANs Available "}
+                    ],
+                    "default": "not-applicable",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "temporaryError": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "16106",
+                    "propLocalId": "4255",
+                    "label": "temporaryError",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "false", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "no",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                }
+            }
+        }
+}

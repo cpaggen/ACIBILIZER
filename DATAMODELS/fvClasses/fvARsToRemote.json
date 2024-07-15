@@ -1,0 +1,608 @@
+{
+        "fv:ARsToRemote": {
+            "contains": {
+                "fault:Counts": "",
+                "fault:Inst": "",
+                "fv:Cons": "",
+                "health:Inst": ""
+            },
+            "rnMap": {
+                "cons-": "fv:Cons",
+                "fault-": "fault:Inst",
+                "fltCnts": "fault:Counts",
+                "health": "health:Inst"
+            },
+            "identifiedBy": [
+
+            ],
+            "rnFormat": "",
+            "containedBy": {
+
+            },
+            "superClasses": [
+                "reln:To",
+                "reln:Inst"
+            ],
+            "subClasses": {
+                "fv:RsFromAssocPolToExpRt": "",
+                "fv:RsFromAssocPolToIntraImpRt": "",
+                "fv:RsFromAssocPolToRtSumm": "",
+                "fv:RsToRemoteBDDef": "",
+                "fv:RsToRemoteBDHolder": "",
+                "fv:RsToRemoteBackupPol": "",
+                "fv:RsToRemoteByPassChain": "",
+                "fv:RsToRemoteCloudsecKeyDefCont": "",
+                "fv:RsToRemoteCtxDef": "",
+                "fv:RsToRemoteESgHolder": "",
+                "fv:RsToRemoteHealthGrp": "",
+                "fv:RsToRemoteHostprotPolDef": "",
+                "fv:RsToRemoteIpContainer": "",
+                "fv:RsToRemoteIpslaPol": "",
+                "fv:RsToRemoteKeyChainPolDef": "",
+                "fv:RsToRemoteLeakRouteFromToCont": "",
+                "fv:RsToRemoteLocalSiteCtxDef": "",
+                "fv:RsToRemoteMdpProviderDef": "",
+                "fv:RsToRemoteMdpTenantInfoDef": "",
+                "fv:RsToRemoteMember": "",
+                "fv:RsToRemoteMonGrp": "",
+                "fv:RsToRemoteMonPol": "",
+                "fv:RsToRemoteNetflowExporterPolDef": "",
+                "fv:RsToRemoteNetflowMonitorPolDef": "",
+                "fv:RsToRemotePbrIpsla": "",
+                "fv:RsToRemotePimRouteMapDefWrapper": "",
+                "fv:RsToRemotePinningPDef": "",
+                "fv:RsToRemoteQosDppPolDef": "",
+                "fv:RsToRemoteQosRequirement": "",
+                "fv:RsToRemoteQueryGroup": "",
+                "fv:RsToRemoteRedirectPol": "",
+                "fv:RsToRemoteRemoteSiteCtxDef": "",
+                "fv:RsToRemoteRtdCtxDef": "",
+                "fv:RsToRemoteRtdEpPInfoHolder": "",
+                "fv:RsToRemoteStpEncapInstDef": "",
+                "fv:RsToRemoteSvcL3OutDef": "",
+                "fv:RsToRemoteTabooDef": "",
+                "fv:RsToSpanFilterGrp": ""
+            },
+            "relationInfo": {
+            },
+            "dnFormats": [
+
+            ],
+            "writeAccess": [
+
+            ],
+            "readAccess": [
+                "admin"
+            ],
+            "faults": {
+
+            },
+            "events": {
+
+            },
+            "stats": {
+
+            },
+            "isAbstract": true,
+            "isConfigurable": true,
+            "isContextRoot": false,
+            "isDeprecated": false,
+            "isEncrypted": false,
+            "isExportable": true,
+            "isPersistent": true,
+            "isSubjectToQuota": false,
+            "isObservable": true,
+            "hasStats": false,
+            "isStat": false,
+            "isFaultable": true,
+            "isDomainable": false,
+            "isHealthScorable": true,
+            "shouldCollectHealthStats": false,
+            "healthCollectionSource": "faults",
+            "hasEventRules": false,
+            "abstractionLayer": "regular",
+            "apicNxProcessing": false,
+            "monitoringPolicySource": "Parent",
+            "isCreatableDeletable": "always",
+            "platformFlavors": [
+
+            ],
+            "classId": "7530",
+            "className": "ARsToRemote",
+            "classPkg": "fv",
+            "featureTag": "",
+            "moCategory": "RelationshipToLocal",
+            "label": "Super Class for Relation used to pull policies to Node",
+            "comment": [
+                "Super class for all relations pulling\n                 policies down to PE, excluding flow controlled\n                 policies"
+            ],
+            "properties": {
+                "childAction": {
+                    "comment": [
+                         "Delete or ignore. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "4",
+                    "propLocalId": "5",
+                    "label": "childAction",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationChildAction",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "16384", "localName": "deleteAll",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteAll "},
+                         { "value": "8192", "localName": "deleteNonPresent",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteNonPresent "},
+                         { "value": "4096", "localName": "ignore",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ignore "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "dn": {
+                    "comment": [
+                         "A tag or metadata is a non-hierarchical keyword or term assigned to the fabric module."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1",
+                    "propLocalId": "2",
+                    "label": "dn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "forceResolve": {
+                    "comment": [
+                         "Whether the relation should force pull the target."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "107",
+                    "propLocalId": "83",
+                    "label": "forceResolve",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "true", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "yes",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "rType": {
+                    "comment": [
+                         "Represents the type of resolver."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "106",
+                    "propLocalId": "82",
+                    "label": "rType",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "reln:ResolverType",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "mo", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "3", "localName": "local",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "local "},
+                         { "value": "1", "localName": "mo",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "mo "},
+                         { "value": "2", "localName": "service",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "service "}
+                    ],
+                    "default": "mo",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "rn": {
+                    "comment": [
+                         "Identifies an object from its siblings within the context of its parent object. The distinguished name contains a sequence of relative names."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "2",
+                    "propLocalId": "3",
+                    "label": "rn",
+                    "baseType": "reference:BinRN",
+                    "modelType": "reference:BinRN",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "state": {
+                    "comment": [
+                         "Represents the state of the relationship."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "103",
+                    "propLocalId": "26",
+                    "label": "State",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "reln:State",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "5", "localName": "cardinality-violation",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "cardinality violation - When relations are created such that\n                     they violate the cardinality, state of the relation would be\n                     set to this."
+                             ],
+                             "label": "cardinality-violation "},
+                         { "value": "unformed", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1", "localName": "formed",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "the relationship is formed with the target object"
+                             ],
+                             "label": "formed "},
+                         { "value": "4", "localName": "invalid-target",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "invalid target DN"
+                             ],
+                             "label": "invalid-target "},
+                         { "value": "2", "localName": "missing-target",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "target does not exist"
+                             ],
+                             "label": "missing-target "},
+                         { "value": "0", "localName": "unformed",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "the relationship is not formed"
+                             ],
+                             "label": "unformed "}
+                    ],
+                    "default": "unformed",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "stateQual": {
+                    "comment": [
+                         "Represents the state qualifier of the relationship."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "104",
+                    "propLocalId": "80",
+                    "label": "State Qualifier",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "reln:StateQual",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "default-target",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "target not specified, using default"
+                             ],
+                             "label": "default-target "},
+                         { "value": "none", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1", "localName": "mismatch-target",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "target not found, using default"
+                             ],
+                             "label": "mismatch-target "},
+                         { "value": "0", "localName": "none",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "no issue"
+                             ],
+                             "label": "none "}
+                    ],
+                    "default": "none",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "status": {
+                    "comment": [
+                         "The upgrade status. This property is for internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "3",
+                    "propLocalId": "4",
+                    "label": "status",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationStatus",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "created",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be created. An error is returned if the object already exists.  \nIn the return value of a setter method: indicates that an object has been created.  \n"
+                             ],
+                             "label": "created "},
+                         { "value": "8", "localName": "deleted",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be deleted.  \nIn the return value of a setter method: indicates that an object has been deleted.\n"
+                             ],
+                             "label": "deleted "},
+                         { "value": "4", "localName": "modified",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be modified  \nIn the return value of a setter method: indicates that an object has been modified.\n"
+                             ],
+                             "label": "modified "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "tCl": {
+                    "comment": [
+                         "The class ID of the target object. This property is managed internally and should not be modified by the user."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "101",
+                    "propLocalId": "78",
+                    "label": "Target-class",
+                    "baseType": "scalar:Enum16",
+                    "modelType": "reln:ClassId",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "unspecified", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "unspecified",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "unspecified "}
+                    ],
+                    "default": "unspecified",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "tDn": {
+                    "comment": [
+                         "The distinguished name of the target."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "100",
+                    "propLocalId": "77",
+                    "label": "Target-dn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reln:Dn",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "tType": {
+                    "comment": [
+                         "The type of target."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "105",
+                    "propLocalId": "81",
+                    "label": "tType",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "reln:TargetType",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "all",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "all "},
+                         { "value": "mo", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1", "localName": "mo",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "mo "},
+                         { "value": "0", "localName": "name",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "name "}
+                    ],
+                    "default": "mo",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                }
+            }
+        }
+}

@@ -1,0 +1,1093 @@
+{
+        "fv:OrchsInfo": {
+            "contains": {
+                "aaa:RbacAnnotation": "",
+                "fault:Counts": "",
+                "fault:Inst": "",
+                "fv:OptedPlanSrvc": "",
+                "fv:OrchsLBCfg": "",
+                "health:Inst": "",
+                "tag:Annotation": "",
+                "tag:Tag": ""
+            },
+            "rnMap": {
+                "LBCfg-": "fv:OrchsLBCfg",
+                "annotationKey-": "tag:Annotation",
+                "fault-": "fault:Inst",
+                "fltCnts": "fault:Counts",
+                "health": "health:Inst",
+                "rbacDom-": "aaa:RbacAnnotation",
+                "srvc-": "fv:OptedPlanSrvc",
+                "tagKey-": "tag:Tag"
+            },
+            "identifiedBy": [
+                "name"
+            ],
+            "rnFormat": "Orchs-{name}",
+            "containedBy": {
+                "cloud:EPg": "",
+                "cloud:ExtEPg": "",
+                "cloud:ISvcEPg": "",
+                "cloud:SvcEPg": "",
+                "dhcp:CRelPg": "",
+                "dhcp:PRelPg": "",
+                "fv:AEPg": "",
+                "fv:ESg": "",
+                "fv:TnlEPg": "",
+                "infra:CEPg": "",
+                "infra:PEPg": "",
+                "l2ext:InstP": "",
+                "l3ext:InstP": "",
+                "l3ext:InstPDef": "",
+                "mgmt:InB": "",
+                "vns:EPpInfo": "",
+                "vns:REPpInfo": "",
+                "vns:SDEPpInfo": "",
+                "vns:SHEPpInfo": ""
+            },
+            "superClasses": [
+                "naming:NamedObject"
+            ],
+            "subClasses": {
+
+            },
+            "relationFrom": {
+
+            },
+            "relationTo": {
+
+            },
+            "dnFormats": [
+                "uni/tn-{name}/cloudapp-{name}/cloudsvcepg-{name}/Orchs-{name}",
+                "uni/tn-{name}/cloudapp-{name}/Orchs-{name}",
+                "uni/tn-{name}/ap-{name}/esg-{name}/Orchs-{name}",
+                "uni/tn-{name}/cloudapp-{name}/Orchs-{name}",
+                "uni/tn-{name}/cloudapp-{name}/Orchs-{name}",
+                "uni/svcdefcont/tensvcdef-{name}/ldevdef-[{lDevDn}]/sepg-{name}/Orchs-{name}",
+                "uni/tn-{name}/ldevdef-[{lDevDn}]/sepg-{name}/Orchs-{name}",
+                "uni/tn-{name}/cloudapp-{name}/sepg-{name}/Orchs-{name}",
+                "uni/tn-{name}/cloudapp-{name}/cloudextepg-{name}/Orchs-{name}",
+                "uni/tn-{name}/cloudapp-{name}/cloudepg-{name}/Orchs-{name}",
+                "uni/tn-{name}/cloudapp-{name}/Orchs-{name}",
+                "uni/tn-{name}/Tnlepg-{name}/Orchs-{name}",
+                "uni/tn-{name}/LDevInst-[{priKey}]-ctx-{ctxName}/epgDn-[{shEpgDn}]/Orchs-{name}",
+                "outdefcont-{id}/rsoutDefContToOut-[{tDn}]/outdef-{name}/instPdef-{name}/Orchs-{name}",
+                "uni/tn-{name}/acIpToIp-{name}/acl3outcont/outdef-{name}/instPdef-{name}/Orchs-{name}",
+                "uni/tn-{name}/acExtToEp-{name}/acl3outcont/outdef-{name}/instPdef-{name}/Orchs-{name}",
+                "uni/tn-{name}/acEpToExt-{name}/acl3outcont/outdef-{name}/instPdef-{name}/Orchs-{name}",
+                "uni/tn-{name}/acEpToEp-{name}/acl3outcont/outdef-{name}/instPdef-{name}/Orchs-{name}",
+                "uni/tn-{name}/acAnyToEp-{name}/acl3outcont/outdef-{name}/instPdef-{name}/Orchs-{name}",
+                "uni/tn-{name}/acEpToAny-{name}/acl3outcont/outdef-{name}/instPdef-{name}/Orchs-{name}",
+                "uni/tn-{name}/epgToEp-{name}/acl3outcont/outdef-{name}/instPdef-{name}/Orchs-{name}",
+                "uni/tn-{name}/epToEpg-{name}/acl3outcont/outdef-{name}/instPdef-{name}/Orchs-{name}",
+                "uni/tn-{name}/ipToEpg-{name}/acl3outcont/outdef-{name}/instPdef-{name}/Orchs-{name}",
+                "uni/tn-{name}/epgToIp-{name}/acl3outcont/outdef-{name}/instPdef-{name}/Orchs-{name}",
+                "uni/tn-{name}/epgToEpg-{name}/acl3outcont/outdef-{name}/instPdef-{name}/Orchs-{name}",
+                "uni/epp/sec-[{epgPKey}]/ac-{name}/acl3outcont/outdef-{name}/instPdef-{name}/Orchs-{name}",
+                "uni/epp/fv-[{epgPKey}]/ac-{name}/acl3outcont/outdef-{name}/instPdef-{name}/Orchs-{name}",
+                "uni/epp/rtd-[{epgPKey}]/ac-{name}/acl3outcont/outdef-{name}/instPdef-{name}/Orchs-{name}",
+                "uni/tn-{name}/ldevCtx-c-{ctrctNameOrLbl}-g-{graphNameOrLbl}-n-{nodeNameOrLbl}/lIfCtx-c-{connNameOrLbl}/outdef-{name}/instPdef-{name}/Orchs-{name}",
+                "uni/tn-{name}/outdef-{name}/instPdef-{name}/Orchs-{name}",
+                "uni/tn-{name}/LDevInst-[{priKey}]-ctx-{ctxName}/bd-[{bdDn}]/Orchs-{name}",
+                "uni/ldev-[{priKey}]-ctx-[{ctxDn}]-bd-[{bdDn}]/Orchs-{name}",
+                "uni/tn-{name}/LDevInst-[{priKey}]-ctx-{ctxName}/G-{graphRn}-N-{nodeRn}-C-{connRn}/Orchs-{name}",
+                "uni/vDev-[{priKey}]-tn-[{tnDn}]-ctx-{ctxName}/rndrInfo/eppContr/G-{graphRn}-N-{nodeRn}-C-{connRn}/Orchs-{name}",
+                "uni/tn-{name}/clp-{name}/cepg-{name}/Orchs-{name}",
+                "uni/tn-{name}/provp-{name}/pepg-{name}/Orchs-{name}",
+                "uni/tn-{name}/provp-{name}/Orchs-{name}",
+                "uni/tn-{name}/clp-{name}/Orchs-{name}",
+                "uni/tn-{name}/mgmtp-{name}/inb-{name}/Orchs-{name}",
+                "uni/tn-{name}/ap-{name}/epg-{name}/Orchs-{name}",
+                "uni/tn-{name}/out-{name}/instP-{name}/Orchs-{name}",
+                "uni/tn-{name}/l2out-{name}/instP-{name}/Orchs-{name}",
+                "uni/tn-{name}/clp-{name}/cdhcp-{name}/Orchs-{name}",
+                "uni/tn-{name}/provp-{name}/pdhcp-{name}/Orchs-{name}"
+            ],
+            "writeAccess": [
+                "admin",
+                "tenant-epg"
+            ],
+            "readAccess": [
+                "admin",
+                "tenant-epg"
+            ],
+            "faults": {
+                "F1712": "fltFvOrchsInfoVipNotAllocated"
+            },
+            "events": {
+                "E4214126": "creation||fv:OrchsInfo",
+                "E4214127": "modification||fv:OrchsInfo",
+                "E4214128": "deletion||fv:OrchsInfo"
+            },
+            "stats": {
+
+            },
+            "isAbstract": false,
+            "isConfigurable": true,
+            "isContextRoot": false,
+            "isDeprecated": false,
+            "isEncrypted": false,
+            "isExportable": true,
+            "isPersistent": true,
+            "isSubjectToQuota": false,
+            "isObservable": true,
+            "hasStats": false,
+            "isStat": false,
+            "isFaultable": true,
+            "isDomainable": false,
+            "isHealthScorable": true,
+            "shouldCollectHealthStats": false,
+            "healthCollectionSource": "faults",
+            "hasEventRules": false,
+            "abstractionLayer": "logical",
+            "apicNxProcessing": false,
+            "monitoringPolicySource": "Parent",
+            "isCreatableDeletable": "always",
+            "platformFlavors": [
+
+            ],
+            "classId": "5566",
+            "className": "OrchsInfo",
+            "classPkg": "fv",
+            "featureTag": "",
+            "moCategory": "Regular",
+            "label": "Orchestrator configuration for this EPG",
+            "comment": [
+                "The orchestration information is used to store orchestration specific properties such as Microsoft Azure Pack."
+            ],
+            "properties": {
+                "addrNsName": {
+                    "comment": [
+                         "null"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "16369",
+                    "propLocalId": "4300",
+                    "label": "addrNsName",
+                    "baseType": "string:Basic",
+                    "modelType": "string:Basic",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 512 }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "annotation": {
+                    "comment": [
+                         "User annotation. Suggested format orchestrator:value"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "38120",
+                    "propLocalId": "8719",
+                    "label": "Annotation",
+                    "baseType": "string:Basic",
+                    "modelType": "mo:Annotation",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 128,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9_.:-]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "childAction": {
+                    "comment": [
+                         "Delete or ignore. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "4",
+                    "propLocalId": "5",
+                    "label": "childAction",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationChildAction",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "16384", "localName": "deleteAll",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteAll "},
+                         { "value": "8192", "localName": "deleteNonPresent",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteNonPresent "},
+                         { "value": "4096", "localName": "ignore",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ignore "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "cloud": {
+                    "comment": [
+                         "null"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "16365",
+                    "propLocalId": "4297",
+                    "label": "cloud",
+                    "baseType": "string:Basic",
+                    "modelType": "string:Basic",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 512 }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "deployIssues": {
+                    "comment": [
+                         "The issues that occurred while deploying an object. For example, this is set when there is a connectivity issues from the APIC to the external VM management system."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "19810",
+                    "propLocalId": "524",
+                    "label": "deployIssues",
+                    "baseType": "scalar:Bitmask64",
+                    "modelType": "comp:DeployIssues",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "0x20000", "localName": "attr-dom-not-supported",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "attribute based EPG is not supported for the domain type "},
+                         { "value": "0x8000", "localName": "ctrlr-not-deployable",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Controller not deployable. "},
+                         { "value": "0x4000", "localName": "ctrlr-unsupported",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Unsupported Controller. "},
+                         { "value": "none", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0x200000", "localName": "duplicate-static-encap",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Duplicate EPG encapsulation value "},
+                         { "value": "0x1000", "localName": "dvs-config-failed",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Failed to configure DVS. "},
+                         { "value": "0x2", "localName": "dvs-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Failed to get DVS config. "},
+                         { "value": "0x20", "localName": "dvs-prep-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "DVS preparation error for VXLAN. "},
+                         { "value": "0x200", "localName": "dvs-version-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Could not get DVS version. "},
+                         { "value": "0x800000", "localName": "epg-pol-enforce-missing-pri_encap",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Missing primary encap in VMM Domain relation for policy enforced EPG "},
+                         { "value": "0x8000000000", "localName": "epg-pol-enforce-nsx-unsupported",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Intra EPG Isolation is not supported for NSX domains "},
+                         { "value": "0x800000000", "localName": "epg-pol-enforce-redhat-unsupported",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Intra EPG Isolation is not supported for Redhat domains "},
+                         { "value": "0x1000000", "localName": "epg-pol-enforce-unsupported",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Intra EPG Isolation is not supported in AVS-VLAN mode and AVE-VLAN mode VMM domains "},
+                         { "value": "0x4000000", "localName": "epg-useg-unsupported",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Microsegmentation is not supported for the controller "},
+                         { "value": "0x100000", "localName": "epp-mcast-addr-match-fabric",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "EPG mcast address is the same as fabric mcast address. Domain fabric multicast address overlaps multicast address pool. "},
+                         { "value": "0x200000000", "localName": "internal-vlan-pool-full",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Insufficient VLANs. Internal VLAN pool full for EPGs in AVE Domain "},
+                         { "value": "0x1", "localName": "invalid-encap",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No valid encapsulation identifier allocated for the epg "},
+                         { "value": "0x400000000", "localName": "invalid-encap-mode",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Encap Mode cannot be VXLAN when Switching Mode is native for this VMM Domain "},
+                         { "value": "0x4000000000", "localName": "invalid-intra-epg-isolation",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Enforcing intra EPG isolation is invalid without primary and secondary vlans set "},
+                         { "value": "0x2000000000", "localName": "invalid-lag-policy-association",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Invalid Enhanced LAG Policy Associated with this EPG "},
+                         { "value": "0x10000", "localName": "invalid-mcast-addr",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No valid mcast address allocated for the epg "},
+                         { "value": "0x40000000", "localName": "invalid-netflow-preference",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Netflow cannot be Enabled for EPG associated to VMM domain in AVS Mode "},
+                         { "value": "0x80000", "localName": "invalid-static-encap",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "EPG encapsulation value is not part of any static encapsulation block for the VMM domain "},
+                         { "value": "0x400000", "localName": "invalid-switching-mode",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "VMM Domain needs to be of type Cisco AVE for Switching Mode AVE "},
+                         { "value": "0x8000000", "localName": "invalid-trunk-portgroup-range",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trunk portgroup VLAN ranges are out of domain VLAN pool "},
+                         { "value": "0x2000000", "localName": "invalid-usegepg-encap",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "primary encap property and encap property both need to be set "},
+                         { "value": "0x40000", "localName": "invalid-vip",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "VIP has not been allocated "},
+                         { "value": "0x1000000000", "localName": "invalid-vlan-encap",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "VLAN encap mode is not allowed for AVE Non-Local switching domain "},
+                         { "value": "0x80000000", "localName": "ipv6-dstaddr-unsupported",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Netflow Exporter DstAddr supports IPv6 from DVS version 6.0 and higher. Please use an IPv4 address for the Netflow Exporter DstAddr "},
+                         { "value": "0x800", "localName": "lacp-apply-failed",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "LACP update for Portgroup failed. "},
+                         { "value": "0x10000000000", "localName": "missing-infra-pg-vlan",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Infrastructure VLAN needs to be configured for Infra-PG. Please enable under AEP. "},
+                         { "value": "0x100000000", "localName": "missing-internal-vlan-pool",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Missing Internal VLAN pools for EPGs in AVE Domain "},
+                         { "value": "0x100", "localName": "no-ctrlr-dn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Controller DN missing. "},
+                         { "value": "0x80", "localName": "no-ctrlr-map",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Controller missing from internal map. "},
+                         { "value": "0x0", "localName": "none",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "N/A "},
+                         { "value": "0x400", "localName": "pg-api-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Portgroup property get API failed. "},
+                         { "value": "0x2000", "localName": "policy-not-found",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Failed to find Policy Container for Controller. "},
+                         { "value": "0x8", "localName": "prep-vxlan-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "VXLAN cluster preparation error. "},
+                         { "value": "0x10", "localName": "proc-vmm-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Cluster type object missing from controller. "},
+                         { "value": "0x20000000", "localName": "resimedcy-unsupported",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "resolution immediacy not supported for this domain "},
+                         { "value": "0x10000000", "localName": "trunk-portgroup-unsupported",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Trunk portgroup not supported "},
+                         { "value": "0x40", "localName": "unsupported-ctrlr",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Invalid Controller scope. "},
+                         { "value": "0x4", "localName": "vdn-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Network scope creation error. "}
+                    ],
+                    "default": "none",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "dn": {
+                    "comment": [
+                         "A tag or metadata is a non-hierarchical keyword or term assigned to the fabric module."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1",
+                    "propLocalId": "2",
+                    "label": "dn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "extMngdBy": {
+                    "comment": [
+                         "Indicates which orchestrator is managing this MO"
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "40259",
+                    "propLocalId": "8023",
+                    "label": "Managed By",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ExtMngdByType",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "undefined", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1", "localName": "msc",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "msc "},
+                         { "value": "0", "localName": "undefined",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "undefined "}
+                    ],
+                    "default": "undefined",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "lcOwn": {
+                    "comment": [
+                         "A value that indicates how this object was created. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "9",
+                    "propLocalId": "9",
+                    "label": "lcOwn",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "mo:Owner",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "local", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "4", "localName": "implicit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Implicit "},
+                         { "value": "0", "localName": "local",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Local "},
+                         { "value": "1", "localName": "policy",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Policy "},
+                         { "value": "2", "localName": "replica",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Replica "},
+                         { "value": "3", "localName": "resolveOnBehalf",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ResolvedOnBehalf "}
+                    ],
+                    "default": "local",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "modTs": {
+                    "comment": [
+                         "The time when this object was last modified."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "7",
+                    "propLocalId": "7",
+                    "label": "modTs",
+                    "baseType": "scalar:Date",
+                    "modelType": "mo:TStamp",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "never", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "never",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "never "}
+                    ],
+                    "default": "never",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "monPolDn": {
+                    "comment": [
+                         "The monitoring policy attached to this observable object."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "19811",
+                    "propLocalId": "228",
+                    "label": "Monitoring policy",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "name": {
+                    "comment": [
+                         "The name of the object."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "16374",
+                    "propLocalId": "13",
+                    "label": "Name",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Name",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": false,
+                    "isNaming": true,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": true,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 1, "max": 16,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9_.:-]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "nameAlias": {
+                    "isConfigurable": true,
+                    "propGlobalId": "28417",
+                    "propLocalId": "6719",
+                    "label": "Name alias",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:NameAlias",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 63,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9_.-]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "needVip": {
+                    "comment": [
+                         "null"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "16367",
+                    "propLocalId": "4299",
+                    "label": "needVip",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "boolean",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "false", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "false",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "plan": {
+                    "comment": [
+                         "null"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "16366",
+                    "propLocalId": "4298",
+                    "label": "plan",
+                    "baseType": "string:Basic",
+                    "modelType": "string:Basic",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 512 }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "rn": {
+                    "comment": [
+                         "Identifies an object from its siblings within the context of its parent object. The distinguished name contains a sequence of relative names."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "2",
+                    "propLocalId": "3",
+                    "label": "rn",
+                    "baseType": "reference:BinRN",
+                    "modelType": "reference:BinRN",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "status": {
+                    "comment": [
+                         "The upgrade status. This property is for internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "3",
+                    "propLocalId": "4",
+                    "label": "status",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationStatus",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "created",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be created. An error is returned if the object already exists.  \nIn the return value of a setter method: indicates that an object has been created.  \n"
+                             ],
+                             "label": "created "},
+                         { "value": "8", "localName": "deleted",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be deleted.  \nIn the return value of a setter method: indicates that an object has been deleted.\n"
+                             ],
+                             "label": "deleted "},
+                         { "value": "4", "localName": "modified",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be modified  \nIn the return value of a setter method: indicates that an object has been modified.\n"
+                             ],
+                             "label": "modified "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "svcsMode": {
+                    "isConfigurable": true,
+                    "propGlobalId": "28258",
+                    "propLocalId": "6672",
+                    "label": "svcsMode",
+                    "baseType": "string:Basic",
+                    "modelType": "string:Basic",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 512 }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "uid": {
+                    "comment": [
+                         "A unique identifier for this object."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "8",
+                    "propLocalId": "8",
+                    "label": "uid",
+                    "baseType": "scalar:Uint16",
+                    "modelType": "scalar:Uint16",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "userdom": {
+                    "isConfigurable": true,
+                    "propGlobalId": "60657",
+                    "propLocalId": "13244",
+                    "label": "userdom",
+                    "baseType": "string:Basic",
+                    "modelType": "mo:UserDomType",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 1024,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9_.:-]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "validValues": [
+                         { "value": "all", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "}
+                    ],
+                    "default": "all",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "usrAcc": {
+                    "comment": [
+                         "null"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "16364",
+                    "propLocalId": "4296",
+                    "label": "usrAcc",
+                    "baseType": "string:Basic",
+                    "modelType": "string:Basic",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 512 }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "vip": {
+                    "comment": [
+                         "The Infra Virtual IP of a VPC switch pair."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "16368",
+                    "propLocalId": "1151",
+                    "label": "vip",
+                    "baseType": "address:Ip",
+                    "modelType": "address:Ip",
+                    "needsPropDelimiters": true,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validateAsIPv4OrIPv6": true,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                }
+            }
+        }
+}
