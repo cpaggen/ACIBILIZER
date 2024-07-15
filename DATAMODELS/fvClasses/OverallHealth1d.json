@@ -1,0 +1,909 @@
+{
+        "fv:OverallHealth1d": {
+            "contains": {
+
+            },
+            "rnMap": {
+
+            },
+            "identifiedBy": [
+
+            ],
+            "rnFormat": "CDfvOverallHealth1d",
+            "containedBy": {
+                "fv:Tenant": ""
+            },
+            "superClasses": [
+                "fv:OverallHealth",
+                "stats:Curr",
+                "stats:Item"
+            ],
+            "subClasses": {
+
+            },
+            "relationFrom": {
+
+            },
+            "relationTo": {
+
+            },
+            "dnFormats": [
+                "uni/tn-{name}/CDfvOverallHealth1d"
+            ],
+            "writeAccess": [
+
+            ],
+            "readAccess": [
+                "admin"
+            ],
+            "faults": {
+
+            },
+            "events": {
+
+            },
+            "stats": {
+
+            },
+            "statsGroup": { "name": "fvOverallHealth", "counters": [
+                { "name": "health", "type": "scalar:UByte", "unit": "score", "label": "health score", 
+                    "comment": [
+                         "Health score."
+                    ],
+                    "deprecated": false }
+                ]
+            },
+            "isAbstract": false,
+            "isConfigurable": false,
+            "isContextRoot": true,
+            "isDeprecated": false,
+            "isEncrypted": false,
+            "isExportable": false,
+            "isPersistent": false,
+            "isSubjectToQuota": false,
+            "isObservable": false,
+            "hasStats": false,
+            "isStat": true,
+            "isFaultable": false,
+            "isDomainable": false,
+            "isHealthScorable": false,
+            "shouldCollectHealthStats": false,
+            "healthCollectionSource": "faults",
+            "hasEventRules": false,
+            "abstractionLayer": "regular",
+            "apicNxProcessing": false,
+            "monitoringPolicySource": "Parent",
+            "isCreatableDeletable": "never",
+            "platformFlavors": [
+                "apic"
+            ],
+            "classId": "2017",
+            "className": "OverallHealth1d",
+            "classPkg": "fv",
+            "featureTag": "",
+            "moCategory": "StatsCurrent",
+            "label": "current overall tenant health stats in 1 day",
+            "comment": [
+                "A class that represents the most current statistics for overall tenant health in a 1 day sampling interval.  This class updates every hour."
+            ],
+            "properties": {
+                "childAction": {
+                    "comment": [
+                         "Delete or ignore. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "4",
+                    "propLocalId": "5",
+                    "label": "childAction",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationChildAction",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "16384", "localName": "deleteAll",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteAll "},
+                         { "value": "8192", "localName": "deleteNonPresent",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteNonPresent "},
+                         { "value": "4096", "localName": "ignore",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ignore "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "cnt": {
+                    "comment": [
+                         "The number of readings made within the current sample."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "16212",
+                    "propLocalId": "87",
+                    "label": "Number of Collections During this Interval",
+                    "baseType": "scalar:Uint16",
+                    "modelType": "scalar:Uint16",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "dn": {
+                    "comment": [
+                         "A tag or metadata is a non-hierarchical keyword or term assigned to the fabric module."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1",
+                    "propLocalId": "2",
+                    "label": "dn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "healthAvg": {
+                    "comment": [
+                         "Health score.  This is the average value read by the counter during the collection interval.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "9302",
+                    "propLocalId": "3233",
+                    "label": "health score average value",
+                    "baseType": "scalar:UByte",
+                    "modelType": "scalar:UByte",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "healthLast": {
+                    "comment": [
+                         "Health score.  This is the most current value read by the counter."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "9299",
+                    "propLocalId": "3230",
+                    "label": "health score current value",
+                    "baseType": "scalar:UByte",
+                    "modelType": "scalar:UByte",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "healthMax": {
+                    "comment": [
+                         "Health score.  This is the largest value read by the counter during the collection interval.  This value is only overwritten if the most current value is larger than the previous value.  For example, if the value of the first reading is 3 and the value of the second reading is 4, the previous value is overwritten with 4.  If the third reading is smaller than 4, the value remains at 4.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "9301",
+                    "propLocalId": "3232",
+                    "label": "health score maximum value",
+                    "baseType": "scalar:UByte",
+                    "modelType": "scalar:UByte",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "healthMin": {
+                    "comment": [
+                         "Health score.  This is the smallest value read by the counter during the collection interval.  This value is only overwritten if the most current value is smaller than the previous value.  For example, if the value of the first reading is 3 and the value of the second reading is 2, the previous value is overwritten with 2.  If the third reading is larger than 2, the value remains at 2.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "9300",
+                    "propLocalId": "3231",
+                    "label": "health score minimum value",
+                    "baseType": "scalar:UByte",
+                    "modelType": "scalar:UByte",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "healthSpct": {
+                    "comment": [
+                         "Health score.  This is the number of missed and/or incorrect values read by the counter during the collection interval.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "9303",
+                    "propLocalId": "3234",
+                    "label": "health score suspect count",
+                    "baseType": "scalar:Uint16",
+                    "modelType": "scalar:Uint16",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "healthThr": {
+                    "comment": [
+                         "Health score.  This indicates the properties of the counter that crossed the threshold during the collection interval.  Note that this value resets at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "9305",
+                    "propLocalId": "3236",
+                    "label": "health score thresholded flags",
+                    "baseType": "scalar:Bitmask64",
+                    "modelType": "stats:ThresholdedMask",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2199023255552", "localName": "avgCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg severity critical "},
+                         { "value": "68719476736", "localName": "avgHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg crossed high threshold "},
+                         { "value": "137438953472", "localName": "avgLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg crossed low threshold "},
+                         { "value": "1099511627776", "localName": "avgMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg severity major "},
+                         { "value": "549755813888", "localName": "avgMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg severity minor "},
+                         { "value": "34359738368", "localName": "avgRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg recovering "},
+                         { "value": "274877906944", "localName": "avgWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg severity warning "},
+                         { "value": "8192", "localName": "cumulativeCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative severity critical "},
+                         { "value": "256", "localName": "cumulativeHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative crossed high threshold "},
+                         { "value": "512", "localName": "cumulativeLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative crossed low threshold "},
+                         { "value": "4096", "localName": "cumulativeMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative severity major "},
+                         { "value": "2048", "localName": "cumulativeMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative severity minor "},
+                         { "value": "128", "localName": "cumulativeRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative recovering "},
+                         { "value": "1024", "localName": "cumulativeWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative severity warning "},
+                         { "value": "unspecified", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "64", "localName": "lastReadingCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading severity critical "},
+                         { "value": "2", "localName": "lastReadingHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading crossed high threshold "},
+                         { "value": "4", "localName": "lastReadingLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading crossed low threshold "},
+                         { "value": "32", "localName": "lastReadingMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading severity major "},
+                         { "value": "16", "localName": "lastReadingMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading severity minor "},
+                         { "value": "1", "localName": "lastReadingRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading recovering "},
+                         { "value": "8", "localName": "lastReadingWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading severity warning "},
+                         { "value": "17179869184", "localName": "maxCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max severity critical "},
+                         { "value": "536870912", "localName": "maxHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max crossed high threshold "},
+                         { "value": "1073741824", "localName": "maxLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max crossed low threshold "},
+                         { "value": "8589934592", "localName": "maxMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max severity major "},
+                         { "value": "4294967296", "localName": "maxMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max severity minor "},
+                         { "value": "268435456", "localName": "maxRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max recovering "},
+                         { "value": "2147483648", "localName": "maxWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max severity warning "},
+                         { "value": "134217728", "localName": "minCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min severity critical "},
+                         { "value": "4194304", "localName": "minHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min crossed high threshold "},
+                         { "value": "8388608", "localName": "minLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min crossed low threshold "},
+                         { "value": "67108864", "localName": "minMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min severity major "},
+                         { "value": "33554432", "localName": "minMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min severity minor "},
+                         { "value": "2097152", "localName": "minRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min recovering "},
+                         { "value": "16777216", "localName": "minWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min severity warning "},
+                         { "value": "1048576", "localName": "periodicCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic severity critical "},
+                         { "value": "32768", "localName": "periodicHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic crossed high threshold "},
+                         { "value": "65536", "localName": "periodicLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic crossed low threshold "},
+                         { "value": "524288", "localName": "periodicMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic severity major "},
+                         { "value": "262144", "localName": "periodicMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic severity minor "},
+                         { "value": "16384", "localName": "periodicRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic recovering "},
+                         { "value": "131072", "localName": "periodicWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic severity warning "},
+                         { "value": "36028797018963968", "localName": "rateCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate severity critical "},
+                         { "value": "1125899906842624", "localName": "rateHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate crossed high threshold "},
+                         { "value": "2251799813685248", "localName": "rateLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate crossed low threshold "},
+                         { "value": "18014398509481984", "localName": "rateMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate severity major "},
+                         { "value": "9007199254740992", "localName": "rateMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate severity minor "},
+                         { "value": "562949953421312", "localName": "rateRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate recovering "},
+                         { "value": "4503599627370496", "localName": "rateWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate severity warning "},
+                         { "value": "281474976710656", "localName": "trendCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend severity critical "},
+                         { "value": "8796093022208", "localName": "trendHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend crossed high threshold "},
+                         { "value": "17592186044416", "localName": "trendLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend crossed low threshold "},
+                         { "value": "140737488355328", "localName": "trendMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend severity major "},
+                         { "value": "70368744177664", "localName": "trendMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend severity minor "},
+                         { "value": "4398046511104", "localName": "trendRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend recovering "},
+                         { "value": "35184372088832", "localName": "trendWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend severity warning "},
+                         { "value": "0", "localName": "unspecified",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "}
+                    ],
+                    "default": "unspecified",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "healthTr": {
+                    "comment": [
+                         "Health score.  This is the trending value of the counter.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "9307",
+                    "propLocalId": "3238",
+                    "label": "health score trend",
+                    "baseType": "scalar:SByte",
+                    "modelType": "scalar:SByte",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "healthTrBase": {
+                    "comment": [
+                         "Health score.  This is the cumulative value of the counter from the previous collection interval.  Used for internal purposes."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "9306",
+                    "propLocalId": "3237",
+                    "label": "health score trend baseline",
+                    "baseType": "scalar:UByte",
+                    "modelType": "scalar:UByte",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "healthTtl": {
+                    "comment": [
+                         "Health score.  This is the total sum of all values read by the counter during the collection interval.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "9304",
+                    "propLocalId": "3235",
+                    "label": "health score total sum",
+                    "baseType": "scalar:Sint64",
+                    "modelType": "scalar:Sint64",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "lastCollOffset": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "111",
+                    "propLocalId": "86",
+                    "label": "Collection Length",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "scalar:Uint32",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "modTs": {
+                    "comment": [
+                         "The time when this object was last modified."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "7",
+                    "propLocalId": "7",
+                    "label": "modTs",
+                    "baseType": "scalar:Date",
+                    "modelType": "mo:TStamp",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "never", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "never",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "never "}
+                    ],
+                    "default": "never",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "repIntvEnd": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "110",
+                    "propLocalId": "85",
+                    "label": "Reporting End Time",
+                    "baseType": "scalar:Date",
+                    "modelType": "scalar:Date",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "repIntvStart": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "109",
+                    "propLocalId": "84",
+                    "label": "Reporting Start Time",
+                    "baseType": "scalar:Date",
+                    "modelType": "scalar:Date",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "rn": {
+                    "comment": [
+                         "Identifies an object from its siblings within the context of its parent object. The distinguished name contains a sequence of relative names."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "2",
+                    "propLocalId": "3",
+                    "label": "rn",
+                    "baseType": "reference:BinRN",
+                    "modelType": "reference:BinRN",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "status": {
+                    "comment": [
+                         "The upgrade status. This property is for internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "3",
+                    "propLocalId": "4",
+                    "label": "status",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationStatus",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "created",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be created. An error is returned if the object already exists.  \nIn the return value of a setter method: indicates that an object has been created.  \n"
+                             ],
+                             "label": "created "},
+                         { "value": "8", "localName": "deleted",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be deleted.  \nIn the return value of a setter method: indicates that an object has been deleted.\n"
+                             ],
+                             "label": "deleted "},
+                         { "value": "4", "localName": "modified",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be modified  \nIn the return value of a setter method: indicates that an object has been modified.\n"
+                             ],
+                             "label": "modified "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                }
+            }
+        }
+}

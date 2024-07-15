@@ -1,0 +1,2021 @@
+{
+        "fv:BDDef": {
+            "contains": {
+                "arp:IfPolDef": "",
+                "dhcp:LblDef": "",
+                "fault:Counts": "",
+                "fault:Delegate": "",
+                "fhs:BDDef": "",
+                "fv:AEPgCont": "",
+                "fv:BDConfigIssues": "",
+                "fv:EpRetDef": "",
+                "fv:IPSLADef": "",
+                "fv:OutCont": "",
+                "fv:RogueExceptionMacDef": "",
+                "fv:RtCrtrnDefToBDDef": "",
+                "fv:RtSrcToBDDef": "",
+                "fv:RtToRemoteBDDef": "",
+                "health:Inst": "",
+                "igmp:IfDef": "",
+                "igmp:SnoopDef": "",
+                "ip:RouteDef": "",
+                "mld:SnoopDef": "",
+                "nd:IfPolDef": "",
+                "netflow:ExporterPolHolder": "",
+                "netflow:MonitorPolHolder": "",
+                "pim:BDDef": ""
+            },
+            "rnMap": {
+                "IPSLADef-": "fv:IPSLADef",
+                "arpifpold": "arp:IfPolDef",
+                "bdcfgissues": "fv:BDConfigIssues",
+                "bddef": "fhs:BDDef",
+                "dhcplbldef-": "dhcp:LblDef",
+                "epRPol": "fv:EpRetDef",
+                "epgDn-": "fv:AEPgCont",
+                "exporterpolh-": "netflow:ExporterPolHolder",
+                "fd-": "fault:Delegate",
+                "fltCnts": "fault:Counts",
+                "health": "health:Inst",
+                "igmpIfDef": "igmp:IfDef",
+                "mldsnPol": "mld:SnoopDef",
+                "monitorpolh-": "netflow:MonitorPolHolder",
+                "ndifpold": "nd:IfPolDef",
+                "outDn-": "fv:OutCont",
+                "pimbdpdef": "pim:BDDef",
+                "rgexpmac-": "fv:RogueExceptionMacDef",
+                "rt-": "ip:RouteDef",
+                "rtCrtrnDefToBDDef": "fv:RtCrtrnDefToBDDef",
+                "rtspanSrcToBDDef-": "fv:RtSrcToBDDef",
+                "rttoRemoteBDDef-": "fv:RtToRemoteBDDef",
+                "snPol": "igmp:SnoopDef"
+            },
+            "identifiedBy": [
+                "bdDn",
+                "isSvc"
+            ],
+            "rnFormat": "bd-[{bdDn}]-isSvc-{isSvc}",
+            "containedBy": {
+                "pol:Uni": ""
+            },
+            "superClasses": [
+                "fv:ABD",
+                "fv:L2Dom",
+                "fv:Dom",
+                "fv:Def",
+                "pol:DefRoot",
+                "pol:Def",
+                "pol:Obj",
+                "naming:NamedObject"
+            ],
+            "subClasses": {
+
+            },
+            "relationFrom": {
+                "fv:RtCrtrnDefToBDDef": "fv:CrtrnDef",
+                "fv:RtSrcToBDDef": "span:Src",
+                "fv:RtToRemoteBDDef": "fv:RemotePolHolder"
+            },
+            "relationTo": {
+
+            },
+            "dnFormats": [
+                "uni/bd-[{bdDn}]-isSvc-{isSvc}"
+            ],
+            "writeAccess": [
+
+            ],
+            "readAccess": [
+                "access-protocol",
+                "admin",
+                "fabric-protocol",
+                "tenant-connectivity",
+                "tenant-protocol"
+            ],
+            "faults": {
+
+            },
+            "events": {
+
+            },
+            "stats": {
+
+            },
+            "isAbstract": false,
+            "isConfigurable": false,
+            "isContextRoot": true,
+            "isDeprecated": false,
+            "isEncrypted": false,
+            "isExportable": false,
+            "isPersistent": true,
+            "isSubjectToQuota": false,
+            "isObservable": true,
+            "hasStats": false,
+            "isStat": false,
+            "isFaultable": false,
+            "isDomainable": false,
+            "isHealthScorable": true,
+            "shouldCollectHealthStats": false,
+            "healthCollectionSource": "faults",
+            "hasEventRules": false,
+            "abstractionLayer": "logical",
+            "apicNxProcessing": false,
+            "monitoringPolicySource": "Explicit",
+            "isCreatableDeletable": "always",
+            "platformFlavors": [
+
+            ],
+            "classId": "1871",
+            "className": "BDDef",
+            "classPkg": "fv",
+            "featureTag": "",
+            "moCategory": "Regular",
+            "label": "Bridge Domain",
+            "comment": [
+                "A private layer 2 network context that belongs to a specific tenant or context, or is shared."
+            ],
+            "properties": {
+                "OptimizeWanBandwidth": {
+                    "comment": [
+                         "OptimizeWanBandwidth flag is enabled between sites"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "34472",
+                    "propLocalId": "8158",
+                    "label": "Optimize Wan Bandwidth between sites",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "boolean",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "no", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "no",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "accEncap": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "15217",
+                    "propLocalId": "1763",
+                    "label": "Access Encapsulation",
+                    "baseType": "base:Encap",
+                    "modelType": "base:Encap",
+                    "needsPropDelimiters": true,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "arpFlood": {
+                    "comment": [
+                         "A property to specify whether ARP flooding is enabled. If flooding is disabled, unicast routing will be performed on the target IP address."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "1693",
+                    "propLocalId": "885",
+                    "label": "ARP Flooding",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "boolean",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "no", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "no",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "bcastP": {
+                    "comment": [
+                         "Outer multicast group IP address."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1691",
+                    "propLocalId": "859",
+                    "label": "bcastP",
+                    "baseType": "address:IPv4",
+                    "modelType": "mcast:Group",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "bdDn": {
+                    "comment": [
+                         "null"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "1703",
+                    "propLocalId": "887",
+                    "label": "bdDn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": false,
+                    "isNaming": true,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "bdStretch": {
+                    "comment": [
+                         "BDStretch flag is enabled between sites"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "55337",
+                    "propLocalId": "12381",
+                    "label": "BD Stretch between sites flag",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "boolean",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "false", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "false",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "childAction": {
+                    "comment": [
+                         "Delete or ignore. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "4",
+                    "propLocalId": "5",
+                    "label": "childAction",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationChildAction",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "16384", "localName": "deleteAll",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteAll "},
+                         { "value": "8192", "localName": "deleteNonPresent",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteNonPresent "},
+                         { "value": "4096", "localName": "ignore",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ignore "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "configIssues": {
+                    "comment": [
+                         "Bitmask representation of the configuration issues found during the endpoint group deployment."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "26448",
+                    "propLocalId": "153",
+                    "label": "configIssues",
+                    "baseType": "scalar:Bitmask64",
+                    "modelType": "fv:BDConfIssuesType",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "0x2", "localName": "FHS-enabled-on-l2-only-bd",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "first hop security enabled on layer 2 only bridge domain "},
+                         { "value": "0x8", "localName": "bd-cannot-combine-hardware-proxy-and-flood-in-encapsulation",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "bd-cannot-combine-hardware-proxy-and-flood-in-encapsulation "},
+                         { "value": "0", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0x1", "localName": "igmp-snoop-disabled-on-multicast-if",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "igmpsnoop disabled on multicast enabled BD "},
+                         { "value": "0x4", "localName": "l3-mcast-is-enabled-on-vrf-where-bd-has-ip-learn-disable",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "l3-mcast-is-enabled-on-vrf-where-bd-has-ip-learn-disable "},
+                         { "value": "0", "localName": "ok",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ok "}
+                    ],
+                    "default": "ok",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "ctxDefDn": {
+                    "comment": [
+                         "The private network the endpoint group is associated with."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1704",
+                    "propLocalId": "888",
+                    "label": "ctxDefDn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "ctxDefStQual": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1706",
+                    "propLocalId": "890",
+                    "label": "ctxDefStQual",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "reln:StateQual",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "default-target",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "target not specified, using default"
+                             ],
+                             "label": "default-target "},
+                         { "value": "none", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1", "localName": "mismatch-target",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "target not found, using default"
+                             ],
+                             "label": "mismatch-target "},
+                         { "value": "0", "localName": "none",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "no issue"
+                             ],
+                             "label": "none "}
+                    ],
+                    "default": "none",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "descr": {
+                    "comment": [
+                         "Specifies a description of the policy definition root."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "5614",
+                    "propLocalId": "28",
+                    "label": "Description",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Descr",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": true,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 128,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9\\\\!#$%()*,-./:;@ _{|}~?&+]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "dn": {
+                    "comment": [
+                         "A tag or metadata is a non-hierarchical keyword or term assigned to the fabric module."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1",
+                    "propLocalId": "2",
+                    "label": "dn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "epClear": {
+                    "comment": [
+                         "Represents the parameter used by the node (i.e. Leaf) to\n                     clear all EPs in all leaves for this BD."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "31106",
+                    "propLocalId": "7825",
+                    "label": "Clear Endpoints",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "boolean",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "no", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "no",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "epMoveDetectMode": {
+                    "comment": [
+                         "The End Point move detection option uses the Gratuitous Address Resolution Protocol (GARP). A gratuitous ARP is an ARP broadcast-type of packet that is used to verify that no other device on the network has the same IP address as the sending device."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "19110",
+                    "propLocalId": "4911",
+                    "label": "EP Move Detection Mode",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "l2:EpMoveDetectMode",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": true,
+                    "likeProp": "l2:BD:epMoveDetectMode",
+                    "validValues": [
+                         { "value": "1", "localName": "garp",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Detection through GARP"
+                             ],
+                             "label": "GARP based detection "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "intersiteBumTrafficAllow": {
+                    "comment": [
+                         "Control whether BUM traffic is allowed between sites"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "30545",
+                    "propLocalId": "7595",
+                    "label": "Allow BUM traffic between sites",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "boolean",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "false", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "false",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "intersiteL2Stretch": {
+                    "comment": [
+                         "l2Stretch flag is enabled between sites"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "33178",
+                    "propLocalId": "7928",
+                    "label": "Allow l2Stretch between sites",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "boolean",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "no", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "no",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "ipLearning": {
+                    "isConfigurable": true,
+                    "propGlobalId": "21254",
+                    "propLocalId": "5433",
+                    "label": "Ip Learning",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "boolean",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "true", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "true",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "ipv6McastAllow": {
+                    "comment": [
+                         "Multicast. Flag to indicate if ipv6 multicast is enabled"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "47406",
+                    "propLocalId": "10834",
+                    "label": "ipv6 Multicast Allow",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "boolean",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": true,
+                    "likeProp": "l2:BD:ipv6McastAllow",
+                    "validValues": [
+                         { "value": "false", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "false",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "isCopySvc": {
+                    "comment": [
+                         "whether the bd that this bddef represents has copy service enabled"
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "26363",
+                    "propLocalId": "6263",
+                    "label": "isCopySvc",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "false", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "no",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "isPolicyEnforced": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "15218",
+                    "propLocalId": "4095",
+                    "label": "isPolicyEnforced",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "true", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "yes",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "isSvc": {
+                    "comment": [
+                         "A property to indicate whether this object is created for an internal service bridge domain or for a user bridge domain."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "1705",
+                    "propLocalId": "889",
+                    "label": "isSvc",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "boolean",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": false,
+                    "isNaming": true,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "false", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "false",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "lcOwn": {
+                    "comment": [
+                         "A value that indicates how this object was created. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "9",
+                    "propLocalId": "9",
+                    "label": "lcOwn",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "mo:Owner",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "local", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "4", "localName": "implicit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Implicit "},
+                         { "value": "0", "localName": "local",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Local "},
+                         { "value": "1", "localName": "policy",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Policy "},
+                         { "value": "2", "localName": "replica",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Replica "},
+                         { "value": "3", "localName": "resolveOnBehalf",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ResolvedOnBehalf "}
+                    ],
+                    "default": "local",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "limitIpLearnToSubnets": {
+                    "comment": [
+                         "Limits IP address learning to the bridge domain subnets only. Every BD can have multiple subnets associated with it. By default, all IPs are learned."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "20851",
+                    "propLocalId": "5375",
+                    "label": "Limit IP learning to BD subnets only",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "boolean",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "true", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "true",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "llAddr": {
+                    "comment": [
+                         "The override of the system generated IPv6 link-local address."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "16876",
+                    "propLocalId": "4368",
+                    "label": "IPv6 Link Local Address",
+                    "baseType": "address:Ip",
+                    "modelType": "address:Ip",
+                    "needsPropDelimiters": true,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validateAsIPv4OrIPv6": true,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "mac": {
+                    "comment": [
+                         "The MAC address of the bridge domain (BD) or switched virtual interface (SVI).  Every BD by default takes the fabric-wide default MAC address. You can override that address with a different one. By default the BD will take a 00:22:BD:F8:19:FF mac address."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "1698",
+                    "propLocalId": "480",
+                    "label": "MAC Address",
+                    "baseType": "address:MAC",
+                    "modelType": "fv:DefaultMAC",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validateAsMAC": true,
+                    "validValues": [
+                         { "value": "280487012409856", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "}
+                    ],
+                    "default": "280487012409856",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "mcastARPDrop": {
+                    "comment": [
+                         "rogue mcast ARP packet drop"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "67535",
+                    "propLocalId": "14706",
+                    "label": "BD rogue mcast ARP packet drop",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "boolean",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "true", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "true",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "mcastAllow": {
+                    "comment": [
+                         "Multicast. Flag to indicate if multicast is enabled"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "24916",
+                    "propLocalId": "6033",
+                    "label": "Multicast Allow",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "boolean",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": true,
+                    "likeProp": "l2:BD:mcastAllow",
+                    "validValues": [
+                         { "value": "false", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "false",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "missingContent": {
+                    "isConfigurable": false,
+                    "propGlobalId": "22703",
+                    "propLocalId": "5669",
+                    "label": "Missing Content because of Version Mismatch at the time of the push",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "false", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "no",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "modTs": {
+                    "comment": [
+                         "The time when this object was last modified."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "7",
+                    "propLocalId": "7",
+                    "label": "modTs",
+                    "baseType": "scalar:Date",
+                    "modelType": "mo:TStamp",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "never", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "never",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "never "}
+                    ],
+                    "default": "never",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "monPolDn": {
+                    "comment": [
+                         "The monitoring policy attached to this observable object."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "14243",
+                    "propLocalId": "228",
+                    "label": "Monitoring policy",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "mtu": {
+                    "comment": [
+                         "The layer 2 maximum transmit unit (MTU) size."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1697",
+                    "propLocalId": "171",
+                    "label": "MTU Size",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "fabric:InheritableMtu",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "inherit", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1", "localName": "inherit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "inherit "}
+                    ],
+                    "default": "inherit",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "multiDstPktAct": {
+                    "comment": [
+                         "The multiple destination forwarding method for L2 Multicast, Broadcast, and Link Layer traffic types."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "18026",
+                    "propLocalId": "4662",
+                    "label": "Multi Destination Packet Action",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "l2:MultiDstPktAct",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": true,
+                    "likeProp": "l2:BD:multiDstPktAct",
+                    "validValues": [
+                         { "value": "0", "localName": "bd-flood",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "BD Flood, flood with all L2 encapsulations in that BD"
+                             ],
+                             "label": "Flood in BD "},
+                         { "value": "bd-flood", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "2", "localName": "drop",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Drop"
+                             ],
+                             "label": "Drop "},
+                         { "value": "1", "localName": "encap-flood",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Flood with the L2 Encapsulation"
+                             ],
+                             "label": "Flood in Encapsulation "}
+                    ],
+                    "default": "bd-flood",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "name": {
+                    "comment": [
+                         "null"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "4991",
+                    "propLocalId": "13",
+                    "label": "Name",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Name",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": true,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 64,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9_.:-]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "nameAlias": {
+                    "isConfigurable": true,
+                    "propGlobalId": "28417",
+                    "propLocalId": "6719",
+                    "label": "Name alias",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:NameAlias",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 63,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9_.-]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "ownerKey": {
+                    "comment": [
+                         "The key for enabling clients to own their data for entity correlation."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "15230",
+                    "propLocalId": "4100",
+                    "label": "ownerKey",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Descr",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 128,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9\\\\!#$%()*,-./:;@ _{|}~?&+]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "ownerTag": {
+                    "comment": [
+                         "A tag for enabling clients to add their own data. For example, to indicate who created this object."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "15231",
+                    "propLocalId": "4101",
+                    "label": "ownerTag",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Descr",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 64,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9\\\\!#$%()*,-./:;@ _{|}~?&+]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "pcTag": {
+                    "comment": [
+                         "The default class ID for unknown unicast traffic terminating on this bridge domain."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1695",
+                    "propLocalId": "551",
+                    "label": "pcTag",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "vz:GPCTag",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "0", "localName": "any",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "any "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "rn": {
+                    "comment": [
+                         "Identifies an object from its siblings within the context of its parent object. The distinguished name contains a sequence of relative names."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "2",
+                    "propLocalId": "3",
+                    "label": "rn",
+                    "baseType": "reference:BinRN",
+                    "modelType": "reference:BinRN",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "scope": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1694",
+                    "propLocalId": "1",
+                    "label": "scope",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "fv:ScopeId",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "0", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "}
+                    ],
+                    "default": "0",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "seg": {
+                    "comment": [
+                         "A LAN domain segment."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1766",
+                    "propLocalId": "912",
+                    "label": "seg",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "fv:Seg",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "status": {
+                    "comment": [
+                         "The upgrade status. This property is for internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "3",
+                    "propLocalId": "4",
+                    "label": "status",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationStatus",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "created",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be created. An error is returned if the object already exists.  \nIn the return value of a setter method: indicates that an object has been created.  \n"
+                             ],
+                             "label": "created "},
+                         { "value": "8", "localName": "deleted",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be deleted.  \nIn the return value of a setter method: indicates that an object has been deleted.\n"
+                             ],
+                             "label": "deleted "},
+                         { "value": "4", "localName": "modified",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be modified  \nIn the return value of a setter method: indicates that an object has been modified.\n"
+                             ],
+                             "label": "modified "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "type": {
+                    "comment": [
+                         "The domain type."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1702",
+                    "propLocalId": "33",
+                    "label": "type",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "fv:BDType",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "regular", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "2", "localName": "fc",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "fc "},
+                         { "value": "1", "localName": "regular",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "regular "}
+                    ],
+                    "default": "regular",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "unicastRoute": {
+                    "comment": [
+                         "The forwarding method based on predefined forwarding criteria (IP or MAC address)."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "1692",
+                    "propLocalId": "884",
+                    "label": "Unicast Routing",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "boolean",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "yes", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "yes",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "unkMacUcastAct": {
+                    "comment": [
+                         "The forwarding method for unknown layer 2 destinations."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "1696",
+                    "propLocalId": "886",
+                    "label": "Unknown Mac Unicast Action",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "l2:UnkMacUcastAct",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": true,
+                    "likeProp": "l2:BD:unkMacUcastAct",
+                    "validValues": [
+                         { "value": "proxy", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Default value is proxy"
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "flood",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Flooding"
+                             ],
+                             "label": "Flood "},
+                         { "value": "1", "localName": "proxy",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Proxy"
+                             ],
+                             "label": "Hardware Proxy "}
+                    ],
+                    "default": "proxy",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "unkMcastAct": {
+                    "comment": [
+                         "The parameter used by the node (i.e. a leaf) for forwarding data for an unknown multicast destination."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "16164",
+                    "propLocalId": "4237",
+                    "label": "Unknown Multicast Destination Action",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "l2:UnkMcastAct",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": true,
+                    "likeProp": "l2:BD:unkMcastAct",
+                    "validValues": [
+                         { "value": "flood", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "flood",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Flooding"
+                             ],
+                             "label": "Flood "},
+                         { "value": "1", "localName": "opt-flood",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Optimized flooding"
+                             ],
+                             "label": "Optimized Flood "}
+                    ],
+                    "default": "flood",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "v6unkMcastAct": {
+                    "isConfigurable": true,
+                    "propGlobalId": "47702",
+                    "propLocalId": "10840",
+                    "label": "Unknown V6 Multicast Destination Action",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "l2:UnkMcastAct",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": true,
+                    "likeProp": "l2:BD:v6unkMcastAct",
+                    "validValues": [
+                         { "value": "flood", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "flood",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Flooding"
+                             ],
+                             "label": "Flood "},
+                         { "value": "1", "localName": "opt-flood",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Optimized flooding"
+                             ],
+                             "label": "Optimized Flood "}
+                    ],
+                    "default": "flood",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "vmac": {
+                    "comment": [
+                         "Virtual MAC address of the BD/SVI.  This is used\n                     when the BD is extended to multiple sites using\n                     l2 Outside."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "21204",
+                    "propLocalId": "5419",
+                    "label": "Virtual MAC Address",
+                    "baseType": "address:MAC",
+                    "modelType": "address:MAC",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validateAsMAC": true,
+                    "validValues": [
+                         { "value": "not-applicable", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "not-applicable",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Not Configured "}
+                    ],
+                    "default": "not-applicable",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                }
+            }
+        }
+}
