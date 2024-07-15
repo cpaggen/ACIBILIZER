@@ -1,0 +1,2285 @@
+{
+        "fv:FltCounterHist5min": {
+            "contains": {
+
+            },
+            "rnMap": {
+
+            },
+            "identifiedBy": [
+                "index"
+            ],
+            "rnFormat": "HDfvFltCounter5min-{index}",
+            "containedBy": {
+                "cloud:EPg": "",
+                "cloud:ExtEPg": "",
+                "cloud:ISvcEPg": "",
+                "cloud:SvcEPg": "",
+                "dhcp:CRelPg": "",
+                "dhcp:PRelPg": "",
+                "fv:AEPg": "",
+                "fv:Ap": "",
+                "fv:BD": "",
+                "fv:Ctx": "",
+                "fv:ESg": "",
+                "fv:Tenant": "",
+                "fv:TnlEPg": "",
+                "infra:CEPg": "",
+                "infra:PEPg": "",
+                "l1:PhysIf": "",
+                "l2ext:InstP": "",
+                "l3ext:InstP": "",
+                "l3ext:InstPDef": "",
+                "mgmt:InB": "",
+                "top:System": "",
+                "vns:EPpInfo": "",
+                "vns:REPpInfo": "",
+                "vns:SDEPpInfo": "",
+                "vns:SHEPpInfo": ""
+            },
+            "superClasses": [
+                "fv:FltCounterHist",
+                "stats:Hist",
+                "stats:Item"
+            ],
+            "subClasses": {
+
+            },
+            "relationFrom": {
+
+            },
+            "relationTo": {
+
+            },
+            "dnFormats": [
+                "uni/tn-{name}/cloudapp-{name}/cloudsvcepg-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/cloudapp-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/ap-{name}/esg-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/cloudapp-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/cloudapp-{name}/HDfvFltCounter5min-{index}",
+                "uni/svcdefcont/tensvcdef-{name}/ldevdef-[{lDevDn}]/sepg-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/ldevdef-[{lDevDn}]/sepg-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/cloudapp-{name}/sepg-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/cloudapp-{name}/cloudextepg-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/cloudapp-{name}/cloudepg-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/cloudapp-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/Tnlepg-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/LDevInst-[{priKey}]-ctx-{ctxName}/epgDn-[{shEpgDn}]/HDfvFltCounter5min-{index}",
+                "outdefcont-{id}/rsoutDefContToOut-[{tDn}]/outdef-{name}/instPdef-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/acIpToIp-{name}/acl3outcont/outdef-{name}/instPdef-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/acExtToEp-{name}/acl3outcont/outdef-{name}/instPdef-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/acEpToExt-{name}/acl3outcont/outdef-{name}/instPdef-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/acEpToEp-{name}/acl3outcont/outdef-{name}/instPdef-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/acAnyToEp-{name}/acl3outcont/outdef-{name}/instPdef-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/acEpToAny-{name}/acl3outcont/outdef-{name}/instPdef-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/epgToEp-{name}/acl3outcont/outdef-{name}/instPdef-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/epToEpg-{name}/acl3outcont/outdef-{name}/instPdef-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/ipToEpg-{name}/acl3outcont/outdef-{name}/instPdef-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/epgToIp-{name}/acl3outcont/outdef-{name}/instPdef-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/epgToEpg-{name}/acl3outcont/outdef-{name}/instPdef-{name}/HDfvFltCounter5min-{index}",
+                "uni/epp/sec-[{epgPKey}]/ac-{name}/acl3outcont/outdef-{name}/instPdef-{name}/HDfvFltCounter5min-{index}",
+                "uni/epp/fv-[{epgPKey}]/ac-{name}/acl3outcont/outdef-{name}/instPdef-{name}/HDfvFltCounter5min-{index}",
+                "uni/epp/rtd-[{epgPKey}]/ac-{name}/acl3outcont/outdef-{name}/instPdef-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/ldevCtx-c-{ctrctNameOrLbl}-g-{graphNameOrLbl}-n-{nodeNameOrLbl}/lIfCtx-c-{connNameOrLbl}/outdef-{name}/instPdef-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/outdef-{name}/instPdef-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/LDevInst-[{priKey}]-ctx-{ctxName}/bd-[{bdDn}]/HDfvFltCounter5min-{index}",
+                "uni/ldev-[{priKey}]-ctx-[{ctxDn}]-bd-[{bdDn}]/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/LDevInst-[{priKey}]-ctx-{ctxName}/G-{graphRn}-N-{nodeRn}-C-{connRn}/HDfvFltCounter5min-{index}",
+                "uni/vDev-[{priKey}]-tn-[{tnDn}]-ctx-{ctxName}/rndrInfo/eppContr/G-{graphRn}-N-{nodeRn}-C-{connRn}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/clp-{name}/cepg-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/provp-{name}/pepg-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/provp-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/clp-{name}/HDfvFltCounter5min-{index}",
+                "topology/pod-{id}/node-{id}/sys/phys-[{id}]/HDfvFltCounter5min-{index}",
+                "sys/phys-[{id}]/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/mgmtp-{name}/inb-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/ctx-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/ap-{name}/epg-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/ap-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/BD-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/out-{name}/instP-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/l2out-{name}/instP-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/clp-{name}/cdhcp-{name}/HDfvFltCounter5min-{index}",
+                "uni/tn-{name}/provp-{name}/pdhcp-{name}/HDfvFltCounter5min-{index}",
+                "topology/pod-{id}/node-{id}/sys/HDfvFltCounter5min-{index}",
+                "sys/HDfvFltCounter5min-{index}"
+            ],
+            "writeAccess": [
+
+            ],
+            "readAccess": [
+                "admin"
+            ],
+            "faults": {
+
+            },
+            "events": {
+
+            },
+            "stats": {
+
+            },
+            "statsGroup": { "name": "fvFltCounter", "counters": [
+                { "name": "warncount", "type": "scalar:Uint32", "unit": "count", "label": "warning Fault", 
+                    "deprecated": false },
+                { "name": "mincount", "type": "scalar:Uint32", "unit": "count", "label": "minor Fault", 
+                    "deprecated": false },
+                { "name": "majcount", "type": "scalar:Uint32", "unit": "count", "label": "major Fault", 
+                    "deprecated": false },
+                { "name": "critcount", "type": "scalar:Uint32", "unit": "count", "label": "critical Fault", 
+                    "comment": [
+                         "Fault Counter"
+                    ],
+                    "deprecated": false }
+                ]
+            },
+            "isAbstract": false,
+            "isConfigurable": false,
+            "isContextRoot": false,
+            "isDeprecated": false,
+            "isEncrypted": false,
+            "isExportable": false,
+            "isPersistent": false,
+            "isSubjectToQuota": false,
+            "isObservable": false,
+            "hasStats": false,
+            "isStat": true,
+            "isFaultable": false,
+            "isDomainable": false,
+            "isHealthScorable": false,
+            "shouldCollectHealthStats": false,
+            "healthCollectionSource": "faults",
+            "hasEventRules": false,
+            "abstractionLayer": "regular",
+            "apicNxProcessing": false,
+            "monitoringPolicySource": "Parent",
+            "isCreatableDeletable": "never",
+            "platformFlavors": [
+                "apic"
+            ],
+            "classId": "9918",
+            "className": "FltCounterHist5min",
+            "classPkg": "fv",
+            "featureTag": "",
+            "moCategory": "StatsHistory",
+            "label": "historical Fault Counter stats in 5 minute",
+            "comment": [
+                "A class that represents historical statistics for  Fault  Counter in a 5 minute sampling interval.  This class updates every 10 seconds."
+            ],
+            "properties": {
+                "childAction": {
+                    "comment": [
+                         "Delete or ignore. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "4",
+                    "propLocalId": "5",
+                    "label": "childAction",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationChildAction",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "16384", "localName": "deleteAll",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteAll "},
+                         { "value": "8192", "localName": "deleteNonPresent",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteNonPresent "},
+                         { "value": "4096", "localName": "ignore",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ignore "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "cnt": {
+                    "comment": [
+                         "The number of readings made within the current sample."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "16212",
+                    "propLocalId": "87",
+                    "label": "Number of Collections During this Interval",
+                    "baseType": "scalar:Uint16",
+                    "modelType": "scalar:Uint16",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "critcountAvg": {
+                    "comment": [
+                         "Critical  Fault.  This is the average value read by the counter during the collection interval.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30196",
+                    "propLocalId": "7470",
+                    "label": "critical Fault average value",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "scalar:Uint32",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "critcountMax": {
+                    "comment": [
+                         "Critical  Fault.  This is the largest value read by the counter during the collection interval.  This value is only overwritten if the most current value is larger than the previous value.  For example, if the value of the first reading is 3 and the value of the second reading is 4, the previous value is overwritten with 4.  If the third reading is smaller than 4, the value remains at 4.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30195",
+                    "propLocalId": "7469",
+                    "label": "critical Fault maximum value",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "scalar:Uint32",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "critcountMin": {
+                    "comment": [
+                         "Critical  Fault.  This is the smallest value read by the counter during the collection interval.  This value is only overwritten if the most current value is smaller than the previous value.  For example, if the value of the first reading is 3 and the value of the second reading is 2, the previous value is overwritten with 2.  If the third reading is larger than 2, the value remains at 2.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30194",
+                    "propLocalId": "7468",
+                    "label": "critical Fault minimum value",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "scalar:Uint32",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "critcountSpct": {
+                    "comment": [
+                         "Critical  Fault.  This is the number of missed and/or incorrect values read by the counter during the collection interval.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30197",
+                    "propLocalId": "7471",
+                    "label": "critical Fault suspect count",
+                    "baseType": "scalar:Uint16",
+                    "modelType": "scalar:Uint16",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "critcountThr": {
+                    "comment": [
+                         "Critical  Fault.  This indicates the properties of the counter that crossed the threshold during the collection interval.  Note that this value resets at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30198",
+                    "propLocalId": "7473",
+                    "label": "critical Fault thresholded flags",
+                    "baseType": "scalar:Bitmask64",
+                    "modelType": "stats:ThresholdedMask",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2199023255552", "localName": "avgCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg severity critical "},
+                         { "value": "68719476736", "localName": "avgHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg crossed high threshold "},
+                         { "value": "137438953472", "localName": "avgLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg crossed low threshold "},
+                         { "value": "1099511627776", "localName": "avgMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg severity major "},
+                         { "value": "549755813888", "localName": "avgMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg severity minor "},
+                         { "value": "34359738368", "localName": "avgRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg recovering "},
+                         { "value": "274877906944", "localName": "avgWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg severity warning "},
+                         { "value": "8192", "localName": "cumulativeCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative severity critical "},
+                         { "value": "256", "localName": "cumulativeHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative crossed high threshold "},
+                         { "value": "512", "localName": "cumulativeLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative crossed low threshold "},
+                         { "value": "4096", "localName": "cumulativeMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative severity major "},
+                         { "value": "2048", "localName": "cumulativeMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative severity minor "},
+                         { "value": "128", "localName": "cumulativeRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative recovering "},
+                         { "value": "1024", "localName": "cumulativeWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative severity warning "},
+                         { "value": "unspecified", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "64", "localName": "lastReadingCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading severity critical "},
+                         { "value": "2", "localName": "lastReadingHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading crossed high threshold "},
+                         { "value": "4", "localName": "lastReadingLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading crossed low threshold "},
+                         { "value": "32", "localName": "lastReadingMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading severity major "},
+                         { "value": "16", "localName": "lastReadingMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading severity minor "},
+                         { "value": "1", "localName": "lastReadingRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading recovering "},
+                         { "value": "8", "localName": "lastReadingWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading severity warning "},
+                         { "value": "17179869184", "localName": "maxCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max severity critical "},
+                         { "value": "536870912", "localName": "maxHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max crossed high threshold "},
+                         { "value": "1073741824", "localName": "maxLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max crossed low threshold "},
+                         { "value": "8589934592", "localName": "maxMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max severity major "},
+                         { "value": "4294967296", "localName": "maxMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max severity minor "},
+                         { "value": "268435456", "localName": "maxRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max recovering "},
+                         { "value": "2147483648", "localName": "maxWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max severity warning "},
+                         { "value": "134217728", "localName": "minCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min severity critical "},
+                         { "value": "4194304", "localName": "minHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min crossed high threshold "},
+                         { "value": "8388608", "localName": "minLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min crossed low threshold "},
+                         { "value": "67108864", "localName": "minMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min severity major "},
+                         { "value": "33554432", "localName": "minMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min severity minor "},
+                         { "value": "2097152", "localName": "minRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min recovering "},
+                         { "value": "16777216", "localName": "minWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min severity warning "},
+                         { "value": "1048576", "localName": "periodicCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic severity critical "},
+                         { "value": "32768", "localName": "periodicHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic crossed high threshold "},
+                         { "value": "65536", "localName": "periodicLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic crossed low threshold "},
+                         { "value": "524288", "localName": "periodicMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic severity major "},
+                         { "value": "262144", "localName": "periodicMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic severity minor "},
+                         { "value": "16384", "localName": "periodicRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic recovering "},
+                         { "value": "131072", "localName": "periodicWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic severity warning "},
+                         { "value": "36028797018963968", "localName": "rateCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate severity critical "},
+                         { "value": "1125899906842624", "localName": "rateHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate crossed high threshold "},
+                         { "value": "2251799813685248", "localName": "rateLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate crossed low threshold "},
+                         { "value": "18014398509481984", "localName": "rateMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate severity major "},
+                         { "value": "9007199254740992", "localName": "rateMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate severity minor "},
+                         { "value": "562949953421312", "localName": "rateRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate recovering "},
+                         { "value": "4503599627370496", "localName": "rateWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate severity warning "},
+                         { "value": "281474976710656", "localName": "trendCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend severity critical "},
+                         { "value": "8796093022208", "localName": "trendHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend crossed high threshold "},
+                         { "value": "17592186044416", "localName": "trendLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend crossed low threshold "},
+                         { "value": "140737488355328", "localName": "trendMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend severity major "},
+                         { "value": "70368744177664", "localName": "trendMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend severity minor "},
+                         { "value": "4398046511104", "localName": "trendRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend recovering "},
+                         { "value": "35184372088832", "localName": "trendWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend severity warning "},
+                         { "value": "0", "localName": "unspecified",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "}
+                    ],
+                    "default": "unspecified",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "critcountTr": {
+                    "comment": [
+                         "Critical  Fault.  This is the trending value of the counter.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30199",
+                    "propLocalId": "7475",
+                    "label": "critical Fault trend",
+                    "baseType": "scalar:Sint32",
+                    "modelType": "scalar:Sint32",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "dn": {
+                    "comment": [
+                         "A tag or metadata is a non-hierarchical keyword or term assigned to the fabric module."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1",
+                    "propLocalId": "2",
+                    "label": "dn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "index": {
+                    "comment": [
+                         "The index of the object."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "30184",
+                    "propLocalId": "89",
+                    "label": "History Index",
+                    "baseType": "scalar:Uint16",
+                    "modelType": "scalar:Uint16",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": false,
+                    "isNaming": true,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": true,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "lastCollOffset": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "111",
+                    "propLocalId": "86",
+                    "label": "Collection Length",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "scalar:Uint32",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "majcountAvg": {
+                    "comment": [
+                         "Major  Fault.  This is the average value read by the counter during the collection interval.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30211",
+                    "propLocalId": "7479",
+                    "label": "major Fault average value",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "scalar:Uint32",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "majcountMax": {
+                    "comment": [
+                         "Major  Fault.  This is the largest value read by the counter during the collection interval.  This value is only overwritten if the most current value is larger than the previous value.  For example, if the value of the first reading is 3 and the value of the second reading is 4, the previous value is overwritten with 4.  If the third reading is smaller than 4, the value remains at 4.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30210",
+                    "propLocalId": "7478",
+                    "label": "major Fault maximum value",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "scalar:Uint32",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "majcountMin": {
+                    "comment": [
+                         "Major  Fault.  This is the smallest value read by the counter during the collection interval.  This value is only overwritten if the most current value is smaller than the previous value.  For example, if the value of the first reading is 3 and the value of the second reading is 2, the previous value is overwritten with 2.  If the third reading is larger than 2, the value remains at 2.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30209",
+                    "propLocalId": "7477",
+                    "label": "major Fault minimum value",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "scalar:Uint32",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "majcountSpct": {
+                    "comment": [
+                         "Major  Fault.  This is the number of missed and/or incorrect values read by the counter during the collection interval.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30212",
+                    "propLocalId": "7480",
+                    "label": "major Fault suspect count",
+                    "baseType": "scalar:Uint16",
+                    "modelType": "scalar:Uint16",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "majcountThr": {
+                    "comment": [
+                         "Major  Fault.  This indicates the properties of the counter that crossed the threshold during the collection interval.  Note that this value resets at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30213",
+                    "propLocalId": "7482",
+                    "label": "major Fault thresholded flags",
+                    "baseType": "scalar:Bitmask64",
+                    "modelType": "stats:ThresholdedMask",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2199023255552", "localName": "avgCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg severity critical "},
+                         { "value": "68719476736", "localName": "avgHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg crossed high threshold "},
+                         { "value": "137438953472", "localName": "avgLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg crossed low threshold "},
+                         { "value": "1099511627776", "localName": "avgMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg severity major "},
+                         { "value": "549755813888", "localName": "avgMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg severity minor "},
+                         { "value": "34359738368", "localName": "avgRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg recovering "},
+                         { "value": "274877906944", "localName": "avgWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg severity warning "},
+                         { "value": "8192", "localName": "cumulativeCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative severity critical "},
+                         { "value": "256", "localName": "cumulativeHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative crossed high threshold "},
+                         { "value": "512", "localName": "cumulativeLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative crossed low threshold "},
+                         { "value": "4096", "localName": "cumulativeMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative severity major "},
+                         { "value": "2048", "localName": "cumulativeMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative severity minor "},
+                         { "value": "128", "localName": "cumulativeRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative recovering "},
+                         { "value": "1024", "localName": "cumulativeWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative severity warning "},
+                         { "value": "unspecified", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "64", "localName": "lastReadingCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading severity critical "},
+                         { "value": "2", "localName": "lastReadingHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading crossed high threshold "},
+                         { "value": "4", "localName": "lastReadingLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading crossed low threshold "},
+                         { "value": "32", "localName": "lastReadingMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading severity major "},
+                         { "value": "16", "localName": "lastReadingMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading severity minor "},
+                         { "value": "1", "localName": "lastReadingRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading recovering "},
+                         { "value": "8", "localName": "lastReadingWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading severity warning "},
+                         { "value": "17179869184", "localName": "maxCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max severity critical "},
+                         { "value": "536870912", "localName": "maxHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max crossed high threshold "},
+                         { "value": "1073741824", "localName": "maxLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max crossed low threshold "},
+                         { "value": "8589934592", "localName": "maxMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max severity major "},
+                         { "value": "4294967296", "localName": "maxMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max severity minor "},
+                         { "value": "268435456", "localName": "maxRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max recovering "},
+                         { "value": "2147483648", "localName": "maxWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max severity warning "},
+                         { "value": "134217728", "localName": "minCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min severity critical "},
+                         { "value": "4194304", "localName": "minHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min crossed high threshold "},
+                         { "value": "8388608", "localName": "minLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min crossed low threshold "},
+                         { "value": "67108864", "localName": "minMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min severity major "},
+                         { "value": "33554432", "localName": "minMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min severity minor "},
+                         { "value": "2097152", "localName": "minRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min recovering "},
+                         { "value": "16777216", "localName": "minWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min severity warning "},
+                         { "value": "1048576", "localName": "periodicCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic severity critical "},
+                         { "value": "32768", "localName": "periodicHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic crossed high threshold "},
+                         { "value": "65536", "localName": "periodicLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic crossed low threshold "},
+                         { "value": "524288", "localName": "periodicMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic severity major "},
+                         { "value": "262144", "localName": "periodicMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic severity minor "},
+                         { "value": "16384", "localName": "periodicRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic recovering "},
+                         { "value": "131072", "localName": "periodicWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic severity warning "},
+                         { "value": "36028797018963968", "localName": "rateCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate severity critical "},
+                         { "value": "1125899906842624", "localName": "rateHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate crossed high threshold "},
+                         { "value": "2251799813685248", "localName": "rateLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate crossed low threshold "},
+                         { "value": "18014398509481984", "localName": "rateMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate severity major "},
+                         { "value": "9007199254740992", "localName": "rateMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate severity minor "},
+                         { "value": "562949953421312", "localName": "rateRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate recovering "},
+                         { "value": "4503599627370496", "localName": "rateWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate severity warning "},
+                         { "value": "281474976710656", "localName": "trendCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend severity critical "},
+                         { "value": "8796093022208", "localName": "trendHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend crossed high threshold "},
+                         { "value": "17592186044416", "localName": "trendLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend crossed low threshold "},
+                         { "value": "140737488355328", "localName": "trendMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend severity major "},
+                         { "value": "70368744177664", "localName": "trendMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend severity minor "},
+                         { "value": "4398046511104", "localName": "trendRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend recovering "},
+                         { "value": "35184372088832", "localName": "trendWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend severity warning "},
+                         { "value": "0", "localName": "unspecified",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "}
+                    ],
+                    "default": "unspecified",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "majcountTr": {
+                    "comment": [
+                         "Major  Fault.  This is the trending value of the counter.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30214",
+                    "propLocalId": "7484",
+                    "label": "major Fault trend",
+                    "baseType": "scalar:Sint32",
+                    "modelType": "scalar:Sint32",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "mincountAvg": {
+                    "comment": [
+                         "Minor  Fault.  This is the average value read by the counter during the collection interval.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30226",
+                    "propLocalId": "7488",
+                    "label": "minor Fault average value",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "scalar:Uint32",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "mincountMax": {
+                    "comment": [
+                         "Minor  Fault.  This is the largest value read by the counter during the collection interval.  This value is only overwritten if the most current value is larger than the previous value.  For example, if the value of the first reading is 3 and the value of the second reading is 4, the previous value is overwritten with 4.  If the third reading is smaller than 4, the value remains at 4.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30225",
+                    "propLocalId": "7487",
+                    "label": "minor Fault maximum value",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "scalar:Uint32",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "mincountMin": {
+                    "comment": [
+                         "Minor  Fault.  This is the smallest value read by the counter during the collection interval.  This value is only overwritten if the most current value is smaller than the previous value.  For example, if the value of the first reading is 3 and the value of the second reading is 2, the previous value is overwritten with 2.  If the third reading is larger than 2, the value remains at 2.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30224",
+                    "propLocalId": "7486",
+                    "label": "minor Fault minimum value",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "scalar:Uint32",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "mincountSpct": {
+                    "comment": [
+                         "Minor  Fault.  This is the number of missed and/or incorrect values read by the counter during the collection interval.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30227",
+                    "propLocalId": "7489",
+                    "label": "minor Fault suspect count",
+                    "baseType": "scalar:Uint16",
+                    "modelType": "scalar:Uint16",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "mincountThr": {
+                    "comment": [
+                         "Minor  Fault.  This indicates the properties of the counter that crossed the threshold during the collection interval.  Note that this value resets at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30228",
+                    "propLocalId": "7491",
+                    "label": "minor Fault thresholded flags",
+                    "baseType": "scalar:Bitmask64",
+                    "modelType": "stats:ThresholdedMask",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2199023255552", "localName": "avgCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg severity critical "},
+                         { "value": "68719476736", "localName": "avgHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg crossed high threshold "},
+                         { "value": "137438953472", "localName": "avgLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg crossed low threshold "},
+                         { "value": "1099511627776", "localName": "avgMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg severity major "},
+                         { "value": "549755813888", "localName": "avgMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg severity minor "},
+                         { "value": "34359738368", "localName": "avgRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg recovering "},
+                         { "value": "274877906944", "localName": "avgWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg severity warning "},
+                         { "value": "8192", "localName": "cumulativeCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative severity critical "},
+                         { "value": "256", "localName": "cumulativeHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative crossed high threshold "},
+                         { "value": "512", "localName": "cumulativeLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative crossed low threshold "},
+                         { "value": "4096", "localName": "cumulativeMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative severity major "},
+                         { "value": "2048", "localName": "cumulativeMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative severity minor "},
+                         { "value": "128", "localName": "cumulativeRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative recovering "},
+                         { "value": "1024", "localName": "cumulativeWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative severity warning "},
+                         { "value": "unspecified", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "64", "localName": "lastReadingCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading severity critical "},
+                         { "value": "2", "localName": "lastReadingHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading crossed high threshold "},
+                         { "value": "4", "localName": "lastReadingLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading crossed low threshold "},
+                         { "value": "32", "localName": "lastReadingMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading severity major "},
+                         { "value": "16", "localName": "lastReadingMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading severity minor "},
+                         { "value": "1", "localName": "lastReadingRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading recovering "},
+                         { "value": "8", "localName": "lastReadingWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading severity warning "},
+                         { "value": "17179869184", "localName": "maxCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max severity critical "},
+                         { "value": "536870912", "localName": "maxHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max crossed high threshold "},
+                         { "value": "1073741824", "localName": "maxLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max crossed low threshold "},
+                         { "value": "8589934592", "localName": "maxMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max severity major "},
+                         { "value": "4294967296", "localName": "maxMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max severity minor "},
+                         { "value": "268435456", "localName": "maxRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max recovering "},
+                         { "value": "2147483648", "localName": "maxWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max severity warning "},
+                         { "value": "134217728", "localName": "minCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min severity critical "},
+                         { "value": "4194304", "localName": "minHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min crossed high threshold "},
+                         { "value": "8388608", "localName": "minLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min crossed low threshold "},
+                         { "value": "67108864", "localName": "minMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min severity major "},
+                         { "value": "33554432", "localName": "minMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min severity minor "},
+                         { "value": "2097152", "localName": "minRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min recovering "},
+                         { "value": "16777216", "localName": "minWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min severity warning "},
+                         { "value": "1048576", "localName": "periodicCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic severity critical "},
+                         { "value": "32768", "localName": "periodicHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic crossed high threshold "},
+                         { "value": "65536", "localName": "periodicLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic crossed low threshold "},
+                         { "value": "524288", "localName": "periodicMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic severity major "},
+                         { "value": "262144", "localName": "periodicMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic severity minor "},
+                         { "value": "16384", "localName": "periodicRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic recovering "},
+                         { "value": "131072", "localName": "periodicWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic severity warning "},
+                         { "value": "36028797018963968", "localName": "rateCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate severity critical "},
+                         { "value": "1125899906842624", "localName": "rateHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate crossed high threshold "},
+                         { "value": "2251799813685248", "localName": "rateLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate crossed low threshold "},
+                         { "value": "18014398509481984", "localName": "rateMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate severity major "},
+                         { "value": "9007199254740992", "localName": "rateMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate severity minor "},
+                         { "value": "562949953421312", "localName": "rateRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate recovering "},
+                         { "value": "4503599627370496", "localName": "rateWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate severity warning "},
+                         { "value": "281474976710656", "localName": "trendCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend severity critical "},
+                         { "value": "8796093022208", "localName": "trendHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend crossed high threshold "},
+                         { "value": "17592186044416", "localName": "trendLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend crossed low threshold "},
+                         { "value": "140737488355328", "localName": "trendMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend severity major "},
+                         { "value": "70368744177664", "localName": "trendMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend severity minor "},
+                         { "value": "4398046511104", "localName": "trendRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend recovering "},
+                         { "value": "35184372088832", "localName": "trendWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend severity warning "},
+                         { "value": "0", "localName": "unspecified",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "}
+                    ],
+                    "default": "unspecified",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "mincountTr": {
+                    "comment": [
+                         "Minor  Fault.  This is the trending value of the counter.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30229",
+                    "propLocalId": "7493",
+                    "label": "minor Fault trend",
+                    "baseType": "scalar:Sint32",
+                    "modelType": "scalar:Sint32",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "modTs": {
+                    "comment": [
+                         "The time when this object was last modified."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "7",
+                    "propLocalId": "7",
+                    "label": "modTs",
+                    "baseType": "scalar:Date",
+                    "modelType": "mo:TStamp",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "never", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "never",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "never "}
+                    ],
+                    "default": "never",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "repIntvEnd": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "110",
+                    "propLocalId": "85",
+                    "label": "Reporting End Time",
+                    "baseType": "scalar:Date",
+                    "modelType": "scalar:Date",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "repIntvStart": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "109",
+                    "propLocalId": "84",
+                    "label": "Reporting Start Time",
+                    "baseType": "scalar:Date",
+                    "modelType": "scalar:Date",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "rn": {
+                    "comment": [
+                         "Identifies an object from its siblings within the context of its parent object. The distinguished name contains a sequence of relative names."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "2",
+                    "propLocalId": "3",
+                    "label": "rn",
+                    "baseType": "reference:BinRN",
+                    "modelType": "reference:BinRN",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "status": {
+                    "comment": [
+                         "The upgrade status. This property is for internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "3",
+                    "propLocalId": "4",
+                    "label": "status",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationStatus",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "created",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be created. An error is returned if the object already exists.  \nIn the return value of a setter method: indicates that an object has been created.  \n"
+                             ],
+                             "label": "created "},
+                         { "value": "8", "localName": "deleted",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be deleted.  \nIn the return value of a setter method: indicates that an object has been deleted.\n"
+                             ],
+                             "label": "deleted "},
+                         { "value": "4", "localName": "modified",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be modified  \nIn the return value of a setter method: indicates that an object has been modified.\n"
+                             ],
+                             "label": "modified "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "warncountAvg": {
+                    "comment": [
+                         "Warning  Fault.  This is the average value read by the counter during the collection interval.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30241",
+                    "propLocalId": "7497",
+                    "label": "warning Fault average value",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "scalar:Uint32",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "warncountMax": {
+                    "comment": [
+                         "Warning  Fault.  This is the largest value read by the counter during the collection interval.  This value is only overwritten if the most current value is larger than the previous value.  For example, if the value of the first reading is 3 and the value of the second reading is 4, the previous value is overwritten with 4.  If the third reading is smaller than 4, the value remains at 4.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30240",
+                    "propLocalId": "7496",
+                    "label": "warning Fault maximum value",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "scalar:Uint32",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "warncountMin": {
+                    "comment": [
+                         "Warning  Fault.  This is the smallest value read by the counter during the collection interval.  This value is only overwritten if the most current value is smaller than the previous value.  For example, if the value of the first reading is 3 and the value of the second reading is 2, the previous value is overwritten with 2.  If the third reading is larger than 2, the value remains at 2.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30239",
+                    "propLocalId": "7495",
+                    "label": "warning Fault minimum value",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "scalar:Uint32",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "warncountSpct": {
+                    "comment": [
+                         "Warning  Fault.  This is the number of missed and/or incorrect values read by the counter during the collection interval.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30242",
+                    "propLocalId": "7498",
+                    "label": "warning Fault suspect count",
+                    "baseType": "scalar:Uint16",
+                    "modelType": "scalar:Uint16",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "warncountThr": {
+                    "comment": [
+                         "Warning  Fault.  This indicates the properties of the counter that crossed the threshold during the collection interval.  Note that this value resets at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30243",
+                    "propLocalId": "7500",
+                    "label": "warning Fault thresholded flags",
+                    "baseType": "scalar:Bitmask64",
+                    "modelType": "stats:ThresholdedMask",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2199023255552", "localName": "avgCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg severity critical "},
+                         { "value": "68719476736", "localName": "avgHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg crossed high threshold "},
+                         { "value": "137438953472", "localName": "avgLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg crossed low threshold "},
+                         { "value": "1099511627776", "localName": "avgMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg severity major "},
+                         { "value": "549755813888", "localName": "avgMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg severity minor "},
+                         { "value": "34359738368", "localName": "avgRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg recovering "},
+                         { "value": "274877906944", "localName": "avgWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "avg severity warning "},
+                         { "value": "8192", "localName": "cumulativeCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative severity critical "},
+                         { "value": "256", "localName": "cumulativeHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative crossed high threshold "},
+                         { "value": "512", "localName": "cumulativeLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative crossed low threshold "},
+                         { "value": "4096", "localName": "cumulativeMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative severity major "},
+                         { "value": "2048", "localName": "cumulativeMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative severity minor "},
+                         { "value": "128", "localName": "cumulativeRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative recovering "},
+                         { "value": "1024", "localName": "cumulativeWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "cumulative severity warning "},
+                         { "value": "unspecified", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "64", "localName": "lastReadingCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading severity critical "},
+                         { "value": "2", "localName": "lastReadingHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading crossed high threshold "},
+                         { "value": "4", "localName": "lastReadingLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading crossed low threshold "},
+                         { "value": "32", "localName": "lastReadingMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading severity major "},
+                         { "value": "16", "localName": "lastReadingMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading severity minor "},
+                         { "value": "1", "localName": "lastReadingRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading recovering "},
+                         { "value": "8", "localName": "lastReadingWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lastReading severity warning "},
+                         { "value": "17179869184", "localName": "maxCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max severity critical "},
+                         { "value": "536870912", "localName": "maxHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max crossed high threshold "},
+                         { "value": "1073741824", "localName": "maxLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max crossed low threshold "},
+                         { "value": "8589934592", "localName": "maxMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max severity major "},
+                         { "value": "4294967296", "localName": "maxMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max severity minor "},
+                         { "value": "268435456", "localName": "maxRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max recovering "},
+                         { "value": "2147483648", "localName": "maxWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "max severity warning "},
+                         { "value": "134217728", "localName": "minCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min severity critical "},
+                         { "value": "4194304", "localName": "minHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min crossed high threshold "},
+                         { "value": "8388608", "localName": "minLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min crossed low threshold "},
+                         { "value": "67108864", "localName": "minMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min severity major "},
+                         { "value": "33554432", "localName": "minMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min severity minor "},
+                         { "value": "2097152", "localName": "minRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min recovering "},
+                         { "value": "16777216", "localName": "minWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "min severity warning "},
+                         { "value": "1048576", "localName": "periodicCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic severity critical "},
+                         { "value": "32768", "localName": "periodicHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic crossed high threshold "},
+                         { "value": "65536", "localName": "periodicLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic crossed low threshold "},
+                         { "value": "524288", "localName": "periodicMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic severity major "},
+                         { "value": "262144", "localName": "periodicMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic severity minor "},
+                         { "value": "16384", "localName": "periodicRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic recovering "},
+                         { "value": "131072", "localName": "periodicWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "periodic severity warning "},
+                         { "value": "36028797018963968", "localName": "rateCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate severity critical "},
+                         { "value": "1125899906842624", "localName": "rateHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate crossed high threshold "},
+                         { "value": "2251799813685248", "localName": "rateLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate crossed low threshold "},
+                         { "value": "18014398509481984", "localName": "rateMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate severity major "},
+                         { "value": "9007199254740992", "localName": "rateMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate severity minor "},
+                         { "value": "562949953421312", "localName": "rateRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate recovering "},
+                         { "value": "4503599627370496", "localName": "rateWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "rate severity warning "},
+                         { "value": "281474976710656", "localName": "trendCrit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend severity critical "},
+                         { "value": "8796093022208", "localName": "trendHigh",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend crossed high threshold "},
+                         { "value": "17592186044416", "localName": "trendLow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend crossed low threshold "},
+                         { "value": "140737488355328", "localName": "trendMajor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend severity major "},
+                         { "value": "70368744177664", "localName": "trendMinor",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend severity minor "},
+                         { "value": "4398046511104", "localName": "trendRecovering",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend recovering "},
+                         { "value": "35184372088832", "localName": "trendWarn",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "trend severity warning "},
+                         { "value": "0", "localName": "unspecified",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "}
+                    ],
+                    "default": "unspecified",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "warncountTr": {
+                    "comment": [
+                         "Warning  Fault.  This is the trending value of the counter.  Note that this value resets to 0 at the beginning of each interval."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30244",
+                    "propLocalId": "7502",
+                    "label": "warning Fault trend",
+                    "baseType": "scalar:Sint32",
+                    "modelType": "scalar:Sint32",
+                    "needsPropDelimiters": false,
+                    "uitype": "number",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                }
+            }
+        }
+}

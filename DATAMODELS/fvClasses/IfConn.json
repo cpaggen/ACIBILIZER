@@ -1,0 +1,1794 @@
+{
+        "fv:IfConn": {
+            "contains": {
+                "arp:IfPolDef": "",
+                "bfd:IfDef": "",
+                "bfd:MhIfDef": "",
+                "bfd:MicroBfdDef": "",
+                "bgp:InfraPeerDef": "",
+                "bgp:PeerDef": "",
+                "dhcp:LblDef": "",
+                "dpp:IfCktAllowAg15min": "",
+                "dpp:IfCktAllowAg1d": "",
+                "dpp:IfCktAllowAg1h": "",
+                "dpp:IfCktAllowAg1mo": "",
+                "dpp:IfCktAllowAg1qtr": "",
+                "dpp:IfCktAllowAg1w": "",
+                "dpp:IfCktAllowAg1year": "",
+                "dpp:IfCktAllowAgHist15min": "",
+                "dpp:IfCktAllowAgHist1d": "",
+                "dpp:IfCktAllowAgHist1h": "",
+                "dpp:IfCktAllowAgHist1mo": "",
+                "dpp:IfCktAllowAgHist1qtr": "",
+                "dpp:IfCktAllowAgHist1w": "",
+                "dpp:IfCktAllowAgHist1year": "",
+                "dpp:IfCktAllowPart15min": "",
+                "dpp:IfCktAllowPart1d": "",
+                "dpp:IfCktAllowPart1h": "",
+                "dpp:IfCktAllowPart1mo": "",
+                "dpp:IfCktAllowPart1qtr": "",
+                "dpp:IfCktAllowPart1w": "",
+                "dpp:IfCktAllowPart1year": "",
+                "dpp:IfCktAllowPart5min": "",
+                "dpp:IfCktAllowPartHist15min": "",
+                "dpp:IfCktAllowPartHist1d": "",
+                "dpp:IfCktAllowPartHist1h": "",
+                "dpp:IfCktAllowPartHist1mo": "",
+                "dpp:IfCktAllowPartHist1qtr": "",
+                "dpp:IfCktAllowPartHist1w": "",
+                "dpp:IfCktAllowPartHist1year": "",
+                "dpp:IfCktAllowPartHist5min": "",
+                "dpp:IfCktDropAg15min": "",
+                "dpp:IfCktDropAg1d": "",
+                "dpp:IfCktDropAg1h": "",
+                "dpp:IfCktDropAg1mo": "",
+                "dpp:IfCktDropAg1qtr": "",
+                "dpp:IfCktDropAg1w": "",
+                "dpp:IfCktDropAg1year": "",
+                "dpp:IfCktDropAgHist15min": "",
+                "dpp:IfCktDropAgHist1d": "",
+                "dpp:IfCktDropAgHist1h": "",
+                "dpp:IfCktDropAgHist1mo": "",
+                "dpp:IfCktDropAgHist1qtr": "",
+                "dpp:IfCktDropAgHist1w": "",
+                "dpp:IfCktDropAgHist1year": "",
+                "dpp:IfCktDropPart15min": "",
+                "dpp:IfCktDropPart1d": "",
+                "dpp:IfCktDropPart1h": "",
+                "dpp:IfCktDropPart1mo": "",
+                "dpp:IfCktDropPart1qtr": "",
+                "dpp:IfCktDropPart1w": "",
+                "dpp:IfCktDropPart1year": "",
+                "dpp:IfCktDropPart5min": "",
+                "dpp:IfCktDropPartHist15min": "",
+                "dpp:IfCktDropPartHist1d": "",
+                "dpp:IfCktDropPartHist1h": "",
+                "dpp:IfCktDropPartHist1mo": "",
+                "dpp:IfCktDropPartHist1qtr": "",
+                "dpp:IfCktDropPartHist1w": "",
+                "dpp:IfCktDropPartHist1year": "",
+                "dpp:IfCktDropPartHist5min": "",
+                "eigrp:IfDef": "",
+                "fault:Counts": "",
+                "fault:Delegate": "",
+                "fault:Inst": "",
+                "fv:EpDefRef": "",
+                "fv:IfConfigIssues": "",
+                "fv:PrimaryEncapDef": "",
+                "fv:QinqFabEncapDef": "",
+                "fv:RsDomIfConn": "",
+                "fv:RsIpCktEpIfConn": "",
+                "fv:RsToDomDef": "",
+                "fv:RtDppIfCreatedByFvIfConn": "",
+                "fv:RtExtBD": "",
+                "fv:RtIpAddr": "",
+                "fv:RtL3If": "",
+                "fv:RtRouteToIfConn": "",
+                "fv:RtSrcToFvIfConn": "",
+                "fv:RtTrExtEpSrcToFvIfConn": "",
+                "fv:RtTrExtExtSrcToFvIfConn": "",
+                "fv:TunDefRef": "",
+                "health:Inst": "",
+                "hsrp:IfDef": "",
+                "igmp:IfDef": "",
+                "l3ext:FloatingIfDef": "",
+                "l3ext:FloatingIpCont": "",
+                "l3ext:ForwarderAddrDef": "",
+                "l3ext:IpDef": "",
+                "l3ext:SharedSecondaryIpContDef": "",
+                "l3ext:VmmDomTracker": "",
+                "mgmt:IpDef": "",
+                "mpls:IfDef": "",
+                "nd:IfPolDef": "",
+                "nd:PfxPolDef": "",
+                "netflow:ExporterPolHolder": "",
+                "netflow:MonitorPolHolder": "",
+                "ospf:IfDef": "",
+                "ptp:CfgDef": "",
+                "qos:ClassLevelDef": "",
+                "qos:CustomPolDef": "",
+                "qos:EgressDppPolHolder": "",
+                "qos:IngressDppPolHolder": "",
+                "rtdmc:IPV6McastIfDefCont": "",
+                "rtdmc:McastIfDefCont": ""
+            },
+            "rnMap": {
+                "CDdppIfCktAllowAg15min": "dpp:IfCktAllowAg15min",
+                "CDdppIfCktAllowAg1d": "dpp:IfCktAllowAg1d",
+                "CDdppIfCktAllowAg1h": "dpp:IfCktAllowAg1h",
+                "CDdppIfCktAllowAg1mo": "dpp:IfCktAllowAg1mo",
+                "CDdppIfCktAllowAg1qtr": "dpp:IfCktAllowAg1qtr",
+                "CDdppIfCktAllowAg1w": "dpp:IfCktAllowAg1w",
+                "CDdppIfCktAllowAg1year": "dpp:IfCktAllowAg1year",
+                "CDdppIfCktAllowPart15min-": "dpp:IfCktAllowPart15min",
+                "CDdppIfCktAllowPart1d-": "dpp:IfCktAllowPart1d",
+                "CDdppIfCktAllowPart1h-": "dpp:IfCktAllowPart1h",
+                "CDdppIfCktAllowPart1mo-": "dpp:IfCktAllowPart1mo",
+                "CDdppIfCktAllowPart1qtr-": "dpp:IfCktAllowPart1qtr",
+                "CDdppIfCktAllowPart1w-": "dpp:IfCktAllowPart1w",
+                "CDdppIfCktAllowPart1year-": "dpp:IfCktAllowPart1year",
+                "CDdppIfCktAllowPart5min-": "dpp:IfCktAllowPart5min",
+                "CDdppIfCktDropAg15min": "dpp:IfCktDropAg15min",
+                "CDdppIfCktDropAg1d": "dpp:IfCktDropAg1d",
+                "CDdppIfCktDropAg1h": "dpp:IfCktDropAg1h",
+                "CDdppIfCktDropAg1mo": "dpp:IfCktDropAg1mo",
+                "CDdppIfCktDropAg1qtr": "dpp:IfCktDropAg1qtr",
+                "CDdppIfCktDropAg1w": "dpp:IfCktDropAg1w",
+                "CDdppIfCktDropAg1year": "dpp:IfCktDropAg1year",
+                "CDdppIfCktDropPart15min-": "dpp:IfCktDropPart15min",
+                "CDdppIfCktDropPart1d-": "dpp:IfCktDropPart1d",
+                "CDdppIfCktDropPart1h-": "dpp:IfCktDropPart1h",
+                "CDdppIfCktDropPart1mo-": "dpp:IfCktDropPart1mo",
+                "CDdppIfCktDropPart1qtr-": "dpp:IfCktDropPart1qtr",
+                "CDdppIfCktDropPart1w-": "dpp:IfCktDropPart1w",
+                "CDdppIfCktDropPart1year-": "dpp:IfCktDropPart1year",
+                "CDdppIfCktDropPart5min-": "dpp:IfCktDropPart5min",
+                "HDdppIfCktAllowAg15min-": "dpp:IfCktAllowAgHist15min",
+                "HDdppIfCktAllowAg1d-": "dpp:IfCktAllowAgHist1d",
+                "HDdppIfCktAllowAg1h-": "dpp:IfCktAllowAgHist1h",
+                "HDdppIfCktAllowAg1mo-": "dpp:IfCktAllowAgHist1mo",
+                "HDdppIfCktAllowAg1qtr-": "dpp:IfCktAllowAgHist1qtr",
+                "HDdppIfCktAllowAg1w-": "dpp:IfCktAllowAgHist1w",
+                "HDdppIfCktAllowAg1year-": "dpp:IfCktAllowAgHist1year",
+                "HDdppIfCktAllowPart15min-": "dpp:IfCktAllowPartHist15min",
+                "HDdppIfCktAllowPart1d-": "dpp:IfCktAllowPartHist1d",
+                "HDdppIfCktAllowPart1h-": "dpp:IfCktAllowPartHist1h",
+                "HDdppIfCktAllowPart1mo-": "dpp:IfCktAllowPartHist1mo",
+                "HDdppIfCktAllowPart1qtr-": "dpp:IfCktAllowPartHist1qtr",
+                "HDdppIfCktAllowPart1w-": "dpp:IfCktAllowPartHist1w",
+                "HDdppIfCktAllowPart1year-": "dpp:IfCktAllowPartHist1year",
+                "HDdppIfCktAllowPart5min-": "dpp:IfCktAllowPartHist5min",
+                "HDdppIfCktDropAg15min-": "dpp:IfCktDropAgHist15min",
+                "HDdppIfCktDropAg1d-": "dpp:IfCktDropAgHist1d",
+                "HDdppIfCktDropAg1h-": "dpp:IfCktDropAgHist1h",
+                "HDdppIfCktDropAg1mo-": "dpp:IfCktDropAgHist1mo",
+                "HDdppIfCktDropAg1qtr-": "dpp:IfCktDropAgHist1qtr",
+                "HDdppIfCktDropAg1w-": "dpp:IfCktDropAgHist1w",
+                "HDdppIfCktDropAg1year-": "dpp:IfCktDropAgHist1year",
+                "HDdppIfCktDropPart15min-": "dpp:IfCktDropPartHist15min",
+                "HDdppIfCktDropPart1d-": "dpp:IfCktDropPartHist1d",
+                "HDdppIfCktDropPart1h-": "dpp:IfCktDropPartHist1h",
+                "HDdppIfCktDropPart1mo-": "dpp:IfCktDropPartHist1mo",
+                "HDdppIfCktDropPart1qtr-": "dpp:IfCktDropPartHist1qtr",
+                "HDdppIfCktDropPart1w-": "dpp:IfCktDropPartHist1w",
+                "HDdppIfCktDropPart1year-": "dpp:IfCktDropPartHist1year",
+                "HDdppIfCktDropPart5min-": "dpp:IfCktDropPartHist5min",
+                "addr-": "l3ext:IpDef",
+                "arpifpold": "arp:IfPolDef",
+                "bfdIfDef": "bfd:IfDef",
+                "bfdMhIfDef": "bfd:MhIfDef",
+                "classlevel": "qos:ClassLevelDef",
+                "dhcplbldef-": "dhcp:LblDef",
+                "dom-": "l3ext:VmmDomTracker",
+                "eigrpIfP": "eigrp:IfDef",
+                "encap-": "fv:QinqFabEncapDef",
+                "epdefref-": "fv:EpDefRef",
+                "eqosdpppolh": "qos:EgressDppPolHolder",
+                "exporterpolh-": "netflow:ExporterPolHolder",
+                "fault-": "fault:Inst",
+                "fd-": "fault:Delegate",
+                "floatingifdef": "l3ext:FloatingIfDef",
+                "floatingipcont": "l3ext:FloatingIpCont",
+                "fltCnts": "fault:Counts",
+                "forwarderaddr-": "l3ext:ForwarderAddrDef",
+                "health": "health:Inst",
+                "hsrpIfDef": "hsrp:IfDef",
+                "ifcfgissues-": "fv:IfConfigIssues",
+                "igmpIfDef": "igmp:IfDef",
+                "infraPeerP-": "bgp:InfraPeerDef",
+                "iqosdpppolh": "qos:IngressDppPolHolder",
+                "mcastifdefcont": "rtdmc:McastIfDefCont",
+                "microBfdDef": "bfd:MicroBfdDef",
+                "mipdef-": "mgmt:IpDef",
+                "monitorpolh-": "netflow:MonitorPolHolder",
+                "mplsifdef": "mpls:IfDef",
+                "ndifpold": "nd:IfPolDef",
+                "ndpfxpold": "nd:PfxPolDef",
+                "ospfIfP": "ospf:IfDef",
+                "peerP-": "bgp:PeerDef",
+                "primencap-": "fv:PrimaryEncapDef",
+                "ptpCfgDef": "ptp:CfgDef",
+                "qoscustom-": "qos:CustomPolDef",
+                "rsdomIfConn": "fv:RsDomIfConn",
+                "rsipCktEpIfConn": "fv:RsIpCktEpIfConn",
+                "rstoDomDef-": "fv:RsToDomDef",
+                "rtDppIfCreatedByFvIfConn": "fv:RtDppIfCreatedByFvIfConn",
+                "rtextBD": "fv:RtExtBD",
+                "rtipAddr": "fv:RtIpAddr",
+                "rtipRouteToIfConn-": "fv:RtRouteToIfConn",
+                "rtl3If": "fv:RtL3If",
+                "rtspanSrcToFvIfConn-": "fv:RtSrcToFvIfConn",
+                "rttraceroutepTrExtEpSrcToFvIfConn-": "fv:RtTrExtEpSrcToFvIfConn",
+                "rttraceroutepTrExtExtSrcToFvIfConn-": "fv:RtTrExtExtSrcToFvIfConn",
+                "sharedipcont": "l3ext:SharedSecondaryIpContDef",
+                "tundefref-": "fv:TunDefRef",
+                "v6mcastifdefcont": "rtdmc:IPV6McastIfDefCont"
+            },
+            "identifiedBy": [
+                "encap",
+                "addr"
+            ],
+            "rnFormat": "conn-[{encap}]-[{addr}]",
+            "containedBy": {
+                "fv:ConnDef": ""
+            },
+            "superClasses": [
+                "fv:AIfConn",
+                "pol:Comp",
+                "pol:Obj",
+                "naming:NamedObject"
+            ],
+            "subClasses": {
+
+            },
+            "relationFrom": {
+                "fv:RtDppIfCreatedByFvIfConn": "dpp:If",
+                "fv:RtExtBD": "l2:BD",
+                "fv:RtIpAddr": "ip:Addr",
+                "fv:RtL3If": "l3:If",
+                "fv:RtRouteToIfConn": "ip:Route",
+                "fv:RtSrcToFvIfConn": "span:Src",
+                "fv:RtTrExtEpSrcToFvIfConn": "traceroutep:TrExtEp",
+                "fv:RtTrExtExtSrcToFvIfConn": "traceroutep:TrExtExt"
+            },
+            "relationTo": {
+                "fv:RsDomIfConn": "l2:ADom",
+                "fv:RsIpCktEpIfConn": "l3:IpCktEp",
+                "fv:RsToDomDef": "fv:DomDef"
+            },
+            "dnFormats": [
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/phynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/phynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/phynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/phynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/phynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/phynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/phynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/phynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/phynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/phynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/phynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/br-[{epgPKey}]/node-{id}/phynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/phynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/phynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/stnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/stnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/stnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/stnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/stnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/stnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/stnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/stnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/stnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/stnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/stnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/br-[{epgPKey}]/node-{id}/stnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/stnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/stnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/dynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/dynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/dynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/dynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/dynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/dynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/dynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/dynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/dynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/dynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/dynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/br-[{epgPKey}]/node-{id}/dynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/dynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/dynodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/vnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/vnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/vnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/vnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/vnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/vnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/vnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/vnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/vnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/vnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/vnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/br-[{epgPKey}]/node-{id}/vnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/vnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/vnodeatt/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/br-[{epgPKey}]/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/dyatt-[{targetDn}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/dyatt-[{targetDn}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/br-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/dyatt-[{targetDn}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/dyatt-[{targetDn}]/conndef/conn-[{encap}]-[{addr}]",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/br-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/conndef/conn-[{encap}]-[{addr}]",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/stpathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/stpathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/br-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/stpathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/stpathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/attEntitypathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/attEntitypathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/br-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/attEntitypathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/attEntitypathatt-[{pathName}]/conndef/conn-[{encap}]-[{addr}]",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/br-[{epgPKey}]/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/conndef/conn-[{encap}]-[{addr}]",
+                "uni/epp/node-{id}/conndef/conn-[{encap}]-[{addr}]"
+            ],
+            "writeAccess": [
+
+            ],
+            "readAccess": [
+                "access-connectivity",
+                "access-qos",
+                "admin",
+                "fabric-connectivity",
+                "fabric-protocol",
+                "tenant-connectivity",
+                "tenant-ext-connectivity",
+                "tenant-ext-protocol",
+                "tenant-protocol",
+                "tenant-qos"
+            ],
+            "faults": {
+
+            },
+            "events": {
+
+            },
+            "stats": {
+                "dpp:IfCktAllowAg15min": {
+                    "comment": [
+                         "A class that represents the most current aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 15 minute sampling interval.  This class updates every 5 minutes."
+                    ]
+                },
+                "dpp:IfCktAllowAg1d": {
+                    "comment": [
+                         "A class that represents the most current aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 1 day sampling interval.  This class updates every hour."
+                    ]
+                },
+                "dpp:IfCktAllowAg1h": {
+                    "comment": [
+                         "A class that represents the most current aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 1 hour sampling interval.  This class updates every 15 minutes."
+                    ]
+                },
+                "dpp:IfCktAllowAg1mo": {
+                    "comment": [
+                         "A class that represents the most current aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 1 month sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktAllowAg1qtr": {
+                    "comment": [
+                         "A class that represents the most current aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 1 quarter sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktAllowAg1w": {
+                    "comment": [
+                         "A class that represents the most current aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 1 week sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktAllowAg1year": {
+                    "comment": [
+                         "A class that represents the most current aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 1 year sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktAllowAgHist15min": {
+                    "comment": [
+                         "A class that represents historical aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 15 minute sampling interval.  This class updates every 5 minutes."
+                    ]
+                },
+                "dpp:IfCktAllowAgHist1d": {
+                    "comment": [
+                         "A class that represents historical aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 1 day sampling interval.  This class updates every hour."
+                    ]
+                },
+                "dpp:IfCktAllowAgHist1h": {
+                    "comment": [
+                         "A class that represents historical aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 1 hour sampling interval.  This class updates every 15 minutes."
+                    ]
+                },
+                "dpp:IfCktAllowAgHist1mo": {
+                    "comment": [
+                         "A class that represents historical aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 1 month sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktAllowAgHist1qtr": {
+                    "comment": [
+                         "A class that represents historical aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 1 quarter sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktAllowAgHist1w": {
+                    "comment": [
+                         "A class that represents historical aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 1 week sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktAllowAgHist1year": {
+                    "comment": [
+                         "A class that represents historical aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 1 year sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktAllowPart15min": {
+                    "comment": [
+                         "A class that represents the most current portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 15 minute sampling interval.  This class updates every 5 minutes."
+                    ]
+                },
+                "dpp:IfCktAllowPart1d": {
+                    "comment": [
+                         "A class that represents the most current portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 1 day sampling interval.  This class updates every hour."
+                    ]
+                },
+                "dpp:IfCktAllowPart1h": {
+                    "comment": [
+                         "A class that represents the most current portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 1 hour sampling interval.  This class updates every 15 minutes."
+                    ]
+                },
+                "dpp:IfCktAllowPart1mo": {
+                    "comment": [
+                         "A class that represents the most current portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 1 month sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktAllowPart1qtr": {
+                    "comment": [
+                         "A class that represents the most current portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 1 quarter sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktAllowPart1w": {
+                    "comment": [
+                         "A class that represents the most current portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 1 week sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktAllowPart1year": {
+                    "comment": [
+                         "A class that represents the most current portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 1 year sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktAllowPart5min": {
+                    "comment": [
+                         "A class that represents the most current portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 5 minute sampling interval.  This class updates every 10 seconds."
+                    ]
+                },
+                "dpp:IfCktAllowPartHist15min": {
+                    "comment": [
+                         "A class that represents historical portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 15 minute sampling interval.  This class updates every 5 minutes."
+                    ]
+                },
+                "dpp:IfCktAllowPartHist1d": {
+                    "comment": [
+                         "A class that represents historical portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 1 day sampling interval.  This class updates every hour."
+                    ]
+                },
+                "dpp:IfCktAllowPartHist1h": {
+                    "comment": [
+                         "A class that represents historical portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 1 hour sampling interval.  This class updates every 15 minutes."
+                    ]
+                },
+                "dpp:IfCktAllowPartHist1mo": {
+                    "comment": [
+                         "A class that represents historical portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 1 month sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktAllowPartHist1qtr": {
+                    "comment": [
+                         "A class that represents historical portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 1 quarter sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktAllowPartHist1w": {
+                    "comment": [
+                         "A class that represents historical portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 1 week sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktAllowPartHist1year": {
+                    "comment": [
+                         "A class that represents historical portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 1 year sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktAllowPartHist5min": {
+                    "comment": [
+                         "A class that represents historical portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Allow  Counters in a 5 minute sampling interval.  This class updates every 10 seconds."
+                    ]
+                },
+                "dpp:IfCktDropAg15min": {
+                    "comment": [
+                         "A class that represents the most current aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 15 minute sampling interval.  This class updates every 5 minutes."
+                    ]
+                },
+                "dpp:IfCktDropAg1d": {
+                    "comment": [
+                         "A class that represents the most current aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 1 day sampling interval.  This class updates every hour."
+                    ]
+                },
+                "dpp:IfCktDropAg1h": {
+                    "comment": [
+                         "A class that represents the most current aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 1 hour sampling interval.  This class updates every 15 minutes."
+                    ]
+                },
+                "dpp:IfCktDropAg1mo": {
+                    "comment": [
+                         "A class that represents the most current aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 1 month sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktDropAg1qtr": {
+                    "comment": [
+                         "A class that represents the most current aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 1 quarter sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktDropAg1w": {
+                    "comment": [
+                         "A class that represents the most current aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 1 week sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktDropAg1year": {
+                    "comment": [
+                         "A class that represents the most current aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 1 year sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktDropAgHist15min": {
+                    "comment": [
+                         "A class that represents historical aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 15 minute sampling interval.  This class updates every 5 minutes."
+                    ]
+                },
+                "dpp:IfCktDropAgHist1d": {
+                    "comment": [
+                         "A class that represents historical aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 1 day sampling interval.  This class updates every hour."
+                    ]
+                },
+                "dpp:IfCktDropAgHist1h": {
+                    "comment": [
+                         "A class that represents historical aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 1 hour sampling interval.  This class updates every 15 minutes."
+                    ]
+                },
+                "dpp:IfCktDropAgHist1mo": {
+                    "comment": [
+                         "A class that represents historical aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 1 month sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktDropAgHist1qtr": {
+                    "comment": [
+                         "A class that represents historical aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 1 quarter sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktDropAgHist1w": {
+                    "comment": [
+                         "A class that represents historical aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 1 week sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktDropAgHist1year": {
+                    "comment": [
+                         "A class that represents historical aggregated statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 1 year sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktDropPart15min": {
+                    "comment": [
+                         "A class that represents the most current portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 15 minute sampling interval.  This class updates every 5 minutes."
+                    ]
+                },
+                "dpp:IfCktDropPart1d": {
+                    "comment": [
+                         "A class that represents the most current portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 1 day sampling interval.  This class updates every hour."
+                    ]
+                },
+                "dpp:IfCktDropPart1h": {
+                    "comment": [
+                         "A class that represents the most current portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 1 hour sampling interval.  This class updates every 15 minutes."
+                    ]
+                },
+                "dpp:IfCktDropPart1mo": {
+                    "comment": [
+                         "A class that represents the most current portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 1 month sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktDropPart1qtr": {
+                    "comment": [
+                         "A class that represents the most current portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 1 quarter sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktDropPart1w": {
+                    "comment": [
+                         "A class that represents the most current portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 1 week sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktDropPart1year": {
+                    "comment": [
+                         "A class that represents the most current portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 1 year sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktDropPart5min": {
+                    "comment": [
+                         "A class that represents the most current portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 5 minute sampling interval.  This class updates every 10 seconds."
+                    ]
+                },
+                "dpp:IfCktDropPartHist15min": {
+                    "comment": [
+                         "A class that represents historical portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 15 minute sampling interval.  This class updates every 5 minutes."
+                    ]
+                },
+                "dpp:IfCktDropPartHist1d": {
+                    "comment": [
+                         "A class that represents historical portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 1 day sampling interval.  This class updates every hour."
+                    ]
+                },
+                "dpp:IfCktDropPartHist1h": {
+                    "comment": [
+                         "A class that represents historical portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 1 hour sampling interval.  This class updates every 15 minutes."
+                    ]
+                },
+                "dpp:IfCktDropPartHist1mo": {
+                    "comment": [
+                         "A class that represents historical portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 1 month sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktDropPartHist1qtr": {
+                    "comment": [
+                         "A class that represents historical portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 1 quarter sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktDropPartHist1w": {
+                    "comment": [
+                         "A class that represents historical portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 1 week sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktDropPartHist1year": {
+                    "comment": [
+                         "A class that represents historical portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 1 year sampling interval.  This class updates every day."
+                    ]
+                },
+                "dpp:IfCktDropPartHist5min": {
+                    "comment": [
+                         "A class that represents historical portion of the statistics for  If Ckt  Ingress  Data  Plane  Policer  Drop  Counters in a 5 minute sampling interval.  This class updates every 10 seconds."
+                    ]
+                }
+            },
+            "isAbstract": false,
+            "isConfigurable": false,
+            "isContextRoot": false,
+            "isDeprecated": false,
+            "isEncrypted": false,
+            "isExportable": false,
+            "isPersistent": true,
+            "isSubjectToQuota": false,
+            "isObservable": true,
+            "hasStats": true,
+            "isStat": false,
+            "isFaultable": true,
+            "isDomainable": false,
+            "isHealthScorable": true,
+            "shouldCollectHealthStats": false,
+            "healthCollectionSource": "faults",
+            "hasEventRules": false,
+            "abstractionLayer": "logical",
+            "apicNxProcessing": false,
+            "monitoringPolicySource": "Parent",
+            "isCreatableDeletable": "always",
+            "platformFlavors": [
+
+            ],
+            "classId": "1949",
+            "className": "IfConn",
+            "classPkg": "fv",
+            "featureTag": "",
+            "moCategory": "Regular",
+            "label": "Interface Connectivity",
+            "comment": [
+                "Connectivity parameters for an interface."
+            ],
+            "properties": {
+                "addr": {
+                    "comment": [
+                         "The IP address of a layer 3 interface"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "1745",
+                    "propLocalId": "149",
+                    "label": "addr",
+                    "baseType": "address:Ip",
+                    "modelType": "address:Ip",
+                    "needsPropDelimiters": true,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": false,
+                    "isNaming": true,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validateAsIPv4OrIPv6": true,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "auto": {
+                    "comment": [
+                         "Selects automatic configuration of the interface."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1747",
+                    "propLocalId": "907",
+                    "label": "auto",
+                    "baseType": "scalar:Bool",
+                    "modelType": "fabric:AutoConfig",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "false", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "no",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "autostate": {
+                    "comment": [
+                         "Autostate feature\n                     When enabled an SVI automatically goes down when forwarding\n                     states of all ports attached to it is down"
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "34167",
+                    "propLocalId": "8079",
+                    "label": "SVI AutoState",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "svi:Autostate",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "disabled", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "disabled",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "disabled "},
+                         { "value": "1", "localName": "enabled",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "enabled "}
+                    ],
+                    "default": "disabled",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "bcastP": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1743",
+                    "propLocalId": "859",
+                    "label": "bcastP",
+                    "baseType": "address:IPv4",
+                    "modelType": "mcast:Group",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "childAction": {
+                    "comment": [
+                         "Delete or ignore. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "4",
+                    "propLocalId": "5",
+                    "label": "childAction",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationChildAction",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "16384", "localName": "deleteAll",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteAll "},
+                         { "value": "8192", "localName": "deleteNonPresent",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteNonPresent "},
+                         { "value": "4096", "localName": "ignore",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ignore "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "classPref": {
+                    "comment": [
+                         "Classification preference for this EPG within a domain\n                encap: the class-id is dervied based on packet encapsulation (e.g Vlan/VxLAN id)\n                useg: class-id is derived based on other useg/EPGs or dynamically learned mac address in VMM."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "23431",
+                    "propLocalId": "5776",
+                    "label": "Classification Preference",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "fv:ClassPref",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "encap", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "encap",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Packet Encapsulation "},
+                         { "value": "1", "localName": "useg",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "uSeg "}
+                    ],
+                    "default": "encap",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "descr": {
+                    "comment": [
+                         "Specifies the description of a policy component."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "5582",
+                    "propLocalId": "28",
+                    "label": "Description",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Descr",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": true,
+                    "likeProp": "naming:Described:descr",
+                    "validators": [
+                         {"min" : 0, "max": 128,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9\\\\!#$%()*,-./:;@ _{|}~?&+]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "dn": {
+                    "comment": [
+                         "A tag or metadata is a non-hierarchical keyword or term assigned to the fabric module."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1",
+                    "propLocalId": "2",
+                    "label": "dn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "encap": {
+                    "comment": [
+                         "The encapsulation (VLAN or VXLAN) to be used for the interface."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "1741",
+                    "propLocalId": "143",
+                    "label": "encap",
+                    "baseType": "base:Encap",
+                    "modelType": "base:Encap",
+                    "needsPropDelimiters": true,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": false,
+                    "isNaming": true,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "extEncap": {
+                    "comment": [
+                         "The layer 2 bridge domain encapsulation in case of external connectivity with an external SVI interface."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1742",
+                    "propLocalId": "858",
+                    "label": "extEncap",
+                    "baseType": "base:Encap",
+                    "modelType": "base:Encap",
+                    "needsPropDelimiters": true,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "gw": {
+                    "comment": [
+                         "Gateway IP Address"
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1746",
+                    "propLocalId": "906",
+                    "label": "gw",
+                    "baseType": "address:Ip",
+                    "modelType": "address:Ip",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "ifInstT": {
+                    "comment": [
+                         "The type of interface to be instantiated."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "16252",
+                    "propLocalId": "899",
+                    "label": "Interface Instantiation Directive",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "fv:IfInstT",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "bridged",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Pure L2 ports "},
+                         { "value": "l3-port", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "13", "localName": "ext-svi",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "External SVI "},
+                         { "value": "12", "localName": "l3-port",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Routed Interface "},
+                         { "value": "11", "localName": "sub-interface",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Routed Sub-interface "}
+                    ],
+                    "default": "l3-port",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "ipv6Dad": {
+                    "comment": [
+                         "IPv6 DAD feature\n                     When disabled it will IPv6 DAD will be diasabled"
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "42722",
+                    "propLocalId": "9254",
+                    "label": "IPv6 DAD",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "l3ext:Ipv6Dad",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "enabled", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "disabled",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "disabled "},
+                         { "value": "1", "localName": "enabled",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "enabled "}
+                    ],
+                    "default": "enabled",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "isMultiPodDirect": {
+                    "comment": [
+                         "MultiPod Direct (Back-to-Back) Link feature\n                     When link is direct MultiPod Link"
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "62992",
+                    "propLocalId": "13777",
+                    "label": "MultiPod Direct Link",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "false", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "no",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "lcOwn": {
+                    "comment": [
+                         "A value that indicates how this object was created. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "9",
+                    "propLocalId": "9",
+                    "label": "lcOwn",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "mo:Owner",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "local", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "4", "localName": "implicit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Implicit "},
+                         { "value": "0", "localName": "local",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Local "},
+                         { "value": "1", "localName": "policy",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Policy "},
+                         { "value": "2", "localName": "replica",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Replica "},
+                         { "value": "3", "localName": "resolveOnBehalf",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ResolvedOnBehalf "}
+                    ],
+                    "default": "local",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "llAddr": {
+                    "comment": [
+                         "The override of the system generated IPv6 link-local address."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "16877",
+                    "propLocalId": "4368",
+                    "label": "IPv6 Link Local Address",
+                    "baseType": "address:Ip",
+                    "modelType": "address:Ip",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "mac": {
+                    "comment": [
+                         "The MAC address for the external l3 interface. Overrides the default MAC address of 00:22:BD:F8:19:FF, which is a reserved MAC address."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1744",
+                    "propLocalId": "480",
+                    "label": "mac",
+                    "baseType": "address:MAC",
+                    "modelType": "address:MAC",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "mcastAddr": {
+                    "comment": [
+                         "The multicast address for the interface."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1750",
+                    "propLocalId": "139",
+                    "label": "mcastAddr",
+                    "baseType": "address:Ip",
+                    "modelType": "address:Ip",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "modTs": {
+                    "comment": [
+                         "The time when this object was last modified."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "7",
+                    "propLocalId": "7",
+                    "label": "modTs",
+                    "baseType": "scalar:Date",
+                    "modelType": "mo:TStamp",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "never", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "never",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "never "}
+                    ],
+                    "default": "never",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "mode": {
+                    "comment": [
+                         "The mode of the encapsulation."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1748",
+                    "propLocalId": "14",
+                    "label": "mode",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "fv:Mode",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "regular", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1", "localName": "native",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Access (802.1P) "},
+                         { "value": "0", "localName": "regular",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Trunk "},
+                         { "value": "2", "localName": "untagged",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Access (Untagged) "}
+                    ],
+                    "default": "regular",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "monPolDn": {
+                    "comment": [
+                         "The monitoring policy attached to this observable object."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "14274",
+                    "propLocalId": "228",
+                    "label": "Monitoring policy",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "mtu": {
+                    "comment": [
+                         "The MTU size for the interface."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1749",
+                    "propLocalId": "171",
+                    "label": "MTU Size",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "fabric:InheritableMtu",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "inherit", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1", "localName": "inherit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "inherit "}
+                    ],
+                    "default": "inherit",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "name": {
+                    "comment": [
+                         "null"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "4991",
+                    "propLocalId": "13",
+                    "label": "Name",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Name",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": true,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 64,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9_.:-]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "nameAlias": {
+                    "isConfigurable": true,
+                    "propGlobalId": "28417",
+                    "propLocalId": "6719",
+                    "label": "Name alias",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:NameAlias",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 63,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9_.-]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "resImedcy": {
+                    "comment": [
+                         "Represents the resolution immediacy preference of the EpG on this port."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1751",
+                    "propLocalId": "527",
+                    "label": "resImedcy",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "fv:ResImedcy",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "lazy", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1", "localName": "immediate",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Immediate "},
+                         { "value": "2", "localName": "lazy",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "On Demand "},
+                         { "value": "3", "localName": "pre-provision",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Pre-provision "}
+                    ],
+                    "default": "lazy",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "rn": {
+                    "comment": [
+                         "Identifies an object from its siblings within the context of its parent object. The distinguished name contains a sequence of relative names."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "2",
+                    "propLocalId": "3",
+                    "label": "rn",
+                    "baseType": "reference:BinRN",
+                    "modelType": "reference:BinRN",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "status": {
+                    "comment": [
+                         "The upgrade status. This property is for internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "3",
+                    "propLocalId": "4",
+                    "label": "status",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationStatus",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "created",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be created. An error is returned if the object already exists.  \nIn the return value of a setter method: indicates that an object has been created.  \n"
+                             ],
+                             "label": "created "},
+                         { "value": "8", "localName": "deleted",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be deleted.  \nIn the return value of a setter method: indicates that an object has been deleted.\n"
+                             ],
+                             "label": "deleted "},
+                         { "value": "4", "localName": "modified",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be modified  \nIn the return value of a setter method: indicates that an object has been modified.\n"
+                             ],
+                             "label": "modified "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "validState": {
+                    "isConfigurable": false,
+                    "propGlobalId": "25987",
+                    "propLocalId": "4167",
+                    "label": "validState",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "fv:ValidationState",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "not-validated", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "2", "localName": "invalid",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Invalid "},
+                         { "value": "0", "localName": "not-validated",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Not validated "},
+                         { "value": "1", "localName": "valid",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Valid "}
+                    ],
+                    "default": "not-validated",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                }
+            }
+        }
+}

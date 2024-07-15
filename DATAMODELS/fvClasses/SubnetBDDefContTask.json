@@ -1,0 +1,1618 @@
+{
+        "fv:SubnetBDDefContTask": {
+            "contains": {
+
+            },
+            "rnMap": {
+
+            },
+            "identifiedBy": [
+                "id"
+            ],
+            "rnFormat": "fvSubnetBDDefContTask-{id}",
+            "containedBy": {
+                "action:AeSubj": "",
+                "action:AnalyticsSubj": "",
+                "action:AppliancedirectorSubj": "",
+                "action:BootmgrSubj": "",
+                "action:CloudpeSubj": "",
+                "action:ConfelemSubj": "",
+                "action:DbgrSubj": "",
+                "action:DbgrelemSubj": "",
+                "action:DhcpdSubj": "",
+                "action:DomainmgrSubj": "",
+                "action:EdmgrSubj": "",
+                "action:EventmgrSubj": "",
+                "action:ExtXMLApiSubj": "",
+                "action:GoconnectorSubj": "",
+                "action:GoeventelemSubj": "",
+                "action:GohealthelemSubj": "",
+                "action:GoobserverelemSubj": "",
+                "action:GoreaderSubj": "",
+                "action:IdmgrSubj": "",
+                "action:LicensemgrSubj": "",
+                "action:NxosmockSubj": "",
+                "action:ObserverSubj": "",
+                "action:ObserverelemSubj": "",
+                "action:OpflexelemSubj": "",
+                "action:OpflexpSubj": "",
+                "action:OshSubj": "",
+                "action:OspaelemSubj": "",
+                "action:PlatformmgrSubj": "",
+                "action:PlgnhandlerSubj": "",
+                "action:PolicydistSubj": "",
+                "action:PolicyelemSubj": "",
+                "action:PolicymgrSubj": "",
+                "action:ScripthandlerSubj": "",
+                "action:SnmpdSubj": "",
+                "action:StreamelemSubj": "",
+                "action:TftpdSubj": "",
+                "action:TopomgrSubj": "",
+                "action:VleafelemSubj": "",
+                "action:VmmmgrSubj": "",
+                "action:VtapSubj": ""
+            },
+            "superClasses": [
+                "task:Inst",
+                "action:RInst",
+                "action:Inst",
+                "pol:ComplElem"
+            ],
+            "subClasses": {
+
+            },
+            "relationFrom": {
+
+            },
+            "relationTo": {
+
+            },
+            "dnFormats": [
+                "action/tftpdsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/goreadersubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/gohealthelemsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/goeventelemsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/goobserverelemsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/streamelemsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/goconnectorsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/cloudpesubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/edmgrsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/platformmgrsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/licensemgrsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/domainmgrsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/plgnhandlersubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/policydistsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/analyticssubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/opflexpsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/snmpdsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/vtapsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/confelemsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/opflexelemsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/oshsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/ospaelemsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/idmgrsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/scripthandlersubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/dhcpdsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/vleafelemsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/appliancedirectorsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/bootmgrsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/nxosmocksubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/vmmmgrsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/dbgrelemsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/observerelemsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/dbgrsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/observersubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/topomgrsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/aesubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/policymgrsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/policyelemsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/extXMLApisubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/eventmgrsubj-[{oDn}]/fvSubnetBDDefContTask-{id}",
+                "action/fvSubnetBDDefContTask-{id}"
+            ],
+            "writeAccess": [
+
+            ],
+            "readAccess": [
+                "admin"
+            ],
+            "faults": {
+
+            },
+            "events": {
+
+            },
+            "stats": {
+
+            },
+            "isAbstract": false,
+            "isConfigurable": false,
+            "isContextRoot": false,
+            "isDeprecated": false,
+            "isEncrypted": false,
+            "isExportable": false,
+            "isPersistent": true,
+            "isSubjectToQuota": false,
+            "isObservable": false,
+            "hasStats": false,
+            "isStat": false,
+            "isFaultable": false,
+            "isDomainable": false,
+            "isHealthScorable": false,
+            "shouldCollectHealthStats": false,
+            "healthCollectionSource": "faults",
+            "hasEventRules": false,
+            "abstractionLayer": "regular",
+            "apicNxProcessing": false,
+            "monitoringPolicySource": "Parent",
+            "isCreatableDeletable": "never",
+            "platformFlavors": [
+
+            ],
+            "classId": "5503",
+            "className": "SubnetBDDefContTask",
+            "classPkg": "fv",
+            "featureTag": "",
+            "moCategory": "Task",
+            "label": "",
+            "comment": [
+                "An internal container for objects used for deployment."
+            ],
+            "properties": {
+                "childAction": {
+                    "comment": [
+                         "Delete or ignore. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "4",
+                    "propLocalId": "5",
+                    "label": "childAction",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationChildAction",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "16384", "localName": "deleteAll",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteAll "},
+                         { "value": "8192", "localName": "deleteNonPresent",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteNonPresent "},
+                         { "value": "4096", "localName": "ignore",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ignore "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "data": {
+                    "comment": [
+                         "Information returned by or provided to the application or task."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "52",
+                    "propLocalId": "43",
+                    "label": "Data",
+                    "baseType": "string:Basic",
+                    "modelType": "string:Basic",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "descr": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "33",
+                    "propLocalId": "28",
+                    "label": "Description",
+                    "baseType": "string:Basic",
+                    "modelType": "action:Descr",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "dn": {
+                    "comment": [
+                         "A tag or metadata is a non-hierarchical keyword or term assigned to the fabric module."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1",
+                    "propLocalId": "2",
+                    "label": "dn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "endTs": {
+                    "comment": [
+                         "The date and time when the task ended."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "15575",
+                    "propLocalId": "32",
+                    "label": "endTs",
+                    "baseType": "scalar:Date",
+                    "modelType": "mo:TStamp",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "never", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "never",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "never "}
+                    ],
+                    "default": "never",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "fail": {
+                    "comment": [
+                         "The number of times the task has failed."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "46",
+                    "propLocalId": "38",
+                    "label": "Fail",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "scalar:Uint32",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "flags": {
+                    "comment": [
+                         "The IP address flags."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "30392",
+                    "propLocalId": "50",
+                    "label": "Flags",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "scalar:Uint32",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "id": {
+                    "comment": [
+                         "An object identifier."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "16145",
+                    "propLocalId": "12",
+                    "label": "ID",
+                    "baseType": "scalar:Enum32",
+                    "modelType": "action:Id",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": false,
+                    "isNaming": true,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": true,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "1382", "localName": "UpdateBDDefWithRouteDef",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "UpdateBDDefWithRouteDef "},
+                         { "value": "1415", "localName": "UpdateBDHolder",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "UpdateBDHolder "},
+                         { "value": "none", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "none",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "none "}
+                    ],
+                    "default": "none",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "invErrCode": {
+                    "comment": [
+                         "The error code returned during task execution."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "49",
+                    "propLocalId": "41",
+                    "label": "Remote Error Code",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "condition:ErrCode",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "1140", "localName": "ERR-FILTER-illegal-format",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1160", "localName": "ERR-FSM-no-such-state",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1551", "localName": "ERR-HTTP-set-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1552", "localName": "ERR-HTTPS-set-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1130", "localName": "ERR-MO-CONFIG-child-object-cant-be-configured",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1122", "localName": "ERR-MO-META-no-such-object-class",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1121", "localName": "ERR-MO-PROPERTY-no-such-property",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1120", "localName": "ERR-MO-PROPERTY-value-out-of-range",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1170", "localName": "ERR-MO-access-denied",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1107", "localName": "ERR-MO-deletion-rule-violation",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1103", "localName": "ERR-MO-duplicate-object",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1106", "localName": "ERR-MO-illegal-containment",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1105", "localName": "ERR-MO-illegal-creation",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1100", "localName": "ERR-MO-illegal-iterator-state",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1101", "localName": "ERR-MO-illegal-object-lifecycle-transition",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1104", "localName": "ERR-MO-naming-rule-violation",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1102", "localName": "ERR-MO-object-not-found",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1150", "localName": "ERR-MO-resource-allocation",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1520", "localName": "ERR-aaa-config-modify-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1513", "localName": "ERR-acct-realm-set-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1574", "localName": "ERR-add-ctrlr",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1522", "localName": "ERR-admin-passwd-set",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1571", "localName": "ERR-api",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1548", "localName": "ERR-auth-issue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1514", "localName": "ERR-auth-realm-set-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1534", "localName": "ERR-authentication",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1535", "localName": "ERR-authorization-required",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1572", "localName": "ERR-connect",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1562", "localName": "ERR-create-domain",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1560", "localName": "ERR-create-keyring",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1526", "localName": "ERR-create-role",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1524", "localName": "ERR-create-user",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1564", "localName": "ERR-delete-domain",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1528", "localName": "ERR-delete-role",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1523", "localName": "ERR-delete-user",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1561", "localName": "ERR-domain-set-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1549", "localName": "ERR-http-initializing",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1568", "localName": "ERR-incompat-ctrlr-version",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1540", "localName": "ERR-internal-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1569", "localName": "ERR-invalid-args",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1589", "localName": "ERR-invalid-delimiter",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1588", "localName": "ERR-invalid-domain",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1582", "localName": "ERR-invalid-domain-name",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1510", "localName": "ERR-ldap-delete-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1509", "localName": "ERR-ldap-get-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1518", "localName": "ERR-ldap-group-modify-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1502", "localName": "ERR-ldap-group-set-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1511", "localName": "ERR-ldap-set-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1546", "localName": "ERR-missing-method",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1567", "localName": "ERR-modify-ctrlr-access",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1576", "localName": "ERR-modify-ctrlr-dvs-version",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1575", "localName": "ERR-modify-ctrlr-rootcont",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1573", "localName": "ERR-modify-ctrlr-scope",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1577", "localName": "ERR-modify-ctrlr-trig-inventory",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1563", "localName": "ERR-modify-domain",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1581", "localName": "ERR-modify-domain-encapmode",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1578", "localName": "ERR-modify-domain-enfpref",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1579", "localName": "ERR-modify-domain-mcastpool",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1580", "localName": "ERR-modify-domain-mode",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1584", "localName": "ERR-modify-domain-prefencapmode",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1527", "localName": "ERR-modify-role",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1525", "localName": "ERR-modify-user",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1565", "localName": "ERR-modify-user-domain",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1532", "localName": "ERR-modify-user-role",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1570", "localName": "ERR-no-buf",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1566", "localName": "ERR-passwd-set-failure",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1519", "localName": "ERR-provider-group-modify-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1512", "localName": "ERR-provider-group-set-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1505", "localName": "ERR-radius-global-set-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1501", "localName": "ERR-radius-group-set-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1504", "localName": "ERR-radius-set-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1545", "localName": "ERR-request-timeout",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1515", "localName": "ERR-role-set-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1587", "localName": "ERR-rsa-global-set-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1585", "localName": "ERR-rsa-group-set-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1586", "localName": "ERR-rsa-set-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1550", "localName": "ERR-secondary-node",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1539", "localName": "ERR-service-not-ready",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1543", "localName": "ERR-set-password-strength-check",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1521", "localName": "ERR-store-pre-login-banner-msg",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1508", "localName": "ERR-tacacs-enable-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1507", "localName": "ERR-tacacs-global-set-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1503", "localName": "ERR-tacacs-group-set-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1506", "localName": "ERR-tacacs-set-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1536", "localName": "ERR-user-account-expired",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1517", "localName": "ERR-user-set-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1547", "localName": "ERR-xml-parse-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1", "localName": "communication-error",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "FAILED TO DELIVER"
+                             ],
+                             "label": "communication-error "},
+                         { "value": "0", "localName": "none",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "SUCCESS"
+                             ],
+                             "label": "none "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "invErrDescr": {
+                    "comment": [
+                         "A description of the error message. The description can be up to 128 alphanumeric characters."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "50",
+                    "propLocalId": "42",
+                    "label": "Remote Error Description",
+                    "baseType": "string:Basic",
+                    "modelType": "action:Descr",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "invRslt": {
+                    "comment": [
+                         "An error result. The result is a bitmask type and can be one or more errors."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "48",
+                    "propLocalId": "40",
+                    "label": "Remote Result",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "condition:RemoteInvRslt",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "16384", "localName": "capability-not-implemented-failure",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "capability-not-implemented-failure "},
+                         { "value": "8192", "localName": "capability-not-implemented-ignore",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "capability-not-implemented-ignore "},
+                         { "value": "32768", "localName": "capability-not-supported",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "capability-not-supported "},
+                         { "value": "65536", "localName": "capability-unavailable",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "capability-unavailable "},
+                         { "value": "0", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "32", "localName": "end-point-failed",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "end-point-failed "},
+                         { "value": "64", "localName": "end-point-protocol-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "end-point-protocol-error "},
+                         { "value": "16", "localName": "end-point-unavailable",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "end-point-unavailable "},
+                         { "value": "134217728", "localName": "extend-timeout",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "extend-timeout "},
+                         { "value": "1", "localName": "failure",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "failure "},
+                         { "value": "4194304", "localName": "fru-identity-indeterminate",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "fru-identity-indeterminate "},
+                         { "value": "8388608", "localName": "fru-info-malformed",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "fru-info-malformed "},
+                         { "value": "67108864", "localName": "fru-not-ready",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "fru-not-ready "},
+                         { "value": "536870912", "localName": "fru-not-supported",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "fru-not-supported "},
+                         { "value": "33554432", "localName": "fru-state-indeterminate",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "fru-state-indeterminate "},
+                         { "value": "256", "localName": "fw-defect",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "fw-defect "},
+                         { "value": "512", "localName": "hw-defect",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "hw-defect "},
+                         { "value": "16777216", "localName": "illegal-fru",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "illegal-fru "},
+                         { "value": "1073741824", "localName": "intermittent-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "intermittent-error "},
+                         { "value": "4", "localName": "internal-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "internal-error "},
+                         { "value": "0", "localName": "not-applicable",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "not-applicable "},
+                         { "value": "2048", "localName": "resource-capacity-exceeded",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "resource-capacity-exceeded "},
+                         { "value": "4096", "localName": "resource-dependency",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "resource-dependency "},
+                         { "value": "1024", "localName": "resource-unavailable",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "resource-unavailable "},
+                         { "value": "262144", "localName": "service-not-implemented-fail",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "service-not-implemented-fail "},
+                         { "value": "131072", "localName": "service-not-implemented-ignore",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "service-not-implemented-ignore "},
+                         { "value": "524288", "localName": "service-not-supported",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "service-not-supported "},
+                         { "value": "2097152", "localName": "service-protocol-error",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "service-protocol-error "},
+                         { "value": "1048576", "localName": "service-unavailable",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "service-unavailable "},
+                         { "value": "128", "localName": "sw-defect",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "sw-defect "},
+                         { "value": "268435456", "localName": "task-reset",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "task-reset "},
+                         { "value": "8", "localName": "timeout",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "timeout "},
+                         { "value": "2", "localName": "unidentified-fail",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "unidentified-fail "}
+                    ],
+                    "default": "not-applicable",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "lcOwn": {
+                    "comment": [
+                         "A value that indicates how this object was created. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "9",
+                    "propLocalId": "9",
+                    "label": "lcOwn",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "mo:Owner",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "local", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "4", "localName": "implicit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Implicit "},
+                         { "value": "0", "localName": "local",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Local "},
+                         { "value": "1", "localName": "policy",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Policy "},
+                         { "value": "2", "localName": "replica",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Replica "},
+                         { "value": "3", "localName": "resolveOnBehalf",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ResolvedOnBehalf "}
+                    ],
+                    "default": "local",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "modTs": {
+                    "comment": [
+                         "The time when this object was last modified."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "7",
+                    "propLocalId": "7",
+                    "label": "modTs",
+                    "baseType": "scalar:Date",
+                    "modelType": "mo:TStamp",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "never", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "never",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "never "}
+                    ],
+                    "default": "never",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "oDn": {
+                    "comment": [
+                         "Distinguished name of the target object"
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "51",
+                    "propLocalId": "10",
+                    "label": "Subject DN",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "operSt": {
+                    "comment": [
+                         "The runtime state of the object or policy."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "15674",
+                    "propLocalId": "29",
+                    "label": "Completion",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "action:OperSt",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "3", "localName": "cancelled",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Cancelled "},
+                         { "value": "2", "localName": "completed",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Completed "},
+                         { "value": "7", "localName": "crashsuspect",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Crash-Suspect "},
+                         { "value": "scheduled", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "4", "localName": "failed",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Failed "},
+                         { "value": "5", "localName": "indeterminate",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Indeterminate "},
+                         { "value": "1", "localName": "processing",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Processing "},
+                         { "value": "8", "localName": "ready",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Ready "},
+                         { "value": "0", "localName": "scheduled",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Scheduled "},
+                         { "value": "6", "localName": "suspended",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Suspended "}
+                    ],
+                    "default": "scheduled",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "originMinority": {
+                    "comment": [
+                         "The origin of the task. This indicates if the task was created in the minority replica."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "54",
+                    "propLocalId": "45",
+                    "label": "originMinority",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "false", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "no",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "rn": {
+                    "comment": [
+                         "Identifies an object from its siblings within the context of its parent object. The distinguished name contains a sequence of relative names."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "2",
+                    "propLocalId": "3",
+                    "label": "rn",
+                    "baseType": "reference:BinRN",
+                    "modelType": "reference:BinRN",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "runId": {
+                    "comment": [
+                         "An internal ID that identifies the run instance of the task."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "45",
+                    "propLocalId": "37",
+                    "label": "ID",
+                    "baseType": "scalar:Uint32",
+                    "modelType": "action:RunId",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "startTs": {
+                    "comment": [
+                         "The date and time when the task began."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "36",
+                    "propLocalId": "31",
+                    "label": "startTs",
+                    "baseType": "scalar:Date",
+                    "modelType": "mo:TStamp",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "never", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "never",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "never "}
+                    ],
+                    "default": "never",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "startTx": {
+                    "comment": [
+                         "Start Transaction ID"
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "36895",
+                    "propLocalId": "8634",
+                    "label": "startTxId",
+                    "baseType": "scalar:Enum32",
+                    "modelType": "action:Id",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "none", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "none",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "none "}
+                    ],
+                    "default": "none",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "status": {
+                    "comment": [
+                         "The upgrade status. This property is for internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "3",
+                    "propLocalId": "4",
+                    "label": "status",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationStatus",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "created",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be created. An error is returned if the object already exists.  \nIn the return value of a setter method: indicates that an object has been created.  \n"
+                             ],
+                             "label": "created "},
+                         { "value": "8", "localName": "deleted",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be deleted.  \nIn the return value of a setter method: indicates that an object has been deleted.\n"
+                             ],
+                             "label": "deleted "},
+                         { "value": "4", "localName": "modified",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be modified  \nIn the return value of a setter method: indicates that an object has been modified.\n"
+                             ],
+                             "label": "modified "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "try": {
+                    "comment": [
+                         "The number of retries for the task."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "15574",
+                    "propLocalId": "30",
+                    "label": "Try",
+                    "baseType": "scalar:UByte",
+                    "modelType": "scalar:UByte",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "ts": {
+                    "comment": [
+                         "The day and time of the task or update."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "47",
+                    "propLocalId": "39",
+                    "label": "ts",
+                    "baseType": "scalar:Date",
+                    "modelType": "mo:TStamp",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "never", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "never",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "never "}
+                    ],
+                    "default": "never",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                }
+            }
+        }
+}
