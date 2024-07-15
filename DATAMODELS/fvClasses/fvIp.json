@@ -1,0 +1,1185 @@
+{
+        "fv:Ip": {
+            "contains": {
+                "aaa:RbacAnnotation": "",
+                "fault:Counts": "",
+                "fault:Inst": "",
+                "fv:ReportingNode": "",
+                "fv:RsToEpIpTag": "",
+                "fv:RtFromEpIp": "",
+                "fv:RtFromEpIpForEpToEpg": "",
+                "fv:RtToEpIp": "",
+                "fv:RtToEpIpForEpToEp": "",
+                "fv:RtToEpIpForEpgToEp": "",
+                "fv:RtTrEpExtIpSrc": "",
+                "fv:RtTrEpIpDst": "",
+                "fv:RtTrEpIpSrc": "",
+                "fv:RtTrExtEpIpDst": "",
+                "health:Inst": "",
+                "tag:Annotation": "",
+                "tag:Tag": "",
+                "tag:TagDef": ""
+            },
+            "rnMap": {
+                "annotationKey-": "tag:Annotation",
+                "fault-": "fault:Inst",
+                "fltCnts": "fault:Counts",
+                "health": "health:Inst",
+                "node-": "fv:ReportingNode",
+                "rbacDom-": "aaa:RbacAnnotation",
+                "rstoEpIpTag": "fv:RsToEpIpTag",
+                "rtdbgacFromEpIp-": "fv:RtFromEpIp",
+                "rtdbgacFromEpIpForEpToEpg-": "fv:RtFromEpIpForEpToEpg",
+                "rtdbgacToEpIp-": "fv:RtToEpIp",
+                "rtdbgacToEpIpForEpToEp-": "fv:RtToEpIpForEpToEp",
+                "rtdbgacToEpIpForEpgToEp-": "fv:RtToEpIpForEpgToEp",
+                "rttrExtEpIpDst": "fv:RtTrExtEpIpDst",
+                "rttraceroutepTrEpExtIpSrc-": "fv:RtTrEpExtIpSrc",
+                "rttraceroutepTrEpIpDst-": "fv:RtTrEpIpDst",
+                "rttraceroutepTrEpIpSrc-": "fv:RtTrEpIpSrc",
+                "tagKey-": "tag:Tag",
+                "tagdefKey-": "tag:TagDef"
+            },
+            "identifiedBy": [
+                "addr"
+            ],
+            "rnFormat": "ip-[{addr}]",
+            "containedBy": {
+                "fv:CEp": "",
+                "fv:EpDef": "",
+                "fv:L3EpDef": "",
+                "fv:PodConnP": ""
+            },
+            "superClasses": [
+
+            ],
+            "subClasses": {
+
+            },
+            "relationFrom": {
+                "fv:RtFromEpIp": "dbgac:FromEpCmn",
+                "fv:RtFromEpIpForEpToEpg": "dbgac:EpToEpg",
+                "fv:RtToEpIp": "dbgac:ToEpCmn",
+                "fv:RtToEpIpForEpToEp": "dbgac:EpToEp",
+                "fv:RtToEpIpForEpgToEp": "dbgac:EpgToEp",
+                "fv:RtTrEpExtIpSrc": "traceroutep:TrEpExt",
+                "fv:RtTrEpIpDst": "traceroutep:TrEp",
+                "fv:RtTrEpIpSrc": "traceroutep:TrEp",
+                "fv:RtTrExtEpIpDst": "traceroutep:TrExtEp"
+            },
+            "relationTo": {
+                "fv:RsToEpIpTag": "fv:EpIpTag"
+            },
+            "dnFormats": [
+                "uni/ctx-[{ctxDn}]/l3epcont/epdef-{mac}/ip-[{addr}]",
+                "uni/tn-{name}/fabricExtConnP-{id}/podConnP-{id}/ip-[{addr}]",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/epcont/epdef-{mac}/ip-[{addr}]",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/epcont/epdef-{mac}/ip-[{addr}]",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/epcont/epdef-{mac}/ip-[{addr}]",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/epcont/epdef-{mac}/ip-[{addr}]",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/epcont/epdef-{mac}/ip-[{addr}]",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/epcont/epdef-{mac}/ip-[{addr}]",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/epcont/epdef-{mac}/ip-[{addr}]",
+                "uni/epp/node-{id}/epcont/epdef-{mac}/ip-[{addr}]",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/epcont/epdef-{mac}/ip-[{addr}]",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/epcont/epdef-{mac}/ip-[{addr}]",
+                "uni/epp/br-[{epgPKey}]/node-{id}/epcont/epdef-{mac}/ip-[{addr}]",
+                "uni/epp/node-{id}/epcont/epdef-{mac}/ip-[{addr}]",
+                "uni/epp/node-{id}/epcont/epdef-{mac}/ip-[{addr}]",
+                "uni/tn-{name}/ap-{name}/esg-{name}/cep-{name}/ip-[{addr}]",
+                "uni/tn-{name}/Tnlepg-{name}/cep-{name}/ip-[{addr}]",
+                "uni/ldev-[{priKey}]-ctx-[{ctxDn}]-bd-[{bdDn}]/cep-{name}/ip-[{addr}]",
+                "uni/tn-{name}/LDevInst-[{priKey}]-ctx-{ctxName}/G-{graphRn}-N-{nodeRn}-C-{connRn}/cep-{name}/ip-[{addr}]",
+                "uni/vDev-[{priKey}]-tn-[{tnDn}]-ctx-{ctxName}/rndrInfo/eppContr/G-{graphRn}-N-{nodeRn}-C-{connRn}/cep-{name}/ip-[{addr}]",
+                "uni/tn-{name}/ctx-{name}/cep-{name}/ip-[{addr}]",
+                "uni/tn-{name}/ap-{name}/epg-{name}/cep-{name}/ip-[{addr}]",
+                "uni/tn-{name}/l2out-{name}/instP-{name}/cep-{name}/ip-[{addr}]"
+            ],
+            "writeAccess": [
+                "admin",
+                "tenant-epg",
+                "tenant-network-profile"
+            ],
+            "readAccess": [
+                "admin",
+                "tenant-connectivity",
+                "tenant-epg",
+                "tenant-ext-connectivity",
+                "tenant-network-profile",
+                "tenant-protocol"
+            ],
+            "faults": {
+                "F3083": "fltFvIpConfig-error"
+            },
+            "events": {
+                "E4209236": "special|ip-detach|fv:Ip",
+                "E4214114": "creation||fv:Ip",
+                "E4214115": "modification||fv:Ip",
+                "E4214116": "deletion||fv:Ip"
+            },
+            "stats": {
+
+            },
+            "isAbstract": false,
+            "isConfigurable": true,
+            "isContextRoot": false,
+            "isDeprecated": false,
+            "isEncrypted": false,
+            "isExportable": true,
+            "isPersistent": true,
+            "isSubjectToQuota": false,
+            "isObservable": true,
+            "hasStats": false,
+            "isStat": false,
+            "isFaultable": true,
+            "isDomainable": false,
+            "isHealthScorable": true,
+            "shouldCollectHealthStats": false,
+            "healthCollectionSource": "faults",
+            "hasEventRules": true,
+            "abstractionLayer": "logical",
+            "apicNxProcessing": false,
+            "monitoringPolicySource": "Parent",
+            "isCreatableDeletable": "always",
+            "platformFlavors": [
+
+            ],
+            "classId": "5205",
+            "className": "Ip",
+            "classPkg": "fv",
+            "featureTag": "",
+            "moCategory": "Regular",
+            "label": "Endpoint IP Address",
+            "comment": [
+                "The IP address of an endpoint."
+            ],
+            "properties": {
+                "addr": {
+                    "comment": [
+                         "The peer IP address."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "15314",
+                    "propLocalId": "149",
+                    "label": "IP Address",
+                    "baseType": "address:Ip",
+                    "modelType": "address:Ip",
+                    "needsPropDelimiters": true,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": false,
+                    "isNaming": true,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validateAsIPv4OrIPv6": true,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "annotation": {
+                    "comment": [
+                         "User annotation. Suggested format orchestrator:value"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "38084",
+                    "propLocalId": "8719",
+                    "label": "Annotation",
+                    "baseType": "string:Basic",
+                    "modelType": "mo:Annotation",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 128,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9_.:-]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "baseEpgDn": {
+                    "comment": [
+                         "Dn of the base epg that the ip belongs"
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "59796",
+                    "propLocalId": "13109",
+                    "label": "baseEpgDn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "bdDn": {
+                    "comment": [
+                         "The distinguished name of the bridge domain."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "62701",
+                    "propLocalId": "887",
+                    "label": "bdDn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": true,
+                    "likeProp": "fv:EpInfo:bdDn",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "childAction": {
+                    "comment": [
+                         "Delete or ignore. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "4",
+                    "propLocalId": "5",
+                    "label": "childAction",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationChildAction",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "16384", "localName": "deleteAll",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteAll "},
+                         { "value": "8192", "localName": "deleteNonPresent",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteNonPresent "},
+                         { "value": "4096", "localName": "ignore",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ignore "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "createTs": {
+                    "comment": [
+                         "The creation time of the Layer 2 bridge domain."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "44619",
+                    "propLocalId": "955",
+                    "label": "Endpoint Create TimeStamp",
+                    "baseType": "scalar:Date",
+                    "modelType": "scalar:Date",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": true,
+                    "likeProp": "epm:EpRec:createTs",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "debugMACMessage": {
+                    "isConfigurable": false,
+                    "propGlobalId": "41045",
+                    "propLocalId": "8851",
+                    "label": "List of detected MACs with same IP in same Context.",
+                    "baseType": "string:Basic",
+                    "modelType": "string:Basic",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "dn": {
+                    "comment": [
+                         "A tag or metadata is a non-hierarchical keyword or term assigned to the fabric module."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1",
+                    "propLocalId": "2",
+                    "label": "dn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "esgUsegDn": {
+                    "comment": [
+                         "Dn of the esg that the ip belongs"
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "59797",
+                    "propLocalId": "13110",
+                    "label": "esgUsegDn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "extMngdBy": {
+                    "comment": [
+                         "Indicates which orchestrator is managing this MO"
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "40223",
+                    "propLocalId": "8023",
+                    "label": "Managed By",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ExtMngdByType",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "undefined", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1", "localName": "msc",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "msc "},
+                         { "value": "0", "localName": "undefined",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "undefined "}
+                    ],
+                    "default": "undefined",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "fabricPathDn": {
+                    "comment": [
+                         "Interface behind which the endpoint has been\n                     learned"
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "62702",
+                    "propLocalId": "4285",
+                    "label": "fabricPathDn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": true,
+                    "likeProp": "fv:EpInfo:fabricPathDn",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "flags": {
+                    "comment": [
+                         "The IP address flags."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "60604",
+                    "propLocalId": "50",
+                    "label": "Endpoint Properties and State",
+                    "baseType": "scalar:Bitmask64",
+                    "modelType": "epm:EpFlags",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "16384", "localName": "aging",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 14, Ep is aging"
+                             ],
+                             "label": "Ep is aging "},
+                         { "value": "274877906944", "localName": "announce",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 38, Announce"
+                             ],
+                             "label": "announce "},
+                         { "value": "2199023255552", "localName": "announce-flush",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 41, Announce"
+                             ],
+                             "label": "announce flush "},
+                         { "value": "8589934592", "localName": "anycast",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 33, Anycast Ep"
+                             ],
+                             "label": "Anycast "},
+                         { "value": "34359738368", "localName": "anycast-service",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 35, Anycast Service"
+                             ],
+                             "label": "Anycast Service "},
+                         { "value": "262144", "localName": "arp",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 18, ARP Ep"
+                             ],
+                             "label": "Arp Ep "},
+                         { "value": "8", "localName": "bounce",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 3, Bounce"
+                             ],
+                             "label": "Bounce Ep "},
+                         { "value": "1048576", "localName": "bounce-to-proxy",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 20, Bounce to spine proxy"
+                             ],
+                             "label": "Bounced to spine proxy "},
+                         { "value": "8192", "localName": "cached",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 13, Cached in software only, not programmed in hardware"
+                             ],
+                             "label": "Cached in software only "},
+                         { "value": "134217728", "localName": "cdp",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 27, CDP neighbour MAC"
+                             ],
+                             "label": "CDP neighbor MAC "},
+                         { "value": "2097152", "localName": "dsr-vip",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 21, DSR VIP"
+                             ],
+                             "label": "DSR VIP "},
+                         { "value": "512", "localName": "dtep",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 9, dynamic TEP EP"
+                             ],
+                             "label": "Dynamic TEP "},
+                         { "value": "17179869184", "localName": "fhs-validation-pending",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 34, FHS validation pending Ep"
+                             ],
+                             "label": "FHS validation pending Ep "},
+                         { "value": "4096", "localName": "ht-attempt",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 12, Host tracking attempted"
+                             ],
+                             "label": "Host tracking attempted "},
+                         { "value": "1024", "localName": "ip",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 10, Has IP info"
+                             ],
+                             "label": "Has IP info "},
+                         { "value": "268435456", "localName": "lldp",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 28, LLDP neighbour MAC"
+                             ],
+                             "label": "LLDP neighbor MAC "},
+                         { "value": "4", "localName": "local",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 2, Local"
+                             ],
+                             "label": "Local Ep "},
+                         { "value": "16", "localName": "local-aged",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 4, Locally aged (only for Ep behind vpc)"
+                             ],
+                             "label": "Locally aged "},
+                         { "value": "1073741824", "localName": "loopback",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 30, loopback IP"
+                             ],
+                             "label": "Loopback IP "},
+                         { "value": "1125899906842624", "localName": "lrn-dis",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 50, LRN DIS EP"
+                             ],
+                             "label": "LRN DIS Ep "},
+                         { "value": "2048", "localName": "mac",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 11, Has MAC info"
+                             ],
+                             "label": "Has MAC info "},
+                         { "value": "33554432", "localName": "mac-ckt",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "bit-22, bit-23 and bit-24 are used by DSR/VIP and locally defined in epm_msg.hplease do not use these bit here4194304, 8388608, 16777216Bit 25, MAC based sclass/epg"
+                             ],
+                             "label": "MAC based epg Ep "},
+                         { "value": "35184372088832", "localName": "max-ip-flow-control",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 45, Max IP per MAC"
+                             ],
+                             "label": "Maximum number of IPs per MAC exceeds threshold "},
+                         { "value": "17592186044416", "localName": "nlb-vip",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 44, NLB VIP"
+                             ],
+                             "label": "NLB VIP "},
+                         { "value": "32", "localName": "peer-aged",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 5, Peer aged (only for Ep behind vpc)"
+                             ],
+                             "label": "Remotely aged "},
+                         { "value": "128", "localName": "peer-attached",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 7, On peer vpc"
+                             ],
+                             "label": "Singly Attached Endpoint on Peer Vpc "},
+                         { "value": "137438953472", "localName": "peer-attached-rl",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 37, Peer Attached RL"
+                             ],
+                             "label": "Singly Attached EP over singly deployed EPG on Peer Vpc RL "},
+                         { "value": "4398046511104", "localName": "proxy",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 42, proxy ep"
+                             ],
+                             "label": "RL direct switching proxy ep "},
+                         { "value": "67108864", "localName": "psvi",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 26, Pervasive SVI Ep"
+                             ],
+                             "label": "Pervasive svi Ep "},
+                         { "value": "562949953421312", "localName": "ptp",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 49, PTP EP"
+                             ],
+                             "label": "PTP Ep "},
+                         { "value": "524288", "localName": "rogue",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 19, Rogue EP"
+                             ],
+                             "label": "Rouge Ep "},
+                         { "value": "256", "localName": "router",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 8, Router"
+                             ],
+                             "label": "Router Ep "},
+                         { "value": "536870912", "localName": "router-mac",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 29, router MAC"
+                             ],
+                             "label": "router MAC "},
+                         { "value": "4294967296", "localName": "service",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 31 , don't useBit 32, Service"
+                             ],
+                             "label": "Service Ep "},
+                         { "value": "549755813888", "localName": "shared-service",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 39, Shared Service SRVC"
+                             ],
+                             "label": "shared service ep "},
+                         { "value": "131072", "localName": "span",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 17, Span Ep"
+                             ],
+                             "label": "Span Ep "},
+                         { "value": "2", "localName": "static",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 1, Static, no moves allowed"
+                             ],
+                             "label": "Static Ep "},
+                         { "value": "64", "localName": "static-ipep",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 6, Static IP Ep"
+                             ],
+                             "label": "Static IP Ep "},
+                         { "value": "8796093022208", "localName": "sticky",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 43, Sticky"
+                             ],
+                             "label": "Sticky EP "},
+                         { "value": "1099511627776", "localName": "svc-mgr",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 40, Service Manager"
+                             ],
+                             "label": "service manager ep "},
+                         { "value": "65536", "localName": "svi",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 16, External SVI Ep"
+                             ],
+                             "label": "External svi Ep "},
+                         { "value": "68719476736", "localName": "trust-sync",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 36, Trust sync"
+                             ],
+                             "label": "Trust the peer bounce notification "},
+                         { "value": "70368744177664", "localName": "veth-ep",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 46, VETH EP"
+                             ],
+                             "label": "VETH EP "},
+                         { "value": "140737488355328", "localName": "veth-peer",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 47, VETH PEER"
+                             ],
+                             "label": "VETH PEER "},
+                         { "value": "281474976710656", "localName": "veth-peer-stl",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 48, VETH PEER STALE"
+                             ],
+                             "label": "VETH PEER STALE "},
+                         { "value": "1", "localName": "vpc-attached",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 0 ,Attached to VPC"
+                             ],
+                             "label": "Attached to VPC "},
+                         { "value": "32768", "localName": "vtep",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Bit 15, VTEP Ep"
+                             ],
+                             "label": "VTEP "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "lcOwn": {
+                    "comment": [
+                         "A value that indicates how this object was created. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "9",
+                    "propLocalId": "9",
+                    "label": "lcOwn",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "mo:Owner",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "local", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "4", "localName": "implicit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Implicit "},
+                         { "value": "0", "localName": "local",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Local "},
+                         { "value": "1", "localName": "policy",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Policy "},
+                         { "value": "2", "localName": "replica",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Replica "},
+                         { "value": "3", "localName": "resolveOnBehalf",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ResolvedOnBehalf "}
+                    ],
+                    "default": "local",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "modTs": {
+                    "comment": [
+                         "The time when this object was last modified."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "7",
+                    "propLocalId": "7",
+                    "label": "modTs",
+                    "baseType": "scalar:Date",
+                    "modelType": "mo:TStamp",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "never", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "never",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "never "}
+                    ],
+                    "default": "never",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "monPolDn": {
+                    "comment": [
+                         "The monitoring policy attached to this observable object."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "24134",
+                    "propLocalId": "228",
+                    "label": "Monitoring policy",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "rn": {
+                    "comment": [
+                         "Identifies an object from its siblings within the context of its parent object. The distinguished name contains a sequence of relative names."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "2",
+                    "propLocalId": "3",
+                    "label": "rn",
+                    "baseType": "reference:BinRN",
+                    "modelType": "reference:BinRN",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "status": {
+                    "comment": [
+                         "The upgrade status. This property is for internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "3",
+                    "propLocalId": "4",
+                    "label": "status",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationStatus",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "created",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be created. An error is returned if the object already exists.  \nIn the return value of a setter method: indicates that an object has been created.  \n"
+                             ],
+                             "label": "created "},
+                         { "value": "8", "localName": "deleted",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be deleted.  \nIn the return value of a setter method: indicates that an object has been deleted.\n"
+                             ],
+                             "label": "deleted "},
+                         { "value": "4", "localName": "modified",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be modified  \nIn the return value of a setter method: indicates that an object has been modified.\n"
+                             ],
+                             "label": "modified "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "uid": {
+                    "comment": [
+                         "A unique identifier for this object."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "8",
+                    "propLocalId": "8",
+                    "label": "uid",
+                    "baseType": "scalar:Uint16",
+                    "modelType": "scalar:Uint16",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "userdom": {
+                    "isConfigurable": true,
+                    "propGlobalId": "60657",
+                    "propLocalId": "13244",
+                    "label": "userdom",
+                    "baseType": "string:Basic",
+                    "modelType": "mo:UserDomType",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 1024,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9_.:-]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "validValues": [
+                         { "value": "all", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "}
+                    ],
+                    "default": "all",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "vrfDn": {
+                    "comment": [
+                         "VRF in which the endpoint has been learned"
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "62700",
+                    "propLocalId": "5846",
+                    "label": "vrfDn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": true,
+                    "likeProp": "fv:EpInfo:vrfDn",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                }
+            }
+        }
+}

@@ -1,0 +1,1083 @@
+{
+        "fv:CompIssues": {
+            "contains": {
+                "fault:Delegate": ""
+            },
+            "rnMap": {
+                "fd-": "fault:Delegate"
+            },
+            "identifiedBy": [
+
+            ],
+            "rnFormat": "compissues",
+            "containedBy": {
+                "fv:AEPgCont": "",
+                "fv:AttEntityPathAtt": "",
+                "fv:BrEpP": "",
+                "fv:ConfigState": "",
+                "fv:DyPathAtt": "",
+                "fv:ESgEpP": "",
+                "fv:EpP": "",
+                "fv:ExtStPathAtt": "",
+                "fv:InBEpP": "",
+                "fv:Locale": "",
+                "fv:OoBEpP": "",
+                "fv:RsNodePortAtt": "",
+                "fv:RsStGrpAtt": "",
+                "fv:RsStPathAtt": "",
+                "fv:RtdEpP": "",
+                "fv:StPathAtt": "",
+                "fv:TnlEpP": "",
+                "l3ext:RtdOutDef": "",
+                "mgmt:InstPDef": "",
+                "vz:ToEPg": "",
+                "vz:ToEPgAny": ""
+            },
+            "superClasses": [
+                "fv:AEpPConfIssues",
+                "fv:AConfIssues",
+                "pol:AConfIssues",
+                "pol:Def",
+                "pol:Obj",
+                "naming:NamedObject"
+            ],
+            "subClasses": {
+
+            },
+            "relationFrom": {
+
+            },
+            "relationTo": {
+
+            },
+            "dnFormats": [
+                "uni/epp/sec-[{epgPKey}]/compissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/compissues",
+                "anydefcont/anydef-[{anyDn}]/to-[{epgDn}]/compissues",
+                "uni/epp/oob-[{epgPKey}]/instp-{name}/compissues",
+                "bdps-[{bdDn}]-isSvc-{isSvc}/epgDn-[{epgDn}]/compissues",
+                "bd-[{bdDn}]-isSvc-{isSvc}/epgDn-[{epgDn}]/compissues",
+                "bd-[{bdDn}]-isSvc-{isSvc}/outDn-[{outDn}]/epgDn-[{epgDn}]/compissues",
+                "uni/bd-[{bdDn}]-isSvc-{isSvc}/outDn-[{outDn}]/epgDn-[{epgDn}]/compissues",
+                "uni/ctx-[{ctxDn}]/epgDn-[{epgDn}]/compissues",
+                "uni/bd-[{bdDn}]-isSvc-{isSvc}/epgDn-[{epgDn}]/compissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/rsnodePortAtt-[{tDn}]/compissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/rsnodePortAtt-[{tDn}]/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/rsnodePortAtt-[{tDn}]/compissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/rsnodePortAtt-[{tDn}]/compissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/rsnodePortAtt-[{tDn}]/compissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/rsnodePortAtt-[{tDn}]/compissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/rsnodePortAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/rsnodePortAtt-[{tDn}]/compissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/rsnodePortAtt-[{tDn}]/compissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/rsnodePortAtt-[{tDn}]/compissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/rsnodePortAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/rsnodePortAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/rsnodePortAtt-[{tDn}]/compissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/compissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/compissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/compissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/compissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/compissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/compissues",
+                "uni/epp/node-{id}/compissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/compissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/compissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/compissues",
+                "uni/epp/node-{id}/compissues",
+                "uni/epp/node-{id}/compissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/dyatt-[{targetDn}]/compissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/compissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/compissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/compissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/compissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/compissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/compissues",
+                "uni/epp/node-{id}/dyatt-[{targetDn}]/compissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/compissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/compissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/compissues",
+                "uni/epp/node-{id}/dyatt-[{targetDn}]/compissues",
+                "uni/epp/node-{id}/dyatt-[{targetDn}]/compissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/compissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/compissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/compissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/compissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/compissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/compissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/compissues",
+                "uni/epp/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/compissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/compissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/compissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/compissues",
+                "uni/epp/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/compissues",
+                "uni/epp/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/compissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/stpathatt-[{pathName}]/compissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/compissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/compissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/compissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/compissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/compissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/compissues",
+                "uni/epp/node-{id}/stpathatt-[{pathName}]/compissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/compissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/compissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/compissues",
+                "uni/epp/node-{id}/stpathatt-[{pathName}]/compissues",
+                "uni/epp/node-{id}/stpathatt-[{pathName}]/compissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/attEntitypathatt-[{pathName}]/compissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/compissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/compissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/compissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/compissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/compissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/compissues",
+                "uni/epp/node-{id}/attEntitypathatt-[{pathName}]/compissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/compissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/compissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/compissues",
+                "uni/epp/node-{id}/attEntitypathatt-[{pathName}]/compissues",
+                "uni/epp/node-{id}/attEntitypathatt-[{pathName}]/compissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/phynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/stnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/dynodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/vnodeatt/rsstGrpAtt-[{tDn}]/compissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/dyatt-[{targetDn}]/rsstGrpAtt-[{tDn}]/compissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstGrpAtt-[{tDn}]/compissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/stpathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/attEntitypathatt-[{pathName}]/rsstGrpAtt-[{tDn}]/compissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/rsstGrpAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/rsstGrpAtt-[{tDn}]/compissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/phynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/stnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/dynodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/vnodeatt/rsstPathAtt-[{tDn}]/compissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/dyatt-[{targetDn}]/rsstPathAtt-[{tDn}]/compissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/extstpathatt-[{pathName}]-extchid-{extChId}/rsstPathAtt-[{tDn}]/compissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/stpathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/attEntitypathatt-[{pathName}]/rsstPathAtt-[{tDn}]/compissues",
+                "resPolCont/rtdOutCont/rtdOutDef-[{outDn}]/node-{id}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/sec-[{epgPKey}]/node-{id}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/cld-[{epgPKey}]/node-{id}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/tnlp-[{epgPKey}]/node-{id}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/instp-[{epgPKey}]/node-{id}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/vns-[{epgPKey}]/node-{id}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/inb-[{epgPKey}]/node-{id}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/oob-[{epgPKey}]/node-{id}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/fv-[{epgPKey}]/node-{id}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/rtd-[{epgPKey}]/node-{id}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/br-[{epgPKey}]/node-{id}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/node-{id}/rsstPathAtt-[{tDn}]/compissues",
+                "uni/epp/inb-[{epgPKey}]/compissues",
+                "uni/epp/oob-[{epgPKey}]/compissues",
+                "uni/epp/fv-[{epgPKey}]/compissues",
+                "uni/epp/rtd-[{epgPKey}]/compissues",
+                "uni/epp/br-[{epgPKey}]/compissues",
+                "anydefcont/anygroupdef-[{anyDn}]/fr-[{epgDefDn}]/to-[{epgDefDn}]/compissues",
+                "cdef-[{collDn}]/epgCont-[{epgDn}]/fr-[{epgDefDn}]/to-[{epgDefDn}]/compissues"
+            ],
+            "writeAccess": [
+
+            ],
+            "readAccess": [
+                "admin"
+            ],
+            "faults": {
+
+            },
+            "events": {
+
+            },
+            "stats": {
+
+            },
+            "isAbstract": false,
+            "isConfigurable": false,
+            "isContextRoot": false,
+            "isDeprecated": false,
+            "isEncrypted": false,
+            "isExportable": false,
+            "isPersistent": true,
+            "isSubjectToQuota": false,
+            "isObservable": false,
+            "hasStats": false,
+            "isStat": false,
+            "isFaultable": false,
+            "isDomainable": false,
+            "isHealthScorable": false,
+            "shouldCollectHealthStats": false,
+            "healthCollectionSource": "faults",
+            "hasEventRules": false,
+            "abstractionLayer": "logical",
+            "apicNxProcessing": false,
+            "monitoringPolicySource": "Parent",
+            "isCreatableDeletable": "never",
+            "platformFlavors": [
+
+            ],
+            "classId": "2114",
+            "className": "CompIssues",
+            "classPkg": "fv",
+            "featureTag": "",
+            "moCategory": "Regular",
+            "label": "Compute Configuration Issues",
+            "comment": [
+                "The compute configuration issues for each endpoint profile."
+            ],
+            "properties": {
+                "childAction": {
+                    "comment": [
+                         "Delete or ignore. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "4",
+                    "propLocalId": "5",
+                    "label": "childAction",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationChildAction",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "16384", "localName": "deleteAll",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteAll "},
+                         { "value": "8192", "localName": "deleteNonPresent",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteNonPresent "},
+                         { "value": "4096", "localName": "ignore",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ignore "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "configQual": {
+                    "comment": [
+                         "The compute configuration quality issues."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1833",
+                    "propLocalId": "461",
+                    "label": "configQual",
+                    "baseType": "scalar:Bitmask64",
+                    "modelType": "fv:CompIssues",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "0", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1", "localName": "insufficient-resources",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "overall there are not enough resources"
+                             ],
+                             "label": "insufficient-resources "},
+                         { "value": "0", "localName": "not-applicable",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "N/A "}
+                    ],
+                    "default": "not-applicable",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "configSt": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "4993",
+                    "propLocalId": "474",
+                    "label": "configSt",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "pol:ConfigSt",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "applied",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Configuration applied."
+                             ],
+                             "label": "applied "},
+                         { "value": "1", "localName": "applying",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Configuration is getting applied."
+                             ],
+                             "label": "applying "},
+                         { "value": "not-applied", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "3", "localName": "failed-to-apply",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Failed to apply configuration"
+                             ],
+                             "label": "failed-to-apply "},
+                         { "value": "0", "localName": "not-applied",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Configuration is not applied."
+                             ],
+                             "label": "not-applied "},
+                         { "value": "4", "localName": "temp-failed-to-apply",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Temporary failure. No faults are raised for this kind of failure."
+                             ],
+                             "label": "temp-failed-to-apply "}
+                    ],
+                    "default": "not-applied",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "debugMessage": {
+                    "comment": [
+                         "Debug messages for the issues"
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "34111",
+                    "propLocalId": "8076",
+                    "label": "debugMessage",
+                    "baseType": "string:Basic",
+                    "modelType": "string:Basic",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "descr": {
+                    "comment": [
+                         "Specifies a description of the policy definition."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "5579",
+                    "propLocalId": "28",
+                    "label": "Description",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Descr",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": true,
+                    "likeProp": "naming:Described:descr",
+                    "validators": [
+                         {"min" : 0, "max": 128,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9\\\\!#$%()*,-./:;@ _{|}~?&+]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "dn": {
+                    "comment": [
+                         "A tag or metadata is a non-hierarchical keyword or term assigned to the fabric module."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1",
+                    "propLocalId": "2",
+                    "label": "dn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "epgPKey": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1831",
+                    "propLocalId": "525",
+                    "label": "epgPKey",
+                    "baseType": "reference:BinRef",
+                    "modelType": "fv:PrimKey",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "lcOwn": {
+                    "comment": [
+                         "A value that indicates how this object was created. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "9",
+                    "propLocalId": "9",
+                    "label": "lcOwn",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "mo:Owner",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "local", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "4", "localName": "implicit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Implicit "},
+                         { "value": "0", "localName": "local",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Local "},
+                         { "value": "1", "localName": "policy",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Policy "},
+                         { "value": "2", "localName": "replica",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Replica "},
+                         { "value": "3", "localName": "resolveOnBehalf",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ResolvedOnBehalf "}
+                    ],
+                    "default": "local",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "modTs": {
+                    "comment": [
+                         "The time when this object was last modified."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "7",
+                    "propLocalId": "7",
+                    "label": "modTs",
+                    "baseType": "scalar:Date",
+                    "modelType": "mo:TStamp",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "never", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "never",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "never "}
+                    ],
+                    "default": "never",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "name": {
+                    "comment": [
+                         "null"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "4991",
+                    "propLocalId": "13",
+                    "label": "Name",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Name",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": true,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 64,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9_.:-]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "nameAlias": {
+                    "isConfigurable": true,
+                    "propGlobalId": "28417",
+                    "propLocalId": "6719",
+                    "label": "Name alias",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:NameAlias",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 63,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9_.-]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "ownerKey": {
+                    "comment": [
+                         "The key for enabling clients to own their data for entity correlation."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "15230",
+                    "propLocalId": "4100",
+                    "label": "ownerKey",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Descr",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 128,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9\\\\!#$%()*,-./:;@ _{|}~?&+]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "ownerTag": {
+                    "comment": [
+                         "A tag for enabling clients to add their own data. For example, to indicate who created this object."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "15231",
+                    "propLocalId": "4101",
+                    "label": "ownerTag",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Descr",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 64,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9\\\\!#$%()*,-./:;@ _{|}~?&+]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "rn": {
+                    "comment": [
+                         "Identifies an object from its siblings within the context of its parent object. The distinguished name contains a sequence of relative names."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "2",
+                    "propLocalId": "3",
+                    "label": "rn",
+                    "baseType": "reference:BinRN",
+                    "modelType": "reference:BinRN",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "status": {
+                    "comment": [
+                         "The upgrade status. This property is for internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "3",
+                    "propLocalId": "4",
+                    "label": "status",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationStatus",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "created",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be created. An error is returned if the object already exists.  \nIn the return value of a setter method: indicates that an object has been created.  \n"
+                             ],
+                             "label": "created "},
+                         { "value": "8", "localName": "deleted",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be deleted.  \nIn the return value of a setter method: indicates that an object has been deleted.\n"
+                             ],
+                             "label": "deleted "},
+                         { "value": "4", "localName": "modified",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be modified  \nIn the return value of a setter method: indicates that an object has been modified.\n"
+                             ],
+                             "label": "modified "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "temporaryError": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "16106",
+                    "propLocalId": "4255",
+                    "label": "temporaryError",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "false", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "no",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                }
+            }
+        }
+}
