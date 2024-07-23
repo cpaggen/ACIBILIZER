@@ -2,7 +2,7 @@ import os
 import re
 import pprint
 
-PATH_TO_MODULES = "/Users/lpaggen/Documents/research_project/ansible-aci/modules"
+PATH_TO_MODULES = ""
 
 def get_file_paths(dir):
     py_files = [] # save files
