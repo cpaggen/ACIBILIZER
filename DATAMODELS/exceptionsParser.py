@@ -2,7 +2,7 @@ import os
 import re
 import pprint
 
-PATH_TO_MODULES = ""
+PATH_TO_MODULES = "/Users/lpaggen/Documents/research_project/ansible-aci/modules"
 
 def get_file_paths(dir):
     py_files = [] # save files
@@ -48,11 +48,12 @@ def get_exception_list(dir):
 
                 # construct nested dictionaries, if more than 1 variable, just save both
                 if len(non_quoted_vars) == 1 and len(quoted_strings) == 3:
-                    entry_dict[non_quoted_vars[0]] = "[" + quoted_strings[0] + "]" + "[attributes]" + "[" + quoted_strings[-1] + "]"
+                    entry_dict[non_quoted_vars[0]] = "[\"" + quoted_strings[0] + "\"]" + "[\"attributes\"]" + "[\"" + quoted_strings[-1] + "\"]"
 
+                # strange bug here it seems, results in duplicate keys (how..?)
                 elif len(non_quoted_vars) == 2 and len(quoted_strings) == 4:
-                    entry_dict[non_quoted_vars[0]] = "[" + quoted_strings[0] + "]" + "[attributes]" + "[" + quoted_strings[-2] + "]"
-                    entry_dict[non_quoted_vars[1]] = "[" + quoted_strings[0] + "]" + "[attributes]" + "[" + quoted_strings[-1] + "]"
+                    entry_dict[non_quoted_vars[0]] = "[\"" + quoted_strings[0] + "\"]" + "[\"attributes\"]" + "[\"" + quoted_strings[-2] + "\"]"
+                    entry_dict[non_quoted_vars[1]] = "[\"" + quoted_strings[0] + "\"]" + "[\"attributes\"]" + "[\"" + quoted_strings[-1] + "\"]"
 
             out[file_path.split("/")[-1][:-3]] = entry_dict if entry_dict else None
 
