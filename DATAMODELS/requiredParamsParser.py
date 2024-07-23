@@ -37,7 +37,6 @@ def get_config_map(dir):
     # Regex to capture the content inside argument_spec.update()
     pattern = re.compile(r'argument_spec\.update\(\s*(.*?)^\s*\)', re.DOTALL | re.MULTILINE)
 
-
     for file_path in py_files:
         with open(file_path, 'r') as file:
             file_content = file.read()
@@ -60,7 +59,7 @@ def extract_required_if(dir):
     py_files = get_file_paths(dir)
     out = {}
     
-    pattern = re.compile(r'"state",\s*"present",\s*\[([^\]]+)\]')
+    pattern = re.compile(r'"state",\s*"present",\s*\[([^\]]+)\]') # for now it only captures anything after "state" and "present"
 
     for file_path in py_files:
         with open(file_path, 'r') as file:
@@ -103,15 +102,15 @@ def add_required_flag(dict1, overlap):
     
     return dict1
 
-if __name__ == "main":
+if __name__ == "__main__c":
     b = get_config_map(PATH_TO_MODULE_DIR)
     c = extract_required_if(PATH_TO_MODULE_DIR)
     x = get_overlap(b, c)
     h = add_required_flag(b, x)
     
-        # save to file
-    with open("requiredParamParser.py", 'w') as file:
-        file.write("requiredParams = ")
+    # save to file
+    with open("requiredParamMap.py", 'w') as file:
+        file.write("requiredParamsMap = ")
         pprint.pprint(h, stream=file)
 
-    print(f"Dictionary has been saved to {"requiredParamParser.py"}")
+    print(f"Dictionary has been saved to requiredParamMap.py")

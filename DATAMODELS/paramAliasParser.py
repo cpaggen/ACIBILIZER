@@ -80,7 +80,7 @@ def extract_parameter_aliases(dir):
 
     return out
 
-if __name__ == "main":
+if __name__ == "__main__":
     out = extract_parameter_aliases(PATH_TO_MODULE_DIR)
 
     # save to file

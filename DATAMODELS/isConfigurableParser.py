@@ -34,5 +34,5 @@ def configurable_map(data, parent_key=None):
     
     return out
 
-if __name__ == "main":
+if __name__ == "__main__":
     configurable_map(meta)

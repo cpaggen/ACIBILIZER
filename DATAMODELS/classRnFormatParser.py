@@ -29,7 +29,7 @@ def getClassRnFormat(dir):
 
     return out
 
-if __name__ == "main":
+if __name__ == "__main__":
 
     out = getClassRnFormat(PATH_TO_META)
 
