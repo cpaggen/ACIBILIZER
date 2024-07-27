@@ -2240,3 +2240,21 @@ requiredParamsAliases = {'__init__': {},
                            'tenant*': ['tenant_name'],
                            'type': ['contract_type'],
                            'vrf*': ['context', 'vrf_name']}}
+
+# can use this function to invert the mapping (this works because aliases are never duplicated in the keys)
+def reverse_alias_map(mapping):
+    reverseAliases = {}
+    for keyclass in mapping:
+        keyclass_str = str(keyclass)
+        if keyclass_str not in reverseAliases:
+            reverseAliases[keyclass_str] = {}
+        for param, alias_list in mapping[keyclass].items():
+            param_str = str(param)
+            if alias_list is None:
+                continue  # Skip if alias_list is None
+            for alias in alias_list:
+                if alias is not None:  # Check for None values
+                    alias_str = str(alias)
+                    reverseAliases[keyclass_str][alias_str] = param_str
+
+    return reverseAliases
