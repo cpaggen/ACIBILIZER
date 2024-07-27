@@ -23,6 +23,9 @@ def reconstruct_yml(data, out_dir=None):
     # here define default arguments (to delete)
     default_args = ['', "", "::", ":all:"]
 
+    # invisible_arguments
+    invisible_args = ["annotation", "dn"] # adjust as needed
+
     # define exception list
     exception_list = ['aci_access_span_src_group',
                         'aci_bd',
@@ -105,8 +108,28 @@ def reconstruct_yml(data, out_dir=None):
         except(KeyError):
             return False
 
-    # def isrequired(parent_key, key, map):
-    #     if key in 
+    def isfullydefault(val, parent_key, default_map, second_default_map):
+        try:
+            # convert defaults to sets 
+            default_values_set = set(default_map[parent_key].values())
+            second_default_values_set = set(second_default_map)
+            
+            # combine default args and default mapping
+            combined_default_values_set = default_values_set.union(second_default_values_set)
+            
+            # to set 
+            val_set = set(val)
+            
+            # check if subset
+            return val_set.issubset(combined_default_values_set)
+        except KeyError: # anything which is not "fv" is here atm
+            return True # change based on desired behavior
+        
+    def save_to_yaml(save_path, data):
+        # save_path = os.path.join(save_path, "ansible_reconstructed.yml")
+        with open("ansible_reconstructed.yml", 'w') as file:
+            yaml.dump(a, file, default_flow_style = False, sort_keys = False)
+        print(f"YAML file has been saved to ansible_reconstructed.yml")
 
     # process data recursively
     # we need to track many parent-child keys, including some of sublists etc
@@ -136,9 +159,12 @@ def reconstruct_yml(data, out_dir=None):
 
                 # handle dn - name of parent in child, grandchild etc etc
                 if isinstance(value, dict) and "children" in value.keys():
-                    dn_key = reverseAliases[classToAnsible[key]]["name"][:-1]
-                    dn_val = data[key]['attributes']["name"]
-                    dn[dn_key] = dn_val
+                    try:
+                        dn_key = reverseAliases[classToAnsible[key]]["name"][:-1]
+                        dn_val = data[key]['attributes']["name"]
+                        dn[dn_key] = dn_val
+                    except(KeyError):
+                        pass
 
                 # all CLASSES are handled, exceptions..
                 # TO DO -> handle exceptions like "changes"
@@ -161,40 +187,54 @@ def reconstruct_yml(data, out_dir=None):
                 elif key == "attributes": # these are all the parameters of the classes
                     attribute_parent_key = parent_key
 
-                    if isexception(parent_key):
-                        # TYPE 1 EXCEPTIONS -> ADD PARAMS WHICH ARE FOUND IN SUBCLASSES (handled same as type2 actually)
-                        try:
-                            for param, path in exceptions[classToAnsible[parent_key]].items():
-                                for item in data['children']: # it seems "children" is almost always found here
-                                    if path[0] in item.keys():
-                                        changes.append((parent_key, param, item[path[0]][path[1]][path[2]], 2))
+                    # check if all attributes are default; if so, skip processing entirely
+                    # empty dictionaries function will take care of it
+                    if not isfullydefault(value.values(), parent_key, defaults, default_args):
 
-                        except(KeyError) as e:
-                            print(f"KeyError encountered: {e}")
-                            pass
+                        if isexception(parent_key):
 
-                    # TYPE 2 -> fix the dn attributes missing from children classes 
-                    if len(dn) > 0:
-                        for dn_key, dn_val in dn.items():
-                            print(dn_key, dn_val)
-                            changes.append((attribute_parent_key, dn_key, dn_val, 2))
+                            # TYPE 1 EXCEPTIONS -> ADD PARAMS WHICH ARE FOUND IN SUBCLASSES (handled same as type2 actually)
+                            try:
+                                for param, path in exceptions[classToAnsible[parent_key]].items():
+                                    for item in data['children']: # it seems "children" is almost always found here
+                                        if path[0] in item.keys():
+                                            changes.append((parent_key, param, item[path[0]][path[1]][path[2]], 2))
 
-                    # TYPE 2 CHANGES -> ATTRIBUTES FIELD REMOVAL, REMOVAL OF DEFAULTS
-                    # append all non default params to "changes" - mapping and deletion is done here
-                    for attr_key, attr_value in value.items(): # here empty values are also handled, eg if default then don't change
-                        if attr_value not in default_args and not isdefault(attribute_parent_key, attr_key, attr_value, default_map):
+                                            #######
+                                            # path[0] is the exception class we need to get rid of, maybe through the changes system
+                                            #######
 
-                            # proper to fv_subnet once again? 
-                            # new exception found with "ip" -> creates a mask
-                            if attr_key == "ip":
-                                changes.append((attribute_parent_key, 'mask', int(attr_value[-2:]), 2))
+                            except(KeyError) as e:
+                                print(f"KeyError encountered: {e}")
+                                pass
 
-                            attr_value = attr_value if attr_key != "ip" else attr_value[:-3]
+                        # TYPE 2 -> fix the dn attributes missing from children classes
+                        if len(dn) > 0:
+                            # assuming dn can only be a stack 2 long
+                            if len(dn) > 2:
+                                dn_list = list(dn.items())
+                                dn_list.pop(1)
+                                dn = dict(dn_list)
+                            for dn_key, dn_val in dn.items():
+                                changes.append((attribute_parent_key, dn_key, dn_val, 2))
 
-                            changes.append((attribute_parent_key, attr_key, attr_value, 2)) # appends a tuple
+                        # TYPE 2 CHANGES -> ATTRIBUTES FIELD REMOVAL, REMOVAL OF DEFAULTS
+                        # append all non default params to "changes" - mapping and deletion is done here
+                        for attr_key, attr_value in value.items(): # here empty values are also handled, eg if default then don't change
+                            if attr_key not in invisible_args and attr_value not in default_args and not isdefault(attribute_parent_key, attr_key, attr_value, default_map):
 
-                            # atm hardcoding "present" into yml, change later if needed
-                            changes.append((attribute_parent_key, 'state', 'present', 2))
+                                # proper to fv_subnet once again?
+                                # new exception found with "ip" -> creates a mask
+                                if attr_key == "ip":
+                                    attr_key = "gateway"
+                                    changes.append((attribute_parent_key, 'mask', int(attr_value[-2:]), 2))
+
+                                attr_value = attr_value if attr_key != "gateway" else attr_value[:-3]
+
+                                changes.append((attribute_parent_key, attr_key, attr_value, 2)) # appends a tuple
+
+                        # atm hardcoding "present" into yml, change later if needed
+                        changes.append((attribute_parent_key, 'state', 'present', 2))
 
                     keys_to_delete.append("attributes") # can append key too
 
@@ -203,7 +243,7 @@ def reconstruct_yml(data, out_dir=None):
                 if isinstance(value, (dict, list)):
                     try:
                         process(value, key, attribute_parent_key, dn)
-                    except (KeyError, TypeError) as e:
+                    except (KeyError) as e:
                         print(f"Error processing key {key}: {e}")
                         pass
 
@@ -214,7 +254,10 @@ def reconstruct_yml(data, out_dir=None):
 
             # any modification to the dict can only be made outside the loops
             for key in keys_to_delete:
-                del data[key]
+                try:
+                    del data[key]
+                except(KeyError):
+                    pass
 
             # use the mapping function
             for key in list(data.keys()):
@@ -233,12 +276,16 @@ def reconstruct_yml(data, out_dir=None):
             if change_type == 2: # ATTRIBUTES parent key
                 try:
                     new_key = reverseAliases[classToAnsible[parent_key]][child_key]
+                    # at the moment no use for the required tag, can change later on if we need it somehow
+                    if new_key[-1] == "*":
+                        new_key = new_key[:-1]
+
                     data[new_key] = child_value
                     if child_key in data and new_key != child_key: # UNSURE if this is necessary anymore ..
                         del data[child_key]
                 except KeyError:
                     data[child_key] = child_value
-    
+
             # DOUBLE CHECK logic here, otherwise seems to work as expected
             # also can get rid of the whole "CHILDREN" key and move all upwards when we need it, only issue is how does this translate in yml
             # FOR NOW keep "children" key as it helps with ordering everything correctly
@@ -268,13 +315,68 @@ def reconstruct_yml(data, out_dir=None):
         else:
             return data # this basically evaluates to false when the structure is None
 
+    # handle reconstruction of yml with recursion
+
+# TO DO -> ADD REMVOVAL OF "fvRs" CLASSES, too hard to handle above due to recursive issues
+
+    def rebuild_yml(data, credentials_file = None, yml_list = [], parent_key = None, grandparent_key = None):
+
+        entry_dict = {}
+
+        if isinstance(data, dict):
+            for key, value in data.items():
+
+                nested_dictionary = {}
+
+                # here restructuring is handled
+                if parent_key == "children" or parent_key == None:
+
+                    # bad trick to get rid of all non-aci modules
+                    if key[:3] == "aci":
+                        pass
+                    else:
+                        break
+
+                    # set name to something generic
+                    key_name = key.split("_")[1] if len(key.split("_")) == 2 else key.split("_")[2]
+                    if parent_key != None:
+                        grandparent_key_name = grandparent_key.split("_")[1] if len(grandparent_key.split("_")) == 2 else grandparent_key.split("_")[2:]
+                        sentence = f"add a {key_name.upper()} to the {grandparent_key_name.upper()}"
+                    else:
+                        sentence = f"create {key_name} on ACI using {key} module"
+
+                    entry_dict["name"] = sentence
+                    for subkey, subvalue in data[key].items():
+                        if subkey != "children":
+                            # print(key, subkey, subvalue)
+                            nested_dictionary[subkey] = subvalue
+                    entry_dict["cisco.aci." + key] = nested_dictionary
+                    entry_dict["delegate_to"] = "localhost"
+
+                    yml_list.append(entry_dict)
+
+                if isinstance(value, dict):
+                    rebuild_yml(value, parent_key = key, grandparent_key = parent_key)
+
+                elif isinstance(value, list):
+                    for item in value:
+                        rebuild_yml(item, parent_key = key, grandparent_key = parent_key)
+
+        elif isinstance(data, list):
+            for item in data:
+                rebuild_yml(item, parent_key = key, grandparent_key = parent_key)
+
+        return yml_list
+
     # process the initial data
     a = process(data)
 
     # delete the empty dictionaries
     b = remove_empty_dicts(a)
 
-    return data
+    fin = rebuild_yml(b)
+
+    return fin
 
 if __name__ == "__name__":
     
@@ -283,7 +385,9 @@ if __name__ == "__name__":
 
     out = reconstruct_yml(y)
 
-    with open(PATH_TO_SAVE, 'w') as file:
-        yaml.dump(out, file, default_flow_style=False)
+    # save_path = os.path.join(save_path, "ansible_reconstructed.yml")
+    with open("ansible_reconstructed.yml", 'w') as file:
+        yaml.dump(out, file, default_flow_style = False, sort_keys = False)
+    print(f"YAML file has been saved to ansible_reconstructed.yml")
 
     print(f"YAML file has been saved to {PATH_TO_SAVE}")
