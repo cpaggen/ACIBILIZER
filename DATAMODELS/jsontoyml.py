@@ -7,10 +7,9 @@ from isConfigurableMap import isConfigurableMap # need to get the
 from defaultClassAttrValues import defaults
 from exceptionDict import exceptions
 from requiredParamsAliasesMap import requiredParamsAliases, reverse_alias_map
-from paramAliasMap import paramAliasMap
-
 
 PATH_TO_SAVE = ""
+PATH_TO_JSON = ""
 
 ### start of the main function ###
 reverseAliases = reverse_alias_map(requiredParamsAliases)
@@ -24,7 +23,7 @@ def reconstruct_yml(data, out_dir=None):
     default_args = ['', "", "::", ":all:"]
 
     # invisible_arguments
-    invisible_args = ["annotation", "dn"] # adjust as needed
+    invisible_args = ["annotation", "dn", "rn", "uid", "modTs", "monPolDn", "seg", "pcTag"] # adjust as needed
 
     # define exception list
     exception_list = ['aci_access_span_src_group',
@@ -378,9 +377,9 @@ def reconstruct_yml(data, out_dir=None):
 
     return fin
 
-if __name__ == "__name__":
+if __name__ == "__main__":
     
-    with open("tn-nils-4.json", 'r') as file:
+    with open(PATH_TO_JSON, 'r') as file:
         y = json.load(file)
 
     out = reconstruct_yml(y)
@@ -388,6 +387,5 @@ if __name__ == "__name__":
     # save_path = os.path.join(save_path, "ansible_reconstructed.yml")
     with open("ansible_reconstructed.yml", 'w') as file:
         yaml.dump(out, file, default_flow_style = False, sort_keys = False)
-    print(f"YAML file has been saved to ansible_reconstructed.yml")
 
     print(f"YAML file has been saved to {PATH_TO_SAVE}")
