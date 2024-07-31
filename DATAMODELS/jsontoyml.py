@@ -8,8 +8,10 @@ from defaultClassAttrValues import defaults
 from exceptionDict import exceptions
 from requiredParamsAliasesMap import requiredParamsAliases, reverse_alias_map
 
-PATH_TO_SAVE = ""
-PATH_TO_JSON = ""
+# define all the paths here
+PATH_TO_SAVE = "ansible-reconstructed.yml"
+PATH_TO_JSON = "tn-dev-test.json"
+PATH_TO_CREDENTIALS = ""
 
 ### start of the main function ###
 reverseAliases = reverse_alias_map(requiredParamsAliases)
@@ -23,7 +25,7 @@ def reconstruct_yml(data, out_dir=None):
     default_args = ['', "", "::", ":all:"]
 
     # invisible_arguments
-    invisible_args = ["annotation", "dn", "rn", "uid", "modTs", "monPolDn", "seg", "pcTag"] # adjust as needed
+    invisible_args = ["annotation", "dn", "rn", "uid", "modTs", "monPolDn", "seg", "pcTag", "userdom", "tDn", "filter_nam"] # adjust as needed
 
     # define exception list
     exception_list = ['aci_access_span_src_group',
@@ -157,13 +159,13 @@ def reconstruct_yml(data, out_dir=None):
             for key, value in data.items():
 
                 # handle dn - name of parent in child, grandchild etc etc
-                if isinstance(value, dict) and "children" in value.keys():
-                    try:
-                        dn_key = reverseAliases[classToAnsible[key]]["name"][:-1]
-                        dn_val = data[key]['attributes']["name"]
-                        dn[dn_key] = dn_val
-                    except(KeyError):
-                        pass
+                # if isinstance(value, dict) and "children" in value.keys():
+                #     try:
+                #         dn_key = reverseAliases[classToAnsible[key]]["name"][:-1]
+                #         dn_val = data[key]['attributes']["name"]
+                #         dn[dn_key] = dn_val
+                #     except(KeyError):
+                #         pass
 
                 # all CLASSES are handled, exceptions..
                 # TO DO -> handle exceptions like "changes"
@@ -208,14 +210,16 @@ def reconstruct_yml(data, out_dir=None):
                                 pass
 
                         # TYPE 2 -> fix the dn attributes missing from children classes
-                        if len(dn) > 0:
-                            # assuming dn can only be a stack 2 long
-                            if len(dn) > 2:
-                                dn_list = list(dn.items())
-                                dn_list.pop(1)
-                                dn = dict(dn_list)
-                            for dn_key, dn_val in dn.items():
-                                changes.append((attribute_parent_key, dn_key, dn_val, 2))
+                        # if len(dn) > 0:
+                        #     # assuming dn can only be a stack 2 long
+                        #     if len(dn) > 2:
+                        #         dn_list = list(dn.items())
+                        #         dn_list.pop(1)
+                        #         dn = dict(dn_list)
+                        #     for dn_key, dn_val in dn.items():
+                        #         if dn_key == "filter_nam":
+                        #             print(dn_key)
+                        #         changes.append((attribute_parent_key, dn_key, dn_val, 2))
 
                         # TYPE 2 CHANGES -> ATTRIBUTES FIELD REMOVAL, REMOVAL OF DEFAULTS
                         # append all non default params to "changes" - mapping and deletion is done here
@@ -275,6 +279,7 @@ def reconstruct_yml(data, out_dir=None):
             if change_type == 2: # ATTRIBUTES parent key
                 try:
                     new_key = reverseAliases[classToAnsible[parent_key]][child_key]
+
                     # at the moment no use for the required tag, can change later on if we need it somehow
                     if new_key[-1] == "*":
                         new_key = new_key[:-1]
@@ -385,7 +390,7 @@ if __name__ == "__main__":
     out = reconstruct_yml(y)
 
     # save_path = os.path.join(save_path, "ansible_reconstructed.yml")
-    with open("ansible_reconstructed.yml", 'w') as file:
+    with open(PATH_TO_SAVE, 'w') as file:
         yaml.dump(out, file, default_flow_style = False, sort_keys = False)
 
     print(f"YAML file has been saved to {PATH_TO_SAVE}")
