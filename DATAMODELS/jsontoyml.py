@@ -2,15 +2,15 @@ import os
 import json
 from mappings import classToAnsible, ansibleToClass # need to get the mapping to ansible from json
 import yaml
-import pprint
 from isConfigurableMap import isConfigurableMap # need to get the 
 from defaultClassAttrValues import defaults
 from exceptionDict import exceptions
 from requiredParamsAliasesMap import requiredParamsAliases, reverse_alias_map
+import time
 
 # define all the paths here
 PATH_TO_SAVE = "ansible-reconstructed.yml"
-PATH_TO_JSON = "tn-dev-test.json"
+PATH_TO_JSON = "TENANT_EXAMPLE/tn-accedian.json"
 PATH_TO_CREDENTIALS = ""
 
 ### start of the main function ###
@@ -88,7 +88,7 @@ def reconstruct_yml(data, out_dir=None):
         out = None
         try:
             out = duplicate_map[child][parent]
-        except(KeyError):
+        except(KeyError, TypeError):
             out = duplicate_map[child] # means there is no exception with the parent
         return out
 
@@ -189,7 +189,7 @@ def reconstruct_yml(data, out_dir=None):
                             # TYPE 1 EXCEPTIONS -> ADD PARAMS WHICH ARE FOUND IN SUBCLASSES (handled same as type2 actually)
                             try:
                                 for param, path in exceptions[classToAnsible[parent_key]].items():
-                                    for item in data['children']: # it seems "children" is almost always found here
+                                    for item in data['children']: # it seems "children" is always found here
                                         if path[0] in item.keys():
                                             changes.append((parent_key, param, item[path[0]][path[1]][path[2]], 2))
 
@@ -198,16 +198,22 @@ def reconstruct_yml(data, out_dir=None):
                                             #######
 
                             except(KeyError) as e:
-                                print(f"KeyError encountered: {e}")
+                                # print(f"KeyError encountered: {e}")
                                 pass
 
-                        # TYPE 2 CHANGES -> ATTRIBUTES FIELD REMOVAL, REMOVAL OF DEFAULTS
                         # append all non default params to "changes" - mapping and deletion is done here
                         for attr_key, attr_value in value.items(): # here empty values are also handled, eg if default then don't change
+
+                            # these changes occur within the key itself, not a parent, and therefore it is handled as "type 1"
+                            if parent_key == "fvRsDomAtt" and attr_key == "tDn": # bypass the skip tDn
+                                changes.append((parent_key, attr_key, attr_value, 1))
+
+
+                            # TYPE 2 CHANGES -> ATTRIBUTES FIELD REMOVAL, REMOVAL OF DEFAULTS
                             if attr_key not in invisible_args and attr_value not in default_args and not isdefault(parent_key, attr_key, attr_value, default_map):
 
                                 # proper to fv_subnet once again?
-                                # new exception found with "ip" -> creates a mask
+                                # new exception found with "ip" -> creates a mask, gateway
                                 if attr_key == "ip":
                                     attr_key = "gateway"
                                     changes.append((parent_key, 'mask', int(attr_value[-2:]), 2))
@@ -271,6 +277,29 @@ def reconstruct_yml(data, out_dir=None):
                 except KeyError:
                     data[child_key] = child_value
 
+            # changes within same class (not associated with a parent)
+            # at the moment only used for epg_to_domain
+            elif change_type == 1:
+                if "vmm" in change[2].split("/")[1]:
+                    dom_type_val = "vmm"
+                    vm_provider_val = change[2].split("/")[1].split("-")[1].lower()
+                    dom_val = change[2].split("/")[2][4:]
+
+                elif "phys" in change[2].split("/")[1]:
+                    dom_type_val = "phys"
+                    dom_val = change[2].split("/")[1].split("-")[1]
+
+                elif "l2dom":
+                    dom_type_val = "l2dom"
+
+                data["domain_type"] = dom_type_val
+
+                try:
+                    data["vm_provider"] = vm_provider_val
+                    data["domain"] = dom_val
+                except(UnboundLocalError):
+                    pass
+
             # DOUBLE CHECK logic here, otherwise seems to work as expected
             # also can get rid of the whole "CHILDREN" key and move all upwards when we need it, only issue is how does this translate in yml
             # FOR NOW keep "children" key as it helps with ordering everything correctly
@@ -325,7 +354,7 @@ def reconstruct_yml(data, out_dir=None):
 
                 if parent_key == "children": # need to append all this info for later use - iterate over pairwise, will work just fine
                     change = [i for i in [parent_name, grandparent_name, great_grandparent_name, great_great_grandparent_name, grandparent_key, great_great_grandparent_key] if i is not None]
-                    changes[key] = change
+                    changes[key] = change if "tenant" in change else change + ["tenant", "aci_tenant"] # need to be careful this is a len 6
 
                 # could make it more clear somehow.. 
                 get_parent_attributes(value, key, parent_key, grandparent_key, great_grandparent_key, 
@@ -390,6 +419,12 @@ def reconstruct_yml(data, out_dir=None):
                                 nested_dictionary[dn_attributes_map[key][0]] = dn_parent_map[dn_attributes_map[key][2]]
                                 nested_dictionary[dn_attributes_map[key][1]] = dn_parent_map[dn_attributes_map[key][3]]
 
+                            # the only case in which this is 6 is when we find no "tenant", then we simply add one like so
+                            elif len(dn_attributes_map[key]) == 6:
+                                nested_dictionary[dn_attributes_map[key][0]] = dn_parent_map[dn_attributes_map[key][2]]
+                                nested_dictionary[dn_attributes_map[key][1]] = dn_parent_map[dn_attributes_map[key][3]]
+                                nested_dictionary[dn_attributes_map[key][4]] = dn_parent_map[dn_attributes_map[key][5]]
+
                         except(KeyError):
                             pass
 
@@ -424,7 +459,9 @@ def reconstruct_yml(data, out_dir=None):
     return fin
 
 if __name__ == "__main__":
-    
+
+    start_time = time.time()
+
     with open(PATH_TO_JSON, 'r') as file:
         y = json.load(file)
 
@@ -434,4 +471,9 @@ if __name__ == "__main__":
     with open(PATH_TO_SAVE, 'w') as file:
         yaml.dump(out, file, default_flow_style = False, sort_keys = False)
 
+    # time 
+    end_time = time.time()
+    elapsed_time_ms = (end_time - start_time) * 1000
+
     print(f"YAML file has been saved to {PATH_TO_SAVE}")
+    print(f"Completed in {elapsed_time_ms:.2f} ms")
