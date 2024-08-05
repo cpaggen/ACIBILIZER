@@ -1,0 +1,430 @@
+{
+    "fvTenant": {
+        "attributes": {
+            "annotation": "orchestrator:ansible",
+            "descr": "git push event test",
+            "dn": "uni/tn-leopoldo",
+            "name": "leopoldo",
+            "nameAlias": "",
+            "ownerKey": "",
+            "ownerTag": "",
+            "userdom": ":all:common:"
+        },
+        "children": [
+            {
+                "vnsSvcCont": {
+                    "attributes": {
+                        "annotation": "",
+                        "userdom": ":all:common:"
+                    }
+                }
+            },
+            {
+                "fvEpTags": {
+                    "attributes": {
+                        "annotation": "",
+                        "userdom": ":all:common:"
+                    }
+                }
+            },
+            {
+                "fvCtx": {
+                    "attributes": {
+                        "annotation": "orchestrator:ansible",
+                        "bdEnforcedEnable": "no",
+                        "descr": "",
+                        "ipDataPlaneLearning": "enabled",
+                        "knwMcastAct": "permit",
+                        "name": "marcel",
+                        "nameAlias": "",
+                        "ownerKey": "",
+                        "ownerTag": "",
+                        "pcEnfDir": "ingress",
+                        "pcEnfPref": "enforced",
+                        "userdom": ":all:common:",
+                        "vrfIndex": "0"
+                    },
+                    "children": [
+                        {
+                            "fvRsVrfValidationPol": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "tnL3extVrfValidationPolName": "",
+                                    "userdom": ":all:common:"
+                                }
+                            }
+                        },
+                        {
+                            "vzAny": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "descr": "",
+                                    "matchT": "AtleastOne",
+                                    "name": "",
+                                    "nameAlias": "",
+                                    "prefGrMemb": "disabled",
+                                    "userdom": ":all:common:"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsOspfCtxPol": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "tnOspfCtxPolName": "",
+                                    "userdom": ":all:common:"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsCtxToEpRet": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "tnFvEpRetPolName": "",
+                                    "userdom": ":all:common:"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsCtxToExtRouteTagPol": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "tnL3extRouteTagPolName": "",
+                                    "userdom": ":all:common:"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsBgpCtxPol": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "tnBgpCtxPolName": "",
+                                    "userdom": ":all:common:"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "fvBD": {
+                    "attributes": {
+                        "OptimizeWanBandwidth": "no",
+                        "annotation": "orchestrator:ansible",
+                        "arpFlood": "yes",
+                        "descr": "",
+                        "epClear": "no",
+                        "epMoveDetectMode": "",
+                        "hostBasedRouting": "no",
+                        "intersiteBumTrafficAllow": "no",
+                        "intersiteL2Stretch": "no",
+                        "ipLearning": "yes",
+                        "ipv6McastAllow": "no",
+                        "limitIpLearnToSubnets": "yes",
+                        "llAddr": "::",
+                        "mac": "00:22:BD:F8:19:FF",
+                        "mcastARPDrop": "yes",
+                        "mcastAllow": "no",
+                        "multiDstPktAct": "bd-flood",
+                        "name": "lenilsou",
+                        "nameAlias": "",
+                        "ownerKey": "",
+                        "ownerTag": "",
+                        "type": "regular",
+                        "unicastRoute": "yes",
+                        "unkMacUcastAct": "proxy",
+                        "unkMcastAct": "flood",
+                        "userdom": ":all:common:",
+                        "v6unkMcastAct": "flood",
+                        "vmac": "not-applicable"
+                    },
+                    "children": [
+                        {
+                            "fvSubnet": {
+                                "attributes": {
+                                    "annotation": "orchestrator:ansible",
+                                    "ctrl": "nd",
+                                    "descr": "",
+                                    "ip": "192.168.67.1/24",
+                                    "ipDPLearning": "enabled",
+                                    "name": "",
+                                    "nameAlias": "",
+                                    "preferred": "no",
+                                    "scope": "private",
+                                    "userdom": ":all:common:",
+                                    "virtual": "no"
+                                }
+                            }
+                        },
+                        {
+                            "fvSubnet": {
+                                "attributes": {
+                                    "annotation": "orchestrator:ansible",
+                                    "ctrl": "nd",
+                                    "descr": "",
+                                    "ip": "192.168.66.1/24",
+                                    "ipDPLearning": "enabled",
+                                    "name": "",
+                                    "nameAlias": "",
+                                    "preferred": "no",
+                                    "scope": "private",
+                                    "userdom": ":all:common:",
+                                    "virtual": "no"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsMldsn": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "tnMldSnoopPolName": "",
+                                    "userdom": ":all:common:"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsIgmpsn": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "tnIgmpSnoopPolName": "",
+                                    "userdom": ":all:common:"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsCtx": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "tnFvCtxName": "marcel",
+                                    "userdom": ":all:common:"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsBdToEpRet": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "resolveAct": "resolve",
+                                    "tnFvEpRetPolName": "",
+                                    "userdom": ":all:common:"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsBDToNdP": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "tnNdIfPolName": "",
+                                    "userdom": ":all:common:"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "fvRsTenantMonPol": {
+                    "attributes": {
+                        "annotation": "",
+                        "tnMonEPGPolName": "",
+                        "userdom": ":all:common:"
+                    }
+                }
+            },
+            {
+                "fvAp": {
+                    "attributes": {
+                        "annotation": "orchestrator:ansible",
+                        "descr": "",
+                        "name": "fonzo",
+                        "nameAlias": "",
+                        "ownerKey": "",
+                        "ownerTag": "",
+                        "prio": "unspecified",
+                        "userdom": ":all:common:"
+                    },
+                    "children": [
+                        {
+                            "fvAEPg": {
+                                "attributes": {
+                                    "annotation": "orchestrator:ansible",
+                                    "descr": "",
+                                    "exceptionTag": "",
+                                    "floodOnEncap": "disabled",
+                                    "fwdCtrl": "",
+                                    "hasMcastSource": "no",
+                                    "isAttrBasedEPg": "no",
+                                    "matchT": "AtleastOne",
+                                    "name": "milou",
+                                    "nameAlias": "",
+                                    "pcEnfPref": "unenforced",
+                                    "prefGrMemb": "exclude",
+                                    "prio": "unspecified",
+                                    "shutdown": "no",
+                                    "userdom": ":all:common:"
+                                },
+                                "children": [
+                                    {
+                                        "fvRsDomAtt": {
+                                            "attributes": {
+                                                "annotation": "orchestrator:ansible",
+                                                "bindingType": "none",
+                                                "classPref": "encap",
+                                                "customEpgName": "",
+                                                "delimiter": "",
+                                                "encap": "unknown",
+                                                "encapMode": "auto",
+                                                "epgCos": "Cos0",
+                                                "epgCosPref": "disabled",
+                                                "instrImedcy": "immediate",
+                                                "lagPolicyName": "",
+                                                "netflowDir": "both",
+                                                "netflowPref": "disabled",
+                                                "numPorts": "0",
+                                                "portAllocation": "none",
+                                                "primaryEncap": "unknown",
+                                                "primaryEncapInner": "unknown",
+                                                "resImedcy": "pre-provision",
+                                                "secondaryEncapInner": "unknown",
+                                                "switchingMode": "native",
+                                                "tDn": "uni/vmmp-VMware/dom-dot3-vmm",
+                                                "untagged": "no",
+                                                "userdom": ":all:common:",
+                                                "vnetOnly": "no"
+                                            },
+                                            "children": [
+                                                {
+                                                    "vmmSecP": {
+                                                        "attributes": {
+                                                            "allowPromiscuous": "reject",
+                                                            "annotation": "",
+                                                            "descr": "",
+                                                            "forgedTransmits": "reject",
+                                                            "macChanges": "reject",
+                                                            "name": "",
+                                                            "nameAlias": "",
+                                                            "ownerKey": "",
+                                                            "ownerTag": "",
+                                                            "userdom": ":all:common:"
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "fvRsCustQosPol": {
+                                            "attributes": {
+                                                "annotation": "",
+                                                "tnQosCustomPolName": "",
+                                                "userdom": ":all:common:"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "fvRsBd": {
+                                            "attributes": {
+                                                "annotation": "",
+                                                "tnFvBDName": "lenilsou",
+                                                "userdom": ":all:common:"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "fvAEPg": {
+                                "attributes": {
+                                    "annotation": "orchestrator:ansible",
+                                    "descr": "",
+                                    "exceptionTag": "",
+                                    "floodOnEncap": "disabled",
+                                    "fwdCtrl": "",
+                                    "hasMcastSource": "no",
+                                    "isAttrBasedEPg": "no",
+                                    "matchT": "AtleastOne",
+                                    "name": "tintin",
+                                    "nameAlias": "",
+                                    "pcEnfPref": "unenforced",
+                                    "prefGrMemb": "exclude",
+                                    "prio": "unspecified",
+                                    "shutdown": "no",
+                                    "userdom": ":all:common:"
+                                },
+                                "children": [
+                                    {
+                                        "fvRsDomAtt": {
+                                            "attributes": {
+                                                "annotation": "orchestrator:ansible",
+                                                "bindingType": "none",
+                                                "classPref": "encap",
+                                                "customEpgName": "",
+                                                "delimiter": "",
+                                                "encap": "unknown",
+                                                "encapMode": "auto",
+                                                "epgCos": "Cos0",
+                                                "epgCosPref": "disabled",
+                                                "instrImedcy": "immediate",
+                                                "lagPolicyName": "",
+                                                "netflowDir": "both",
+                                                "netflowPref": "disabled",
+                                                "numPorts": "0",
+                                                "portAllocation": "none",
+                                                "primaryEncap": "unknown",
+                                                "primaryEncapInner": "unknown",
+                                                "resImedcy": "pre-provision",
+                                                "secondaryEncapInner": "unknown",
+                                                "switchingMode": "native",
+                                                "tDn": "uni/vmmp-VMware/dom-dot3-vmm",
+                                                "untagged": "no",
+                                                "userdom": ":all:common:",
+                                                "vnetOnly": "no"
+                                            },
+                                            "children": [
+                                                {
+                                                    "vmmSecP": {
+                                                        "attributes": {
+                                                            "allowPromiscuous": "reject",
+                                                            "annotation": "",
+                                                            "descr": "",
+                                                            "forgedTransmits": "reject",
+                                                            "macChanges": "reject",
+                                                            "name": "",
+                                                            "nameAlias": "",
+                                                            "ownerKey": "",
+                                                            "ownerTag": "",
+                                                            "userdom": ":all:common:"
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "fvRsCustQosPol": {
+                                            "attributes": {
+                                                "annotation": "",
+                                                "tnQosCustomPolName": "",
+                                                "userdom": ":all:common:"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "fvRsBd": {
+                                            "attributes": {
+                                                "annotation": "",
+                                                "tnFvBDName": "lenilsou",
+                                                "userdom": ":all:common:"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
