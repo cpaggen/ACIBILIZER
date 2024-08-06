@@ -9,8 +9,8 @@ PATH_TO_JSON_DATA = ""
 
 def parse_attr_defaults(dir):
     out = {} # output
-
-    yml_bool_list = ['false', 'False', 'off', 'Off', 'No', 'true', 'True', 'on', 'On', 'Yes']
+    
+    yml_bool_list = ['false', 'False', 'off', 'Off', 'No', 'no', 'true', 'True', 'on', 'On', 'Yes', 'yes']
 
     yml_bool_map = {'false': 'no', # should cover all boolean cases (?)
                     'off': 'no',
@@ -20,7 +20,8 @@ def parse_attr_defaults(dir):
                     'true': 'yes',
                     'on': 'yes',
                     'True': 'yes',
-                    'On': 'yes'}
+                    'On': 'yes',
+                    'Yes': 'yes'}
 
     for file in os.listdir(dir): # read from the json file
         entry_dict = {} # serves as nested dict in "out"
