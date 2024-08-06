@@ -1,6 +1,6 @@
 import os
 import json
-from mappings import classToAnsible, ansibleToClass # need to get the mapping to ansible from json
+from mappings import classToAnsible # need to get the mapping to ansible from json
 import yaml
 from isConfigurableMap import isConfigurableMap # need to get the 
 from defaultClassAttrValues import defaults
@@ -10,7 +10,7 @@ import time
 
 # define all the paths here
 PATH_TO_SAVE = "ansible-reconstructed.yml"
-PATH_TO_JSON = "TENANT_EXAMPLE/tn-accedian.json"
+PATH_TO_JSON = "TENANT_EXAMPLE/tenantLeopoldo.json"
 PATH_TO_CREDENTIALS = ""
 
 ### start of the main function ###
@@ -22,10 +22,12 @@ def reconstruct_yml(data, out_dir=None):
     save_path = "ansible_reconstructed.yml" if out_dir is None else os.path.join(out_dir, "ansible_reconstructed.yml")
 
     # here define default arguments (to delete)
-    default_args = ['', "", "::", ":all:"]
+    default_args = ['', "", "::", ":all:", "unknown"]
 
     # invisible_arguments
-    invisible_args = ["annotation", "dn", "rn", "uid", "modTs", "monPolDn", "seg", "pcTag", "userdom", "tDn", "filter_nam"] # adjust as needed
+    invisible_args = ["annotation", "dn", "rn", "uid", "modTs", "monPolDn",
+                       "seg", "pcTag", "userdom", "tDn", "filter_nam",
+                       "mac_address", "preferred"] # adjust as needed
 
     # define exception list
     exception_list = ['aci_access_span_src_group',
@@ -36,7 +38,8 @@ def reconstruct_yml(data, out_dir=None):
                         'aci_epg_subnet',
                         'aci_fabric_span_src_group',
                         'aci_tenant_span_src_group',
-                        'aci_tenant_span_src_group_src']
+                        'aci_tenant_span_src_group_src',
+                        'aci_epg']
     
     # here define duplicates list - handle dupes in values of class mappings
     # key (class) : value (dict) -> key (parent class) : value (correct mapping)
@@ -185,6 +188,7 @@ def reconstruct_yml(data, out_dir=None):
                     if not isfullydefault(value.values(), parent_key, defaults, default_args):
 
                         if isexception(parent_key):
+                            print(parent_key)
 
                             # TYPE 1 EXCEPTIONS -> ADD PARAMS WHICH ARE FOUND IN SUBCLASSES (handled same as type2 actually)
                             try:
@@ -341,6 +345,9 @@ def reconstruct_yml(data, out_dir=None):
                           great_grandparent_name=None, 
                           great_great_grandparent_name=None, 
                           changes=None):
+        
+        # this dict ensures we are not missing any params
+        # for example aci_epg needs a bd, but this function does not find a bd otherwise
 
         if changes is None:
             changes = {}
@@ -369,8 +376,7 @@ def reconstruct_yml(data, out_dir=None):
 
     # handle reconstruction of yml with recursion
     # TO DO -> ADD REMVOVAL OF "fvRs" CLASSES, too hard to handle above due to recursive issues
-    def rebuild_yml(data, dn_parent_map = {}, dn_attributes_map = None, credentials_file = None, yml_list = [], parent_key = None, grandparent_key = None):
-
+    def rebuild_yml(data, dn_parent_map={}, dn_attributes_map=None, credentials_file=None, yml_list=[], parent_key=None, grandparent_key=None):
         entry_dict = {}
 
         if isinstance(data, dict):
@@ -378,15 +384,15 @@ def reconstruct_yml(data, out_dir=None):
 
                 # get dn attributes
                 try:
-                    parent_attribute = reverseAliases[key]["name"][:-1] # only applies to required params
+                    parent_attribute = reverseAliases[key]["name"][:-1]  # only applies to required params
                     dn_parent_map[key] = data[key][parent_attribute]
-                except(KeyError):
+                except KeyError:
                     pass
 
                 nested_dictionary = {}
 
                 # here restructuring is handled
-                if parent_key == "children" or parent_key == None:
+                if parent_key == "children" or parent_key is None:
 
                     # bad trick to get rid of all non-aci modules
                     if key[:3] == "aci":
@@ -397,20 +403,16 @@ def reconstruct_yml(data, out_dir=None):
                     # set name to something generic
                     key_name = key.split("_")[1] if len(key.split("_")) == 2 else key.split("_")[2]
 
-                    if parent_key != None:
-                        grandparent_key_name = grandparent_key.split("_")[1] if len(grandparent_key.split("_")) == 2 else grandparent_key.split("_")[2:]
-                        sentence = f"add a {key_name.upper()} to the {grandparent_key_name.upper()}"
-                    else:
-                        sentence = f"create {key_name} on ACI using {key} module"
+                    sentence = f"Task - Create {key_name.upper()}"
 
                     entry_dict["name"] = sentence
+
                     for subkey, subvalue in data[key].items():
                         if subkey != "children":
-                            # print(key, subkey, subvalue)
                             nested_dictionary[subkey] = subvalue
 
+                    # this does handle parents, not siblings however
                     if key in dn_attributes_map:
-
                         try:
                             if len(dn_attributes_map[key]) == 2:
                                 nested_dictionary[dn_attributes_map[key][0]] = dn_parent_map[dn_attributes_map[key][1]]
@@ -425,8 +427,10 @@ def reconstruct_yml(data, out_dir=None):
                                 nested_dictionary[dn_attributes_map[key][1]] = dn_parent_map[dn_attributes_map[key][3]]
                                 nested_dictionary[dn_attributes_map[key][4]] = dn_parent_map[dn_attributes_map[key][5]]
 
-                        except(KeyError):
+                        except KeyError:
                             pass
+
+                    # if key in dn_attributes_map and key in 
 
                     entry_dict["cisco.aci." + key] = nested_dictionary
                     entry_dict["delegate_to"] = "localhost"
@@ -434,15 +438,15 @@ def reconstruct_yml(data, out_dir=None):
                     yml_list.append(entry_dict)
 
                 if isinstance(value, dict):
-                    rebuild_yml(value, parent_key = key, grandparent_key = parent_key, dn_attributes_map = dn_attributes_map)
+                    rebuild_yml(value, dn_parent_map, dn_attributes_map, credentials_file, yml_list, key, parent_key)
 
                 elif isinstance(value, list):
                     for item in value:
-                        rebuild_yml(item, parent_key = key, grandparent_key = parent_key, dn_attributes_map = dn_attributes_map)
+                        rebuild_yml(item, dn_parent_map, dn_attributes_map, credentials_file, yml_list, key, parent_key)
 
         elif isinstance(data, list):
             for item in data:
-                rebuild_yml(item, parent_key = key, grandparent_key = parent_key, dn_attributes_map = dn_attributes_map)
+                rebuild_yml(item, dn_parent_map, dn_attributes_map, credentials_file, yml_list, parent_key, grandparent_key)
 
         return yml_list
 
