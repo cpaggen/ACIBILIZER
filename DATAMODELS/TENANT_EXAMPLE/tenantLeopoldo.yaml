@@ -98,3 +98,22 @@
       resolution_immediacy: 'pre-provision'
       deploy_immediacy: 'immediate'
 
+  - name: Read data from CSV file to be used to configure ACI
+    community.general.read_csv:
+      path: ports.csv
+    register: ports
+
+  - name: deploy static path bindings for an EPG
+    cisco.aci.aci_static_binding_to_epg:
+      <<: *aci_login
+      tenant: '{{ item.tenant }}'
+      ap: '{{ item.ap }}'
+      epg: '{{ item.epg }}'
+      encap_id: '{{ item.encap_id }}'
+      deploy_immediacy: '{{ item.deploy }}'
+      interface_mode: '{{ item.int_mode }}'
+      interface_type: '{{ item.int_type }}'
+      pod_id: '{{ item.pod_id }}'
+      leafs: '{{ item.leaf }}'
+      interface: '{{ item.int }}'
+    loop: '{{ ports.list }}'

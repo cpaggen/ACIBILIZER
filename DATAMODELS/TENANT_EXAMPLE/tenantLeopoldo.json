@@ -265,6 +265,90 @@
                                 },
                                 "children": [
                                     {
+                                        "fvRsPathAtt": {
+                                            "attributes": {
+                                                "annotation": "orchestrator:ansible",
+                                                "descr": "",
+                                                "encap": "vlan-1",
+                                                "instrImedcy": "immediate",
+                                                "mode": "regular",
+                                                "primaryEncap": "unknown",
+                                                "tDn": "topology/pod-1/paths-102/pathep-[eth1/2]",
+                                                "userdom": ":all:common:"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "fvRsPathAtt": {
+                                            "attributes": {
+                                                "annotation": "orchestrator:ansible",
+                                                "descr": "",
+                                                "encap": "vlan-1",
+                                                "instrImedcy": "immediate",
+                                                "mode": "regular",
+                                                "primaryEncap": "unknown",
+                                                "tDn": "topology/pod-1/paths-102/pathep-[eth1/1]",
+                                                "userdom": ":all:common:"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "fvRsPathAtt": {
+                                            "attributes": {
+                                                "annotation": "orchestrator:ansible",
+                                                "descr": "",
+                                                "encap": "vlan-1",
+                                                "instrImedcy": "immediate",
+                                                "mode": "regular",
+                                                "primaryEncap": "unknown",
+                                                "tDn": "topology/pod-1/paths-103/pathep-[eth1/2]",
+                                                "userdom": ":all:common:"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "fvRsPathAtt": {
+                                            "attributes": {
+                                                "annotation": "orchestrator:ansible",
+                                                "descr": "",
+                                                "encap": "vlan-1",
+                                                "instrImedcy": "immediate",
+                                                "mode": "regular",
+                                                "primaryEncap": "unknown",
+                                                "tDn": "topology/pod-1/paths-103/pathep-[eth1/1]",
+                                                "userdom": ":all:common:"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "fvRsPathAtt": {
+                                            "attributes": {
+                                                "annotation": "orchestrator:ansible",
+                                                "descr": "",
+                                                "encap": "vlan-1",
+                                                "instrImedcy": "immediate",
+                                                "mode": "regular",
+                                                "primaryEncap": "unknown",
+                                                "tDn": "topology/pod-1/paths-101/pathep-[eth1/2]",
+                                                "userdom": ":all:common:"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "fvRsPathAtt": {
+                                            "attributes": {
+                                                "annotation": "orchestrator:ansible",
+                                                "descr": "",
+                                                "encap": "vlan-1",
+                                                "instrImedcy": "immediate",
+                                                "mode": "regular",
+                                                "primaryEncap": "unknown",
+                                                "tDn": "topology/pod-1/paths-101/pathep-[eth1/1]",
+                                                "userdom": ":all:common:"
+                                            }
+                                        }
+                                    },
+                                    {
                                         "fvRsDomAtt": {
                                             "attributes": {
                                                 "annotation": "orchestrator:ansible",
