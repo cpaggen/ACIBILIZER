@@ -24,10 +24,10 @@ def reconstruct_yml(data, out_dir=None):
     # here define default arguments (to delete)
     default_args = ['', "", "::", ":all:", "unknown"]
 
-    # invisible_arguments
+    # invisible_arguments - be sure to have them "pre-mapping"
     invisible_args = ["annotation", "dn", "rn", "uid", "modTs", "monPolDn",
                        "seg", "pcTag", "userdom", "tDn", "filter_nam",
-                       "mac_address", "preferred"] # adjust as needed
+                       "mac", "preferred", "numPorts"] # adjust as needed
 
     # define exception list
     exception_list = ['aci_access_span_src_group',
@@ -188,7 +188,6 @@ def reconstruct_yml(data, out_dir=None):
                     if not isfullydefault(value.values(), parent_key, defaults, default_args):
 
                         if isexception(parent_key):
-                            print(parent_key)
 
                             # TYPE 1 EXCEPTIONS -> ADD PARAMS WHICH ARE FOUND IN SUBCLASSES (handled same as type2 actually)
                             try:
@@ -209,12 +208,15 @@ def reconstruct_yml(data, out_dir=None):
                         for attr_key, attr_value in value.items(): # here empty values are also handled, eg if default then don't change
 
                             # these changes occur within the key itself, not a parent, and therefore it is handled as "type 1"
+                            # could possibly handle with exceptions_list but risky..
                             if parent_key == "fvRsDomAtt" and attr_key == "tDn": # bypass the skip tDn
                                 changes.append((parent_key, attr_key, attr_value, 1))
 
 
                             # TYPE 2 CHANGES -> ATTRIBUTES FIELD REMOVAL, REMOVAL OF DEFAULTS
                             if attr_key not in invisible_args and attr_value not in default_args and not isdefault(parent_key, attr_key, attr_value, default_map):
+
+                                print(attr_key)
 
                                 # proper to fv_subnet once again?
                                 # new exception found with "ip" -> creates a mask, gateway
