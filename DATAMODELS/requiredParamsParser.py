@@ -102,7 +102,7 @@ def add_required_flag(dict1, overlap):
     
     return dict1
 
-if __name__ == "__main__c":
+if __name__ == "__main__":
     b = get_config_map(PATH_TO_MODULE_DIR)
     c = extract_required_if(PATH_TO_MODULE_DIR)
     x = get_overlap(b, c)
