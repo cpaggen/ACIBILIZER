@@ -1,0 +1,1295 @@
+{
+        "vz:RuleOwner": {
+            "contains": {
+                "fault:Delegate": ""
+            },
+            "rnMap": {
+                "fd-": "fault:Delegate"
+            },
+            "identifiedBy": [
+                "creatorDn",
+                "tag"
+            ],
+            "rnFormat": "own-[{creatorDn}]-tag-{tag}",
+            "containedBy": {
+                "actrl:MgmtRule": "",
+                "actrl:Rule": "",
+                "actrl:SnmpRule": ""
+            },
+            "superClasses": [
+                "vz:ARuleOwner",
+                "pol:Obj",
+                "naming:NamedObject"
+            ],
+            "subClasses": {
+
+            },
+            "relationFrom": {
+
+            },
+            "relationTo": {
+
+            },
+            "dnFormats": [
+                "topology/pod-{id}/node-{id}/sys/actrl/scope-{id}/sr-{scopeId}-s-{sPcTag}-d-{dPcTag}-f-{fltId}/own-[{creatorDn}]-tag-{tag}",
+                "sys/actrl/scope-{id}/sr-{scopeId}-s-{sPcTag}-d-{dPcTag}-f-{fltId}/own-[{creatorDn}]-tag-{tag}",
+                "topology/pod-{id}/node-{id}/sys/actrl/scope-{id}/mr-{scopeId}-s-{sPcTag}-d-{dPcTag}-f-{fltId}/own-[{creatorDn}]-tag-{tag}",
+                "sys/actrl/scope-{id}/mr-{scopeId}-s-{sPcTag}-d-{dPcTag}-f-{fltId}/own-[{creatorDn}]-tag-{tag}",
+                "topology/pod-{id}/node-{id}/sys/actrl/scope-{id}/rule-{scopeId}-s-{sPcTag}-d-{dPcTag}-f-{fltId}/own-[{creatorDn}]-tag-{tag}",
+                "sys/actrl/scope-{id}/rule-{scopeId}-s-{sPcTag}-d-{dPcTag}-f-{fltId}/own-[{creatorDn}]-tag-{tag}"
+            ],
+            "writeAccess": [
+
+            ],
+            "readAccess": [
+                "admin"
+            ],
+            "faults": {
+
+            },
+            "events": {
+
+            },
+            "stats": {
+
+            },
+            "isAbstract": false,
+            "isConfigurable": false,
+            "isContextRoot": false,
+            "isDeprecated": false,
+            "isEncrypted": false,
+            "isExportable": false,
+            "isPersistent": true,
+            "isSubjectToQuota": false,
+            "isObservable": false,
+            "hasStats": false,
+            "isStat": false,
+            "isFaultable": false,
+            "isDomainable": false,
+            "isHealthScorable": false,
+            "shouldCollectHealthStats": false,
+            "healthCollectionSource": "faults",
+            "hasEventRules": false,
+            "abstractionLayer": "concrete64b",
+            "apicNxProcessing": false,
+            "monitoringPolicySource": "Parent",
+            "isCreatableDeletable": "always",
+            "platformFlavors": [
+                "apic",
+                "nxos"
+            ],
+            "classId": "9495",
+            "className": "RuleOwner",
+            "classPkg": "vz",
+            "featureTag": "",
+            "moCategory": "Regular",
+            "label": "",
+            "properties": {
+                "action": {
+                    "comment": [
+                         "The action required when the condition is met."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "35593",
+                    "propLocalId": "291",
+                    "label": "Action",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "actrl:Action",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "512", "localName": "analytics_vld",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "enable analytics "},
+                         { "value": "32", "localName": "copy",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "copy "},
+                         { "value": "1", "localName": "count",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "count"
+                             ],
+                             "label": "count "},
+                         { "value": "permit", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Default is permit"
+                             ],
+                             "label": " "},
+                         { "value": "16", "localName": "deny",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "deny"
+                             ],
+                             "label": "Deny "},
+                         { "value": "2", "localName": "log",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "log"
+                             ],
+                             "label": "log "},
+                         { "value": "256", "localName": "no_stats",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "no stats "},
+                         { "value": "4", "localName": "permit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "permit "},
+                         { "value": "1024", "localName": "permit_override",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "permit override "},
+                         { "value": "8", "localName": "redir",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "redirect "},
+                         { "value": "128", "localName": "redir_override",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "redir override "},
+                         { "value": "64", "localName": "threshold_redir",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "redirect with threshold "}
+                    ],
+                    "default": "permit",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "childAction": {
+                    "comment": [
+                         "Delete or ignore. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "4",
+                    "propLocalId": "5",
+                    "label": "childAction",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationChildAction",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "16384", "localName": "deleteAll",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteAll "},
+                         { "value": "8192", "localName": "deleteNonPresent",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteNonPresent "},
+                         { "value": "4096", "localName": "ignore",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ignore "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "creatorDn": {
+                    "isConfigurable": true,
+                    "propGlobalId": "28363",
+                    "propLocalId": "4142",
+                    "label": "creatorDn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": false,
+                    "isNaming": true,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": true,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "ctrctName": {
+                    "isConfigurable": false,
+                    "propGlobalId": "42283",
+                    "propLocalId": "9148",
+                    "label": "ctrctName",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Name",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "direction": {
+                    "comment": [
+                         "The connector direction."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "35597",
+                    "propLocalId": "94",
+                    "label": "direction",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "actrl:Direction",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "bi-dir",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Unidirectional"
+                             ],
+                             "label": "Bi-directional "},
+                         { "value": "uni-dir", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Default is uni-directional"
+                             ],
+                             "label": " "},
+                         { "value": "1", "localName": "uni-dir",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Unidirectional"
+                             ],
+                             "label": "Uni-directional "},
+                         { "value": "3", "localName": "uni-dir-ignore",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Unidirectional-Ignore - used with the dummy Rule Mo,\n                     which accompanies the bi-dir Rule Mo"
+                             ],
+                             "label": "Uni-directional-Ignore "}
+                    ],
+                    "default": "uni-dir",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "dn": {
+                    "comment": [
+                         "A tag or metadata is a non-hierarchical keyword or term assigned to the fabric module."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1",
+                    "propLocalId": "2",
+                    "label": "dn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "intent": {
+                    "isConfigurable": false,
+                    "propGlobalId": "55652",
+                    "propLocalId": "12600",
+                    "label": "intent",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "vz:Intent",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "install", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "2", "localName": "estimate_add",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "process configuration and estimate number of rules for adding contract "},
+                         { "value": "1", "localName": "estimate_delete",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "process configuration and estimate number of rules for deleting contract "},
+                         { "value": "0", "localName": "install",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "install rules in hardware "}
+                    ],
+                    "default": "install",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "lcOwn": {
+                    "comment": [
+                         "A value that indicates how this object was created. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "9",
+                    "propLocalId": "9",
+                    "label": "lcOwn",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "mo:Owner",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "local", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "4", "localName": "implicit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Implicit "},
+                         { "value": "0", "localName": "local",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Local "},
+                         { "value": "1", "localName": "policy",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Policy "},
+                         { "value": "2", "localName": "replica",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Replica "},
+                         { "value": "3", "localName": "resolveOnBehalf",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ResolvedOnBehalf "}
+                    ],
+                    "default": "local",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "markDscp": {
+                    "comment": [
+                         "DSCP values to apply for QOS"
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "35596",
+                    "propLocalId": "1015",
+                    "label": "Dscp",
+                    "baseType": "scalar:UByte",
+                    "modelType": "qosp:Dscp",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "10", "localName": "AF11",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "AF11 low drop"
+                             ],
+                             "label": "AF11 low drop "},
+                         { "value": "12", "localName": "AF12",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "AF12 medium drop"
+                             ],
+                             "label": "AF12 medium drop "},
+                         { "value": "14", "localName": "AF13",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "AF13 high drop"
+                             ],
+                             "label": "AF13 high drop "},
+                         { "value": "18", "localName": "AF21",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "AF21 low drop"
+                             ],
+                             "label": "AF21 low drop "},
+                         { "value": "20", "localName": "AF22",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "AF22 medium drop"
+                             ],
+                             "label": "AF22 medium drop "},
+                         { "value": "22", "localName": "AF23",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "AF22 high drop"
+                             ],
+                             "label": "AF23 high drop "},
+                         { "value": "26", "localName": "AF31",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "AF31 low drop"
+                             ],
+                             "label": "AF31 low drop "},
+                         { "value": "28", "localName": "AF32",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "AF32 medium drop"
+                             ],
+                             "label": "AF32 medium drop "},
+                         { "value": "30", "localName": "AF33",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "AF33 high drop"
+                             ],
+                             "label": "AF33 high drop "},
+                         { "value": "34", "localName": "AF41",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "AF41 low drop"
+                             ],
+                             "label": "AF41 low drop "},
+                         { "value": "36", "localName": "AF42",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "AF42 medium drop"
+                             ],
+                             "label": "AF42 medium drop "},
+                         { "value": "38", "localName": "AF43",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "AF42 high drop"
+                             ],
+                             "label": "AF43 high drop "},
+                         { "value": "0", "localName": "CS0",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "CS0"
+                             ],
+                             "label": "CS0 "},
+                         { "value": "8", "localName": "CS1",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "CS1"
+                             ],
+                             "label": "CS1 "},
+                         { "value": "16", "localName": "CS2",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "CS2"
+                             ],
+                             "label": "CS2 "},
+                         { "value": "24", "localName": "CS3",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "CS3"
+                             ],
+                             "label": "CS3 "},
+                         { "value": "32", "localName": "CS4",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "CS4"
+                             ],
+                             "label": "CS4 "},
+                         { "value": "40", "localName": "CS5",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "CS5"
+                             ],
+                             "label": "CS5 "},
+                         { "value": "48", "localName": "CS6",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "CS6"
+                             ],
+                             "label": "CS6 "},
+                         { "value": "56", "localName": "CS7",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "CS7"
+                             ],
+                             "label": "CS7 "},
+                         { "value": "46", "localName": "EF",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "EF"
+                             ],
+                             "label": "Expedited Forwarding "},
+                         { "value": "44", "localName": "VA",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "VA"
+                             ],
+                             "label": "Voice Admit "},
+                         { "value": "unspecified", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "64", "localName": "unspecified",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Unspecified"
+                             ],
+                             "label": "Unspecified "}
+                    ],
+                    "default": "unspecified",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "modTs": {
+                    "comment": [
+                         "The time when this object was last modified."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "7",
+                    "propLocalId": "7",
+                    "label": "modTs",
+                    "baseType": "scalar:Date",
+                    "modelType": "mo:TStamp",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "never", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "never",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "never "}
+                    ],
+                    "default": "never",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "monitorDn": {
+                    "isConfigurable": false,
+                    "propGlobalId": "35598",
+                    "propLocalId": "8287",
+                    "label": "monitorDn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "name": {
+                    "comment": [
+                         "null"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "4991",
+                    "propLocalId": "13",
+                    "label": "Name",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Name",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": true,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 64,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9_.:-]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "nameAlias": {
+                    "isConfigurable": true,
+                    "propGlobalId": "28417",
+                    "propLocalId": "6719",
+                    "label": "Name alias",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:NameAlias",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 63,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9_.-]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "prio": {
+                    "comment": [
+                         "The QoS priority class ID."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "35594",
+                    "propLocalId": "172",
+                    "label": "Priority",
+                    "baseType": "scalar:UByte",
+                    "modelType": "actrl:RulePrio",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "21", "localName": "any_any_any",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "any_any_any "},
+                         { "value": "17", "localName": "any_any_filter",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "any_any_filter "},
+                         { "value": "16", "localName": "any_dest_any",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "any_dest_any "},
+                         { "value": "14", "localName": "any_dest_filter",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "any_dest_filter "},
+                         { "value": "22", "localName": "any_vrf_any_deny",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "any_vrf_any_deny "},
+                         { "value": "5", "localName": "black_list",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "black_list "},
+                         { "value": "3", "localName": "class-eq-allow",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "class-eq-allow "},
+                         { "value": "2", "localName": "class-eq-deny",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "class-eq-deny "},
+                         { "value": "1", "localName": "class-eq-filter",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "class-eq-filter "},
+                         { "value": "23", "localName": "default_action",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "default_action "},
+                         { "value": "6", "localName": "fabric_infra",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "fabric_infra "},
+                         { "value": "7", "localName": "fully_qual",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "fully_qual "},
+                         { "value": "20", "localName": "grp_any_any_any_permit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "grp_any_any_any_permit "},
+                         { "value": "19", "localName": "grp_any_dest_any_deny",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "grp_any_dest_any_deny "},
+                         { "value": "18", "localName": "grp_src_any_any_deny",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "grp_src_any_any_deny "},
+                         { "value": "4", "localName": "prov-nonshared-to-cons",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "prov-nonshared-to-cons "},
+                         { "value": "12", "localName": "shsrc_any_any_deny",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "shsrc_any_any_deny "},
+                         { "value": "11", "localName": "shsrc_any_any_perm",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "shsrc_any_any_perm "},
+                         { "value": "10", "localName": "shsrc_any_filt_perm",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "shsrc_any_filt_perm "},
+                         { "value": "15", "localName": "src_any_any",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "src_any_any "},
+                         { "value": "13", "localName": "src_any_filter",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "src_any_filter "},
+                         { "value": "9", "localName": "src_dst_any",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "src_dst_any "},
+                         { "value": "8", "localName": "system_incomplete",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "system_incomplete "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "qosGrp": {
+                    "comment": [
+                         "The classification of Qos class."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "35595",
+                    "propLocalId": "1014",
+                    "label": "QOS Group",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "qos:Prio",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "5", "localName": "control-plane",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "control-plane "},
+                         { "value": "unspecified", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "3", "localName": "level1",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Level1 "},
+                         { "value": "2", "localName": "level2",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Level2 "},
+                         { "value": "1", "localName": "level3",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "User configurable classes"
+                             ],
+                             "label": "Level3 (Default) "},
+                         { "value": "9", "localName": "level4",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Level4 "},
+                         { "value": "8", "localName": "level5",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Level5 "},
+                         { "value": "7", "localName": "level6",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Level6 "},
+                         { "value": "4", "localName": "policy-plane",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "System Classes. Not user configurable"
+                             ],
+                             "label": "policy-plane "},
+                         { "value": "6", "localName": "span",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "span "},
+                         { "value": "0", "localName": "unspecified",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Unspecified "}
+                    ],
+                    "default": "unspecified",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "rn": {
+                    "comment": [
+                         "Identifies an object from its siblings within the context of its parent object. The distinguished name contains a sequence of relative names."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "2",
+                    "propLocalId": "3",
+                    "label": "rn",
+                    "baseType": "reference:BinRN",
+                    "modelType": "reference:BinRN",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "status": {
+                    "comment": [
+                         "The upgrade status. This property is for internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "3",
+                    "propLocalId": "4",
+                    "label": "status",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationStatus",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "created",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be created. An error is returned if the object already exists.  \nIn the return value of a setter method: indicates that an object has been created.  \n"
+                             ],
+                             "label": "created "},
+                         { "value": "8", "localName": "deleted",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be deleted.  \nIn the return value of a setter method: indicates that an object has been deleted.\n"
+                             ],
+                             "label": "deleted "},
+                         { "value": "4", "localName": "modified",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be modified  \nIn the return value of a setter method: indicates that an object has been modified.\n"
+                             ],
+                             "label": "modified "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "tag": {
+                    "comment": [
+                         "The color of a policy label."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "28489",
+                    "propLocalId": "416",
+                    "label": "tag",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "vz:RuleTag",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": false,
+                    "isNaming": true,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": true,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "5", "localName": "arepp",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "arepp "},
+                         { "value": "2", "localName": "bd",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "bd "},
+                         { "value": "0", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "8", "localName": "filter",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "filter "},
+                         { "value": "9", "localName": "mgmt",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "mgmt "},
+                         { "value": "7", "localName": "taboo",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "taboo "},
+                         { "value": "3", "localName": "to-epg",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "to-epg "},
+                         { "value": "4", "localName": "to-epg-any",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "to-epg-any "},
+                         { "value": "0", "localName": "unknown",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "unknown "},
+                         { "value": "6", "localName": "vlanckt",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "vlanckt "},
+                         { "value": "1", "localName": "vrf",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "vrf "}
+                    ],
+                    "default": "unknown",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "type": {
+                    "comment": [
+                         "The specific type of the object or component."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "57375",
+                    "propLocalId": "33",
+                    "label": "Type",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "actrl:RuleT",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "4", "localName": "bd_flood",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "BD flood rule"
+                             ],
+                             "label": "Flood "},
+                         { "value": "tenant", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Default is tenant"
+                             ],
+                             "label": " "},
+                         { "value": "6", "localName": "infra",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Infra rule"
+                             ],
+                             "label": "Infra "},
+                         { "value": "2", "localName": "mgmt",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "management"
+                             ],
+                             "label": "Management "},
+                         { "value": "3", "localName": "snmp",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "snmp"
+                             ],
+                             "label": "SNMP "},
+                         { "value": "1", "localName": "tenant",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "tenant"
+                             ],
+                             "label": "Tenant "},
+                         { "value": "5", "localName": "vrf_default",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Vrf default rule"
+                             ],
+                             "label": "Vrf "}
+                    ],
+                    "default": "tenant",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                }
+            }
+        }
+}

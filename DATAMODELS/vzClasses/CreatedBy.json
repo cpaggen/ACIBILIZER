@@ -1,0 +1,783 @@
+{
+        "vz:CreatedBy": {
+            "contains": {
+                "fault:Delegate": ""
+            },
+            "rnMap": {
+                "fd-": "fault:Delegate"
+            },
+            "identifiedBy": [
+                "ownerDn"
+            ],
+            "rnFormat": "by-[{ownerDn}]",
+            "containedBy": {
+                "fv:SharedService": "",
+                "vz:IntraSecurityDef": "",
+                "vz:RsRFltAtt": ""
+            },
+            "superClasses": [
+                "pol:Obj",
+                "naming:NamedObject"
+            ],
+            "subClasses": {
+
+            },
+            "relationFrom": {
+
+            },
+            "relationTo": {
+
+            },
+            "dnFormats": [
+                "uni/tn-{name}/oobbrc-{name}/intraEpg/intra-[{epgDn}]-any-{isAny}/by-[{ownerDn}]",
+                "uni/tn-{name}/brc-{name}/intraEpg/intra-[{epgDn}]-any-{isAny}/by-[{ownerDn}]",
+                "uni/tn-{name}/intraEpg/intra-[{epgDn}]-any-{isAny}/by-[{ownerDn}]",
+                "uni/tn-{name}/oobbrc-{name}/inherited-[{relationDn}]/intra-[{epgDn}]-any-{isAny}/by-[{ownerDn}]",
+                "uni/tn-{name}/brc-{name}/inherited-[{relationDn}]/intra-[{epgDn}]-any-{isAny}/by-[{ownerDn}]",
+                "uni/tn-{name}/inherited-[{relationDn}]/intra-[{epgDn}]-any-{isAny}/by-[{ownerDn}]",
+                "uni/tn-{name}/brc-{name}/ctrct-[{ctrctPKey}]-subj-[{subjPKey}]/intra-[{epgDn}]-any-{isAny}/by-[{ownerDn}]",
+                "uni/tn-{name}/brc-{name}/int-[{ifPKey}]/intra-[{epgDn}]-any-{isAny}/by-[{ownerDn}]",
+                "uni/tn-{name}/brc-{name}/any-[{anyPKey}]-type-{membType}/intra-[{epgDn}]-any-{isAny}/by-[{ownerDn}]",
+                "uni/tn-{name}/oobbrc-{name}/dirass/intra-[{epgDn}]-any-{isAny}/by-[{ownerDn}]",
+                "uni/tn-{name}/brc-{name}/dirass/intra-[{epgDn}]-any-{isAny}/by-[{ownerDn}]",
+                "uni/tn-{name}/dirass/intra-[{epgDn}]-any-{isAny}/by-[{ownerDn}]",
+                "uni/tn-{name}/cloudapp-{name}/cloudsvcepg-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/cloudapp-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/ap-{name}/esg-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/cloudapp-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/cloudapp-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/svcdefcont/tensvcdef-{name}/ldevdef-[{lDevDn}]/sepg-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/ldevdef-[{lDevDn}]/sepg-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/cloudapp-{name}/sepg-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/cloudapp-{name}/cloudextepg-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/cloudapp-{name}/cloudepg-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/cloudapp-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/Tnlepg-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/LDevInst-[{priKey}]-ctx-{ctxName}/epgDn-[{shEpgDn}]/sharedServiceAlloc/by-[{ownerDn}]",
+                "outdefcont-{id}/rsoutDefContToOut-[{tDn}]/outdef-{name}/instPdef-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/acIpToIp-{name}/acl3outcont/outdef-{name}/instPdef-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/acExtToEp-{name}/acl3outcont/outdef-{name}/instPdef-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/acEpToExt-{name}/acl3outcont/outdef-{name}/instPdef-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/acEpToEp-{name}/acl3outcont/outdef-{name}/instPdef-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/acAnyToEp-{name}/acl3outcont/outdef-{name}/instPdef-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/acEpToAny-{name}/acl3outcont/outdef-{name}/instPdef-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/epgToEp-{name}/acl3outcont/outdef-{name}/instPdef-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/epToEpg-{name}/acl3outcont/outdef-{name}/instPdef-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/ipToEpg-{name}/acl3outcont/outdef-{name}/instPdef-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/epgToIp-{name}/acl3outcont/outdef-{name}/instPdef-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/epgToEpg-{name}/acl3outcont/outdef-{name}/instPdef-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/epp/sec-[{epgPKey}]/ac-{name}/acl3outcont/outdef-{name}/instPdef-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/epp/fv-[{epgPKey}]/ac-{name}/acl3outcont/outdef-{name}/instPdef-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/epp/rtd-[{epgPKey}]/ac-{name}/acl3outcont/outdef-{name}/instPdef-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/ldevCtx-c-{ctrctNameOrLbl}-g-{graphNameOrLbl}-n-{nodeNameOrLbl}/lIfCtx-c-{connNameOrLbl}/outdef-{name}/instPdef-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/outdef-{name}/instPdef-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/LDevInst-[{priKey}]-ctx-{ctxName}/bd-[{bdDn}]/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/ldev-[{priKey}]-ctx-[{ctxDn}]-bd-[{bdDn}]/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/LDevInst-[{priKey}]-ctx-{ctxName}/G-{graphRn}-N-{nodeRn}-C-{connRn}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/vDev-[{priKey}]-tn-[{tnDn}]-ctx-{ctxName}/rndrInfo/eppContr/G-{graphRn}-N-{nodeRn}-C-{connRn}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/clp-{name}/cepg-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/provp-{name}/pepg-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/provp-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/clp-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/mgmtp-{name}/inb-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/ctx-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/ap-{name}/epg-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/out-{name}/instP-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/l2out-{name}/instP-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/clp-{name}/cdhcp-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "uni/tn-{name}/provp-{name}/pdhcp-{name}/sharedServiceAlloc/by-[{ownerDn}]",
+                "anydefcont/anygroupdef-[{anyDn}]/fr-[{epgDefDn}]/to-[{epgDefDn}]/rsrFltAtt-[{tDn}]/by-[{ownerDn}]",
+                "cdef-[{collDn}]/epgCont-[{epgDn}]/fr-[{epgDefDn}]/to-[{epgDefDn}]/rsrFltAtt-[{tDn}]/by-[{ownerDn}]"
+            ],
+            "writeAccess": [
+
+            ],
+            "readAccess": [
+                "admin"
+            ],
+            "faults": {
+
+            },
+            "events": {
+
+            },
+            "stats": {
+
+            },
+            "isAbstract": false,
+            "isConfigurable": false,
+            "isContextRoot": false,
+            "isDeprecated": false,
+            "isEncrypted": false,
+            "isExportable": false,
+            "isPersistent": true,
+            "isSubjectToQuota": false,
+            "isObservable": false,
+            "hasStats": false,
+            "isStat": false,
+            "isFaultable": false,
+            "isDomainable": false,
+            "isHealthScorable": false,
+            "shouldCollectHealthStats": false,
+            "healthCollectionSource": "faults",
+            "hasEventRules": false,
+            "abstractionLayer": "logical",
+            "apicNxProcessing": false,
+            "monitoringPolicySource": "Parent",
+            "isCreatableDeletable": "always",
+            "platformFlavors": [
+
+            ],
+            "classId": "1387",
+            "className": "CreatedBy",
+            "classPkg": "vz",
+            "featureTag": "",
+            "moCategory": "Regular",
+            "label": "",
+            "comment": [
+                "A container that captures information about the creator of an object."
+            ],
+            "properties": {
+                "action": {
+                    "comment": [
+                         "The action required when the condition is met."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "36994",
+                    "propLocalId": "291",
+                    "label": "action",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "vz:BinaryAction",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "permit", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Default is permit"
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "deny",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "deny"
+                             ],
+                             "label": "Deny "},
+                         { "value": "1", "localName": "permit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Permit "}
+                    ],
+                    "default": "permit",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "childAction": {
+                    "comment": [
+                         "Delete or ignore. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "4",
+                    "propLocalId": "5",
+                    "label": "childAction",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationChildAction",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "16384", "localName": "deleteAll",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteAll "},
+                         { "value": "8192", "localName": "deleteNonPresent",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteNonPresent "},
+                         { "value": "4096", "localName": "ignore",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ignore "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "crType": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "16473",
+                    "propLocalId": "4315",
+                    "label": "crType",
+                    "baseType": "scalar:Bitmask8",
+                    "modelType": "vz:CreatedbyType",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "0", "localName": "cleared",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Clear"
+                             ],
+                             "label": "Cleared "},
+                         { "value": "0", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1", "localName": "fwd",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Fwd filter"
+                             ],
+                             "label": "Created while Processing Fwd Filter "},
+                         { "value": "2", "localName": "rev",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Rev filter"
+                             ],
+                             "label": "Created while Processing Rev Filter "}
+                    ],
+                    "default": "cleared",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "directives": {
+                    "isConfigurable": false,
+                    "propGlobalId": "26069",
+                    "propLocalId": "3976",
+                    "label": "directives",
+                    "baseType": "scalar:Bitmask8",
+                    "modelType": "vz:RAction",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "none", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "2", "localName": "log",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Log "},
+                         { "value": "4", "localName": "no_stats",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Enable Policy Compression "},
+                         { "value": "0", "localName": "none",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "log"
+                             ],
+                             "label": "none "}
+                    ],
+                    "default": "none",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "dn": {
+                    "comment": [
+                         "A tag or metadata is a non-hierarchical keyword or term assigned to the fabric module."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1",
+                    "propLocalId": "2",
+                    "label": "dn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "hasGraph": {
+                    "comment": [
+                         "A property for specifying if an ABS graph is associated with this owner."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "15338",
+                    "propLocalId": "4109",
+                    "label": "hasGraph",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "false", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "no",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "lcOwn": {
+                    "comment": [
+                         "A value that indicates how this object was created. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "9",
+                    "propLocalId": "9",
+                    "label": "lcOwn",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "mo:Owner",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "local", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "4", "localName": "implicit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Implicit "},
+                         { "value": "0", "localName": "local",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Local "},
+                         { "value": "1", "localName": "policy",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Policy "},
+                         { "value": "2", "localName": "replica",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Replica "},
+                         { "value": "3", "localName": "resolveOnBehalf",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ResolvedOnBehalf "}
+                    ],
+                    "default": "local",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "modTs": {
+                    "comment": [
+                         "The time when this object was last modified."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "7",
+                    "propLocalId": "7",
+                    "label": "modTs",
+                    "baseType": "scalar:Date",
+                    "modelType": "mo:TStamp",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "never", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "never",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "never "}
+                    ],
+                    "default": "never",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "name": {
+                    "comment": [
+                         "null"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "4991",
+                    "propLocalId": "13",
+                    "label": "Name",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Name",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": true,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 64,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9_.:-]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "nameAlias": {
+                    "isConfigurable": true,
+                    "propGlobalId": "28417",
+                    "propLocalId": "6719",
+                    "label": "Name alias",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:NameAlias",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 63,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9_.-]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "ownerDn": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "1070",
+                    "propLocalId": "565",
+                    "label": "ownerDn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": false,
+                    "isNaming": true,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "priorityOverride": {
+                    "isConfigurable": false,
+                    "propGlobalId": "37164",
+                    "propLocalId": "8683",
+                    "label": "priorityOverride",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "vz:PriorityLevel",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "0", "localName": "default",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "default level "},
+                         { "value": "default", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1", "localName": "level1",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "lowest priority "},
+                         { "value": "2", "localName": "level2",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "medium priority "},
+                         { "value": "3", "localName": "level3",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "highest priority "}
+                    ],
+                    "default": "default",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "rn": {
+                    "comment": [
+                         "Identifies an object from its siblings within the context of its parent object. The distinguished name contains a sequence of relative names."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "2",
+                    "propLocalId": "3",
+                    "label": "rn",
+                    "baseType": "reference:BinRN",
+                    "modelType": "reference:BinRN",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "scope": {
+                    "comment": [
+                         "The domain applicable to the capability."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "16597",
+                    "propLocalId": "1",
+                    "label": "Scope",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "vz:Scope",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "1", "localName": "application-profile",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Application Profile "},
+                         { "value": "3", "localName": "context",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "VRF "},
+                         { "value": "context", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "4", "localName": "global",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Global "},
+                         { "value": "2", "localName": "tenant",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Tenant "}
+                    ],
+                    "default": "context",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "status": {
+                    "comment": [
+                         "The upgrade status. This property is for internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "3",
+                    "propLocalId": "4",
+                    "label": "status",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationStatus",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "created",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be created. An error is returned if the object already exists.  \nIn the return value of a setter method: indicates that an object has been created.  \n"
+                             ],
+                             "label": "created "},
+                         { "value": "8", "localName": "deleted",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be deleted.  \nIn the return value of a setter method: indicates that an object has been deleted.\n"
+                             ],
+                             "label": "deleted "},
+                         { "value": "4", "localName": "modified",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be modified  \nIn the return value of a setter method: indicates that an object has been modified.\n"
+                             ],
+                             "label": "modified "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                }
+            }
+        }
+}
