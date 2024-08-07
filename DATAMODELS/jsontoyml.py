@@ -60,7 +60,7 @@ def reconstruct_yml(data, out_dir=None):
         # 'spanRsSrcToPathEp': None,
         'fvSubnet': {'aci_epg': 'aci_epg_subnet',
                      'aci_bd': 'aci_bd_subnet'},
-        # 'fvRsPathAtt': None,
+        'fvRsPathAtt': 'aci_static_binding_to_epg',
         'vzBrCP': "aci_contract",
         # 'dhcpRelayP': None,
         # 'infraRsVlanNs': None,
@@ -187,8 +187,9 @@ def reconstruct_yml(data, out_dir=None):
                     # empty dictionaries function will take care of it
                     if not isfullydefault(value.values(), parent_key, defaults, default_args):
 
-                        if isexception(parent_key):
+                        
 
+                        if isexception(parent_key):
                             # TYPE 1 EXCEPTIONS -> ADD PARAMS WHICH ARE FOUND IN SUBCLASSES (handled same as type2 actually)
                             try:
                                 for param, path in exceptions[classToAnsible[parent_key]].items():
@@ -215,8 +216,6 @@ def reconstruct_yml(data, out_dir=None):
 
                             # TYPE 2 CHANGES -> ATTRIBUTES FIELD REMOVAL, REMOVAL OF DEFAULTS
                             if attr_key not in invisible_args and attr_value not in default_args and not isdefault(parent_key, attr_key, attr_value, default_map):
-
-                                print(attr_key)
 
                                 # proper to fv_subnet once again?
                                 # new exception found with "ip" -> creates a mask, gateway
@@ -312,6 +311,8 @@ def reconstruct_yml(data, out_dir=None):
             elif change_type == 0: # CHILDREN parent key, DUPLICATE CASES
                 try:
                     new_key = map_if_duplicate(child_key, classToAnsible[parent_key])
+                    print(new_key)
+                    print(child_value)
                     data['children'][0][new_key] = child_value
                     if child_key in data['children'][0]: # is this always the case? 0 idx? double check logic
                         del data['children'][0][child_key]
