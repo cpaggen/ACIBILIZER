@@ -9,6 +9,23 @@
       use_proxy: no
       use_ssl: yes
       validate_certs: no
+    contracts:
+      - contract: "contract-one"
+        subject: "subject1"
+        filter: "web"
+      - contract: "contract-two"
+        subject: "subject2"
+        filter: "ping"
+    filters:
+      - filter: "web"
+        entry: "https"
+        protocol: "tcp"
+        port: "443"
+      - filter: "ping"
+        entry: "icmp"
+        protocol: "icmp"
+        port: "0"
+
   tasks:
   - name: Add a tenant using aci_tenant
     aci_tenant:
@@ -117,3 +134,109 @@
       leafs: '{{ item.leaf }}'
       interface: '{{ item.int }}'
     loop: '{{ ports.list }}'
+
+  - name: create web filter
+    cisco.aci.aci_filter:
+      <<: *aci_login
+      tenant: leopoldo
+      filter: web_filter
+    delegate_to: localhost
+
+  - name: create db filter
+    cisco.aci.aci_filter:
+      <<: *aci_login
+      tenant: leopoldo
+      filter: database_filter
+    delegate_to: localhost
+
+  - name: create web filter entry
+    cisco.aci.aci_filter_entry:
+      <<: *aci_login
+      tenant: leopoldo
+      filter: web_filter
+      entry: https
+      ether_type: ip
+      ip_protocol: tcp
+      dst_port: 443
+    delegate_to: localhost
+
+  - name: create db filter entry
+    cisco.aci.aci_filter_entry:
+      <<: *aci_login
+      tenant: leopoldo
+      filter: database_filter
+      entry: sql
+      ether_type: ip
+      ip_protocol: tcp
+      dst_port: 3306
+    delegate_to: localhost
+
+  - name: create web contract
+    aci_contract:
+      <<: *aci_login
+      tenant: leopoldo
+      contract: web_contract
+      scope: context
+    delegate_to: localhost
+
+  - name: create db contract
+    aci_contract:
+      <<: *aci_login
+      tenant: leopoldo
+      contract: database_contract
+      scope: context
+    delegate_to: localhost
+
+  - name: create web contract subject
+    aci_contract_subject:
+      <<: *aci_login
+      tenant: leopoldo
+      contract: web_contract
+      subject: web_subject
+    delegate_to: localhost
+
+  - name: create db contract subject
+    aci_contract_subject:
+      <<: *aci_login
+      tenant: leopoldo
+      contract: database_contract
+      subject: database_subject
+    delegate_to: localhost
+
+  - name: web subject to web filter bindings
+    aci_contract_subject_to_filter:
+      <<: *aci_login
+      tenant: leopoldo
+      contract: web_contract
+      subject: web_subject
+      filter: web_filter
+    delegate_to: localhost
+
+  - name: db subject to db filter bindings
+    aci_contract_subject_to_filter:
+      <<: *aci_login
+      tenant: leopoldo
+      contract: database_contract
+      subject: database_subject
+      filter: database_filter
+    delegate_to: localhost
+
+  - name: bind epg to web contract
+    aci_epg_to_contract:
+      <<: *aci_login
+      tenant: leopoldo
+      ap: fonzo
+      epg: milou
+      contract: web_contract
+      contract_type: provider
+    delegate_to: localhost
+
+  - name: bind epg to db contract
+    aci_epg_to_contract:
+      <<: *aci_login
+      tenant: leopoldo
+      ap: fonzo
+      epg: tintin
+      contract: database_contract
+      contract_type: consumer
+    delegate_to: localhost

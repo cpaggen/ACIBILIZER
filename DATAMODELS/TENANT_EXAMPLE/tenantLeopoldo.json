@@ -12,6 +12,104 @@
         },
         "children": [
             {
+                "vzBrCP": {
+                    "attributes": {
+                        "annotation": "orchestrator:ansible",
+                        "descr": "",
+                        "intent": "install",
+                        "name": "database_contract",
+                        "nameAlias": "",
+                        "ownerKey": "",
+                        "ownerTag": "",
+                        "prio": "unspecified",
+                        "scope": "context",
+                        "targetDscp": "unspecified",
+                        "userdom": ":all:common:"
+                    },
+                    "children": [
+                        {
+                            "vzSubj": {
+                                "attributes": {
+                                    "annotation": "orchestrator:ansible",
+                                    "consMatchT": "AtleastOne",
+                                    "descr": "",
+                                    "name": "database_subject",
+                                    "nameAlias": "",
+                                    "prio": "unspecified",
+                                    "provMatchT": "AtleastOne",
+                                    "revFltPorts": "yes",
+                                    "targetDscp": "unspecified",
+                                    "userdom": ":all:common:"
+                                },
+                                "children": [
+                                    {
+                                        "vzRsSubjFiltAtt": {
+                                            "attributes": {
+                                                "action": "permit",
+                                                "annotation": "orchestrator:ansible",
+                                                "directives": "",
+                                                "priorityOverride": "default",
+                                                "tnVzFilterName": "database_filter",
+                                                "userdom": ":all:common:"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "vzBrCP": {
+                    "attributes": {
+                        "annotation": "orchestrator:ansible",
+                        "descr": "",
+                        "intent": "install",
+                        "name": "web_contract",
+                        "nameAlias": "",
+                        "ownerKey": "",
+                        "ownerTag": "",
+                        "prio": "unspecified",
+                        "scope": "context",
+                        "targetDscp": "unspecified",
+                        "userdom": ":all:common:"
+                    },
+                    "children": [
+                        {
+                            "vzSubj": {
+                                "attributes": {
+                                    "annotation": "orchestrator:ansible",
+                                    "consMatchT": "AtleastOne",
+                                    "descr": "",
+                                    "name": "web_subject",
+                                    "nameAlias": "",
+                                    "prio": "unspecified",
+                                    "provMatchT": "AtleastOne",
+                                    "revFltPorts": "yes",
+                                    "targetDscp": "unspecified",
+                                    "userdom": ":all:common:"
+                                },
+                                "children": [
+                                    {
+                                        "vzRsSubjFiltAtt": {
+                                            "attributes": {
+                                                "action": "permit",
+                                                "annotation": "orchestrator:ansible",
+                                                "directives": "",
+                                                "priorityOverride": "default",
+                                                "tnVzFilterName": "web_filter",
+                                                "userdom": ":all:common:"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
                 "vnsSvcCont": {
                     "attributes": {
                         "annotation": "",
@@ -223,6 +321,84 @@
                 }
             },
             {
+                "vzFilter": {
+                    "attributes": {
+                        "annotation": "orchestrator:ansible",
+                        "descr": "",
+                        "name": "database_filter",
+                        "nameAlias": "",
+                        "ownerKey": "",
+                        "ownerTag": "",
+                        "userdom": ":all:common:"
+                    },
+                    "children": [
+                        {
+                            "vzEntry": {
+                                "attributes": {
+                                    "annotation": "orchestrator:ansible",
+                                    "applyToFrag": "no",
+                                    "arpOpc": "unspecified",
+                                    "dFromPort": "3306",
+                                    "dToPort": "3306",
+                                    "descr": "",
+                                    "etherT": "ip",
+                                    "icmpv4T": "unspecified",
+                                    "icmpv6T": "unspecified",
+                                    "matchDscp": "unspecified",
+                                    "name": "sql",
+                                    "nameAlias": "",
+                                    "prot": "tcp",
+                                    "sFromPort": "unspecified",
+                                    "sToPort": "unspecified",
+                                    "stateful": "no",
+                                    "tcpRules": "",
+                                    "userdom": ":all:common:"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "vzFilter": {
+                    "attributes": {
+                        "annotation": "orchestrator:ansible",
+                        "descr": "",
+                        "name": "web_filter",
+                        "nameAlias": "",
+                        "ownerKey": "",
+                        "ownerTag": "",
+                        "userdom": ":all:common:"
+                    },
+                    "children": [
+                        {
+                            "vzEntry": {
+                                "attributes": {
+                                    "annotation": "orchestrator:ansible",
+                                    "applyToFrag": "no",
+                                    "arpOpc": "unspecified",
+                                    "dFromPort": "https",
+                                    "dToPort": "https",
+                                    "descr": "",
+                                    "etherT": "ip",
+                                    "icmpv4T": "unspecified",
+                                    "icmpv6T": "unspecified",
+                                    "matchDscp": "unspecified",
+                                    "name": "https",
+                                    "nameAlias": "",
+                                    "prot": "tcp",
+                                    "sFromPort": "unspecified",
+                                    "sToPort": "unspecified",
+                                    "stateful": "no",
+                                    "tcpRules": "",
+                                    "userdom": ":all:common:"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            {
                 "fvRsTenantMonPol": {
                     "attributes": {
                         "annotation": "",
@@ -264,6 +440,18 @@
                                     "userdom": ":all:common:"
                                 },
                                 "children": [
+                                    {
+                                        "fvRsProv": {
+                                            "attributes": {
+                                                "annotation": "orchestrator:ansible",
+                                                "intent": "install",
+                                                "matchT": "AtleastOne",
+                                                "prio": "unspecified",
+                                                "tnVzBrCPName": "web_contract",
+                                                "userdom": ":all:common:"
+                                            }
+                                        }
+                                    },
                                     {
                                         "fvRsPathAtt": {
                                             "attributes": {
@@ -483,6 +671,17 @@
                                                     }
                                                 }
                                             ]
+                                        }
+                                    },
+                                    {
+                                        "fvRsCons": {
+                                            "attributes": {
+                                                "annotation": "orchestrator:ansible",
+                                                "intent": "install",
+                                                "prio": "unspecified",
+                                                "tnVzBrCPName": "database_contract",
+                                                "userdom": ":all:common:"
+                                            }
                                         }
                                     },
                                     {
