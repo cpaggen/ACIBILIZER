@@ -489,7 +489,7 @@ def reconstruct_yml(data, out_dir=None):
             for item in data:
                 rebuild_yml(item, dn_parent_map, dn_attributes_map, credentials_file, yml_list, parent_key, grandparent_key)
 
-        return yml_list
+        return {'tasks': yml_list}
 
     # process the initial data
     a = process(data)
