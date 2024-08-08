@@ -9,8 +9,8 @@ from requiredParamsAliasesMap import requiredParamsAliases, reverse_alias_map
 import time
 
 # define all the paths here
-PATH_TO_SAVE = "ansible-reconstructed.yml"
-PATH_TO_JSON = "TENANT_EXAMPLE/tenantLeopoldo.json"
+PATH_TO_SAVE = "./VALIDATION/output.yml"
+PATH_TO_JSON = "./TENANT_EXAMPLE/tenantLeopoldo.json"
 PATH_TO_CREDENTIALS = ""
 
 ### start of the main function ###
