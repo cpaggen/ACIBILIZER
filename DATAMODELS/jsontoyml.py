@@ -9,8 +9,8 @@ from requiredParamsAliasesMap import requiredParamsAliases, reverse_alias_map
 import time
 
 # define all the paths here
-PATH_TO_SAVE = "./VALIDATION/output.yml"
-PATH_TO_JSON = "./TENANT_EXAMPLE/tenantLeopoldo.json"
+PATH_TO_SAVE = "ansible-reconstructed.yml"
+PATH_TO_JSON = "TENANT_EXAMPLE/tenantLeopoldo.json"
 PATH_TO_CREDENTIALS = ""
 
 ### start of the main function ###
@@ -86,13 +86,24 @@ def reconstruct_yml(data, out_dir=None):
         except(KeyError):
             pass
 
-    # helper method to navigate the exception dictionary
+    # helper method to navigate the exception dictionary - KEYS
     def map_if_duplicate(child, parent = None):
         out = None
         try:
             out = duplicate_map[child][parent]
         except(KeyError, TypeError):
             out = duplicate_map[child] # means there is no exception with the parent
+        return out
+
+    # maps entire dictionary - used for change of type 0
+    def map_if_duplicate_value(key, value):
+        out = {}
+        for subkey in value:
+            try:
+                new_key = reverseAliases[key][subkey]
+                out[new_key] = value[subkey]
+            except KeyError:
+                out[subkey] = value[subkey]
         return out
 
     # simple method to check if a key in in the exception list
@@ -105,7 +116,7 @@ def reconstruct_yml(data, out_dir=None):
             return value == map[parent_key][key] # means attribute has a default value
         except(KeyError):
             return False
-        
+
     def isexception(key): # checks if key in exceptions
         try:
             return classToAnsible[key] in exception_list
@@ -128,7 +139,7 @@ def reconstruct_yml(data, out_dir=None):
             return val_set.issubset(combined_default_values_set)
         except KeyError: # anything which is not "fv" is here atm
             return True # change based on desired behavior
-        
+
     def save_to_yaml(save_path, data):
         # save_path = os.path.join(save_path, "ansible_reconstructed.yml")
         with open("ansible_reconstructed.yml", 'w') as file:
@@ -187,8 +198,6 @@ def reconstruct_yml(data, out_dir=None):
                     # empty dictionaries function will take care of it
                     if not isfullydefault(value.values(), parent_key, defaults, default_args):
 
-                        
-
                         if isexception(parent_key):
                             # TYPE 1 EXCEPTIONS -> ADD PARAMS WHICH ARE FOUND IN SUBCLASSES (handled same as type2 actually)
                             try:
@@ -212,7 +221,6 @@ def reconstruct_yml(data, out_dir=None):
                             # could possibly handle with exceptions_list but risky..
                             if parent_key == "fvRsDomAtt" and attr_key == "tDn": # bypass the skip tDn
                                 changes.append((parent_key, attr_key, attr_value, 1))
-
 
                             # TYPE 2 CHANGES -> ATTRIBUTES FIELD REMOVAL, REMOVAL OF DEFAULTS
                             if attr_key not in invisible_args and attr_value not in default_args and not isdefault(parent_key, attr_key, attr_value, default_map):
@@ -305,18 +313,22 @@ def reconstruct_yml(data, out_dir=None):
                 except(UnboundLocalError):
                     pass
 
-            # DOUBLE CHECK logic here, otherwise seems to work as expected
-            # also can get rid of the whole "CHILDREN" key and move all upwards when we need it, only issue is how does this translate in yml
-            # FOR NOW keep "children" key as it helps with ordering everything correctly
+            # handle all duplicates
             elif change_type == 0: # CHILDREN parent key, DUPLICATE CASES
+
+                # seems forcing the "children" index to be 0 causes issues..
                 try:
                     new_key = map_if_duplicate(child_key, classToAnsible[parent_key])
-                    print(new_key)
-                    print(child_value)
-                    data['children'][0][new_key] = child_value
-                    if child_key in data['children'][0]: # is this always the case? 0 idx? double check logic
-                        del data['children'][0][child_key]
-                except(KeyError):
+                    new_value = map_if_duplicate_value(new_key, child_value)
+
+                    # iterate to find correct index.. slow but works
+                    for child in data['children']:
+                        if child_key in child:
+                            child[new_key] = new_value
+                            del child[child_key]
+                            break
+
+                except KeyError:
                     pass
 
         return data
@@ -389,6 +401,7 @@ def reconstruct_yml(data, out_dir=None):
                 try:
                     parent_attribute = reverseAliases[key]["name"][:-1]  # only applies to required params
                     dn_parent_map[key] = data[key][parent_attribute]
+
                 except KeyError:
                     pass
 
@@ -397,6 +410,11 @@ def reconstruct_yml(data, out_dir=None):
                 # here restructuring is handled
                 if parent_key == "children" or parent_key is None:
 
+                    # try:
+                    #     print(classToAnsible[key], value)
+                    # except:
+                    #     print(key, value)
+
                     # bad trick to get rid of all non-aci modules
                     if key[:3] == "aci":
                         pass
@@ -404,7 +422,13 @@ def reconstruct_yml(data, out_dir=None):
                         break
 
                     # set name to something generic
-                    key_name = key.split("_")[1] if len(key.split("_")) == 2 else key.split("_")[2]
+
+                    key_name = key
+
+                    # try:
+                    #     key_name = key.split("_")[1] if len(key.split("_")) == 2 else key.split("_")[2]
+                    # except(IndexError):
+                    #     key_name = key
 
                     sentence = f"Task - Create {key_name.upper()}"
 
