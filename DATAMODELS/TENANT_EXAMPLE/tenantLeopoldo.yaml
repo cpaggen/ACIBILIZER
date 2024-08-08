@@ -171,6 +171,23 @@
       dst_port: 3306
     delegate_to: localhost
 
+  - name: create port range to test codegen logic
+    cisco.aci.aci_filter_entry:
+      <<: *aci_login
+      entry: rangetest
+      filter: web_filter
+      tenant: leopoldo
+      ether_type: ip
+      ip_protocol: tcp
+      dst_port_start: 8443
+      dst_port_end: 8449
+      source_port_start: 1024
+      source_port_end: 2048
+      tcp_flags:
+      - acknowledgment
+      - finish
+    delegate_to: localhost
+
   - name: create web contract
     aci_contract:
       <<: *aci_login

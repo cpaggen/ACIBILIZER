@@ -377,6 +377,30 @@
                                     "annotation": "orchestrator:ansible",
                                     "applyToFrag": "no",
                                     "arpOpc": "unspecified",
+                                    "dFromPort": "8443",
+                                    "dToPort": "8449",
+                                    "descr": "",
+                                    "etherT": "ip",
+                                    "icmpv4T": "unspecified",
+                                    "icmpv6T": "unspecified",
+                                    "matchDscp": "unspecified",
+                                    "name": "rangetest",
+                                    "nameAlias": "",
+                                    "prot": "tcp",
+                                    "sFromPort": "1024",
+                                    "sToPort": "2048",
+                                    "stateful": "no",
+                                    "tcpRules": "ack,fin",
+                                    "userdom": ":all:common:"
+                                }
+                            }
+                        },
+                        {
+                            "vzEntry": {
+                                "attributes": {
+                                    "annotation": "orchestrator:ansible",
+                                    "applyToFrag": "no",
+                                    "arpOpc": "unspecified",
                                     "dFromPort": "https",
                                     "dToPort": "https",
                                     "descr": "",
