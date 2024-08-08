@@ -220,7 +220,10 @@ def reconstruct_yml(data, out_dir=None):
                             # these changes occur within the key itself, not a parent, and therefore it is handled as "type 1"
                             # could possibly handle with exceptions_list but risky..
                             if parent_key == "fvRsDomAtt" and attr_key == "tDn": # bypass the skip tDn
-                                changes.append((parent_key, attr_key, attr_value, 1))
+                                changes.append((parent_key, "tDn", attr_value, 1))
+
+                            if parent_key == "fvRsPathAtt" and attr_key == "tDn":
+                                changes.append((parent_key, "tDn", attr_value, 1))
 
                             # handle fvRsProv and fvRsCons
                             if parent_key == "fvRsCons":
@@ -300,25 +303,32 @@ def reconstruct_yml(data, out_dir=None):
             # changes within same class (not associated with a parent)
             # at the moment only used for epg_to_domain
             elif change_type == 1:
-                if "vmm" in change[2].split("/")[1]:
-                    dom_type_val = "vmm"
-                    vm_provider_val = change[2].split("/")[1].split("-")[1].lower()
-                    dom_val = change[2].split("/")[2][4:]
 
-                elif "phys" in change[2].split("/")[1]:
-                    dom_type_val = "phys"
-                    dom_val = change[2].split("/")[1].split("-")[1]
+                if parent_key == "fvRsDomAtt":
+                    if "vmm" in change[2].split("/")[1]:
+                        dom_type_val = "vmm"
+                        vm_provider_val = change[2].split("/")[1].split("-")[1].lower()
+                        dom_val = change[2].split("/")[2][4:]
 
-                elif "l2dom":
-                    dom_type_val = "l2dom"
+                    elif "phys" in change[2].split("/")[1]:
+                        dom_type_val = "phys"
+                        dom_val = change[2].split("/")[1].split("-")[1]
 
-                data["domain_type"] = dom_type_val
+                    elif "l2dom":
+                        dom_type_val = "l2dom"
 
-                try:
-                    data["vm_provider"] = vm_provider_val
-                    data["domain"] = dom_val
-                except(UnboundLocalError):
-                    pass
+                    data["domain_type"] = dom_type_val
+
+                    try:
+                        data["vm_provider"] = vm_provider_val
+                        data["domain"] = dom_val
+                    except(UnboundLocalError):
+                        pass
+
+                if parent_key == "fvRsPathAtt":
+                    data["leafs"] = change[2].split("/")[2].split("-")[1]
+                    data["interface"] = change[2].split("-")[3].replace("[", "").replace("]", "")
+                    data["pod_id"] = change[2].split("/")[1].split("-")[1]
 
             # handle all duplicates
             elif change_type == 0: # CHILDREN parent key, DUPLICATE CASES
@@ -401,6 +411,8 @@ def reconstruct_yml(data, out_dir=None):
     def rebuild_yml(data, dn_parent_map={}, dn_attributes_map=None, credentials_file=None, yml_list=[], parent_key=None, grandparent_key=None):
         entry_dict = {}
 
+        tcp_flags_map = {"ack": "acknowledgment", "est": "established", "fin": "finish", "rst": "reset", "syn": "synchronize"}
+
         if isinstance(data, dict):
             for key, value in data.items():
 
@@ -467,7 +479,7 @@ def reconstruct_yml(data, out_dir=None):
                         if subkey != "children":
                             # add the check for tcp_flags here..? 
                             if subkey == 'tcp_flags':
-                                nested_dictionary[subkey] = [i for i in subvalue.split(",")]
+                                nested_dictionary[subkey] = [tcp_flags_map[i] for i in subvalue.split(",")]
                             else:
                                 nested_dictionary[subkey] = subvalue
 
