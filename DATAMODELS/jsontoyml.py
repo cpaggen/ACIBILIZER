@@ -222,6 +222,13 @@ def reconstruct_yml(data, out_dir=None):
                             if parent_key == "fvRsDomAtt" and attr_key == "tDn": # bypass the skip tDn
                                 changes.append((parent_key, attr_key, attr_value, 1))
 
+                            # handle fvRsProv and fvRsCons
+                            if parent_key == "fvRsCons":
+                                changes.append((parent_key, "contract_type", "consumer", 2))
+                            
+                            if parent_key == "fvRsProv":
+                                changes.append((parent_key, "contract_type", "provider", 2))
+
                             # TYPE 2 CHANGES -> ATTRIBUTES FIELD REMOVAL, REMOVAL OF DEFAULTS
                             if attr_key not in invisible_args and attr_value not in default_args and not isdefault(parent_key, attr_key, attr_value, default_map):
 
@@ -434,9 +441,8 @@ def reconstruct_yml(data, out_dir=None):
 
                     entry_dict["name"] = sentence
 
-                    for subkey, subvalue in data[key].items():
-                        if subkey != "children":
-                            nested_dictionary[subkey] = subvalue
+                    # add yml anchor
+                    nested_dictionary['<<'] = "*aci_login"
 
                     # this does handle parents, not siblings however
                     if key in dn_attributes_map:
@@ -456,6 +462,14 @@ def reconstruct_yml(data, out_dir=None):
 
                         except KeyError:
                             pass
+
+                    for subkey, subvalue in data[key].items():
+                        if subkey != "children":
+                            # add the check for tcp_flags here..? 
+                            if subkey == 'tcp_flags':
+                                nested_dictionary[subkey] = [i for i in subvalue.split(",")]
+                            else:
+                                nested_dictionary[subkey] = subvalue
 
                     # if key in dn_attributes_map and key in 
 
