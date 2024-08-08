@@ -516,6 +516,11 @@ if __name__ == "__main__":
     with open(PATH_TO_SAVE, 'w') as file:
         yaml.dump(out, file, default_flow_style = False, sort_keys = False)
 
+    # remove single quotes from YAML anchors
+    with open(PATH_TO_SAVE,'r') as fin:
+        with open("./VALIDATION/out-final.yml", "wt") as fout:
+            for line in fin:
+                fout.write(line.replace("'<<': '*aci_login'", "<<: *aci_login"))
     # time 
     end_time = time.time()
     elapsed_time_ms = (end_time - start_time) * 1000
