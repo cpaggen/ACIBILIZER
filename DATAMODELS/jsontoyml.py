@@ -328,7 +328,7 @@ def reconstruct_yml(data, out_dir=None):
                 if parent_key == "fvRsPathAtt":
                     data["leafs"] = change[2].split("/")[2].split("-")[1]
                     data["interface"] = change[2].split("-")[3].replace("[", "").replace("]", "")
-                    data["pod_id"] = change[2].split("/")[1].split("-")[1]
+                    data["encap_id"] = change[2].split("/")[1].split("-")[1]
 
             # handle all duplicates
             elif change_type == 0: # CHILDREN parent key, DUPLICATE CASES
