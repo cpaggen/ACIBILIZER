@@ -27,7 +27,7 @@ def reconstruct_yml(data, out_dir=None):
     # invisible_arguments - be sure to have them "pre-mapping"
     invisible_args = ["annotation", "dn", "rn", "uid", "modTs", "monPolDn",
                        "seg", "pcTag", "userdom", "tDn", "filter_nam",
-                       "mac", "preferred", "numPorts"] # adjust as needed
+                       "mac", "preferred", "numPorts", "encap"] # adjust as needed
 
     # define exception list
     exception_list = ['aci_access_span_src_group',
@@ -225,6 +225,9 @@ def reconstruct_yml(data, out_dir=None):
                             if parent_key == "fvRsPathAtt" and attr_key == "tDn":
                                 changes.append((parent_key, "tDn", attr_value, 1))
 
+                            if parent_key == "fvRsPathAtt" and attr_key == "encap":
+                                changes.append((parent_key, attr_key, attr_value, 1))
+
                             # handle fvRsProv and fvRsCons
                             if parent_key == "fvRsCons":
                                 changes.append((parent_key, "contract_type", "consumer", 2))
@@ -325,10 +328,15 @@ def reconstruct_yml(data, out_dir=None):
                     except(UnboundLocalError):
                         pass
 
-                if parent_key == "fvRsPathAtt":
+                if parent_key == "fvRsPathAtt" and child_key == "tDn":
                     data["leafs"] = change[2].split("/")[2].split("-")[1]
                     data["interface"] = change[2].split("-")[3].replace("[", "").replace("]", "")
                     data["pod_id"] = change[2].split("/")[1].split("-")[1]
+
+                if parent_key == "fvRsPathAtt" and child_key == "encap":
+                    data["encap_id"] = child_value.split("-")[1]
+                    if child_key in data:
+                        del data[child_key]
 
             # handle all duplicates
             elif change_type == 0: # CHILDREN parent key, DUPLICATE CASES
