@@ -11,9 +11,11 @@ import configparser
 import re
 
 # define all the paths here
-PATH_TO_SAVE = "./VALIDATION/output.yml"
-PATH_TO_JSON = "./TENANT_EXAMPLE/tenantLeopoldo.json"
+PATH_TO_SAVE        = "./VALIDATION/output.yml"
+PATH_TO_JSON        = "./TENANT_EXAMPLE/tenantLeopoldo.json"
 PATH_TO_CREDENTIALS = ""
+PATH_TO_INVENTORY   = "./VALIDATION/aciInventory.ini"
+PATH_TO_FINAL       = "./VALIDATION/output-final.yml"
 
 ### start of the main function ###
 reverseAliases = reverse_alias_map(requiredParamsAliases)
@@ -554,21 +556,16 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
 
     # delete the empty dictionaries
     b = remove_empty_dicts(a)
-
     c = get_parent_attributes(b)
-
     fin = rebuild_yml(data = b, dn_attributes_map = c)
-
     return fin
 
 if __name__ == "__main__":
-
     start_time = time.time()
-
     with open(PATH_TO_JSON, 'r') as file:
         y = json.load(file)
 
-    out = reconstruct_yml(y, inventory = "VALIDATION/aciInventory.ini")
+    out = reconstruct_yml(y, inventory = PATH_TO_INVENTORY)
 
     # save_path = os.path.join(save_path, "ansible_reconstructed.yml")
     with open(PATH_TO_SAVE, 'w') as file:
@@ -579,7 +576,7 @@ if __name__ == "__main__":
     with open(PATH_TO_SAVE, 'r') as fin:
         lines = fin.readlines()
 
-    with open("./VALIDATION/out-final.yml", "wt") as fout:
+    with open(PATH_TO_FINAL, "wt") as fout:
         for line in lines:
             modified_line = line.replace("'<<': '*aci_login'", "<<: *aci_login")
             modified_line = modified_line.replace("aci_login:", "aci_login: &aci_login")
@@ -590,5 +587,5 @@ if __name__ == "__main__":
     end_time = time.time()
     elapsed_time_ms = (end_time - start_time) * 1000
 
-    print(f"YAML file has been saved to {PATH_TO_SAVE}")
+    print(f"YAML file has been saved to {PATH_TO_FINAL}")
     print(f"Completed in {elapsed_time_ms:.2f} ms")
