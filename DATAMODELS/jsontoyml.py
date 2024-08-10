@@ -7,6 +7,8 @@ from defaultClassAttrValues import defaults
 from exceptionDict import exceptions
 from requiredParamsAliasesMap import requiredParamsAliases, reverse_alias_map
 import time
+import configparser
+import re
 
 # define all the paths here
 PATH_TO_SAVE = "./VALIDATION/output.yml"
@@ -18,7 +20,7 @@ reverseAliases = reverse_alias_map(requiredParamsAliases)
 
 # this will be refactored at some stage, maybe some OOP or just cleaned, for now it does what I need it to
 
-def reconstruct_yml(data, out_dir=None):
+def reconstruct_yml(data, out_dir=None, inventory = None):
     save_path = "ansible_reconstructed.yml" if out_dir is None else os.path.join(out_dir, "ansible_reconstructed.yml")
 
     # here define default arguments (to delete)
@@ -145,6 +147,25 @@ def reconstruct_yml(data, out_dir=None):
         with open("ansible_reconstructed.yml", 'w') as file:
             yaml.dump(a, file, default_flow_style = False, sort_keys = False)
         print(f"YAML file has been saved to ansible_reconstructed.yml")
+        
+    def parse_ini_file(file_path):
+        with open(file_path, 'r') as file:
+            content = file.read()
+
+        # get host username and password
+        host_pattern = r'\[aci\]\s*([\d\.]+)'
+        username_pattern = r'aci_username\s*=\s*(\S+)'
+        password_pattern = r'aci_password\s*=\s*(\S+)'
+
+        host = re.search(host_pattern, content)
+        aci_username = re.search(username_pattern, content)
+        aci_password = re.search(password_pattern, content)
+
+        host = host.group(1) if host else None
+        aci_username = aci_username.group(1) if aci_username else None
+        aci_password = aci_password.group(1) if aci_password else None
+
+        return host, aci_username, aci_password
 
     # process data recursively
     # we need to track many parent-child keys, including some of sublists etc
@@ -416,10 +437,13 @@ def reconstruct_yml(data, out_dir=None):
 
     # handle reconstruction of yml with recursion
     # TO DO -> ADD REMVOVAL OF "fvRs" CLASSES, too hard to handle above due to recursive issues
-    def rebuild_yml(data, dn_parent_map={}, dn_attributes_map=None, credentials_file=None, yml_list=[], parent_key=None, grandparent_key=None):
+    def rebuild_yml(data, dn_parent_map={}, dn_attributes_map=None, credentials_file=None, yml_list=[], parent_key=None, grandparent_key=None, ini_inventory = inventory):
         entry_dict = {}
 
         tcp_flags_map = {"ack": "acknowledgment", "est": "established", "fin": "finish", "rst": "reset", "syn": "synchronize"}
+
+        # get the params in .ini inventory
+        hosts, username, password = parse_ini_file(ini_inventory)
 
         if isinstance(data, dict):
             for key, value in data.items():
@@ -509,7 +533,21 @@ def reconstruct_yml(data, out_dir=None):
             for item in data:
                 rebuild_yml(item, dn_parent_map, dn_attributes_map, credentials_file, yml_list, parent_key, grandparent_key)
 
-        return {'tasks': yml_list}
+        return [{
+            "hosts": hosts,
+            "connection": "local",
+            "vars": {
+                "aci_login": {
+                    "hostname": "{{ inventory_hostname }}",
+                    "username": username,
+                    "password": password,
+                    "use_proxy": "no",
+                    "use_ssl": "yes",
+                    "validate_certs": "no"
+                }
+            },
+            "tasks": yml_list
+        }]
 
     # process the initial data
     a = process(data)
@@ -530,17 +568,24 @@ if __name__ == "__main__":
     with open(PATH_TO_JSON, 'r') as file:
         y = json.load(file)
 
-    out = reconstruct_yml(y)
+    out = reconstruct_yml(y, inventory = "VALIDATION/aciInventory.ini")
 
     # save_path = os.path.join(save_path, "ansible_reconstructed.yml")
     with open(PATH_TO_SAVE, 'w') as file:
+        file.write("---\n") # at start of file
         yaml.dump(out, file, default_flow_style = False, sort_keys = False)
 
     # remove single quotes from YAML anchors
-    with open(PATH_TO_SAVE,'r') as fin:
-        with open("./VALIDATION/out-final.yml", "wt") as fout:
-            for line in fin:
-                fout.write(line.replace("'<<': '*aci_login'", "<<: *aci_login"))
+    with open(PATH_TO_SAVE, 'r') as fin:
+        lines = fin.readlines()
+
+    with open("./VALIDATION/out-final.yml", "wt") as fout:
+        for line in lines:
+            modified_line = line.replace("'<<': '*aci_login'", "<<: *aci_login")
+            modified_line = modified_line.replace("aci_login:", "aci_login: &aci_login")
+            modified_line = modified_line.replace("'yes'", "yes").replace("'no'", "no")
+            fout.write(modified_line)
+
     # time 
     end_time = time.time()
     elapsed_time_ms = (end_time - start_time) * 1000
