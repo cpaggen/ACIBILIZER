@@ -1,4 +1,4 @@
-exceptions = {'__init__': None,
+ACI_MODULE_DEPENDENCIES_FROM_CHILDREN = {'__init__': None,
  'aci_aaa_certificate_authority': None,
  'aci_aaa_custom_privilege': None,
  'aci_aaa_domain': None,

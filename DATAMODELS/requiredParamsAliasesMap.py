@@ -1,4 +1,4 @@
-requiredParamsAliases = {'__init__': {},
+ACI_MODULE_ATTRIBUTES_TO_ALIASES_MAP = {'__init__': {},
  'aci_aaa_certificate_authority': {'certificate_chain': ['certChain'],
                                    'description': ['descr'],
                                    'name*': ['name'],
@@ -2242,11 +2242,11 @@ requiredParamsAliases = {'__init__': {},
 
 # can use this function to invert the mapping (this works because aliases are never duplicated in the keys)
 def reverse_alias_map(mapping):
-    reverseAliases = {}
+    out = {}
     for keyclass in mapping:
         keyclass_str = str(keyclass)
-        if keyclass_str not in reverseAliases:
-            reverseAliases[keyclass_str] = {}
+        if keyclass_str not in out:
+            out[keyclass_str] = {}
         for param, alias_list in mapping[keyclass].items():
             param_str = str(param)
             if alias_list is None:
@@ -2254,6 +2254,8 @@ def reverse_alias_map(mapping):
             for alias in alias_list:
                 if alias is not None:  # Check for None values
                     alias_str = str(alias)
-                    reverseAliases[keyclass_str][alias_str] = param_str
+                    out[keyclass_str][alias_str] = param_str
 
-    return reverseAliases
+    return out
+
+ACI_MODULE_ALIASES_TO_ATTRIBUTES_MAP = reverse_alias_map(ACI_MODULE_ATTRIBUTES_TO_ALIASES_MAP)

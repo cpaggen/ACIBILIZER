@@ -1,4 +1,4 @@
-defaults = {'fvAACrtrn': {'childAction': '',
+ACI_MODULE_ATTRIBUTES_DEFAULT_VALUES = {'fvAACrtrn': {'childAction': '',
                'descr': '',
                'dn': '',
                'match': 'any',

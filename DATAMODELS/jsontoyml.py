@@ -1,13 +1,12 @@
 import os
 import json
-from mappings import classToAnsible # need to get the mapping to ansible from json
+from mappings import CLASS_TO_ANSIBLE_MAP # need to get the mapping to ansible from json
 import yaml
-from isConfigurableMap import isConfigurableMap # need to get the 
-from defaultClassAttrValues import defaults
-from exceptionDict import exceptions
-from requiredParamsAliasesMap import requiredParamsAliases, reverse_alias_map
+from isConfigurableMap import ACI_MODULE_IS_CONFIGURABLE_MAP # need to get the 
+from defaultClassAttrValues import ACI_MODULE_ATTRIBUTES_DEFAULT_VALUES
+from exceptionDict import ACI_MODULE_DEPENDENCIES_FROM_CHILDREN
+from requiredParamsAliasesMap import ACI_MODULE_ALIASES_TO_ATTRIBUTES_MAP
 import time
-import configparser
 import re
 
 # define all the paths here
@@ -18,23 +17,22 @@ PATH_TO_INVENTORY   = "./VALIDATION/aciInventory.ini"
 PATH_TO_FINAL       = "./VALIDATION/output-final.yml"
 
 ### start of the main function ###
-reverseAliases = reverse_alias_map(requiredParamsAliases)
 
 # this will be refactored at some stage, maybe some OOP or just cleaned, for now it does what I need it to
 
 def reconstruct_yml(data, out_dir=None, inventory = None):
     save_path = "ansible_reconstructed.yml" if out_dir is None else os.path.join(out_dir, "ansible_reconstructed.yml")
 
-    # here define default arguments (to delete)
-    default_args = ['', "", "::", ":all:", "unknown"]
+    # aci classes have some parameters which are default for all classes
+    ATTRIBUTES_COMMON_DEFAULT_VALUES = ['', "", "::", ":all:", "unknown"]
 
     # invisible_arguments - be sure to have them "pre-mapping"
-    invisible_args = ["annotation", "dn", "rn", "uid", "modTs", "monPolDn",
+    INVISIBLE_ARGUMENTS = ["annotation", "dn", "rn", "uid", "modTs", "monPolDn",
                        "seg", "pcTag", "userdom", "tDn", "filter_nam",
                        "mac", "preferred", "numPorts", "encap"] # adjust as needed
 
-    # define exception list
-    exception_list = ['aci_access_span_src_group',
+    # define exception list - dependencies
+    ACI_CLASSES_WITH_DEPENDENCIES_IN_CHILD = ['aci_access_span_src_group',
                         'aci_bd',
                         'aci_bd_dhcp_label',
                         'aci_bd_subnet',
@@ -47,8 +45,7 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
     
     # here define duplicates list - handle dupes in values of class mappings
     # key (class) : value (dict) -> key (parent class) : value (correct mapping)
-
-    duplicate_list = ['spanDestGrp', 'spanSrcGrp', 'spanSrc',
+    ACI_CLASSES_WITH_MULTIPLE_MAPPINGS = ['spanDestGrp', 'spanSrcGrp', 'spanSrc',
                       'mgmtMaintP', 'spanRsSrcToPathEp', 'fvSubnet',
                       'fvRsPathAtt', 'vzBrCP', 'dhcpRelayP',
                       'infraRsVlanNs', 'fvRsSecInherited', 'l1PhysIf',
@@ -56,7 +53,7 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
 
     # TO DO
     # finish this mapping
-    duplicate_map = {
+    ACI_CLASSES_WITH_MULTIPLE_MAPPINGS_MAP = {
         # 'spanDestGrp': None,
         # 'spanSrcGrp': None,
         # 'spanSrc': None,
@@ -74,16 +71,22 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
         # 'mgmtOoB': None
         }
     
-    def map_json_to_ansible(json_data, key, map):
+    def _map_json_to_ansible(json_data, key, map):
+        """
+        Maps classes as found in json config to aci terminology
+        """
         try:
             new_key = map[key]
             json_data[new_key] = json_data.pop(key) # replace with ansible term
         except(KeyError): # no match found, skip
             pass
 
-    def remove_isNotConfigurable(key, delete_key_list):
+    def _remove_isNotConfigurable(key, delete_key_list):
+        """
+        Appends all non-configurable classes to deletion list
+        """
         try:
-            if isConfigurableMap[key] == False:
+            if ACI_MODULE_IS_CONFIGURABLE_MAP[key] == False:
                 delete_key_list.append(key)
             else:
                 pass
@@ -91,20 +94,26 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
             pass
 
     # helper method to navigate the exception dictionary - KEYS
-    def map_if_duplicate(child, parent = None):
+    def _map_if_duplicate(child, parent = None):
+        """
+        Maps classes with multiple mappings using their parent class
+        """
         out = None
         try:
-            out = duplicate_map[child][parent]
+            out = ACI_CLASSES_WITH_MULTIPLE_MAPPINGS_MAP[child][parent]
         except(KeyError, TypeError):
-            out = duplicate_map[child] # means there is no exception with the parent
+            out = ACI_CLASSES_WITH_MULTIPLE_MAPPINGS_MAP[child] # means there is no exception with the parent
         return out
 
     # maps entire dictionary - used for change of type 0
-    def map_if_duplicate_value(key, value):
+    def _map_if_duplicate_value(key, value):
+        """
+        Maps values
+        """
         out = {}
         for subkey in value:
             try:
-                new_key = reverseAliases[key][subkey]
+                new_key = ACI_MODULE_ALIASES_TO_ATTRIBUTES_MAP[key][subkey]
                 out[new_key] = value[subkey]
             except KeyError:
                 out[subkey] = value[subkey]
@@ -112,25 +121,28 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
 
     # simple method to check if a key in in the exception list
     # need to run this stuff before mapping anything - mapping is ambiguous
-    def isduplicate(key):
-        return key in duplicate_list
+    def _isduplicate(key):
+        """
+        
+        """
+        return key in ACI_CLASSES_WITH_MULTIPLE_MAPPINGS
 
-    def isdefault(parent_key, key, value, map):
+    def _isdefault(parent_key, key, value, map):
         try:
             return value == map[parent_key][key] # means attribute has a default value
         except(KeyError):
             return False
 
-    def isexception(key): # checks if key in exceptions
+    def _isexception(key): # checks if key in exceptions
         try:
-            return classToAnsible[key] in exception_list
+            return CLASS_TO_ANSIBLE_MAP[key] in ACI_CLASSES_WITH_DEPENDENCIES_IN_CHILD
         except(KeyError):
             return False
 
-    def isfullydefault(val, parent_key, default_map, second_default_map):
+    def _isfullydefault(val, parent_key, ACI_MODULE_ATTRIBUTES_DEFAULT_VALUES, second_default_map):
         try:
             # convert defaults to sets 
-            default_values_set = set(default_map[parent_key].values())
+            default_values_set = set(ACI_MODULE_ATTRIBUTES_DEFAULT_VALUES[parent_key].values())
             second_default_values_set = set(second_default_map)
             
             # combine default args and default mapping
@@ -144,13 +156,13 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
         except KeyError: # anything which is not "fv" is here atm
             return True # change based on desired behavior
 
-    def save_to_yaml(save_path, data):
+    def _save_to_yaml(save_path, data):
         # save_path = os.path.join(save_path, "ansible_reconstructed.yml")
         with open("ansible_reconstructed.yml", 'w') as file:
             yaml.dump(a, file, default_flow_style = False, sort_keys = False)
         print(f"YAML file has been saved to ansible_reconstructed.yml")
-        
-    def parse_ini_file(file_path):
+    
+    def _parse_ini_file(file_path):
         with open(file_path, 'r') as file:
             content = file.read()
 
@@ -171,24 +183,21 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
 
     # process data recursively
     # we need to track many parent-child keys, including some of sublists etc
-    def process(data,
+    def _process(data,
                 parent_key:str = None,
-                grandparent_key:str = None,
-                default_map:dict = defaults,
-                dn:dict = {},
-                dn_key_stack:list = []) -> dict:
+                grandparent_key:str = None) -> dict:
         """
+        #### `_process(data, parent_key=None, grandparent_key=None, default_map=defaults, dn={}, dn_key_stack=[])`
 
-        Handles mapping of 
-        - classes to ansible
-        - class parameters to ansible
-
-        Gets rid of the "attributes" field found in the JSON config 
-
-        Gets rid of any fields with default values
-
-        Handles duplicates in mappings
-
+        **Arguments:**
+        - `data` (dict or list): The data to process.
+        
+        **Arguments handled in recursion:**
+        - `parent_key` (str): Key of the parent item. Defaults to `None`.
+        - `grandparent_key` (str): Key of the grandparent item. Defaults to `None`.
+    
+        **Returns:**
+        - `dict`: The processed data with attributes mapped and cleaned, and the "attributes" keys removed.
         """
 
         changes = []
@@ -204,30 +213,30 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
                 if key == "children":
 
                     # children ALWAYS contains a nested list of nested dictionaries
-                    for item in value:
-                        for chld_key, chld_value in item.items():
+                    for sublist in value:
+                        for child_key, child_value in sublist.items():
 
                             # the last element of each tuple in "changes" is an integer
                             # this is ONLY TO IDENTIFY WHICH TYPE OF CHANGE IS NEEDED
 
                             # handle duplicate mappings FIRST
-                            if isduplicate(chld_key):
-                                changes.append((parent_key, chld_key, chld_value, 0))
+                            if _isduplicate(child_key):
+                                changes.append((parent_key, child_key, child_value, 0))
 
                 # all PARAMETERS are processed and mapped if needed
                 elif key == "attributes": # these are all the parameters of the classes
 
                     # check if all attributes are default; if so, skip processing entirely
                     # empty dictionaries function will take care of it
-                    if not isfullydefault(value.values(), parent_key, defaults, default_args):
+                    if not _isfullydefault(value.values(), parent_key, ACI_MODULE_ATTRIBUTES_DEFAULT_VALUES, ATTRIBUTES_COMMON_DEFAULT_VALUES):
 
-                        if isexception(parent_key):
-                            # TYPE 1 EXCEPTIONS -> ADD PARAMS WHICH ARE FOUND IN SUBCLASSES (handled same as type2 actually)
+                        if _isexception(parent_key):
+                            # TYPE 2 EXCEPTIONS -> ADD PARAMS WHICH ARE FOUND IN SUBCLASSES
                             try:
-                                for param, path in exceptions[classToAnsible[parent_key]].items():
-                                    for item in data['children']: # it seems "children" is always found here
-                                        if path[0] in item.keys():
-                                            changes.append((parent_key, param, item[path[0]][path[1]][path[2]], 2))
+                                for param, path in ACI_MODULE_DEPENDENCIES_FROM_CHILDREN[CLASS_TO_ANSIBLE_MAP[parent_key]].items():
+                                    for sublist in data['children']: # it seems "children" is always found here
+                                        if path[0] in sublist.keys():
+                                            changes.append((parent_key, param, sublist[path[0]][path[1]][path[2]], 2))
 
                                             #######
                                             # path[0] is the exception class we need to get rid of, maybe through the changes system
@@ -259,7 +268,7 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
                                 changes.append((parent_key, "contract_type", "provider", 2))
 
                             # TYPE 2 CHANGES -> ATTRIBUTES FIELD REMOVAL, REMOVAL OF DEFAULTS
-                            if attr_key not in invisible_args and attr_value not in default_args and not isdefault(parent_key, attr_key, attr_value, default_map):
+                            if attr_key not in INVISIBLE_ARGUMENTS and attr_value not in ATTRIBUTES_COMMON_DEFAULT_VALUES and not _isdefault(parent_key, attr_key, attr_value, ACI_MODULE_ATTRIBUTES_DEFAULT_VALUES):
 
                                 # proper to fv_subnet once again?
                                 # new exception found with "ip" -> creates a mask, gateway
@@ -280,8 +289,8 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
                 # therefore we want no exceptions
                 if isinstance(value, (dict, list)):
                     try:
-                        process(data = value, parent_key = key, grandparent_key = parent_key)
-    
+                        _process(data = value, parent_key = key, grandparent_key = parent_key)
+
                     except (KeyError) as e:
                         print(f"Error processing key {key}: {e}")
                         pass
@@ -289,7 +298,7 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
                 if isinstance(value, dict) and not value:
                     keys_to_delete.append(key)
 
-                remove_isNotConfigurable(key, keys_to_delete) # change to boolean check? 
+                _remove_isNotConfigurable(key, keys_to_delete) # change to boolean check? 
 
             # any modification to the dict can only be made outside the loops
             for key in keys_to_delete:
@@ -300,13 +309,13 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
 
             # use the mapping function
             for key in list(data.keys()):
-                if key not in duplicate_list: # mapping done elsewhere for dupes
-                    map_json_to_ansible(data, key, classToAnsible)
+                if not _isduplicate(key): # mapping done elsewhere for dupes - changes of type 0 
+                    _map_json_to_ansible(data, key, CLASS_TO_ANSIBLE_MAP)
 
         elif isinstance(data, list):
             for item in data:
                 if isinstance(item, (dict, list)):
-                    process(data = item, parent_key = parent_key, grandparent_key = grandparent_key)
+                    _process(data = item, parent_key = parent_key, grandparent_key = grandparent_key)
 
         # accessing keys in "data" instead of passing through a parent_key works
         # BECAUSE OF RECURSION, we are handling nested dictionaries as "data" everytime !!!!!!
@@ -314,7 +323,7 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
             parent_key, child_key, child_value, change_type = change  # "change" is a 3x tuple
             if change_type == 2: # ATTRIBUTES parent key
                 try:
-                    new_key = reverseAliases[classToAnsible[parent_key]][child_key]
+                    new_key = ACI_MODULE_ALIASES_TO_ATTRIBUTES_MAP[CLASS_TO_ANSIBLE_MAP[parent_key]][child_key]
 
                     # at the moment no use for the required tag, can change later on if we need it somehow
                     if new_key[-1] == "*":
@@ -327,7 +336,6 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
                     data[child_key] = child_value
 
             # changes within same class (not associated with a parent)
-            # at the moment only used for epg_to_domain
             elif change_type == 1:
 
                 if parent_key == "fvRsDomAtt":
@@ -340,7 +348,7 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
                         dom_type_val = "phys"
                         dom_val = change[2].split("/")[1].split("-")[1]
 
-                    elif "l2dom":
+                    elif "l2dom" in change[2].split("/")[1]:
                         dom_type_val = "l2dom"
 
                     data["domain_type"] = dom_type_val
@@ -366,8 +374,8 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
 
                 # seems forcing the "children" index to be 0 causes issues..
                 try:
-                    new_key = map_if_duplicate(child_key, classToAnsible[parent_key])
-                    new_value = map_if_duplicate_value(new_key, child_value)
+                    new_key = _map_if_duplicate(child_key, CLASS_TO_ANSIBLE_MAP[parent_key])
+                    new_value = _map_if_duplicate_value(new_key, child_value)
 
                     # iterate to find correct index.. slow but works
                     for child in data['children']:
@@ -383,22 +391,22 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
 
     # this function gets rid of empty structures in the output, think of {} for example
     # code is from GPT
-    def remove_empty_dicts(data):
+    def _remove_empty_dicts(data):
         if isinstance(data, dict):
-            return {k: remove_empty_dicts(v) for k, v in data.items() if remove_empty_dicts(v)} # see return of function for why this works
+            return {k: _remove_empty_dicts(v) for k, v in data.items() if _remove_empty_dicts(v)} # see out of function for why this works
         elif isinstance(data, list):
             for idx, item in enumerate(data):
                 if isinstance(item, dict) and len(item) == 0:
                     data.pop(idx)
                 else:
-                    data[idx] = remove_empty_dicts(item)
+                    data[idx] = _remove_empty_dicts(item)
             return data
         else:
             return data # this basically evaluates to false when the structure is None
 
     # this function gathers all hierarchical parameter names - further used in reconstruct function
     # returns a dictionary with list values and string keys
-    def get_parent_attributes(data, 
+    def _get_parent_attributes(data, 
                           parent_key=None, 
                           grandparent_key=None, 
                           great_grandparent_key=None, 
@@ -409,6 +417,27 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
                           great_great_grandparent_name=None, 
                           changes=None):
         
+        """
+        #### `get_parent_attributes(data, parent_key=None, grandparent_key=None, great_grandparent_key=None, great_great_grandparent_key=None, parent_name=None, grandparent_name=None, great_grandparent_name=None, great_great_grandparent_name=None, changes=None)`
+
+        **Arguments:**
+        - `data` (dict or list): Data structure to gather hierarchical parameter names from.
+        
+        **Arguments handled in recursion:**
+        - `parent_key` (str): Key of the current parent item. Defaults to `None`.
+        - `grandparent_key` (str): Key of the grandparent item. Defaults to `None`.
+        - `great_grandparent_key` (str): Key of the great-grandparent item. Defaults to `None`.
+        - `great_great_grandparent_key` (str): Key of the great-great-grandparent item. Defaults to `None`.
+        - `parent_name` (str): Name of the current parent item. Defaults to `None`.
+        - `grandparent_name` (str): Name of the grandparent item. Defaults to `None`.
+        - `great_grandparent_name` (str): Name of the great-grandparent item. Defaults to `None`.
+        - `great_great_grandparent_name` (str): Name of the great-great-grandparent item. Defaults to `None`.
+        - `changes` (dict): Dictionary to accumulate hierarchical parameter names. Defaults to `{}`.
+
+        **Returns:**
+        - `dict`: A dictionary containing aci classes along with a list of required attributes found in parent keys.
+        """
+        
         # this dict ensures we are not missing any params
         # for example aci_epg needs a bd, but this function does not find a bd otherwise
 
@@ -418,7 +447,7 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
         if isinstance(data, dict):
             for key, value in data.items():
                 try:
-                    current_name = reverseAliases[key]["name"][:-1]  # remove mandatory tag
+                    current_name = ACI_MODULE_ALIASES_TO_ATTRIBUTES_MAP[key]["name"][:-1]  # remove mandatory tag
                 except KeyError:
                     current_name = None
 
@@ -427,32 +456,51 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
                     changes[key] = change if "tenant" in change else change + ["tenant", "aci_tenant"] # need to be careful this is a len 6
 
                 # could make it more clear somehow.. 
-                get_parent_attributes(value, key, parent_key, grandparent_key, great_grandparent_key, 
+                _get_parent_attributes(value, key, parent_key, grandparent_key, great_grandparent_key, 
                                     current_name, parent_name, grandparent_name, great_grandparent_name, changes)
 
         elif isinstance(data, list):
             for item in data:
-                get_parent_attributes(item, parent_key, grandparent_key, great_grandparent_key, great_great_grandparent_key, 
+                _get_parent_attributes(item, parent_key, grandparent_key, great_grandparent_key, great_great_grandparent_key, 
                                     parent_name, grandparent_name, great_grandparent_name, great_great_grandparent_name, changes)
 
         return changes
 
     # handle reconstruction of yml with recursion
     # TO DO -> ADD REMVOVAL OF "fvRs" CLASSES, too hard to handle above due to recursive issues
-    def rebuild_yml(data, dn_parent_map={}, dn_attributes_map=None, credentials_file=None, yml_list=[], parent_key=None, grandparent_key=None, ini_inventory = inventory):
+    def _rebuild_yml(data, dn_parent_map={}, dn_attributes_map=None, credentials_file=None, yml_list=[], parent_key=None, grandparent_key=None, ini_inventory = inventory):
+        """
+        #### `rebuild_yml(data, dn_parent_map={}, dn_attributes_map=None, credentials_file=None, yml_list=[], parent_key=None, grandparent_key=None, ini_inventory=None)`
+
+        **Arguments:**
+        - `data` (dict/json): The data to be reconstructed into YAML.
+        - `dn_parent_map` (dict): Mapping of distinguished names to their parent attributes. Defaults to `{}`.
+        - `ini_inventory` (str): Path to the inventory file. Defaults to `None`.
+        - `credentials_file` (str): Path to the credentials file. Defaults to `None`.
+        
+        **Arguments handled in recursion:**
+        - `dn_attributes_map` (dict): Mapping of DN attributes. Defaults to `None`.
+        - `yml_list` (list): List to accumulate YAML entries. Defaults to `[]`.
+        - `parent_key` (str): Key of the parent item. Defaults to `None`.
+        - `grandparent_key` (str): Key of the grandparent item. Defaults to `None`.
+
+        **Returns:**
+        - `list`: A list containing the reconstructed YAML structure ready for output.
+        """
+
         entry_dict = {}
 
         tcp_flags_map = {"ack": "acknowledgment", "est": "established", "fin": "finish", "rst": "reset", "syn": "synchronize"}
 
         # get the params in .ini inventory
-        hosts, username, password = parse_ini_file(ini_inventory)
+        hosts, username, password = _parse_ini_file(ini_inventory)
 
         if isinstance(data, dict):
             for key, value in data.items():
 
                 # get dn attributes
                 try:
-                    parent_attribute = reverseAliases[key]["name"][:-1]  # only applies to required params
+                    parent_attribute = ACI_MODULE_ALIASES_TO_ATTRIBUTES_MAP[key]["name"][:-1]  # only applies to required params
                     dn_parent_map[key] = data[key][parent_attribute]
 
                 except KeyError:
@@ -462,11 +510,6 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
 
                 # here restructuring is handled
                 if parent_key == "children" or parent_key is None:
-
-                    # try:
-                    #     print(classToAnsible[key], value)
-                    # except:
-                    #     print(key, value)
 
                     # bad trick to get rid of all non-aci modules
                     if key[:3] == "aci":
@@ -525,15 +568,15 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
                     yml_list.append(entry_dict)
 
                 if isinstance(value, dict):
-                    rebuild_yml(value, dn_parent_map, dn_attributes_map, credentials_file, yml_list, key, parent_key)
+                    _rebuild_yml(value, dn_parent_map, dn_attributes_map, credentials_file, yml_list, key, parent_key)
 
                 elif isinstance(value, list):
                     for item in value:
-                        rebuild_yml(item, dn_parent_map, dn_attributes_map, credentials_file, yml_list, key, parent_key)
+                        _rebuild_yml(item, dn_parent_map, dn_attributes_map, credentials_file, yml_list, key, parent_key)
 
         elif isinstance(data, list):
             for item in data:
-                rebuild_yml(item, dn_parent_map, dn_attributes_map, credentials_file, yml_list, parent_key, grandparent_key)
+                _rebuild_yml(item, dn_parent_map, dn_attributes_map, credentials_file, yml_list, parent_key, grandparent_key)
 
         return [{
             "hosts": hosts,
@@ -552,13 +595,12 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
         }]
 
     # process the initial data
-    a = process(data)
+    processed_data_1 = _process(data)
+    processed_data_2 = _remove_empty_dicts(processed_data_1)
+    required_attributes_from_parents_map = _get_parent_attributes(processed_data_2)
+    processed_data_3 = _rebuild_yml(data = processed_data_2, dn_attributes_map = required_attributes_from_parents_map)
 
-    # delete the empty dictionaries
-    b = remove_empty_dicts(a)
-    c = get_parent_attributes(b)
-    fin = rebuild_yml(data = b, dn_attributes_map = c)
-    return fin
+    return processed_data_3
 
 if __name__ == "__main__":
     start_time = time.time()

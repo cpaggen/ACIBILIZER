@@ -1,4 +1,4 @@
-isConfigurableMap = {'aaaADomainRef': True,
+ACI_MODULE_IS_CONFIGURABLE_MAP = {'aaaADomainRef': True,
  'aaaADomainRefTask': False,
  'aaaAProvider': True,
  'aaaARbacRule': True,
