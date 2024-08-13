@@ -8,15 +8,7 @@ from exceptionDict import ACI_MODULE_DEPENDENCIES_FROM_CHILDREN
 from requiredParamsAliasesMap import ACI_MODULE_ALIASES_TO_ATTRIBUTES_MAP
 import time
 import re
-
-# define all the paths here
-PATH_TO_SAVE        = "./VALIDATION/output.yml"
-PATH_TO_JSON        = "./TENANT_EXAMPLE/tenantLeopoldo.json"
-PATH_TO_CREDENTIALS = ""
-PATH_TO_INVENTORY   = "./VALIDATION/aciInventory.ini"
-PATH_TO_FINAL       = "./VALIDATION/output-final.yml"
-
-### start of the main function ###
+import argparse
 
 # this will be refactored at some stage, maybe some OOP or just cleaned, for now it does what I need it to
 
@@ -603,22 +595,28 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
     return processed_data_3
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Convert Cisco ACI JSON config file into Ansible playbook")
+    parser.add_argument("input_json_config", help="Path to the ACI JSON config file")
+    parser.add_argument("output_ansible_playbook", help="Path to store the reconstructed Ansible playbook")
+    parser.add_argument("ansible_inventory", help="Path to the Ansible inventory file")
+    args = parser.parse_args()
+    intermediate_file = f"{args.output_ansible_playbook}.temp"
+
     start_time = time.time()
-    with open(PATH_TO_JSON, 'r') as file:
+    with open(args.input_json_config, 'r') as file:
         y = json.load(file)
 
-    out = reconstruct_yml(y, inventory = PATH_TO_INVENTORY)
+    out = reconstruct_yml(y, inventory = args.ansible_inventory)
 
-    # save_path = os.path.join(save_path, "ansible_reconstructed.yml")
-    with open(PATH_TO_SAVE, 'w') as file:
+    with open(intermediate_file, 'w') as file:
         file.write("---\n") # at start of file
         yaml.dump(out, file, default_flow_style = False, sort_keys = False)
 
     # remove single quotes from YAML anchors
-    with open(PATH_TO_SAVE, 'r') as fin:
+    with open(intermediate_file, 'r') as fin:
         lines = fin.readlines()
 
-    with open(PATH_TO_FINAL, "wt") as fout:
+    with open(args.output_ansible_playbook, "wt") as fout:
         for line in lines:
             modified_line = line.replace("'<<': '*aci_login'", "<<: *aci_login")
             modified_line = modified_line.replace("aci_login:", "aci_login: &aci_login")
@@ -629,5 +627,5 @@ if __name__ == "__main__":
     end_time = time.time()
     elapsed_time_ms = (end_time - start_time) * 1000
 
-    print(f"YAML file has been saved to {PATH_TO_FINAL}")
+    print(f"YAML file has been saved to {args.output_ansible_playbook}")
     print(f"Completed in {elapsed_time_ms:.2f} ms")
