@@ -332,16 +332,16 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
             elif change_type == 1:
 
                 if parent_key == "fvRsDomAtt":
-                    if "vmm" in change[2].split("/")[1]:
+                    if "vmm" in child_value.split("/")[1]:
                         dom_type_val = "vmm"
-                        vm_provider_val = change[2].split("/")[1].split("-")[1].lower()
-                        dom_val = change[2].split("/")[2][4:]
+                        vm_provider_val = child_value.split("/")[1].split("-")[1].lower()
+                        dom_val = child_value.split("/")[2][4:]
 
-                    elif "phys" in change[2].split("/")[1]:
+                    elif "phys" in child_value.split("/")[1]:
                         dom_type_val = "phys"
-                        dom_val = change[2].split("/")[1].split("-")[1]
+                        dom_val = child_value.split("/")[1].split("-")[1]
 
-                    elif "l2dom" in change[2].split("/")[1]:
+                    elif "l2dom" in child_value.split("/")[1]:
                         dom_type_val = "l2dom"
 
                     data["domain_type"] = dom_type_val
