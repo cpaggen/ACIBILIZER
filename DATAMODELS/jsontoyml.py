@@ -1,4 +1,5 @@
 import os
+import sys
 import json
 from mappings import CLASS_TO_ANSIBLE_MAP # need to get the mapping to ansible from json
 import yaml
@@ -594,7 +595,7 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
 
     return processed_data_3
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(description="Convert Cisco ACI JSON config file into Ansible playbook")
     parser.add_argument("input_json_config", help="Path to the ACI JSON config file")
     parser.add_argument("output_ansible_playbook", help="Path to store the reconstructed Ansible playbook")
@@ -629,3 +630,7 @@ if __name__ == "__main__":
 
     print(f"YAML file has been saved to {args.output_ansible_playbook}")
     print(f"Completed in {elapsed_time_ms:.2f} ms")
+
+if __name__ == "__main__":
+    main()
+    sys.exit(1)
