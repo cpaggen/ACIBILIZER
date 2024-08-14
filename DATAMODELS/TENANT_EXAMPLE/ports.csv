@@ -1,0 +1,7 @@
+tenant,ap,epg,encap_id,deploy,int_mode,int_type,pod_id,leaf,int
+leopoldo,fonzo,milou,1,immediate,trunk,switch_port,1,101,1/1
+leopoldo,fonzo,milou,1,immediate,trunk,switch_port,1,101,1/2
+leopoldo,fonzo,milou,1,immediate,trunk,switch_port,1,102,1/1
+leopoldo,fonzo,milou,1,immediate,trunk,switch_port,1,102,1/2
+leopoldo,fonzo,milou,1,immediate,trunk,switch_port,1,103,1/1
+leopoldo,fonzo,milou,1,immediate,trunk,switch_port,1,103,1/2

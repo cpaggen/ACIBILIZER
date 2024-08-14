@@ -1,4 +1,4 @@
-ansibleToClass = {
+ANSIBLE_TO_CLASS_MAP = {
     "__debug1__": "leakInternalSubnet",
     "__debug2__": "leakRoutes",
     "__debug3__": "leakTo",
@@ -177,4 +177,17 @@ ansibleToClass = {
     "aci_vzany_to_contract": "vzRsAnyToProv, vzRsAnyToCons, vzRsAnyToConsIf",
 }
 
-classToAnsible = dict(zip(ansibleToClass.values(),ansibleToClass.keys()))
+def reverse_mapping(mapping):
+    reversed_dict = {}
+
+    for ansible_name, class_names in mapping.items():
+        # Split the class names if there are multiple
+        class_names_list = class_names.split(', ')
+        
+        for class_name in class_names_list:
+            if class_name not in reversed_dict:
+                reversed_dict[class_name] = ansible_name
+
+    return reversed_dict
+
+CLASS_TO_ANSIBLE_MAP = reverse_mapping(ANSIBLE_TO_CLASS_MAP)

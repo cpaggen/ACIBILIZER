@@ -1,0 +1,1151 @@
+{
+        "vz:RsTabooRFltAtt": {
+            "contains": {
+
+            },
+            "rnMap": {
+
+            },
+            "identifiedBy": [
+                "tDn"
+            ],
+            "rnFormat": "rstabooRFltAtt-[{tDn}]",
+            "containedBy": {
+                "vz:TabooDef": ""
+            },
+            "superClasses": [
+                "vz:ToRFltP",
+                "reln:To",
+                "reln:Inst"
+            ],
+            "subClasses": {
+
+            },
+            "relationInfo": {
+                "type": "explicit",
+                "cardinality": "n-to-m",
+                "fromMo": "vz:TabooDef",
+                "fromRelMo": "vz:RsTabooRFltAtt",
+                "toMo": "vz:AFilterableUnit",
+                "toRelMo": "vz:RtTabooRFltAtt",
+                "enforceable": false,
+                "resolvable": false
+            },
+            "dnFormats": [
+                "tdef-[{collDn}]/rstabooRFltAtt-[{tDn}]"
+            ],
+            "writeAccess": [
+
+            ],
+            "readAccess": [
+                "admin"
+            ],
+            "faults": {
+
+            },
+            "events": {
+
+            },
+            "stats": {
+
+            },
+            "isAbstract": false,
+            "isConfigurable": false,
+            "isContextRoot": false,
+            "isDeprecated": false,
+            "isEncrypted": false,
+            "isExportable": false,
+            "isPersistent": true,
+            "isSubjectToQuota": false,
+            "isObservable": false,
+            "hasStats": false,
+            "isStat": false,
+            "isFaultable": false,
+            "isDomainable": false,
+            "isHealthScorable": false,
+            "shouldCollectHealthStats": false,
+            "healthCollectionSource": "faults",
+            "hasEventRules": false,
+            "abstractionLayer": "regular",
+            "apicNxProcessing": false,
+            "monitoringPolicySource": "Parent",
+            "isCreatableDeletable": "always",
+            "platformFlavors": [
+
+            ],
+            "classId": "1376",
+            "className": "RsTabooRFltAtt",
+            "classPkg": "vz",
+            "featureTag": "",
+            "moCategory": "RelationshipToLocal",
+            "label": "Super Class for Any Relation to RFltP",
+            "comment": [
+                "A source relation to a taboo resolved filter profile."
+            ],
+            "properties": {
+                "action": {
+                    "comment": [
+                         "The action required when the condition is met."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "11911",
+                    "propLocalId": "291",
+                    "label": "action",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "actrl:Action",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "512", "localName": "analytics_vld",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "enable analytics "},
+                         { "value": "32", "localName": "copy",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "copy "},
+                         { "value": "1", "localName": "count",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "count"
+                             ],
+                             "label": "count "},
+                         { "value": "permit", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Default is permit"
+                             ],
+                             "label": " "},
+                         { "value": "16", "localName": "deny",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "deny"
+                             ],
+                             "label": "Deny "},
+                         { "value": "2", "localName": "log",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "log"
+                             ],
+                             "label": "log "},
+                         { "value": "256", "localName": "no_stats",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "no stats "},
+                         { "value": "4", "localName": "permit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "permit "},
+                         { "value": "1024", "localName": "permit_override",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "permit override "},
+                         { "value": "8", "localName": "redir",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "redirect "},
+                         { "value": "128", "localName": "redir_override",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "redir override "},
+                         { "value": "64", "localName": "threshold_redir",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "redirect with threshold "}
+                    ],
+                    "default": "permit",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "childAction": {
+                    "comment": [
+                         "Delete or ignore. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "4",
+                    "propLocalId": "5",
+                    "label": "childAction",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationChildAction",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "16384", "localName": "deleteAll",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteAll "},
+                         { "value": "8192", "localName": "deleteNonPresent",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteNonPresent "},
+                         { "value": "4096", "localName": "ignore",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ignore "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "direction": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "11912",
+                    "propLocalId": "94",
+                    "label": "direction",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "vz:Dir",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "3", "localName": "bidir",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "bidir "},
+                         { "value": "6", "localName": "bidirAny",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "bidirAny "},
+                         { "value": "2", "localName": "dest",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "dest "},
+                         { "value": "5", "localName": "destAny",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "destAny "},
+                         { "value": "1", "localName": "src",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "src "},
+                         { "value": "4", "localName": "srcAny",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "srcAny "},
+                         { "value": "0", "localName": "unspecified",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "unspecified "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "dn": {
+                    "comment": [
+                         "A tag or metadata is a non-hierarchical keyword or term assigned to the fabric module."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1",
+                    "propLocalId": "2",
+                    "label": "dn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "forceResolve": {
+                    "comment": [
+                         "Whether the relation should force pull the target."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "107",
+                    "propLocalId": "83",
+                    "label": "forceResolve",
+                    "baseType": "scalar:Bool",
+                    "modelType": "scalar:Bool",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "true", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "false", "localName": "no",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No "},
+                         { "value": "true", "localName": "yes",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Yes "}
+                    ],
+                    "default": "yes",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "lcOwn": {
+                    "comment": [
+                         "A value that indicates how this object was created. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "9",
+                    "propLocalId": "9",
+                    "label": "lcOwn",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "mo:Owner",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "local", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "4", "localName": "implicit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Implicit "},
+                         { "value": "0", "localName": "local",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Local "},
+                         { "value": "1", "localName": "policy",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Policy "},
+                         { "value": "2", "localName": "replica",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Replica "},
+                         { "value": "3", "localName": "resolveOnBehalf",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ResolvedOnBehalf "}
+                    ],
+                    "default": "local",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "markDscp": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "11913",
+                    "propLocalId": "1015",
+                    "label": "markDscp",
+                    "baseType": "scalar:UByte",
+                    "modelType": "qosp:Dscp",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "10", "localName": "AF11",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "AF11 low drop"
+                             ],
+                             "label": "AF11 low drop "},
+                         { "value": "12", "localName": "AF12",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "AF12 medium drop"
+                             ],
+                             "label": "AF12 medium drop "},
+                         { "value": "14", "localName": "AF13",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "AF13 high drop"
+                             ],
+                             "label": "AF13 high drop "},
+                         { "value": "18", "localName": "AF21",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "AF21 low drop"
+                             ],
+                             "label": "AF21 low drop "},
+                         { "value": "20", "localName": "AF22",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "AF22 medium drop"
+                             ],
+                             "label": "AF22 medium drop "},
+                         { "value": "22", "localName": "AF23",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "AF22 high drop"
+                             ],
+                             "label": "AF23 high drop "},
+                         { "value": "26", "localName": "AF31",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "AF31 low drop"
+                             ],
+                             "label": "AF31 low drop "},
+                         { "value": "28", "localName": "AF32",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "AF32 medium drop"
+                             ],
+                             "label": "AF32 medium drop "},
+                         { "value": "30", "localName": "AF33",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "AF33 high drop"
+                             ],
+                             "label": "AF33 high drop "},
+                         { "value": "34", "localName": "AF41",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "AF41 low drop"
+                             ],
+                             "label": "AF41 low drop "},
+                         { "value": "36", "localName": "AF42",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "AF42 medium drop"
+                             ],
+                             "label": "AF42 medium drop "},
+                         { "value": "38", "localName": "AF43",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "AF42 high drop"
+                             ],
+                             "label": "AF43 high drop "},
+                         { "value": "0", "localName": "CS0",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "CS0"
+                             ],
+                             "label": "CS0 "},
+                         { "value": "8", "localName": "CS1",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "CS1"
+                             ],
+                             "label": "CS1 "},
+                         { "value": "16", "localName": "CS2",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "CS2"
+                             ],
+                             "label": "CS2 "},
+                         { "value": "24", "localName": "CS3",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "CS3"
+                             ],
+                             "label": "CS3 "},
+                         { "value": "32", "localName": "CS4",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "CS4"
+                             ],
+                             "label": "CS4 "},
+                         { "value": "40", "localName": "CS5",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "CS5"
+                             ],
+                             "label": "CS5 "},
+                         { "value": "48", "localName": "CS6",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "CS6"
+                             ],
+                             "label": "CS6 "},
+                         { "value": "56", "localName": "CS7",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "CS7"
+                             ],
+                             "label": "CS7 "},
+                         { "value": "46", "localName": "EF",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "EF"
+                             ],
+                             "label": "Expedited Forwarding "},
+                         { "value": "44", "localName": "VA",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "VA"
+                             ],
+                             "label": "Voice Admit "},
+                         { "value": "unspecified", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "64", "localName": "unspecified",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "Unspecified"
+                             ],
+                             "label": "Unspecified "}
+                    ],
+                    "default": "unspecified",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "modTs": {
+                    "comment": [
+                         "The time when this object was last modified."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "7",
+                    "propLocalId": "7",
+                    "label": "modTs",
+                    "baseType": "scalar:Date",
+                    "modelType": "mo:TStamp",
+                    "needsPropDelimiters": false,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "never", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "never",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "never "}
+                    ],
+                    "default": "never",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "prio": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "11914",
+                    "propLocalId": "172",
+                    "label": "prio",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "qos:TenantPrio",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "unspecified", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "3", "localName": "level1",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Level1 "},
+                         { "value": "2", "localName": "level2",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Level2 "},
+                         { "value": "1", "localName": "level3",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "User configurable classes"
+                             ],
+                             "label": "Level3 (Default) "},
+                         { "value": "9", "localName": "level4",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Level4 "},
+                         { "value": "8", "localName": "level5",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Level5 "},
+                         { "value": "7", "localName": "level6",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Level6 "},
+                         { "value": "0", "localName": "unspecified",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Unspecified "}
+                    ],
+                    "default": "unspecified",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "rType": {
+                    "comment": [
+                         "Represents the type of resolver."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "106",
+                    "propLocalId": "82",
+                    "label": "rType",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "reln:ResolverType",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "mo", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "3", "localName": "local",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "local "},
+                         { "value": "1", "localName": "mo",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "mo "},
+                         { "value": "2", "localName": "service",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "service "}
+                    ],
+                    "default": "mo",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "rn": {
+                    "comment": [
+                         "Identifies an object from its siblings within the context of its parent object. The distinguished name contains a sequence of relative names."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "2",
+                    "propLocalId": "3",
+                    "label": "rn",
+                    "baseType": "reference:BinRN",
+                    "modelType": "reference:BinRN",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "state": {
+                    "comment": [
+                         "Represents the state of the relationship."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "103",
+                    "propLocalId": "26",
+                    "label": "State",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "reln:State",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "5", "localName": "cardinality-violation",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "cardinality violation - When relations are created such that\n                     they violate the cardinality, state of the relation would be\n                     set to this."
+                             ],
+                             "label": "cardinality-violation "},
+                         { "value": "unformed", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1", "localName": "formed",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "the relationship is formed with the target object"
+                             ],
+                             "label": "formed "},
+                         { "value": "4", "localName": "invalid-target",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "invalid target DN"
+                             ],
+                             "label": "invalid-target "},
+                         { "value": "2", "localName": "missing-target",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "target does not exist"
+                             ],
+                             "label": "missing-target "},
+                         { "value": "0", "localName": "unformed",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "the relationship is not formed"
+                             ],
+                             "label": "unformed "}
+                    ],
+                    "default": "unformed",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "stateQual": {
+                    "comment": [
+                         "Represents the state qualifier of the relationship."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "104",
+                    "propLocalId": "80",
+                    "label": "State Qualifier",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "reln:StateQual",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "default-target",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "target not specified, using default"
+                             ],
+                             "label": "default-target "},
+                         { "value": "none", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1", "localName": "mismatch-target",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "target not found, using default"
+                             ],
+                             "label": "mismatch-target "},
+                         { "value": "0", "localName": "none",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "no issue"
+                             ],
+                             "label": "none "}
+                    ],
+                    "default": "none",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "status": {
+                    "comment": [
+                         "The upgrade status. This property is for internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "3",
+                    "propLocalId": "4",
+                    "label": "status",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationStatus",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "created",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be created. An error is returned if the object already exists.  \nIn the return value of a setter method: indicates that an object has been created.  \n"
+                             ],
+                             "label": "created "},
+                         { "value": "8", "localName": "deleted",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be deleted.  \nIn the return value of a setter method: indicates that an object has been deleted.\n"
+                             ],
+                             "label": "deleted "},
+                         { "value": "4", "localName": "modified",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be modified  \nIn the return value of a setter method: indicates that an object has been modified.\n"
+                             ],
+                             "label": "modified "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "tCl": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "11910",
+                    "propLocalId": "78",
+                    "label": "Target-class",
+                    "baseType": "scalar:Enum16",
+                    "modelType": "reln:ClassId",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": true,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2490", "localName": "actrlFlt",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1317", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "0", "localName": "unspecified",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "unspecified "},
+                         { "value": "1317", "localName": "vzAFilterableUnit",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "5695", "localName": "vzERFltP",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1362", "localName": "vzFilter",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1369", "localName": "vzRFltP",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "}
+                    ],
+                    "default": "vzAFilterableUnit",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "tDn": {
+                    "comment": [
+                         ""
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "11909",
+                    "propLocalId": "77",
+                    "label": "Target-dn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reln:Dn",
+                    "needsPropDelimiters": true,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": false,
+                    "isNaming": true,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": true,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "tType": {
+                    "comment": [
+                         "The type of target."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "105",
+                    "propLocalId": "81",
+                    "label": "tType",
+                    "baseType": "scalar:Enum8",
+                    "modelType": "reln:TargetType",
+                    "needsPropDelimiters": false,
+                    "uitype": "enum",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "all",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "all "},
+                         { "value": "mo", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1", "localName": "mo",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "mo "},
+                         { "value": "0", "localName": "name",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "name "}
+                    ],
+                    "default": "mo",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                }
+            }
+        }
+}

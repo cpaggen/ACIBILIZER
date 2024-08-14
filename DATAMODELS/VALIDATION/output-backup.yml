@@ -1,0 +1,291 @@
+---
+- hosts: 10.48.168.3
+  connection: local
+  vars:
+    aci_login: &aci_login
+      hostname: '{{ inventory_hostname }}'
+      username: ansible
+      password: random
+      use_proxy: no
+      use_ssl: yes
+      validate_certs: no
+  tasks:     
+  - name: Task - Create ACI_TENANT
+    cisco.aci.aci_tenant:
+      <<: *aci_login
+      description: git push event test
+      tenant: leopoldo
+      state: present
+    delegate_to: localhost
+  - name: Task - Create ACI_CONTRACT
+    cisco.aci.aci_contract:
+      <<: *aci_login
+      contract: database_contract
+      state: present
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_CONTRACT_SUBJECT
+    cisco.aci.aci_contract_subject:
+      <<: *aci_login
+      subject: database_subject
+      state: present
+      contract: database_contract
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_CONTRACT_SUBJECT_TO_FILTER
+    cisco.aci.aci_contract_subject_to_filter:
+      <<: *aci_login
+      filter: database_filter
+      state: present
+      subject: database_subject
+      contract: database_contract
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_CONTRACT
+    cisco.aci.aci_contract:
+      <<: *aci_login
+      contract: web_contract
+      state: present
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_CONTRACT_SUBJECT
+    cisco.aci.aci_contract_subject:
+      <<: *aci_login
+      subject: web_subject
+      state: present
+      contract: web_contract
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_CONTRACT_SUBJECT_TO_FILTER
+    cisco.aci.aci_contract_subject_to_filter:
+      <<: *aci_login
+      filter: web_filter
+      state: present
+      subject: web_subject
+      contract: web_contract
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_VRF
+    cisco.aci.aci_vrf:
+      <<: *aci_login
+      vrf: marcel
+      state: present
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_BD
+    cisco.aci.aci_bd:
+      <<: *aci_login
+      endpoint_retention_action: resolve
+      vrf: marcel
+      arp_flooding: 'yes'
+      endpoint_clear: 'no'
+      allow_intersite_l2_stretch: 'no'
+      bd: lenilsou
+      enable_routing: 'yes'
+      state: present
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_BD_SUBNET
+    cisco.aci.aci_bd_subnet:
+      <<: *aci_login
+      mask: 24
+      gateway: 192.168.67.1
+      state: present
+      bd: lenilsou
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_BD_SUBNET
+    cisco.aci.aci_bd_subnet:
+      <<: *aci_login
+      mask: 24
+      gateway: 192.168.66.1
+      state: present
+      bd: lenilsou
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_FILTER
+    cisco.aci.aci_filter:
+      <<: *aci_login
+      filter: database_filter
+      state: present
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_FILTER_ENTRY
+    cisco.aci.aci_filter_entry:
+      <<: *aci_login
+      destination_port_start: '3306'
+      destination_port_end: '3306'
+      ether_type: ip
+      entry: sql
+      ip_protocol: tcp
+      state: present
+      filter: database_filter
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_FILTER
+    cisco.aci.aci_filter:
+      <<: *aci_login
+      filter: web_filter
+      state: present
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_FILTER_ENTRY
+    cisco.aci.aci_filter_entry:
+      <<: *aci_login
+      destination_port_start: '8443'
+      destination_port_end: '8449'
+      ether_type: ip
+      entry: rangetest
+      ip_protocol: tcp
+      source_port_start: '1024'
+      source_port_end: '2048'
+      tcp_flags:
+      - acknowledgment
+      - finish
+      state: present
+      filter: web_filter
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_FILTER_ENTRY
+    cisco.aci.aci_filter_entry:
+      <<: *aci_login
+      destination_port_start: https
+      destination_port_end: https
+      ether_type: ip
+      entry: https
+      ip_protocol: tcp
+      state: present
+      filter: web_filter
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_AP
+    cisco.aci.aci_ap:
+      <<: *aci_login
+      ap: fonzo
+      state: present
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_EPG
+    cisco.aci.aci_epg:
+      <<: *aci_login
+      bd: lenilsou
+      epg: milou
+      state: present
+      ap: fonzo
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_EPG_TO_CONTRACT
+    cisco.aci.aci_epg_to_contract:
+      <<: *aci_login
+      contract: web_contract
+      contract_type: consumer
+      state: present
+      epg: milou
+      ap: fonzo
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_STATIC_BINDING_TO_EPG
+    cisco.aci.aci_static_binding_to_epg:
+      <<: *aci_login
+      encap: vlan-1
+      deploy_immediacy: immediate
+      state: present
+      epg: milou
+      ap: fonzo
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_STATIC_BINDING_TO_EPG
+    cisco.aci.aci_static_binding_to_epg:
+      <<: *aci_login
+      encap: vlan-1
+      deploy_immediacy: immediate
+      state: present
+      epg: milou
+      ap: fonzo
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_STATIC_BINDING_TO_EPG
+    cisco.aci.aci_static_binding_to_epg:
+      <<: *aci_login
+      encap: vlan-1
+      deploy_immediacy: immediate
+      state: present
+      epg: milou
+      ap: fonzo
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_STATIC_BINDING_TO_EPG
+    cisco.aci.aci_static_binding_to_epg:
+      <<: *aci_login
+      encap: vlan-1
+      deploy_immediacy: immediate
+      state: present
+      epg: milou
+      ap: fonzo
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_STATIC_BINDING_TO_EPG
+    cisco.aci.aci_static_binding_to_epg:
+      <<: *aci_login
+      encap: vlan-1
+      deploy_immediacy: immediate
+      state: present
+      epg: milou
+      ap: fonzo
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_STATIC_BINDING_TO_EPG
+    cisco.aci.aci_static_binding_to_epg:
+      <<: *aci_login
+      encap: vlan-1
+      deploy_immediacy: immediate
+      state: present
+      epg: milou
+      ap: fonzo
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_EPG_TO_DOMAIN
+    cisco.aci.aci_epg_to_domain:
+      <<: *aci_login
+      deploy_immediacy: immediate
+      resolution_immediacy: pre-provision
+      domain_type: vmm
+      vm_provider: vmware
+      domain: dot3-vmm
+      state: present
+      epg: milou
+      ap: fonzo
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_EPG
+    cisco.aci.aci_epg:
+      <<: *aci_login
+      bd: lenilsou
+      epg: tintin
+      state: present
+      ap: fonzo
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_EPG_TO_DOMAIN
+    cisco.aci.aci_epg_to_domain:
+      <<: *aci_login
+      deploy_immediacy: immediate
+      resolution_immediacy: pre-provision
+      domain_type: vmm
+      vm_provider: vmware
+      domain: dot3-vmm
+      state: present
+      epg: tintin
+      ap: fonzo
+      tenant: leopoldo
+    delegate_to: localhost
+  - name: Task - Create ACI_EPG_TO_CONTRACT
+    cisco.aci.aci_epg_to_contract:
+      <<: *aci_login
+      contract: database_contract
+      state: present
+      epg: tintin
+      ap: fonzo
+      contract_type: provider
+      tenant: leopoldo
+    delegate_to: localhost

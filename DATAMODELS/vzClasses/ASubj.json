@@ -1,0 +1,388 @@
+{
+        "vz:ASubj": {
+            "contains": {
+                "fault:Delegate": ""
+            },
+            "rnMap": {
+                "fd-": "fault:Delegate"
+            },
+            "identifiedBy": [
+
+            ],
+            "rnFormat": "",
+            "containedBy": {
+
+            },
+            "superClasses": [
+                "pol:Comp",
+                "pol:Obj",
+                "naming:NamedObject"
+            ],
+            "subClasses": {
+                "vz:Subj": "",
+                "vz:TSubj": ""
+            },
+            "relationFrom": {
+
+            },
+            "relationTo": {
+
+            },
+            "dnFormats": [
+
+            ],
+            "writeAccess": [
+
+            ],
+            "readAccess": [
+                "admin"
+            ],
+            "faults": {
+
+            },
+            "events": {
+
+            },
+            "stats": {
+
+            },
+            "isAbstract": true,
+            "isConfigurable": true,
+            "isContextRoot": false,
+            "isDeprecated": false,
+            "isEncrypted": false,
+            "isExportable": true,
+            "isPersistent": true,
+            "isSubjectToQuota": false,
+            "isObservable": false,
+            "hasStats": false,
+            "isStat": false,
+            "isFaultable": false,
+            "isDomainable": false,
+            "isHealthScorable": false,
+            "shouldCollectHealthStats": false,
+            "healthCollectionSource": "faults",
+            "hasEventRules": false,
+            "abstractionLayer": "concrete",
+            "apicNxProcessing": false,
+            "monitoringPolicySource": "Parent",
+            "isCreatableDeletable": "derived",
+            "platformFlavors": [
+
+            ],
+            "classId": "1318",
+            "className": "ASubj",
+            "classPkg": "vz",
+            "featureTag": "",
+            "moCategory": "Regular",
+            "label": "",
+            "comment": [
+                "The abstraction of a subject. A subject represents a sub application running behind an endpoint group. For example, an exchange server or a firewall."
+            ],
+            "properties": {
+                "childAction": {
+                    "comment": [
+                         "Delete or ignore. For internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "4",
+                    "propLocalId": "5",
+                    "label": "childAction",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationChildAction",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "16384", "localName": "deleteAll",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteAll "},
+                         { "value": "8192", "localName": "deleteNonPresent",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "deleteNonPresent "},
+                         { "value": "4096", "localName": "ignore",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "ignore "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "configIssues": {
+                    "comment": [
+                         "Bitmask representation of the configuration issues found during the endpoint group deployment."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "15771",
+                    "propLocalId": "153",
+                    "label": "Config Issues",
+                    "baseType": "scalar:Bitmask64",
+                    "modelType": "vz:ConfigIssues",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "8", "localName": "any-to-prov-shared-service",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Private Network Cannot be a Provider in Shared Service Scenario "},
+                         { "value": "none", "localName": "defaultValue",
+                             "platformFlavors": [
+
+                             ],
+                             "label": " "},
+                         { "value": "1", "localName": "filter-not-present",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Filter Not Present "},
+                         { "value": "0", "localName": "none",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "none "},
+                         { "value": "4", "localName": "subject-not-in-use-due-to-label",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "No EPG Has Label For This Subject "},
+                         { "value": "2", "localName": "taboo-has-no-filter",
+                             "platformFlavors": [
+
+                             ],
+                             "label": "Taboo Not associated to Any Filter "}
+                    ],
+                    "default": "none",
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "descr": {
+                    "comment": [
+                         "Specifies the description of a policy component."
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "5582",
+                    "propLocalId": "28",
+                    "label": "Description",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Descr",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": true,
+                    "likeProp": "naming:Described:descr",
+                    "validators": [
+                         {"min" : 0, "max": 128,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9\\\\!#$%()*,-./:;@ _{|}~?&+]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "dn": {
+                    "comment": [
+                         "A tag or metadata is a non-hierarchical keyword or term assigned to the fabric module."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "1",
+                    "propLocalId": "2",
+                    "label": "dn",
+                    "baseType": "reference:BinRef",
+                    "modelType": "reference:BinRef",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "name": {
+                    "comment": [
+                         "null"
+                    ],
+                    "isConfigurable": true,
+                    "propGlobalId": "4991",
+                    "propLocalId": "13",
+                    "label": "Name",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:Name",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": true,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 64,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9_.:-]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "nameAlias": {
+                    "isConfigurable": true,
+                    "propGlobalId": "28417",
+                    "propLocalId": "6719",
+                    "label": "Name alias",
+                    "baseType": "string:Basic",
+                    "modelType": "naming:NameAlias",
+                    "needsPropDelimiters": false,
+                    "uitype": "string",
+                    "createOnly": false,
+                    "readWrite": true,
+                    "readOnly": false,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": false,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validators": [
+                         {"min" : 0, "max": 63,
+                             "regexs": [
+                                 {"regex" : "^[a-zA-Z0-9_.-]+$", "type": "include"}
+                             ]
+                         }
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "rn": {
+                    "comment": [
+                         "Identifies an object from its siblings within the context of its parent object. The distinguished name contains a sequence of relative names."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "2",
+                    "propLocalId": "3",
+                    "label": "rn",
+                    "baseType": "reference:BinRN",
+                    "modelType": "reference:BinRN",
+                    "needsPropDelimiters": true,
+                    "uitype": "auto",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                },
+                "status": {
+                    "comment": [
+                         "The upgrade status. This property is for internal use only."
+                    ],
+                    "isConfigurable": false,
+                    "propGlobalId": "3",
+                    "propLocalId": "4",
+                    "label": "status",
+                    "baseType": "scalar:Bitmask32",
+                    "modelType": "mo:ModificationStatus",
+                    "needsPropDelimiters": false,
+                    "uitype": "bitmask",
+                    "createOnly": false,
+                    "readWrite": false,
+                    "readOnly": true,
+                    "isNaming": false,
+                    "secure": false,
+                    "implicit": true,
+                    "mandatory": false,
+                    "isOverride": false,
+                    "isLike": false,
+                    "validValues": [
+                         { "value": "2", "localName": "created",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be created. An error is returned if the object already exists.  \nIn the return value of a setter method: indicates that an object has been created.  \n"
+                             ],
+                             "label": "created "},
+                         { "value": "8", "localName": "deleted",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be deleted.  \nIn the return value of a setter method: indicates that an object has been deleted.\n"
+                             ],
+                             "label": "deleted "},
+                         { "value": "4", "localName": "modified",
+                             "platformFlavors": [
+
+                             ],
+                             "comment": [
+                                 "In a setter method: specifies that an object should be modified  \nIn the return value of a setter method: indicates that an object has been modified.\n"
+                             ],
+                             "label": "modified "}
+                    ],
+                    "platformFlavors": [
+
+                    ],
+                    "isDeprecated": false
+                }
+            }
+        }
+}
