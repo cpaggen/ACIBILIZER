@@ -355,9 +355,9 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
                         pass
 
                 if parent_key == "fvRsPathAtt" and child_key == "tDn":
-                    data["leafs"] = change[2].split("/")[2].split("-")[1]
-                    data["interface"] = change[2].split("-")[3].replace("[eth", "").replace("]", "")
-                    data["pod_id"] = change[2].split("/")[1].split("-")[1]
+                    data["leafs"] = child_value.split("/")[2].split("-")[1]
+                    data["interface"] = child_value.split("-")[3].replace("[eth", "").replace("]", "")
+                    data["pod_id"] = child_value.split("/")[1].split("-")[1]
 
                 if parent_key == "fvRsPathAtt" and child_key == "encap":
                     data["encap_id"] = child_value.split("-")[1]
