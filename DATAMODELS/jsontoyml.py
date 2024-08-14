@@ -339,7 +339,9 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
 
                     elif "phys" in child_value.split("/")[1]:
                         dom_type_val = "phys"
-                        dom_val = child_value.split("/")[1].split("-")[1]
+                        # example name => uni/phys-my-domain
+                        dom_val = child_value.split("/phys-")[1]
+                        print(f"%DEBUG% physDomP found - extracted {dom_val}")
 
                     elif "l2dom" in child_value.split("/")[1]:
                         dom_type_val = "l2dom"
@@ -354,7 +356,7 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
 
                 if parent_key == "fvRsPathAtt" and child_key == "tDn":
                     data["leafs"] = change[2].split("/")[2].split("-")[1]
-                    data["interface"] = change[2].split("-")[3].replace("[", "").replace("]", "")
+                    data["interface"] = change[2].split("-")[3].replace("[eth", "").replace("]", "")
                     data["pod_id"] = change[2].split("/")[1].split("-")[1]
 
                 if parent_key == "fvRsPathAtt" and child_key == "encap":
@@ -623,7 +625,8 @@ def main():
             modified_line = modified_line.replace("aci_login:", "aci_login: &aci_login")
             modified_line = modified_line.replace("'yes'", "yes").replace("'no'", "no")
             fout.write(modified_line)
-
+    
+    os.remove(intermediate_file)
     # time 
     end_time = time.time()
     elapsed_time_ms = (end_time - start_time) * 1000
