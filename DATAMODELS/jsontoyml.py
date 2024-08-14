@@ -349,8 +349,12 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
                     data["domain_type"] = dom_type_val
 
                     try:
-                        data["vm_provider"] = vm_provider_val
                         data["domain"] = dom_val
+                    except(UnboundLocalError):
+                        pass
+
+                    try:
+                        data["vm_provider"] = vm_provider_val
                     except(UnboundLocalError):
                         pass
 
