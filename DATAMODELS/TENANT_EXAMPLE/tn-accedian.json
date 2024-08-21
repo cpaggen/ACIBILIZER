@@ -1,7 +1,7 @@
 {
     "fvTenant": {
         "attributes": {
-            "annotation": "",
+            "annotation": "orchestrator:ansible",
             "descr": "",
             "dn": "uni/tn-accedian",
             "name": "accedian",
@@ -14,7 +14,7 @@
             {
                 "vzBrCP": {
                     "attributes": {
-                        "annotation": "",
+                        "annotation": "orchestrator:ansible",
                         "descr": "",
                         "intent": "install",
                         "name": "accedian",
@@ -30,7 +30,7 @@
                         {
                             "vzSubj": {
                                 "attributes": {
-                                    "annotation": "",
+                                    "annotation": "orchestrator:ansible",
                                     "consMatchT": "AtleastOne",
                                     "descr": "",
                                     "name": "accedian",
@@ -46,7 +46,7 @@
                                         "vzRsSubjFiltAtt": {
                                             "attributes": {
                                                 "action": "permit",
-                                                "annotation": "",
+                                                "annotation": "orchestrator:ansible",
                                                 "directives": "",
                                                 "priorityOverride": "default",
                                                 "tnVzFilterName": "accedian",
@@ -79,7 +79,7 @@
             {
                 "fvCtx": {
                     "attributes": {
-                        "annotation": "",
+                        "annotation": "orchestrator:ansible",
                         "bdEnforcedEnable": "no",
                         "descr": "",
                         "ipDataPlaneLearning": "enabled",
@@ -162,6 +162,7 @@
                         "annotation": "",
                         "arpFlood": "yes",
                         "descr": "",
+                        "enableRogueExceptMac": "no",
                         "epClear": "no",
                         "epMoveDetectMode": "",
                         "hostBasedRouting": "no",
@@ -175,265 +176,16 @@
                         "mcastARPDrop": "yes",
                         "mcastAllow": "no",
                         "multiDstPktAct": "bd-flood",
-                        "name": "twamp_101",
+                        "name": "actuate_99",
                         "nameAlias": "",
                         "ownerKey": "",
                         "ownerTag": "",
-                        "type": "regular",
-                        "unicastRoute": "yes",
-                        "unkMacUcastAct": "flood",
-                        "unkMcastAct": "flood",
-                        "userdom": ":all:",
-                        "v6unkMcastAct": "flood",
-                        "vmac": "not-applicable"
-                    },
-                    "children": [
-                        {
-                            "fvSubnet": {
-                                "attributes": {
-                                    "annotation": "",
-                                    "ctrl": "nd",
-                                    "descr": "",
-                                    "ip": "2101::1/64",
-                                    "ipDPLearning": "enabled",
-                                    "name": "",
-                                    "nameAlias": "",
-                                    "preferred": "no",
-                                    "scope": "public,shared",
-                                    "userdom": ":all:",
-                                    "virtual": "no"
-                                }
-                            }
-                        },
-                        {
-                            "fvSubnet": {
-                                "attributes": {
-                                    "annotation": "",
-                                    "ctrl": "",
-                                    "descr": "",
-                                    "ip": "10.169.169.169/24",
-                                    "ipDPLearning": "enabled",
-                                    "name": "",
-                                    "nameAlias": "",
-                                    "preferred": "no",
-                                    "scope": "private,shared",
-                                    "userdom": ":all:",
-                                    "virtual": "no"
-                                }
-                            }
-                        },
-                        {
-                            "fvSubnet": {
-                                "attributes": {
-                                    "annotation": "",
-                                    "ctrl": "",
-                                    "descr": "",
-                                    "ip": "10.50.50.1/24",
-                                    "ipDPLearning": "enabled",
-                                    "name": "",
-                                    "nameAlias": "",
-                                    "preferred": "yes",
-                                    "scope": "public,shared",
-                                    "userdom": ":all:",
-                                    "virtual": "no"
-                                }
-                            }
-                        },
-                        {
-                            "fvRsMldsn": {
-                                "attributes": {
-                                    "annotation": "",
-                                    "tnMldSnoopPolName": "",
-                                    "userdom": ":all:"
-                                }
-                            }
-                        },
-                        {
-                            "fvRsIgmpsn": {
-                                "attributes": {
-                                    "annotation": "",
-                                    "tnIgmpSnoopPolName": "",
-                                    "userdom": ":all:"
-                                }
-                            }
-                        },
-                        {
-                            "fvRsCtx": {
-                                "attributes": {
-                                    "annotation": "",
-                                    "tnFvCtxName": "main",
-                                    "userdom": ":all:"
-                                }
-                            }
-                        },
-                        {
-                            "fvRsBdToEpRet": {
-                                "attributes": {
-                                    "annotation": "",
-                                    "resolveAct": "resolve",
-                                    "tnFvEpRetPolName": "",
-                                    "userdom": ":all:"
-                                }
-                            }
-                        },
-                        {
-                            "fvRsBDToOut": {
-                                "attributes": {
-                                    "annotation": "",
-                                    "tnL3extOutName": "internet",
-                                    "userdom": ":all:"
-                                }
-                            }
-                        },
-                        {
-                            "fvRsBDToNdP": {
-                                "attributes": {
-                                    "annotation": "",
-                                    "tnNdIfPolName": "",
-                                    "userdom": ":all:"
-                                }
-                            }
-                        }
-                    ]
-                }
-            },
-            {
-                "fvBD": {
-                    "attributes": {
-                        "OptimizeWanBandwidth": "no",
-                        "annotation": "",
-                        "arpFlood": "yes",
-                        "descr": "",
-                        "epClear": "no",
-                        "epMoveDetectMode": "",
-                        "hostBasedRouting": "no",
-                        "intersiteBumTrafficAllow": "no",
-                        "intersiteL2Stretch": "no",
-                        "ipLearning": "yes",
-                        "ipv6McastAllow": "no",
-                        "limitIpLearnToSubnets": "yes",
-                        "llAddr": "::",
-                        "mac": "00:22:BD:F8:19:FF",
-                        "mcastARPDrop": "yes",
-                        "mcastAllow": "no",
-                        "multiDstPktAct": "bd-flood",
-                        "name": "vlan-333",
-                        "nameAlias": "",
-                        "ownerKey": "",
-                        "ownerTag": "",
-                        "type": "regular",
-                        "unicastRoute": "yes",
-                        "unkMacUcastAct": "flood",
-                        "unkMcastAct": "flood",
-                        "userdom": ":all:",
-                        "v6unkMcastAct": "flood",
-                        "vmac": "not-applicable"
-                    },
-                    "children": [
-                        {
-                            "fvSubnet": {
-                                "attributes": {
-                                    "annotation": "",
-                                    "ctrl": "",
-                                    "descr": "",
-                                    "ip": "10.19.19.1/24",
-                                    "ipDPLearning": "enabled",
-                                    "name": "",
-                                    "nameAlias": "",
-                                    "preferred": "yes",
-                                    "scope": "public,shared",
-                                    "userdom": ":all:",
-                                    "virtual": "no"
-                                }
-                            }
-                        },
-                        {
-                            "fvRsMldsn": {
-                                "attributes": {
-                                    "annotation": "",
-                                    "tnMldSnoopPolName": "",
-                                    "userdom": ":all:"
-                                }
-                            }
-                        },
-                        {
-                            "fvRsIgmpsn": {
-                                "attributes": {
-                                    "annotation": "",
-                                    "tnIgmpSnoopPolName": "",
-                                    "userdom": ":all:"
-                                }
-                            }
-                        },
-                        {
-                            "fvRsCtx": {
-                                "attributes": {
-                                    "annotation": "",
-                                    "tnFvCtxName": "default",
-                                    "userdom": ":all:"
-                                }
-                            }
-                        },
-                        {
-                            "fvRsBdToEpRet": {
-                                "attributes": {
-                                    "annotation": "",
-                                    "resolveAct": "resolve",
-                                    "tnFvEpRetPolName": "",
-                                    "userdom": ":all:"
-                                }
-                            }
-                        },
-                        {
-                            "fvRsBDToOut": {
-                                "attributes": {
-                                    "annotation": "",
-                                    "tnL3extOutName": "internet",
-                                    "userdom": ":all:"
-                                }
-                            }
-                        },
-                        {
-                            "fvRsBDToNdP": {
-                                "attributes": {
-                                    "annotation": "",
-                                    "tnNdIfPolName": "",
-                                    "userdom": ":all:"
-                                }
-                            }
-                        }
-                    ]
-                }
-            },
-            {
-                "fvBD": {
-                    "attributes": {
-                        "OptimizeWanBandwidth": "no",
-                        "annotation": "",
-                        "arpFlood": "yes",
-                        "descr": "",
-                        "epClear": "no",
-                        "epMoveDetectMode": "",
-                        "hostBasedRouting": "no",
-                        "intersiteBumTrafficAllow": "no",
-                        "intersiteL2Stretch": "no",
-                        "ipLearning": "yes",
-                        "ipv6McastAllow": "no",
-                        "limitIpLearnToSubnets": "yes",
-                        "llAddr": "::",
-                        "mac": "00:22:BD:F8:19:FF",
-                        "mcastARPDrop": "yes",
-                        "mcastAllow": "no",
-                        "multiDstPktAct": "bd-flood",
-                        "name": "twamp_666_vlan52",
-                        "nameAlias": "",
-                        "ownerKey": "",
-                        "ownerTag": "",
+                        "serviceBdRoutingDisable": "no",
                         "type": "regular",
                         "unicastRoute": "yes",
                         "unkMacUcastAct": "proxy",
                         "unkMcastAct": "flood",
-                        "userdom": ":all:",
+                        "userdom": ":all:common:",
                         "v6unkMcastAct": "flood",
                         "vmac": "not-applicable"
                     },
@@ -444,13 +196,13 @@
                                     "annotation": "",
                                     "ctrl": "",
                                     "descr": "",
-                                    "ip": "10.52.52.1/24",
+                                    "ip": "99.99.99.14/29",
                                     "ipDPLearning": "enabled",
                                     "name": "",
                                     "nameAlias": "",
                                     "preferred": "no",
                                     "scope": "public,shared",
-                                    "userdom": ":all:",
+                                    "userdom": ":all:common:",
                                     "virtual": "no"
                                 }
                             }
@@ -460,7 +212,7 @@
                                 "attributes": {
                                     "annotation": "",
                                     "tnMldSnoopPolName": "",
-                                    "userdom": ":all:"
+                                    "userdom": ":all:common:"
                                 }
                             }
                         },
@@ -469,7 +221,7 @@
                                 "attributes": {
                                     "annotation": "",
                                     "tnIgmpSnoopPolName": "",
-                                    "userdom": ":all:"
+                                    "userdom": ":all:common:"
                                 }
                             }
                         },
@@ -478,7 +230,7 @@
                                 "attributes": {
                                     "annotation": "",
                                     "tnFvCtxName": "main",
-                                    "userdom": ":all:"
+                                    "userdom": ":all:common:"
                                 }
                             }
                         },
@@ -488,7 +240,7 @@
                                     "annotation": "",
                                     "resolveAct": "resolve",
                                     "tnFvEpRetPolName": "",
-                                    "userdom": ":all:"
+                                    "userdom": ":all:common:"
                                 }
                             }
                         },
@@ -497,7 +249,7 @@
                                 "attributes": {
                                     "annotation": "",
                                     "tnL3extOutName": "internet",
-                                    "userdom": ":all:"
+                                    "userdom": ":all:common:"
                                 }
                             }
                         },
@@ -506,7 +258,7 @@
                                 "attributes": {
                                     "annotation": "",
                                     "tnNdIfPolName": "",
-                                    "userdom": ":all:"
+                                    "userdom": ":all:common:"
                                 }
                             }
                         }
@@ -517,9 +269,10 @@
                 "fvBD": {
                     "attributes": {
                         "OptimizeWanBandwidth": "no",
-                        "annotation": "",
+                        "annotation": "orchestrator:ansible",
                         "arpFlood": "yes",
                         "descr": "VCE 10.51.51.100",
+                        "enableRogueExceptMac": "no",
                         "epClear": "no",
                         "epMoveDetectMode": "",
                         "hostBasedRouting": "no",
@@ -530,13 +283,14 @@
                         "limitIpLearnToSubnets": "yes",
                         "llAddr": "::",
                         "mac": "00:22:BD:F8:19:FF",
-                        "mcastARPDrop": "yes",
+                        "mcastARPDrop": "no",
                         "mcastAllow": "no",
                         "multiDstPktAct": "bd-flood",
                         "name": "twamp_101_vlan51",
                         "nameAlias": "",
                         "ownerKey": "",
                         "ownerTag": "",
+                        "serviceBdRoutingDisable": "no",
                         "type": "regular",
                         "unicastRoute": "yes",
                         "unkMacUcastAct": "proxy",
@@ -549,7 +303,7 @@
                         {
                             "fvSubnet": {
                                 "attributes": {
-                                    "annotation": "",
+                                    "annotation": "orchestrator:ansible",
                                     "ctrl": "",
                                     "descr": "",
                                     "ip": "10.51.51.1/24",
@@ -603,7 +357,7 @@
                         {
                             "fvRsBDToOut": {
                                 "attributes": {
-                                    "annotation": "",
+                                    "annotation": "orchestrator:ansible",
                                     "tnL3extOutName": "internet",
                                     "userdom": ":all:"
                                 }
@@ -625,9 +379,10 @@
                 "fvBD": {
                     "attributes": {
                         "OptimizeWanBandwidth": "no",
-                        "annotation": "",
+                        "annotation": "orchestrator:ansible",
                         "arpFlood": "yes",
                         "descr": "",
+                        "enableRogueExceptMac": "no",
                         "epClear": "no",
                         "epMoveDetectMode": "",
                         "hostBasedRouting": "no",
@@ -638,13 +393,14 @@
                         "limitIpLearnToSubnets": "yes",
                         "llAddr": "::",
                         "mac": "00:22:BD:F8:19:FF",
-                        "mcastARPDrop": "yes",
+                        "mcastARPDrop": "no",
                         "mcastAllow": "no",
                         "multiDstPktAct": "bd-flood",
-                        "name": "twamp_666",
+                        "name": "twamp_101",
                         "nameAlias": "",
                         "ownerKey": "",
                         "ownerTag": "",
+                        "serviceBdRoutingDisable": "no",
                         "type": "regular",
                         "unicastRoute": "yes",
                         "unkMacUcastAct": "flood",
@@ -657,7 +413,371 @@
                         {
                             "fvSubnet": {
                                 "attributes": {
+                                    "annotation": "orchestrator:ansible",
+                                    "ctrl": "",
+                                    "descr": "",
+                                    "ip": "10.50.50.1/24",
+                                    "ipDPLearning": "enabled",
+                                    "name": "",
+                                    "nameAlias": "",
+                                    "preferred": "yes",
+                                    "scope": "public,shared",
+                                    "userdom": ":all:",
+                                    "virtual": "no"
+                                }
+                            }
+                        },
+                        {
+                            "fvSubnet": {
+                                "attributes": {
+                                    "annotation": "orchestrator:ansible",
+                                    "ctrl": "nd",
+                                    "descr": "",
+                                    "ip": "2101::1/64",
+                                    "ipDPLearning": "enabled",
+                                    "name": "",
+                                    "nameAlias": "",
+                                    "preferred": "no",
+                                    "scope": "public,shared",
+                                    "userdom": ":all:",
+                                    "virtual": "no"
+                                }
+                            }
+                        },
+                        {
+                            "fvSubnet": {
+                                "attributes": {
+                                    "annotation": "orchestrator:ansible",
+                                    "ctrl": "",
+                                    "descr": "",
+                                    "ip": "10.169.169.169/24",
+                                    "ipDPLearning": "enabled",
+                                    "name": "",
+                                    "nameAlias": "",
+                                    "preferred": "no",
+                                    "scope": "public,shared",
+                                    "userdom": ":all:",
+                                    "virtual": "no"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsMldsn": {
+                                "attributes": {
                                     "annotation": "",
+                                    "tnMldSnoopPolName": "",
+                                    "userdom": ":all:"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsIgmpsn": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "tnIgmpSnoopPolName": "",
+                                    "userdom": ":all:"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsCtx": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "tnFvCtxName": "main",
+                                    "userdom": ":all:"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsBdToEpRet": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "resolveAct": "resolve",
+                                    "tnFvEpRetPolName": "",
+                                    "userdom": ":all:"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsBDToOut": {
+                                "attributes": {
+                                    "annotation": "orchestrator:ansible",
+                                    "tnL3extOutName": "internet",
+                                    "userdom": ":all:"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsBDToNdP": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "tnNdIfPolName": "",
+                                    "userdom": ":all:"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "fvBD": {
+                    "attributes": {
+                        "OptimizeWanBandwidth": "no",
+                        "annotation": "orchestrator:ansible",
+                        "arpFlood": "yes",
+                        "descr": "",
+                        "enableRogueExceptMac": "no",
+                        "epClear": "no",
+                        "epMoveDetectMode": "",
+                        "hostBasedRouting": "no",
+                        "intersiteBumTrafficAllow": "no",
+                        "intersiteL2Stretch": "no",
+                        "ipLearning": "yes",
+                        "ipv6McastAllow": "no",
+                        "limitIpLearnToSubnets": "yes",
+                        "llAddr": "::",
+                        "mac": "00:22:BD:F8:19:FF",
+                        "mcastARPDrop": "no",
+                        "mcastAllow": "no",
+                        "multiDstPktAct": "bd-flood",
+                        "name": "vlan-333",
+                        "nameAlias": "",
+                        "ownerKey": "",
+                        "ownerTag": "",
+                        "serviceBdRoutingDisable": "no",
+                        "type": "regular",
+                        "unicastRoute": "yes",
+                        "unkMacUcastAct": "flood",
+                        "unkMcastAct": "flood",
+                        "userdom": ":all:",
+                        "v6unkMcastAct": "flood",
+                        "vmac": "not-applicable"
+                    },
+                    "children": [
+                        {
+                            "fvSubnet": {
+                                "attributes": {
+                                    "annotation": "orchestrator:ansible",
+                                    "ctrl": "",
+                                    "descr": "",
+                                    "ip": "10.19.19.1/24",
+                                    "ipDPLearning": "enabled",
+                                    "name": "",
+                                    "nameAlias": "",
+                                    "preferred": "yes",
+                                    "scope": "public,shared",
+                                    "userdom": ":all:",
+                                    "virtual": "no"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsMldsn": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "tnMldSnoopPolName": "",
+                                    "userdom": ":all:"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsIgmpsn": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "tnIgmpSnoopPolName": "",
+                                    "userdom": ":all:"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsCtx": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "tnFvCtxName": "default",
+                                    "userdom": ":all:"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsBdToEpRet": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "resolveAct": "resolve",
+                                    "tnFvEpRetPolName": "",
+                                    "userdom": ":all:"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsBDToOut": {
+                                "attributes": {
+                                    "annotation": "orchestrator:ansible",
+                                    "tnL3extOutName": "internet",
+                                    "userdom": ":all:"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsBDToNdP": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "tnNdIfPolName": "",
+                                    "userdom": ":all:"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "fvBD": {
+                    "attributes": {
+                        "OptimizeWanBandwidth": "no",
+                        "annotation": "orchestrator:ansible",
+                        "arpFlood": "yes",
+                        "descr": "",
+                        "enableRogueExceptMac": "no",
+                        "epClear": "no",
+                        "epMoveDetectMode": "",
+                        "hostBasedRouting": "no",
+                        "intersiteBumTrafficAllow": "no",
+                        "intersiteL2Stretch": "no",
+                        "ipLearning": "yes",
+                        "ipv6McastAllow": "no",
+                        "limitIpLearnToSubnets": "yes",
+                        "llAddr": "::",
+                        "mac": "00:22:BD:F8:19:FF",
+                        "mcastARPDrop": "no",
+                        "mcastAllow": "no",
+                        "multiDstPktAct": "bd-flood",
+                        "name": "twamp_666_vlan52",
+                        "nameAlias": "",
+                        "ownerKey": "",
+                        "ownerTag": "",
+                        "serviceBdRoutingDisable": "no",
+                        "type": "regular",
+                        "unicastRoute": "yes",
+                        "unkMacUcastAct": "proxy",
+                        "unkMcastAct": "flood",
+                        "userdom": ":all:",
+                        "v6unkMcastAct": "flood",
+                        "vmac": "not-applicable"
+                    },
+                    "children": [
+                        {
+                            "fvSubnet": {
+                                "attributes": {
+                                    "annotation": "orchestrator:ansible",
+                                    "ctrl": "",
+                                    "descr": "",
+                                    "ip": "10.52.52.1/24",
+                                    "ipDPLearning": "enabled",
+                                    "name": "",
+                                    "nameAlias": "",
+                                    "preferred": "no",
+                                    "scope": "public,shared",
+                                    "userdom": ":all:",
+                                    "virtual": "no"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsMldsn": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "tnMldSnoopPolName": "",
+                                    "userdom": ":all:"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsIgmpsn": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "tnIgmpSnoopPolName": "",
+                                    "userdom": ":all:"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsCtx": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "tnFvCtxName": "main",
+                                    "userdom": ":all:"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsBdToEpRet": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "resolveAct": "resolve",
+                                    "tnFvEpRetPolName": "",
+                                    "userdom": ":all:"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsBDToOut": {
+                                "attributes": {
+                                    "annotation": "orchestrator:ansible",
+                                    "tnL3extOutName": "internet",
+                                    "userdom": ":all:"
+                                }
+                            }
+                        },
+                        {
+                            "fvRsBDToNdP": {
+                                "attributes": {
+                                    "annotation": "",
+                                    "tnNdIfPolName": "",
+                                    "userdom": ":all:"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "fvBD": {
+                    "attributes": {
+                        "OptimizeWanBandwidth": "no",
+                        "annotation": "orchestrator:ansible",
+                        "arpFlood": "yes",
+                        "descr": "",
+                        "enableRogueExceptMac": "no",
+                        "epClear": "no",
+                        "epMoveDetectMode": "",
+                        "hostBasedRouting": "no",
+                        "intersiteBumTrafficAllow": "no",
+                        "intersiteL2Stretch": "no",
+                        "ipLearning": "yes",
+                        "ipv6McastAllow": "no",
+                        "limitIpLearnToSubnets": "yes",
+                        "llAddr": "::",
+                        "mac": "00:22:BD:F8:19:FF",
+                        "mcastARPDrop": "no",
+                        "mcastAllow": "no",
+                        "multiDstPktAct": "bd-flood",
+                        "name": "twamp_666",
+                        "nameAlias": "",
+                        "ownerKey": "",
+                        "ownerTag": "",
+                        "serviceBdRoutingDisable": "no",
+                        "type": "regular",
+                        "unicastRoute": "yes",
+                        "unkMacUcastAct": "flood",
+                        "unkMcastAct": "flood",
+                        "userdom": ":all:",
+                        "v6unkMcastAct": "flood",
+                        "vmac": "not-applicable"
+                    },
+                    "children": [
+                        {
+                            "fvSubnet": {
+                                "attributes": {
+                                    "annotation": "orchestrator:ansible",
                                     "ctrl": "nd",
                                     "descr": "",
                                     "ip": "2666::1/64",
@@ -674,7 +794,7 @@
                         {
                             "fvSubnet": {
                                 "attributes": {
-                                    "annotation": "",
+                                    "annotation": "orchestrator:ansible",
                                     "ctrl": "",
                                     "descr": "",
                                     "ip": "10.60.60.1/24",
@@ -728,7 +848,7 @@
                         {
                             "fvRsBDToOut": {
                                 "attributes": {
-                                    "annotation": "",
+                                    "annotation": "orchestrator:ansible",
                                     "tnL3extOutName": "internet",
                                     "userdom": ":all:"
                                 }
@@ -749,7 +869,7 @@
             {
                 "vzFilter": {
                     "attributes": {
-                        "annotation": "",
+                        "annotation": "orchestrator:ansible",
                         "descr": "",
                         "name": "accedian",
                         "nameAlias": "",
@@ -761,19 +881,19 @@
                         {
                             "vzEntry": {
                                 "attributes": {
-                                    "annotation": "",
+                                    "annotation": "orchestrator:ansible",
                                     "applyToFrag": "no",
                                     "arpOpc": "unspecified",
                                     "dFromPort": "unspecified",
                                     "dToPort": "unspecified",
                                     "descr": "",
-                                    "etherT": "ip",
+                                    "etherT": "ipv6",
                                     "icmpv4T": "unspecified",
                                     "icmpv6T": "unspecified",
                                     "matchDscp": "unspecified",
-                                    "name": "twamp",
+                                    "name": "ipv6",
                                     "nameAlias": "",
-                                    "prot": "tcp",
+                                    "prot": "unspecified",
                                     "sFromPort": "unspecified",
                                     "sToPort": "unspecified",
                                     "stateful": "no",
@@ -785,7 +905,7 @@
                         {
                             "vzEntry": {
                                 "attributes": {
-                                    "annotation": "",
+                                    "annotation": "orchestrator:ansible",
                                     "applyToFrag": "no",
                                     "arpOpc": "unspecified",
                                     "dFromPort": "unspecified",
@@ -809,19 +929,19 @@
                         {
                             "vzEntry": {
                                 "attributes": {
-                                    "annotation": "",
+                                    "annotation": "orchestrator:ansible",
                                     "applyToFrag": "no",
                                     "arpOpc": "unspecified",
                                     "dFromPort": "unspecified",
                                     "dToPort": "unspecified",
                                     "descr": "",
-                                    "etherT": "ipv6",
+                                    "etherT": "ip",
                                     "icmpv4T": "unspecified",
                                     "icmpv6T": "unspecified",
                                     "matchDscp": "unspecified",
-                                    "name": "ipv6",
+                                    "name": "twamp",
                                     "nameAlias": "",
-                                    "prot": "unspecified",
+                                    "prot": "tcp",
                                     "sFromPort": "unspecified",
                                     "sToPort": "unspecified",
                                     "stateful": "no",
@@ -845,7 +965,7 @@
             {
                 "fvAp": {
                     "attributes": {
-                        "annotation": "",
+                        "annotation": "orchestrator:ansible",
                         "descr": "",
                         "name": "TWAMP_001",
                         "nameAlias": "",
@@ -859,6 +979,305 @@
                             "fvAEPg": {
                                 "attributes": {
                                     "annotation": "",
+                                    "descr": "for app hosted on evpn leaf2 10.48.168.43",
+                                    "exceptionTag": "",
+                                    "floodOnEncap": "disabled",
+                                    "fwdCtrl": "",
+                                    "hasMcastSource": "no",
+                                    "isAttrBasedEPg": "no",
+                                    "matchT": "AtleastOne",
+                                    "name": "actuate_fx3_99",
+                                    "nameAlias": "",
+                                    "pcEnfPref": "unenforced",
+                                    "prefGrMemb": "exclude",
+                                    "prio": "level3",
+                                    "shutdown": "no",
+                                    "userdom": ":all:common:"
+                                },
+                                "children": [
+                                    {
+                                        "fvRsProv": {
+                                            "attributes": {
+                                                "annotation": "",
+                                                "intent": "install",
+                                                "matchT": "AtleastOne",
+                                                "prio": "unspecified",
+                                                "tnVzBrCPName": "default",
+                                                "userdom": ":all:common:"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "fvRsPathAtt": {
+                                            "attributes": {
+                                                "annotation": "",
+                                                "descr": "",
+                                                "encap": "vlan-99",
+                                                "instrImedcy": "lazy",
+                                                "mode": "regular",
+                                                "primaryEncap": "unknown",
+                                                "tDn": "topology/pod-1/paths-101/pathep-[eth1/55]",
+                                                "userdom": ":all:common:"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "fvRsDomAtt": {
+                                            "attributes": {
+                                                "annotation": "",
+                                                "apiMode": "mgmt",
+                                                "bindingType": "none",
+                                                "classPref": "encap",
+                                                "customEpgName": "",
+                                                "delimiter": "",
+                                                "encap": "unknown",
+                                                "encapMode": "auto",
+                                                "epgCos": "Cos0",
+                                                "epgCosPref": "disabled",
+                                                "instrImedcy": "lazy",
+                                                "ipamDhcpOverride": "0.0.0.0",
+                                                "ipamEnabled": "no",
+                                                "ipamGateway": "0.0.0.0",
+                                                "lagPolicyName": "",
+                                                "netflowDir": "both",
+                                                "netflowPref": "disabled",
+                                                "numPorts": "0",
+                                                "portAllocation": "none",
+                                                "primaryEncap": "unknown",
+                                                "primaryEncapInner": "unknown",
+                                                "resImedcy": "immediate",
+                                                "secondaryEncapInner": "unknown",
+                                                "switchingMode": "native",
+                                                "tDn": "uni/phys-accedian-sfps",
+                                                "untagged": "no",
+                                                "userdom": ":all:common:",
+                                                "vnetOnly": "no"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "fvRsCons": {
+                                            "attributes": {
+                                                "annotation": "",
+                                                "intent": "install",
+                                                "prio": "unspecified",
+                                                "tnVzBrCPName": "default",
+                                                "userdom": ":all:common:"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "fvRsCustQosPol": {
+                                            "attributes": {
+                                                "annotation": "",
+                                                "tnQosCustomPolName": "",
+                                                "userdom": ":all:common:"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "fvRsBd": {
+                                            "attributes": {
+                                                "annotation": "",
+                                                "tnFvBDName": "actuate_99",
+                                                "userdom": ":all:common:"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "fvAEPg": {
+                                "attributes": {
+                                    "annotation": "orchestrator:ansible",
+                                    "descr": "",
+                                    "exceptionTag": "",
+                                    "floodOnEncap": "disabled",
+                                    "fwdCtrl": "",
+                                    "hasMcastSource": "no",
+                                    "isAttrBasedEPg": "no",
+                                    "matchT": "AtleastOne",
+                                    "name": "twamp_666",
+                                    "nameAlias": "",
+                                    "pcEnfPref": "unenforced",
+                                    "prefGrMemb": "exclude",
+                                    "prio": "level3",
+                                    "shutdown": "no",
+                                    "userdom": ":all:"
+                                },
+                                "children": [
+                                    {
+                                        "fvRsProv": {
+                                            "attributes": {
+                                                "annotation": "",
+                                                "intent": "install",
+                                                "matchT": "AtleastOne",
+                                                "prio": "unspecified",
+                                                "tnVzBrCPName": "default",
+                                                "userdom": ":all:"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "fvRsProv": {
+                                            "attributes": {
+                                                "annotation": "orchestrator:ansible",
+                                                "intent": "install",
+                                                "matchT": "AtleastOne",
+                                                "prio": "unspecified",
+                                                "tnVzBrCPName": "accedian",
+                                                "userdom": ":all:"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "fvRsPathAtt": {
+                                            "attributes": {
+                                                "annotation": "orchestrator:ansible",
+                                                "descr": "",
+                                                "encap": "vlan-60",
+                                                "instrImedcy": "immediate",
+                                                "mode": "regular",
+                                                "primaryEncap": "unknown",
+                                                "tDn": "topology/pod-1/paths-666/pathep-[eth1/24]",
+                                                "userdom": ":all:"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "fvRsDomAtt": {
+                                            "attributes": {
+                                                "annotation": "orchestrator:ansible",
+                                                "apiMode": "mgmt",
+                                                "bindingType": "none",
+                                                "classPref": "encap",
+                                                "customEpgName": "",
+                                                "delimiter": "",
+                                                "encap": "unknown",
+                                                "encapMode": "auto",
+                                                "epgCos": "Cos0",
+                                                "epgCosPref": "disabled",
+                                                "instrImedcy": "immediate",
+                                                "ipamDhcpOverride": "0.0.0.0",
+                                                "ipamEnabled": "no",
+                                                "ipamGateway": "0.0.0.0",
+                                                "lagPolicyName": "",
+                                                "netflowDir": "both",
+                                                "netflowPref": "disabled",
+                                                "numPorts": "0",
+                                                "portAllocation": "none",
+                                                "primaryEncap": "unknown",
+                                                "primaryEncapInner": "unknown",
+                                                "resImedcy": "immediate",
+                                                "secondaryEncapInner": "unknown",
+                                                "switchingMode": "native",
+                                                "tDn": "uni/vmmp-VMware/dom-dot3-vmm",
+                                                "untagged": "no",
+                                                "userdom": ":all:",
+                                                "vnetOnly": "no"
+                                            },
+                                            "children": [
+                                                {
+                                                    "vmmSecP": {
+                                                        "attributes": {
+                                                            "allowPromiscuous": "reject",
+                                                            "annotation": "",
+                                                            "descr": "",
+                                                            "forgedTransmits": "reject",
+                                                            "macChanges": "reject",
+                                                            "name": "",
+                                                            "nameAlias": "",
+                                                            "ownerKey": "",
+                                                            "ownerTag": "",
+                                                            "userdom": ":all:"
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "fvRsDomAtt": {
+                                            "attributes": {
+                                                "annotation": "orchestrator:ansible",
+                                                "apiMode": "mgmt",
+                                                "bindingType": "none",
+                                                "classPref": "encap",
+                                                "customEpgName": "",
+                                                "delimiter": "",
+                                                "encap": "unknown",
+                                                "encapMode": "auto",
+                                                "epgCos": "Cos0",
+                                                "epgCosPref": "disabled",
+                                                "instrImedcy": "lazy",
+                                                "ipamDhcpOverride": "0.0.0.0",
+                                                "ipamEnabled": "no",
+                                                "ipamGateway": "0.0.0.0",
+                                                "lagPolicyName": "",
+                                                "netflowDir": "both",
+                                                "netflowPref": "disabled",
+                                                "numPorts": "0",
+                                                "portAllocation": "none",
+                                                "primaryEncap": "unknown",
+                                                "primaryEncapInner": "unknown",
+                                                "resImedcy": "immediate",
+                                                "secondaryEncapInner": "unknown",
+                                                "switchingMode": "native",
+                                                "tDn": "uni/phys-accedian-sfps",
+                                                "untagged": "no",
+                                                "userdom": ":all:",
+                                                "vnetOnly": "no"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "fvRsCons": {
+                                            "attributes": {
+                                                "annotation": "orchestrator:ansible",
+                                                "intent": "install",
+                                                "prio": "unspecified",
+                                                "tnVzBrCPName": "default",
+                                                "userdom": ":all:"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "fvRsCons": {
+                                            "attributes": {
+                                                "annotation": "orchestrator:ansible",
+                                                "intent": "install",
+                                                "prio": "unspecified",
+                                                "tnVzBrCPName": "accedian",
+                                                "userdom": ":all:"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "fvRsCustQosPol": {
+                                            "attributes": {
+                                                "annotation": "",
+                                                "tnQosCustomPolName": "",
+                                                "userdom": ":all:"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "fvRsBd": {
+                                            "attributes": {
+                                                "annotation": "",
+                                                "tnFvBDName": "twamp_666",
+                                                "userdom": ":all:"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "fvAEPg": {
+                                "attributes": {
+                                    "annotation": "orchestrator:ansible",
                                     "descr": "",
                                     "exceptionTag": "",
                                     "floodOnEncap": "disabled",
@@ -882,6 +1301,18 @@
                                                 "intent": "install",
                                                 "matchT": "AtleastOne",
                                                 "prio": "unspecified",
+                                                "tnVzBrCPName": "default",
+                                                "userdom": ":all:"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "fvRsProv": {
+                                            "attributes": {
+                                                "annotation": "orchestrator:ansible",
+                                                "intent": "install",
+                                                "matchT": "AtleastOne",
+                                                "prio": "unspecified",
                                                 "tnVzBrCPName": "accedian",
                                                 "userdom": ":all:"
                                             }
@@ -890,21 +1321,7 @@
                                     {
                                         "fvRsPathAtt": {
                                             "attributes": {
-                                                "annotation": "",
-                                                "descr": "",
-                                                "encap": "vlan-50",
-                                                "instrImedcy": "immediate",
-                                                "mode": "regular",
-                                                "primaryEncap": "unknown",
-                                                "tDn": "topology/pod-1/paths-101/pathep-[eth1/24]",
-                                                "userdom": ":all:"
-                                            }
-                                        }
-                                    },
-                                    {
-                                        "fvRsPathAtt": {
-                                            "attributes": {
-                                                "annotation": "",
+                                                "annotation": "orchestrator:ansible",
                                                 "descr": "",
                                                 "encap": "vlan-1169",
                                                 "instrImedcy": "immediate",
@@ -916,9 +1333,24 @@
                                         }
                                     },
                                     {
+                                        "fvRsPathAtt": {
+                                            "attributes": {
+                                                "annotation": "orchestrator:ansible",
+                                                "descr": "",
+                                                "encap": "vlan-50",
+                                                "instrImedcy": "immediate",
+                                                "mode": "regular",
+                                                "primaryEncap": "unknown",
+                                                "tDn": "topology/pod-1/paths-101/pathep-[eth1/24]",
+                                                "userdom": ":all:"
+                                            }
+                                        }
+                                    },
+                                    {
                                         "fvRsDomAtt": {
                                             "attributes": {
-                                                "annotation": "",
+                                                "annotation": "orchestrator:ansible",
+                                                "apiMode": "mgmt",
                                                 "bindingType": "none",
                                                 "classPref": "encap",
                                                 "customEpgName": "",
@@ -928,6 +1360,9 @@
                                                 "epgCos": "Cos0",
                                                 "epgCosPref": "disabled",
                                                 "instrImedcy": "immediate",
+                                                "ipamDhcpOverride": "0.0.0.0",
+                                                "ipamEnabled": "no",
+                                                "ipamGateway": "0.0.0.0",
                                                 "lagPolicyName": "",
                                                 "netflowDir": "both",
                                                 "netflowPref": "disabled",
@@ -950,8 +1385,8 @@
                                                             "allowPromiscuous": "reject",
                                                             "annotation": "",
                                                             "descr": "",
-                                                            "forgedTransmits": "accept",
-                                                            "macChanges": "accept",
+                                                            "forgedTransmits": "reject",
+                                                            "macChanges": "reject",
                                                             "name": "",
                                                             "nameAlias": "",
                                                             "ownerKey": "",
@@ -966,7 +1401,8 @@
                                     {
                                         "fvRsDomAtt": {
                                             "attributes": {
-                                                "annotation": "",
+                                                "annotation": "orchestrator:ansible",
+                                                "apiMode": "mgmt",
                                                 "bindingType": "none",
                                                 "classPref": "encap",
                                                 "customEpgName": "",
@@ -976,6 +1412,9 @@
                                                 "epgCos": "Cos0",
                                                 "epgCosPref": "disabled",
                                                 "instrImedcy": "lazy",
+                                                "ipamDhcpOverride": "0.0.0.0",
+                                                "ipamEnabled": "no",
+                                                "ipamGateway": "0.0.0.0",
                                                 "lagPolicyName": "",
                                                 "netflowDir": "both",
                                                 "netflowPref": "disabled",
@@ -996,10 +1435,10 @@
                                     {
                                         "fvRsCons": {
                                             "attributes": {
-                                                "annotation": "",
+                                                "annotation": "orchestrator:ansible",
                                                 "intent": "install",
                                                 "prio": "unspecified",
-                                                "tnVzBrCPName": "accedian",
+                                                "tnVzBrCPName": "default",
                                                 "userdom": ":all:"
                                             }
                                         }
@@ -1007,10 +1446,10 @@
                                     {
                                         "fvRsCons": {
                                             "attributes": {
-                                                "annotation": "",
+                                                "annotation": "orchestrator:ansible",
                                                 "intent": "install",
                                                 "prio": "unspecified",
-                                                "tnVzBrCPName": "default",
+                                                "tnVzBrCPName": "accedian",
                                                 "userdom": ":all:"
                                             }
                                         }
@@ -1039,7 +1478,7 @@
                         {
                             "fvAEPg": {
                                 "attributes": {
-                                    "annotation": "",
+                                    "annotation": "orchestrator:ansible",
                                     "descr": "",
                                     "exceptionTag": "",
                                     "floodOnEncap": "disabled",
@@ -1057,9 +1496,21 @@
                                 },
                                 "children": [
                                     {
-                                        "fvRsPathAtt": {
+                                        "fvRsProv": {
                                             "attributes": {
                                                 "annotation": "",
+                                                "intent": "install",
+                                                "matchT": "AtleastOne",
+                                                "prio": "unspecified",
+                                                "tnVzBrCPName": "default",
+                                                "userdom": ":all:"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "fvRsPathAtt": {
+                                            "attributes": {
+                                                "annotation": "orchestrator:ansible",
                                                 "descr": "",
                                                 "encap": "vlan-51",
                                                 "instrImedcy": "immediate",
@@ -1073,7 +1524,8 @@
                                     {
                                         "fvRsDomAtt": {
                                             "attributes": {
-                                                "annotation": "",
+                                                "annotation": "orchestrator:ansible",
+                                                "apiMode": "mgmt",
                                                 "bindingType": "none",
                                                 "classPref": "encap",
                                                 "customEpgName": "",
@@ -1083,6 +1535,9 @@
                                                 "epgCos": "Cos0",
                                                 "epgCosPref": "disabled",
                                                 "instrImedcy": "lazy",
+                                                "ipamDhcpOverride": "0.0.0.0",
+                                                "ipamEnabled": "no",
+                                                "ipamGateway": "0.0.0.0",
                                                 "lagPolicyName": "",
                                                 "netflowDir": "both",
                                                 "netflowPref": "disabled",
@@ -1103,7 +1558,7 @@
                                     {
                                         "fvRsCons": {
                                             "attributes": {
-                                                "annotation": "",
+                                                "annotation": "orchestrator:ansible",
                                                 "intent": "install",
                                                 "prio": "unspecified",
                                                 "tnVzBrCPName": "default",
@@ -1135,174 +1590,7 @@
                         {
                             "fvAEPg": {
                                 "attributes": {
-                                    "annotation": "",
-                                    "descr": "",
-                                    "exceptionTag": "",
-                                    "floodOnEncap": "disabled",
-                                    "fwdCtrl": "",
-                                    "hasMcastSource": "no",
-                                    "isAttrBasedEPg": "no",
-                                    "matchT": "AtleastOne",
-                                    "name": "twamp_666",
-                                    "nameAlias": "",
-                                    "pcEnfPref": "unenforced",
-                                    "prefGrMemb": "exclude",
-                                    "prio": "level3",
-                                    "shutdown": "no",
-                                    "userdom": ":all:"
-                                },
-                                "children": [
-                                    {
-                                        "fvRsProv": {
-                                            "attributes": {
-                                                "annotation": "",
-                                                "intent": "install",
-                                                "matchT": "AtleastOne",
-                                                "prio": "unspecified",
-                                                "tnVzBrCPName": "accedian",
-                                                "userdom": ":all:"
-                                            }
-                                        }
-                                    },
-                                    {
-                                        "fvRsPathAtt": {
-                                            "attributes": {
-                                                "annotation": "",
-                                                "descr": "",
-                                                "encap": "vlan-60",
-                                                "instrImedcy": "immediate",
-                                                "mode": "regular",
-                                                "primaryEncap": "unknown",
-                                                "tDn": "topology/pod-1/paths-666/pathep-[eth1/24]",
-                                                "userdom": ":all:"
-                                            }
-                                        }
-                                    },
-                                    {
-                                        "fvRsDomAtt": {
-                                            "attributes": {
-                                                "annotation": "",
-                                                "bindingType": "none",
-                                                "classPref": "encap",
-                                                "customEpgName": "",
-                                                "delimiter": "",
-                                                "encap": "unknown",
-                                                "encapMode": "auto",
-                                                "epgCos": "Cos0",
-                                                "epgCosPref": "disabled",
-                                                "instrImedcy": "lazy",
-                                                "lagPolicyName": "",
-                                                "netflowDir": "both",
-                                                "netflowPref": "disabled",
-                                                "numPorts": "0",
-                                                "portAllocation": "none",
-                                                "primaryEncap": "unknown",
-                                                "primaryEncapInner": "unknown",
-                                                "resImedcy": "immediate",
-                                                "secondaryEncapInner": "unknown",
-                                                "switchingMode": "native",
-                                                "tDn": "uni/phys-accedian-sfps",
-                                                "untagged": "no",
-                                                "userdom": ":all:",
-                                                "vnetOnly": "no"
-                                            }
-                                        }
-                                    },
-                                    {
-                                        "fvRsDomAtt": {
-                                            "attributes": {
-                                                "annotation": "",
-                                                "bindingType": "none",
-                                                "classPref": "encap",
-                                                "customEpgName": "",
-                                                "delimiter": "",
-                                                "encap": "unknown",
-                                                "encapMode": "auto",
-                                                "epgCos": "Cos0",
-                                                "epgCosPref": "disabled",
-                                                "instrImedcy": "immediate",
-                                                "lagPolicyName": "",
-                                                "netflowDir": "both",
-                                                "netflowPref": "disabled",
-                                                "numPorts": "0",
-                                                "portAllocation": "none",
-                                                "primaryEncap": "unknown",
-                                                "primaryEncapInner": "unknown",
-                                                "resImedcy": "immediate",
-                                                "secondaryEncapInner": "unknown",
-                                                "switchingMode": "native",
-                                                "tDn": "uni/vmmp-VMware/dom-dot3-vmm",
-                                                "untagged": "no",
-                                                "userdom": ":all:",
-                                                "vnetOnly": "no"
-                                            },
-                                            "children": [
-                                                {
-                                                    "vmmSecP": {
-                                                        "attributes": {
-                                                            "allowPromiscuous": "reject",
-                                                            "annotation": "",
-                                                            "descr": "",
-                                                            "forgedTransmits": "accept",
-                                                            "macChanges": "accept",
-                                                            "name": "",
-                                                            "nameAlias": "",
-                                                            "ownerKey": "",
-                                                            "ownerTag": "",
-                                                            "userdom": ":all:"
-                                                        }
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "fvRsCons": {
-                                            "attributes": {
-                                                "annotation": "",
-                                                "intent": "install",
-                                                "prio": "unspecified",
-                                                "tnVzBrCPName": "accedian",
-                                                "userdom": ":all:"
-                                            }
-                                        }
-                                    },
-                                    {
-                                        "fvRsCons": {
-                                            "attributes": {
-                                                "annotation": "",
-                                                "intent": "install",
-                                                "prio": "unspecified",
-                                                "tnVzBrCPName": "default",
-                                                "userdom": ":all:"
-                                            }
-                                        }
-                                    },
-                                    {
-                                        "fvRsCustQosPol": {
-                                            "attributes": {
-                                                "annotation": "",
-                                                "tnQosCustomPolName": "",
-                                                "userdom": ":all:"
-                                            }
-                                        }
-                                    },
-                                    {
-                                        "fvRsBd": {
-                                            "attributes": {
-                                                "annotation": "",
-                                                "tnFvBDName": "twamp_666",
-                                                "userdom": ":all:"
-                                            }
-                                        }
-                                    }
-                                ]
-                            }
-                        },
-                        {
-                            "fvAEPg": {
-                                "attributes": {
-                                    "annotation": "",
+                                    "annotation": "orchestrator:ansible",
                                     "descr": "",
                                     "exceptionTag": "",
                                     "floodOnEncap": "disabled",
@@ -1320,9 +1608,21 @@
                                 },
                                 "children": [
                                     {
-                                        "fvRsPathAtt": {
+                                        "fvRsProv": {
                                             "attributes": {
                                                 "annotation": "",
+                                                "intent": "install",
+                                                "matchT": "AtleastOne",
+                                                "prio": "unspecified",
+                                                "tnVzBrCPName": "default",
+                                                "userdom": ":all:"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "fvRsPathAtt": {
+                                            "attributes": {
+                                                "annotation": "orchestrator:ansible",
                                                 "descr": "",
                                                 "encap": "vlan-52",
                                                 "instrImedcy": "immediate",
@@ -1336,7 +1636,8 @@
                                     {
                                         "fvRsDomAtt": {
                                             "attributes": {
-                                                "annotation": "",
+                                                "annotation": "orchestrator:ansible",
+                                                "apiMode": "mgmt",
                                                 "bindingType": "none",
                                                 "classPref": "encap",
                                                 "customEpgName": "",
@@ -1346,6 +1647,9 @@
                                                 "epgCos": "Cos0",
                                                 "epgCosPref": "disabled",
                                                 "instrImedcy": "lazy",
+                                                "ipamDhcpOverride": "0.0.0.0",
+                                                "ipamEnabled": "no",
+                                                "ipamGateway": "0.0.0.0",
                                                 "lagPolicyName": "",
                                                 "netflowDir": "both",
                                                 "netflowPref": "disabled",
@@ -1366,7 +1670,7 @@
                                     {
                                         "fvRsCons": {
                                             "attributes": {
-                                                "annotation": "",
+                                                "annotation": "orchestrator:ansible",
                                                 "intent": "install",
                                                 "prio": "unspecified",
                                                 "tnVzBrCPName": "default",
@@ -1401,7 +1705,7 @@
             {
                 "fvAp": {
                     "attributes": {
-                        "annotation": "",
+                        "annotation": "orchestrator:ansible",
                         "descr": "",
                         "name": "skylight",
                         "nameAlias": "",
@@ -1414,7 +1718,7 @@
                         {
                             "fvAEPg": {
                                 "attributes": {
-                                    "annotation": "",
+                                    "annotation": "orchestrator:ansible",
                                     "descr": "",
                                     "exceptionTag": "",
                                     "floodOnEncap": "disabled",
@@ -1434,7 +1738,7 @@
                                     {
                                         "fvRsProv": {
                                             "attributes": {
-                                                "annotation": "",
+                                                "annotation": "orchestrator:ansible",
                                                 "intent": "install",
                                                 "matchT": "AtleastOne",
                                                 "prio": "unspecified",
@@ -1446,7 +1750,8 @@
                                     {
                                         "fvRsDomAtt": {
                                             "attributes": {
-                                                "annotation": "",
+                                                "annotation": "orchestrator:ansible",
+                                                "apiMode": "mgmt",
                                                 "bindingType": "none",
                                                 "classPref": "encap",
                                                 "customEpgName": "",
@@ -1456,6 +1761,9 @@
                                                 "epgCos": "Cos0",
                                                 "epgCosPref": "disabled",
                                                 "instrImedcy": "lazy",
+                                                "ipamDhcpOverride": "0.0.0.0",
+                                                "ipamEnabled": "no",
+                                                "ipamGateway": "0.0.0.0",
                                                 "lagPolicyName": "",
                                                 "netflowDir": "both",
                                                 "netflowPref": "disabled",
@@ -1476,7 +1784,8 @@
                                     {
                                         "fvRsDomAtt": {
                                             "attributes": {
-                                                "annotation": "",
+                                                "annotation": "orchestrator:ansible",
+                                                "apiMode": "mgmt",
                                                 "bindingType": "none",
                                                 "classPref": "encap",
                                                 "customEpgName": "",
@@ -1486,6 +1795,9 @@
                                                 "epgCos": "Cos0",
                                                 "epgCosPref": "disabled",
                                                 "instrImedcy": "lazy",
+                                                "ipamDhcpOverride": "0.0.0.0",
+                                                "ipamEnabled": "no",
+                                                "ipamGateway": "0.0.0.0",
                                                 "lagPolicyName": "",
                                                 "netflowDir": "both",
                                                 "netflowPref": "disabled",
@@ -1506,7 +1818,7 @@
                                     {
                                         "fvRsCons": {
                                             "attributes": {
-                                                "annotation": "",
+                                                "annotation": "orchestrator:ansible",
                                                 "intent": "install",
                                                 "prio": "unspecified",
                                                 "tnVzBrCPName": "default",
