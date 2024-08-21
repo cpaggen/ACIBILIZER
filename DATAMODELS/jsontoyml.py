@@ -22,7 +22,10 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
     # invisible_arguments - be sure to have them "pre-mapping"
     INVISIBLE_ARGUMENTS = ["annotation", "dn", "rn", "uid", "modTs", "monPolDn",
                        "seg", "pcTag", "userdom", "tDn", "filter_nam",
-                       "mac", "preferred", "numPorts", "encap"] # adjust as needed
+                       "mac", "preferred", "numPorts", "encap", 
+                       "serviceBdRoutingDisable", "mcastARPDrop",
+                       "apiMode", "ipamDhcpOverride", "ipamEnabled",
+                       "ipamGateway"] # adjust as needed
 
     # define exception list - dependencies
     ACI_CLASSES_WITH_DEPENDENCIES_IN_CHILD = ['aci_access_span_src_group',
