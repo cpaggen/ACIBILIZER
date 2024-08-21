@@ -341,7 +341,6 @@ def reconstruct_yml(data, out_dir=None, inventory = None):
                         dom_type_val = "phys"
                         # example name => uni/phys-my-domain
                         dom_val = child_value.split("/phys-")[1]
-                        print(f"%DEBUG% physDomP found - extracted {dom_val}")
 
                     elif "l2dom" in child_value.split("/")[1]:
                         dom_type_val = "l2dom"
