@@ -1,12 +1,12 @@
 import os
 import sys
 import json
-from mappings import CLASS_TO_ANSIBLE_MAP # need to get the mapping to ansible from json
+from required_mappings import CLASS_TO_ANSIBLE_MAP # need to get the mapping to ansible from json
 import yaml
-from isConfigurableMap import ACI_MODULE_IS_CONFIGURABLE_MAP # need to get the 
-from defaultClassAttrValues import ACI_MODULE_ATTRIBUTES_DEFAULT_VALUES
-from exceptionDict import ACI_MODULE_DEPENDENCIES_FROM_CHILDREN
-from requiredParamsAliasesMap import ACI_MODULE_ALIASES_TO_ATTRIBUTES_MAP
+from required_mappings import ACI_MODULE_IS_CONFIGURABLE_MAP # need to get the 
+from required_mappings import ACI_MODULE_ATTRIBUTES_DEFAULT_VALUES
+from required_mappings import ACI_MODULE_DEPENDENCIES_FROM_CHILDREN
+from required_mappings import ACI_MODULE_ALIASES_TO_ATTRIBUTES_MAP
 import time
 import re
 import argparse
