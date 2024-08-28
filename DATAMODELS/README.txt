@@ -15,3 +15,7 @@
 -> can potentially run into issues if a task includes any of the following: "spanDestGrp", "spanSrcGrp", "spanSrc", "mgmtMaintP",
 									    "spanRsSrcToPathEp", "dhcpRelayP", "infraRsVlanNs",
 									    "fvRsSecInherited", "l1PhysIf", "l2extInstP", "mgmtOoB"
+
+-> values for "delegate_to" currently hardcoded as "local_host"
+
+-> values for "state" currently hardcoded to "present"
